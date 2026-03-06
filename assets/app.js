@@ -9,6 +9,22 @@
       nav.setAttribute('data-open', String(!open));
       navBtn.setAttribute('aria-expanded', String(!open));
     });
+
+    // Cerrar al hacer clic en un enlace del menú
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.setAttribute('data-open', 'false');
+        navBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Cerrar al hacer clic fuera
+    document.addEventListener('click', (e) => {
+      if (!navBtn.contains(e.target) && !nav.contains(e.target)) {
+        nav.setAttribute('data-open', 'false');
+        navBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
   }
 
   // Year
