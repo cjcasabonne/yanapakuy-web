@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="520" height="120" viewBox="0 0 520 120" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Yanapakuy">
+  <rect x="8" y="12" width="96" height="96" rx="20" fill="#1D4ED8"/>
+  <path d="M30 78c10-22 18-34 26-34s16 12 26 34" stroke="#F59E0B" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="56" cy="44" r="6" fill="#F59E0B"/>
+  <text x="124" y="62" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="34" font-weight="800" fill="#0F172A">YANAPAKUY</text>
+  <text x="124" y="88" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="16" font-weight="600" fill="#64748B">Educación integral · Disciplina · Comunidad</text>
+</svg>
