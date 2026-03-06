@@ -3,23 +3,133 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>YANAPAKUY — Educación integral para primera generación</title>
-  <meta name="description" content="Yanapakuy promueve educación integral para escolares de recursos limitados: disciplina diaria, excelencia accesible y comunidad." />
+  <title>Yanapakuy — Juntos por el Perú</title>
+  <meta name="description" content="Yanapakuy acompaña a niños y adolescentes de Manchay en su formación académica, emocional y ciudadana. Disciplina diaria, excelencia accesible y comunidad comprometida." />
   <meta name="theme-color" content="#c45c1a" />
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--pri);
+      background: var(--pri-light);
+      border: 1px solid rgba(196,92,26,.20);
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--pri);
+      flex-shrink: 0;
+    }
+    .hero-card .h1 {
+      font-size: clamp(36px, 5.5vw, 60px);
+      line-height: 1.08;
+      margin: 0 0 18px;
+    }
+    .hero-card .h1 em {
+      font-style: italic;
+      color: var(--pri);
+      display: block;
+    }
+    .hero-desc {
+      font-size: 18px;
+      color: var(--ink-2);
+      max-width: 80%;
+      line-height: 1.65;
+      margin: 0 0 24px;
+    }
+    .section-head { margin-bottom: 24px }
+    .section-head .kicker { margin-bottom: 4px }
+    .section-head .h2 { margin: 0 }
+    .eje-icon { font-size: 32px; margin-bottom: 12px; display: block }
+    .historia-text { font-size: 16px; color: var(--ink-2); line-height: 1.7; margin: 0 0 16px }
+    .teoricos-group { margin-bottom: 28px }
+    .teoricos-group:last-child { margin-bottom: 0 }
+    .teoricos-group-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 1px solid var(--line-warm);
+      padding-bottom: 8px;
+      margin-bottom: 14px;
+    }
+    .teorico {
+      padding: 14px 16px;
+      background: var(--bg-warm);
+      border-radius: 14px;
+      border-left: 3px solid var(--pri);
+      margin-bottom: 10px;
+    }
+    .teorico:last-child { margin-bottom: 0 }
+    .teorico:nth-child(2n) { border-left-color: var(--gold) }
+    .teorico:nth-child(3n) { border-left-color: var(--acc) }
+    .teorico-header {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 5px;
+      flex-wrap: wrap;
+    }
+    .teorico-name { font-weight: 700; font-size: 15px; color: var(--ink) }
+    .teorico-concepto {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--pri);
+      background: var(--pri-light);
+      padding: 2px 8px;
+      border-radius: 999px;
+    }
+    .teorico-desc { font-size: 14px; color: var(--ink-2); line-height: 1.6; margin: 0 }
+    .cta-section {
+      text-align: center;
+      background: var(--pri);
+      border-color: transparent;
+      color: #fff;
+      padding: 56px 44px;
+    }
+    .cta-section .kicker { color: rgba(255,255,255,.65); margin-bottom: 10px }
+    .cta-h {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3.2vw, 38px);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.18;
+      letter-spacing: -.02em;
+      margin: 0 auto 14px;
+      max-width: 80%;
+    }
+    .cta-sub {
+      color: rgba(255,255,255,.78);
+      font-size: 16px;
+      max-width: 80%;
+      margin: 0 auto 28px;
+      line-height: 1.6;
+    }
+    @media (max-width: 600px) {
+      .cta-section { padding: 36px 22px }
+    }
+  </style>
 </head>
 <body>
 
-<!-- ═══════════════════════ HEADER ═══════════════════════ -->
 <header class="header">
   <div class="container header-inner">
     <a class="brand" href="index.html" aria-label="Inicio Yanapakuy">
       <img src="assets/logo.svg" alt="Yanapakuy" />
     </a>
-    <button class="navbtn" data-nav-toggle aria-expanded="false" aria-controls="nav">
-      Menú
-    </button>
+    <button class="navbtn" data-nav-toggle aria-expanded="false" aria-controls="nav">Menú</button>
     <nav class="nav" id="nav" data-nav data-open="false" aria-label="Navegación principal">
       <a href="quienes-somos.html">Quiénes somos</a>
       <a href="metodologia.html">Metodología</a>
@@ -34,26 +144,27 @@
 
 <main>
 
-  <!-- ═══════════════════════ HERO ═══════════════════════ -->
+  <!-- HERO -->
   <section class="hero" aria-label="Presentación">
     <div class="container">
       <div class="hero-card">
-        <div class="kicker anim-up">Asociación educativa sin fines de lucro · Lima, Perú</div>
+        <div class="hero-eyebrow anim-up">Asociación educativa sin fines de lucro · Manchay, Lima · Desde 2015</div>
 
         <h1 class="h1 anim-up">
-          Educación integral<br>
-          <em style="color:var(--pri);font-style:italic">para primera generación</em>
+          Educación integral
+          <em>para quienes más lo necesitan</em>
         </h1>
 
-        <p class="p anim-up">
-          Formamos mente, carácter y ciudadanía en escolares de recursos limitados.
-          Disciplina diaria, excelencia accesible y comunidad comprometida.
+        <p class="hero-desc anim-up">
+          Acompañamos a niños y adolescentes de Manchay en su formación académica,
+          emocional y ciudadana. Porque no carecen de talento —
+          carecen de estructura, referentes y expectativas altas.
         </p>
 
         <div class="btnrow anim-up">
           <a class="btn primary" href="voluntariado.html">Participar como voluntario</a>
           <a class="btn accent" href="programas.html">Explorar programas</a>
-          <a class="btn ghost"  href="contacto.html">Aliados y colaboración</a>
+          <a class="btn ghost" href="contacto.html">Aliados y colaboración</a>
         </div>
 
         <div class="hero-meta anim-up" aria-label="Ideas fuerza">
@@ -67,86 +178,76 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════ QUÉ HACEMOS ════════════════ -->
+  <!-- TRES EJES -->
   <section class="section" aria-label="Qué hacemos">
     <div class="container">
-
-      <!-- Section label -->
-      <div style="margin-bottom:16px">
+      <div class="section-head">
         <div class="kicker">Nuestro trabajo</div>
-        <h2 class="h2" style="margin:0">Tres ejes de formación</h2>
+        <h2 class="h2">Tres ejes de formación</h2>
       </div>
 
       <div class="grid grid-3">
-        <article class="card reveal" style="border-top: 4px solid var(--pri)">
-          <div class="badge" style="margin-bottom:12px">Refuerzo académico</div>
+        <article class="card reveal" style="border-top:4px solid var(--pri)">
+          <span class="eje-icon">📚</span>
+          <div class="badge" style="margin-bottom:10px">Refuerzo académico</div>
           <h3 class="h2">Mente</h3>
-          <p class="p">Rutinas claras, metas semanales y acompañamiento. Aprender con estructura.</p>
-          <p class="small">Matemática · Comunicación · Hábitos de estudio</p>
+          <p class="p">Comprensión lectora, matemática y hábitos de estudio. Metas claras, práctica guiada y seguimiento semanal.</p>
+          <p class="small">Matemática · Comunicación · Pensamiento crítico</p>
         </article>
 
-        <article class="card reveal" style="border-top: 4px solid var(--gold); animation-delay:.1s">
-          <div class="badge" style="margin-bottom:12px">Carácter y perseverancia</div>
+        <article class="card reveal" style="border-top:4px solid var(--gold);animation-delay:.1s">
+          <span class="eje-icon">⏰</span>
+          <div class="badge" style="margin-bottom:10px">Carácter y perseverancia</div>
           <h3 class="h2">Carácter</h3>
-          <p class="p">Disciplina, responsabilidad y trabajo en equipo como práctica diaria.</p>
+          <p class="p">Disciplina, autoestima y perseverancia como práctica diaria. El ejemplo educa más que la palabra.</p>
           <p class="small">Hábitos · Autocontrol · Compromiso</p>
         </article>
 
-        <article class="card reveal" style="border-top: 4px solid var(--acc); animation-delay:.2s">
-          <div class="badge" style="background:var(--acc-light); border-color:rgba(37,99,176,.25); color:var(--acc); margin-bottom:12px">Ciudadanía e identidad</div>
+        <article class="card reveal" style="border-top:4px solid var(--acc);animation-delay:.2s">
+          <span class="eje-icon">🇵🇪</span>
+          <div class="badge" style="background:var(--acc-light);border-color:rgba(37,99,176,.25);color:var(--acc);margin-bottom:10px">Ciudadanía e identidad</div>
           <h3 class="h2">Ciudadanía</h3>
-          <p class="p">Identidad peruana y pensamiento crítico: servir, construir y liderar.</p>
+          <p class="p">Identidad peruana, empatía y responsabilidad compartida. Servir para crecer.</p>
           <p class="small">Comunidad · Valores · Pertenencia</p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════ IMPACTO + ACTIVIDADES ═══════ -->
-  <section class="section" aria-label="Impacto y actividades">
+  <!-- HISTORIA + ACTIVIDADES -->
+  <section class="section" aria-label="Historia y actividades">
     <div class="container grid grid-2">
 
-      <section class="card reveal" aria-label="Impacto">
-        <div class="kicker">Indicadores</div>
-        <h2 class="h2">Impacto</h2>
-        <p class="p small">Mostraremos indicadores cuando existan registros verificables.</p>
+      <section class="card reveal" aria-label="Historia">
+        <div class="kicker">Desde 2015</div>
+        <h2 class="h2">Una historia de evolución</h2>
 
-        <div class="kpis" aria-label="Indicadores">
-          <div class="kpi">
-            <p class="label">Estudiantes activos</p>
-            <p class="value">—</p>
-          </div>
-          <div class="kpi">
-            <p class="label">Sesiones realizadas</p>
-            <p class="value">—</p>
-          </div>
-          <div class="kpi">
-            <p class="label">Voluntarios</p>
-            <p class="value">—</p>
-          </div>
-          <div class="kpi">
-            <p class="label">Continuidad educativa</p>
-            <p class="value">—</p>
-          </div>
-        </div>
-
-        <hr class="hr" />
+        <p class="historia-text">
+          Comenzamos llegando a la mayor cantidad de niños posible: útiles, mochilas y materiales escolares en colegios de Lima. Con el tiempo entendimos que el impacto verdadero viene de la constancia.
+        </p>
+        <p class="historia-text">
+          Desde 2022 trabajamos en Manchay, con los mismos niños, cada dos semanas, construyendo comunidad desde el barrio. Hoy nos estamos reorganizando para retomar con más fuerza y un equipo comprometido.
+        </p>
 
         <div class="quote">
-          <p>"La identidad se construye sirviendo. La disciplina transforma el esfuerzo en resultado."</p>
+          <p>"La disciplina transforma talento en resultado. Comunidad fuerte, futuro sólido."</p>
           <div class="who">Yanapakuy</div>
+        </div>
+
+        <div class="btnrow">
+          <a class="btn primary" href="quienes-somos.html">Conocer la organización</a>
         </div>
       </section>
 
-      <section class="card reveal" aria-label="Actividades recientes" style="animation-delay:.12s">
-        <div class="kicker">Últimas actividades</div>
-        <h2 class="h2">En terreno</h2>
+      <section class="card reveal" aria-label="Actividades" style="animation-delay:.12s">
+        <div class="kicker">Actividades</div>
+        <h2 class="h2">Presencial</h2>
 
         <ul class="timeline" aria-label="Timeline de actividades">
           <li class="t-item">
             <div class="t-date">Próximo</div>
             <div class="t-title">Sesión de hábitos de estudio</div>
-            <p class="t-body">Planificación semanal, rutina sostenible y control de avances.</p>
+            <p class="t-body">Planificación semanal, zona de desarrollo próximo y control de avances en Manchay.</p>
           </li>
           <li class="t-item">
             <div class="t-date">Reciente</div>
@@ -156,92 +257,171 @@
           <li class="t-item">
             <div class="t-date">Reciente</div>
             <div class="t-title">Refuerzo académico</div>
-            <p class="t-body">Metas cortas, práctica guiada y seguimiento.</p>
+            <p class="t-body">Comprensión lectora y matemática con metas cortas y práctica guiada.</p>
           </li>
         </ul>
 
         <div class="btnrow">
           <a class="btn primary" href="actividades.html">Ver actividades</a>
-          <a class="btn ghost"   href="documentos.html">Ver documentos</a>
+          <a class="btn ghost" href="documentos.html">Ver documentos</a>
         </div>
       </section>
 
     </div>
   </section>
 
-  <!-- ═══════════════════════ MARCO Y VALORES ════════════ -->
-  <section class="section" aria-label="Marco y valores">
+  <!-- MARCO TEÓRICO -->
+  <section class="section" aria-label="Marco teórico">
     <div class="container">
-      <div class="card reveal" style="
-        background: linear-gradient(135deg, var(--bg-warm) 0%, var(--surface) 100%);
-        border-color: var(--line-warm);
-      ">
-        <div class="kicker">Fundamentos</div>
+      <div class="card reveal" style="background:linear-gradient(135deg,var(--bg-warm),var(--surface));border-color:var(--line-warm)">
+        <div class="kicker">Base conceptual</div>
         <h2 class="h2">Marco que nos guía</h2>
-        <p class="p" style="max-width:620px">
-          Integramos educación transformadora, lectura social de la desigualdad,
-          inversión en capital humano, perseverancia sostenida, sentido de vida
-          y mentalidad de crecimiento — con enfoque práctico.
+        <p class="p" style="max-width:85%;margin-bottom:28px">
+          No usamos referentes como vitrina. Cada uno informa decisiones concretas de cómo trabajamos en Manchay.
         </p>
 
-        <div class="grid grid-2" style="margin-top:16px">
-          <details open class="card flat">
-            <summary>Referentes teóricos</summary>
-            <ul style="margin-top:8px">
-              <li>Paulo Freire</li>
-              <li>Pierre Bourdieu</li>
-              <li>James Heckman</li>
-              <li>Angela Duckworth</li>
-              <li>Viktor Frankl</li>
-              <li>Carol Dweck</li>
-            </ul>
-          </details>
+        <div class="grid grid-3" style="gap:24px">
 
-          <details open class="card flat">
-            <summary>Valores que practicamos</summary>
-            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:10px">
-              <span class="chip">Servicio</span>
-              <span class="chip">Disciplina</span>
-              <span class="chip">Perseverancia</span>
-              <span class="chip">Responsabilidad</span>
-              <span class="chip">Identidad peruana</span>
-              <span class="chip">Trabajo en equipo</span>
-              <span class="chip">Excelencia</span>
+          <div class="teoricos-group">
+            <div class="teoricos-group-title">Sociología de la educación</div>
+            <div class="teorico">
+              <div class="teorico-header">
+                <span class="teorico-name">Pierre Bourdieu</span>
+                <span class="teorico-concepto">Capital cultural</span>
+              </div>
+              <p class="teorico-desc">La escuela evalúa con los códigos de quienes ya los tienen. Yanapakuy actúa como mecanismo compensador: entregamos estructura, lenguaje académico y referentes a quienes no los recibieron en casa.</p>
             </div>
-          </details>
+            <div class="teorico">
+              <div class="teorico-header">
+                <span class="teorico-name">Bernard Lahire</span>
+                <span class="teorico-concepto">Ambición posible</span>
+              </div>
+              <p class="teorico-desc">Incluso sin capital escolar familiar, la ambición educativa es posible si aparece un vínculo protector sostenido. El voluntario cumple ese rol.</p>
+            </div>
+            <div class="teorico">
+              <div class="teorico-header">
+                <span class="teorico-name">Paulo Freire</span>
+                <span class="teorico-concepto">Conciencia crítica</span>
+              </div>
+              <p class="teorico-desc">Educar no es depositar información — es despertar conciencia crítica. Nuestros talleres de ciudadanía parten de esa base.</p>
+            </div>
+          </div>
+
+          <div class="teoricos-group">
+            <div class="teoricos-group-title">Psicopedagogía</div>
+            <div class="teorico">
+              <div class="teorico-header">
+                <span class="teorico-name">Lev Vygotsky</span>
+                <span class="teorico-concepto">Zona de Desarrollo Próximo</span>
+              </div>
+              <p class="teorico-desc">El aprendizaje ocurre entre lo que el niño puede hacer solo y lo que logra con apoyo. El voluntario es ese mediador.</p>
+            </div>
+            <div class="teorico">
+              <div class="teorico-header">
+                <span class="teorico-name">David Ausubel</span>
+                <span class="teorico-concepto">Aprendizaje significativo</span>
+              </div>
+              <p class="teorico-desc">Nada se aprende de verdad si no se conecta con lo que ya se sabe. Por eso partimos del contexto real del niño, no de contenidos abstractos.</p>
+            </div>
+            <div class="teorico">
+              <div class="teorico-header">
+                <span class="teorico-name">Albert Bandura</span>
+                <span class="teorico-concepto">Autoeficacia y modelado</span>
+              </div>
+              <p class="teorico-desc">Ver a alguien parecido a ti lograr algo cambia lo que crees posible. Los voluntarios no solo enseñan — modelan.</p>
+            </div>
+            <div class="teorico">
+              <div class="teorico-header">
+                <span class="teorico-name">Urie Bronfenbrenner</span>
+                <span class="teorico-concepto">Influencia sistémica</span>
+              </div>
+              <p class="teorico-desc">El niño no aprende solo en el aula. Su barrio, su familia y su comunidad forman parte del proceso. Por eso trabajamos en el territorio.</p>
+            </div>
+          </div>
+
+          <div class="teoricos-group">
+            <div class="teoricos-group-title">Carácter y sentido</div>
+            <div class="teorico">
+              <div class="teorico-header">
+                <span class="teorico-name">Angela Duckworth</span>
+                <span class="teorico-concepto">Perseverancia sostenida</span>
+              </div>
+              <p class="teorico-desc">El talento sin constancia no llega lejos. Nuestras sesiones en Manchay son en sí mismas un ejercicio de grit — para los niños y para los voluntarios.</p>
+            </div>
+            <div class="teorico">
+              <div class="teorico-header">
+                <span class="teorico-name">Viktor Frankl</span>
+                <span class="teorico-concepto">Sentido como motor</span>
+              </div>
+              <p class="teorico-desc">Quien tiene un por qué aguanta cualquier cómo. Parte de nuestro trabajo es ayudar a los jóvenes a construir ese sentido.</p>
+            </div>
+            <div class="teorico">
+              <div class="teorico-header">
+                <span class="teorico-name">Carol Dweck</span>
+                <span class="teorico-concepto">Mentalidad de crecimiento</span>
+              </div>
+              <p class="teorico-desc">La inteligencia no es fija. Con la retroalimentación correcta, cualquier niño puede aprender a aprender.</p>
+            </div>
+            <div class="teorico">
+              <div class="teorico-header">
+                <span class="teorico-name">James Heckman</span>
+                <span class="teorico-concepto">Retorno social</span>
+              </div>
+              <p class="teorico-desc">Invertir temprano en habilidades y carácter multiplica oportunidades. El impacto de Yanapakuy no es solo educativo — es estructural.</p>
+            </div>
+          </div>
+
         </div>
 
-        <div class="btnrow" style="margin-top:20px">
-          <a class="btn primary" href="quienes-somos.html">Conocer la organización</a>
-          <a class="btn ghost"   href="metodologia.html">Ver metodología</a>
+        <div class="btnrow" style="margin-top:24px">
+          <a class="btn primary" href="metodologia.html">Ver metodología completa</a>
+          <a class="btn ghost" href="quienes-somos.html">Conocer la organización</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════ CTA VOLUNTARIADO ═══════════ -->
+  <!-- VALORES -->
+  <section class="section" aria-label="Valores">
+    <div class="container">
+      <div class="card reveal">
+        <div class="kicker">Identidad</div>
+        <h2 class="h2">Lo que practicamos</h2>
+        <p class="p" style="max-width:80%;margin-bottom:20px">
+          El servicio no es asistencialismo. Es acción consciente orientada a generar autonomía:
+          ayudar para que el otro crezca, no para que dependa.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <span class="chip">Servicio con propósito</span>
+          <span class="chip">Solidaridad</span>
+          <span class="chip">Disciplina</span>
+          <span class="chip">Perseverancia</span>
+          <span class="chip">Responsabilidad</span>
+          <span class="chip">Honestidad</span>
+          <span class="chip">Identidad peruana</span>
+          <span class="chip">Trabajo en equipo</span>
+          <span class="chip">Respeto</span>
+          <span class="chip">Excelencia</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
   <section class="section" aria-label="Llamado a la acción">
     <div class="container">
-      <div class="card reveal" style="
-        text-align:center;
-        background: var(--pri);
-        border-color: transparent;
-        color: #fff;
-        padding: 52px 40px;
-      ">
-        <div class="kicker" style="color:rgba(255,255,255,.70)">Súmate</div>
-        <h2 class="h2" style="color:#fff; font-size:clamp(24px,3vw,36px); margin-bottom:12px">
-          La constancia transforma la buena intención en impacto real
-        </h2>
-        <p style="color:rgba(255,255,255,.82); max-width:520px; margin:0 auto 24px; font-size:16px">
-          Buscamos voluntarios con disciplina y vocación de servicio.
+      <div class="card cta-section reveal">
+        <div class="kicker">Súmate en 2026</div>
+        <h2 class="cta-h">Estamos reorganizándonos. Buscamos personas que se comprometan de verdad.</h2>
+        <p class="cta-sub">
+          No pedimos experiencia previa — pedimos disciplina, constancia y vocación de servicio.
           El proceso es simple: postulación, entrevista breve e inducción.
         </p>
         <div class="btnrow" style="justify-content:center">
-          <a class="btn" style="background:#fff; color:var(--pri); border-color:transparent; font-weight:800" href="voluntariado.html">
+          <a class="btn" style="background:#fff;color:var(--pri);border-color:transparent;font-weight:800" href="voluntariado.html">
             Postular como voluntario
           </a>
-          <a class="btn" style="background:transparent; color:#fff; border-color:rgba(255,255,255,.40)" href="contacto.html">
+          <a class="btn" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.35)" href="contacto.html">
             Escribirnos
           </a>
         </div>
@@ -251,16 +431,13 @@
 
 </main>
 
-<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
 <footer class="footer">
   <div class="container footer-grid">
-
     <div>
-      <div class="h3">YANAPAKUY</div>
+      <div class="h3">Yanapakuy — Juntos por el Perú</div>
       <div class="small">Educación integral para escolares de recursos limitados.</div>
       <div class="legal">© <span data-year></span> Yanapakuy. Asociación sin fines de lucro.</div>
     </div>
-
     <div>
       <div class="h3" style="font-size:14px;letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-body)">Navegación</div>
       <div class="small">
@@ -270,15 +447,14 @@
         <div><a href="documentos.html">Documentos</a></div>
       </div>
     </div>
-
     <div>
       <div class="h3" style="font-size:14px;letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-body)">Acción</div>
       <div class="small">
         <div><a href="voluntariado.html">Voluntariado</a></div>
         <div><a href="contacto.html">Contacto</a></div>
+        <div><a href="https://www.instagram.com/yanapakuy.pe" target="_blank" rel="noopener">Instagram @yanapakuy.pe</a></div>
       </div>
     </div>
-
   </div>
 </footer>
 

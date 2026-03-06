@@ -235,8 +235,8 @@ li { margin: 6px 0 }
   pointer-events: none;
 }
 .hero-card > * { position: relative }
-.hero-card .h1 { max-width: 680px }
-.hero-card .p  { max-width: 580px; font-size: 18px; color: var(--ink-2) }
+.hero-card .h1 { max-width: 90% }
+.hero-card .p  { max-width: 85%; font-size: 18px; color: var(--ink-2) }
 .hero-meta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px }
 
 @media (max-width: 600px) {

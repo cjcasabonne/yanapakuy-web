@@ -3,17 +3,84 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Quiénes somos — YANAPAKUY</title>
-  <meta name="description" content="Misión, visión, valores y población objetivo de Yanapakuy." />
+  <title>Quiénes somos — Yanapakuy</title>
+  <meta name="description" content="Somos un equipo peruano que desde 2015 acompaña a niños y adolescentes en su formación académica, emocional y ciudadana. Asociación civil sin fines de lucro." />
   <meta name="theme-color" content="#c45c1a" />
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--pri);
+      background: var(--pri-light);
+      border: 1px solid rgba(196,92,26,.20);
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--pri);
+      flex-shrink: 0;
+    }
+    .hero-card .h1 em {
+      font-style: italic;
+      color: var(--pri);
+      display: block;
+    }
+    .mv-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .mv-text {
+      font-size: 17px;
+      color: var(--ink-2);
+      line-height: 1.65;
+      margin: 0;
+    }
+    .mv-divider {
+      height: 1px;
+      background: var(--line-warm);
+      margin: 20px 0;
+    }
+    .gov-card {
+      text-align: center;
+      padding: 28px 20px;
+    }
+    .gov-icon {
+      font-size: 34px;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .poblacion-text {
+      font-size: 16px;
+      color: var(--ink-2);
+      line-height: 1.7;
+      margin: 0;
+    }
+    .poblacion-highlight {
+      font-weight: 700;
+      color: var(--ink);
+    }
+  </style>
 </head>
 <body>
 
 <header class="header">
   <div class="container header-inner">
-    <a class="brand" href="index.html" aria-label="Ir a inicio">
+    <a class="brand" href="index.html" aria-label="Inicio Yanapakuy">
       <img src="assets/logo.svg" alt="Yanapakuy" />
     </a>
     <button class="navbtn" data-nav-toggle aria-expanded="false" aria-controls="nav">Menú</button>
@@ -31,46 +98,55 @@
 
 <main>
 
-  <!-- Hero interno -->
+  <!-- HERO -->
   <section class="hero">
     <div class="container">
       <div class="hero-card">
-        <div class="kicker anim-up">Identidad institucional</div>
-        <h1 class="h1 anim-up">Quiénes<br><em style="color:var(--pri);font-style:italic">somos</em></h1>
-        <p class="p anim-up" style="max-width:560px;font-size:18px">
-          Yanapakuy es una asociación orientada a la educación integral de escolares
-          de recursos limitados, con énfasis en primera generación de estudiantes.
+        <div class="hero-eyebrow anim-up">Asociación civil sin fines de lucro · Lima, Perú · Desde 2015</div>
+        <h1 class="h1 anim-up">
+          Quiénes
+          <em>somos</em>
+        </h1>
+        <p class="p anim-up" style="max-width:80%;font-size:18px">
+          Somos un equipo peruano que desde 2015 acompaña a niños y adolescentes
+          en su formación académica, emocional y ciudadana. Empezamos llegando a muchos —
+          hoy apostamos por la constancia: un territorio, una comunidad, un vínculo sostenido.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Misión / Visión -->
+  <!-- MISIÓN / VISIÓN + VALORES -->
   <section class="section">
     <div class="container grid grid-2">
 
       <section class="card reveal" style="border-top:4px solid var(--pri)">
         <div class="kicker">Norte institucional</div>
-        <h2 class="h2">Misión</h2>
-        <p class="p">Formar capacidades académicas y carácter, fortaleciendo ciudadanía y sentido de pertenencia.</p>
-        <hr class="hr" />
-        <h2 class="h2">Visión</h2>
-        <p class="p">Una comunidad donde la primera generación tiene estructura, acompañamiento y expectativas altas.</p>
+
+        <div class="mv-label">Misión</div>
+        <p class="mv-text">Promover el desarrollo académico y personal de niños y adolescentes en situación de vulnerabilidad, fortaleciendo habilidades, carácter y sentido de pertenencia a través del acompañamiento sostenido.</p>
+
+        <div class="mv-divider"></div>
+
+        <div class="mv-label">Visión</div>
+        <p class="mv-text">Una comunidad donde cada joven tiene estructura, referentes y expectativas altas — independientemente del entorno en el que nació.</p>
       </section>
 
-      <section class="card reveal" style="animation-delay:.1s; border-top:4px solid var(--gold)">
+      <section class="card reveal" style="animation-delay:.1s;border-top:4px solid var(--gold)">
         <div class="kicker">Lo que practicamos</div>
         <h2 class="h2">Valores</h2>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 16px">
-          <span class="chip">Servicio</span>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 20px">
+          <span class="chip">Servicio con propósito</span>
+          <span class="chip">Solidaridad</span>
           <span class="chip">Disciplina</span>
           <span class="chip">Perseverancia</span>
           <span class="chip">Responsabilidad</span>
+          <span class="chip">Honestidad</span>
           <span class="chip">Identidad peruana</span>
           <span class="chip">Trabajo en equipo</span>
+          <span class="chip">Respeto</span>
           <span class="chip">Excelencia</span>
         </div>
-        <hr class="hr" />
         <div class="quote">
           <p>"Servicio con propósito: formar capacidades, fortalecer carácter, construir ciudadanía."</p>
           <div class="who">Principio rector</div>
@@ -80,29 +156,36 @@
     </div>
   </section>
 
-  <!-- Población objetivo -->
+  <!-- POBLACIÓN OBJETIVO -->
   <section class="section">
     <div class="container">
       <div class="card reveal">
         <div class="kicker">A quiénes acompañamos</div>
-        <h2 class="h2">Población objetivo</h2>
-        <p class="p"><strong>Primera generación.</strong> Jóvenes con alto potencial y baja estructura externa.</p>
+        <h2 class="h2">Nuestra comunidad</h2>
 
-        <div class="grid grid-2" style="margin-top:16px">
+        <p class="poblacion-text" style="margin-top:12px">
+          Trabajamos con niños y adolescentes de zonas periféricas de Lima —
+          <span class="poblacion-highlight">Manchay desde 2022</span> —
+          que tienen alta capacidad de aprendizaje y resiliencia, pero poca estructura externa:
+          sin referentes académicos cercanos, sin orientación vocacional, sin acompañamiento sostenido.
+          <span class="poblacion-highlight">No carecen de talento. Carecen de red.</span>
+        </p>
+
+        <div class="grid grid-2" style="margin-top:20px">
           <div class="card flat" style="border-left:4px solid #e57373">
-            <h3 class="h3">Barreras típicas</h3>
+            <h3 class="h3">Barreras que enfrentan</h3>
             <ul>
-              <li>Capital cultural académico limitado en el hogar.</li>
+              <li>Bajo capital cultural académico en el entorno familiar.</li>
               <li>Brechas en orientación vocacional y planificación.</li>
               <li>Falta de referentes y acompañamiento sostenido.</li>
             </ul>
           </div>
           <div class="card flat" style="border-left:4px solid var(--ok)">
-            <h3 class="h3">Lo que sí hay</h3>
+            <h3 class="h3">Lo que traen consigo</h3>
             <ul>
-              <li>Resiliencia y disposición.</li>
-              <li>Capacidad de aprendizaje si hay estructura.</li>
-              <li>Motivación cuando aparece sentido y comunidad.</li>
+              <li>Alta resiliencia y disposición al esfuerzo.</li>
+              <li>Capacidad de aprendizaje cuando hay estructura.</li>
+              <li>Motivación real cuando aparece sentido y comunidad.</li>
             </ul>
           </div>
         </div>
@@ -110,35 +193,38 @@
     </div>
   </section>
 
-  <!-- Gobernanza -->
+  <!-- GOBERNANZA -->
   <section class="section">
     <div class="container">
       <div class="card reveal" style="background:linear-gradient(135deg,var(--bg-warm),var(--surface));border-color:var(--line-warm)">
         <div class="kicker">Estructura interna</div>
-        <h2 class="h2">Gobernanza y equipo</h2>
-        <p class="p">Mantener simple: roles claros, rendición de cuentas, protección de menores.</p>
+        <h2 class="h2">Equipo y gobernanza</h2>
+        <p class="p" style="max-width:80%;margin-bottom:24px">
+          Organización simple, roles claros y rendición de cuentas.
+          Cada persona sabe qué hace, por qué lo hace y a quién responde.
+        </p>
 
-        <div class="grid grid-3" style="margin-top:16px">
-          <div class="card" style="text-align:center;padding:24px 16px">
-            <div style="font-size:32px;margin-bottom:8px">🧭</div>
+        <div class="grid grid-3">
+          <div class="card gov-card">
+            <span class="gov-icon">🧭</span>
             <h3 class="h3">Dirección</h3>
-            <p class="p small">Define estrategia, aprueba lineamientos y resguarda integridad institucional.</p>
+            <p class="p small">Define estrategia, aprueba lineamientos y resguarda la integridad institucional.</p>
           </div>
-          <div class="card" style="text-align:center;padding:24px 16px">
-            <div style="font-size:32px;margin-bottom:8px">📋</div>
+          <div class="card gov-card">
+            <span class="gov-icon">📋</span>
             <h3 class="h3">Coordinación</h3>
             <p class="p small">Planifica programas, calendariza sesiones, controla asistencia y avances.</p>
           </div>
-          <div class="card" style="text-align:center;padding:24px 16px">
-            <div style="font-size:32px;margin-bottom:8px">🤝</div>
+          <div class="card gov-card">
+            <span class="gov-icon">🤝</span>
             <h3 class="h3">Voluntariado</h3>
-            <p class="p small">Ejecuta sesiones, acompaña estudiantes, reporta y sostiene disciplina educativa.</p>
+            <p class="p small">Ejecuta sesiones, acompaña estudiantes, reporta y sostiene la disciplina educativa.</p>
           </div>
         </div>
 
-        <div class="btnrow" style="margin-top:20px">
+        <div class="btnrow" style="margin-top:24px">
           <a class="btn primary" href="documentos.html">Transparencia y documentos</a>
-          <a class="btn ghost"   href="voluntariado.html">Sumarme como voluntario</a>
+          <a class="btn ghost" href="voluntariado.html">Sumarme como voluntario</a>
         </div>
       </div>
     </div>
@@ -149,9 +235,9 @@
 <footer class="footer">
   <div class="container footer-grid">
     <div>
-      <div class="h3">YANAPAKUY</div>
-      <div class="small">Formación integral para primera generación.</div>
-      <div class="legal">© <span data-year></span> Yanapakuy. Asociación sin fines de lucro.</div>
+      <div class="h3">Yanapakuy — Juntos por el Perú</div>
+      <div class="small">Educación integral para escolares de recursos limitados.</div>
+      <div class="legal">© <span data-year></span> Yanapakuy. Asociación civil sin fines de lucro.</div>
     </div>
     <div>
       <div class="h3" style="font-size:14px;letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-body)">Navegación</div>
@@ -166,6 +252,7 @@
       <div class="small">
         <div><a href="voluntariado.html">Voluntariado</a></div>
         <div><a href="contacto.html">Contacto</a></div>
+        <div><a href="https://www.instagram.com/yanapakuy.pe" target="_blank" rel="noopener">Instagram @yanapakuy.pe</a></div>
       </div>
     </div>
   </div>

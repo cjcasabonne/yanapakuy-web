@@ -3,22 +3,123 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Programas — YANAPAKUY</title>
-  <meta name="description" content="Programas: refuerzo académico, carácter y ciudadanía." />
+  <title>Programa — Yanapakuy</title>
+  <meta name="description" content="Programa formativo Yanapakuy: identidad, valores, disciplina y proyecto de vida. Educación no formal en Manchay, Lima." />
   <meta name="theme-color" content="#c45c1a" />
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--pri);
+      background: var(--pri-light);
+      border: 1px solid rgba(196,92,26,.20);
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--pri);
+      flex-shrink: 0;
+    }
+
+    /* Estructura de sesión */
+    .sesion-flow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      margin: 16px 0 0;
+    }
+    .sesion-paso {
+      display: flex;
+      align-items: center;
+      gap: 0;
+    }
+    .sesion-paso-label {
+      background: var(--pri-light);
+      border: 1px solid rgba(196,92,26,.20);
+      color: var(--pri);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 8px 14px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+    .sesion-arrow {
+      color: var(--muted);
+      font-size: 14px;
+      padding: 0 6px;
+    }
+    .sesion-paso:last-child .sesion-arrow { display: none }
+    .sesion-duracion {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    /* Módulos */
+    .modulo-num {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .modulo-objetivo {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink-2);
+      background: var(--bg-warm);
+      border-radius: 10px;
+      padding: 10px 14px;
+      margin: 10px 0 14px;
+      border-left: 3px solid var(--pri);
+    }
+    .modulo-contenidos-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 14px 0 6px;
+    }
+    .modulo-ejemplo {
+      margin-top: 14px;
+      padding: 12px 14px;
+      background: var(--gold-light);
+      border-radius: 10px;
+      border-left: 3px solid var(--gold);
+      font-size: 14px;
+      color: var(--ink-2);
+      line-height: 1.55;
+    }
+    .modulo-ejemplo strong { color: var(--ink); display: block; margin-bottom: 3px; font-size: 12px; text-transform: uppercase; letter-spacing: .06em }
+    .chips-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px }
+  </style>
 </head>
 <body>
 
 <header class="header">
   <div class="container header-inner">
-    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="Yanapakuy" /></a>
+    <a class="brand" href="index.html" aria-label="Inicio Yanapakuy">
+      <img src="assets/logo.svg" alt="Yanapakuy" />
+    </a>
     <button class="navbtn" data-nav-toggle aria-expanded="false" aria-controls="nav">Menú</button>
-    <nav class="nav" id="nav" data-nav data-open="false">
+    <nav class="nav" id="nav" data-nav data-open="false" aria-label="Navegación principal">
       <a href="quienes-somos.html">Quiénes somos</a>
       <a href="metodologia.html">Metodología</a>
-      <a href="programas.html" aria-current="page">Programas</a>
+      <a href="programas.html" aria-current="page">Programa</a>
       <a href="actividades.html">Actividades</a>
       <a href="documentos.html">Documentos</a>
       <a href="voluntariado.html">Voluntariado</a>
@@ -29,86 +130,176 @@
 
 <main>
 
+  <!-- HERO -->
   <section class="hero">
     <div class="container">
       <div class="hero-card">
-        <div class="kicker anim-up">Qué ofrecemos</div>
-        <h1 class="h1 anim-up">Programas</h1>
-        <p class="p anim-up" style="max-width:540px;font-size:18px">
-          Diseñados para ser sostenibles con presupuesto cero
-          y alto estándar metodológico.
+        <div class="hero-eyebrow anim-up">Programa formativo · Manchay, Lima</div>
+        <h1 class="h1 anim-up">Programa Yanapakuy</h1>
+        <p class="p anim-up" style="max-width:80%;font-size:18px">
+          Un programa de formación de carácter que combina identidad, valores, disciplina
+          y sentido de comunidad mediante educación no formal.
+          Finalidad: formar jóvenes capaces, disciplinados y con propósito de servicio.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Tres programas -->
+  <!-- ESTRUCTURA DE SESIÓN -->
   <section class="section">
-    <div class="container grid grid-3">
-
-      <article class="card reveal" style="border-top:4px solid var(--pri)">
-        <div class="badge" style="margin-bottom:14px">Programa 1</div>
-        <div style="font-size:28px;margin-bottom:10px">📚</div>
-        <h2 class="h2">Refuerzo académico</h2>
-        <p class="p">Matemática y comunicación con práctica guiada, metas semanales y evidencias.</p>
-        <hr class="hr" />
-        <p class="small"><strong>Frecuencia:</strong> semanal</p>
-        <p class="small"><strong>Medición:</strong> asistencia + checklist + mini-evaluaciones</p>
-      </article>
-
-      <article class="card reveal" style="border-top:4px solid var(--gold); animation-delay:.1s">
-        <div class="badge" style="margin-bottom:14px">Programa 2</div>
-        <div style="font-size:28px;margin-bottom:10px">⏰</div>
-        <h2 class="h2">Disciplina y hábitos</h2>
-        <p class="p">Rutinas de estudio, puntualidad, orden, planificación y responsabilidad.</p>
-        <hr class="hr" />
-        <p class="small"><strong>Frecuencia:</strong> semanal</p>
-        <p class="small"><strong>Medición:</strong> hábitos (sí/no) por semana</p>
-      </article>
-
-      <article class="card reveal" style="border-top:4px solid var(--acc); animation-delay:.2s">
-        <div class="badge" style="background:var(--acc-light);border-color:rgba(37,99,176,.25);color:var(--acc);margin-bottom:14px">Programa 3</div>
-        <div style="font-size:28px;margin-bottom:10px">🇵🇪</div>
-        <h2 class="h2">Ciudadanía e identidad</h2>
-        <p class="p">Comunidad, servicio, liderazgo y orgullo peruano con acción práctica.</p>
-        <hr class="hr" />
-        <p class="small"><strong>Frecuencia:</strong> quincenal / mensual</p>
-        <p class="small"><strong>Medición:</strong> participación + proyectos comunitarios</p>
-      </article>
-
+    <div class="container">
+      <div class="card reveal" style="border-top:4px solid var(--pri)">
+        <div class="kicker">Diseño pedagógico</div>
+        <h2 class="h2">Estructura de cada sesión</h2>
+        <p class="p small" style="margin-bottom:4px">Todas las sesiones siguen el mismo esquema. La consistencia es parte del método.</p>
+        <div class="sesion-flow">
+          <div class="sesion-paso">
+            <span class="sesion-paso-label">Introducción</span>
+            <span class="sesion-arrow">→</span>
+          </div>
+          <div class="sesion-paso">
+            <span class="sesion-paso-label">Contexto</span>
+            <span class="sesion-arrow">→</span>
+          </div>
+          <div class="sesion-paso">
+            <span class="sesion-paso-label">Dinámica participativa</span>
+            <span class="sesion-arrow">→</span>
+          </div>
+          <div class="sesion-paso">
+            <span class="sesion-paso-label">Reflexión</span>
+            <span class="sesion-arrow">→</span>
+          </div>
+          <div class="sesion-paso">
+            <span class="sesion-paso-label">Cierre</span>
+            <span class="sesion-arrow"></span>
+          </div>
+        </div>
+        <p class="sesion-duracion">Duración aproximada: 2 horas · Frecuencia: cada dos semanas en Manchay</p>
+      </div>
     </div>
   </section>
 
-  <!-- Indicadores -->
+  <!-- MÓDULOS -->
+  <section class="section">
+    <div class="container">
+      <div style="margin-bottom:20px">
+        <div class="kicker">Contenido</div>
+        <h2 class="h2">Cuatro módulos formativos</h2>
+      </div>
+
+      <div class="grid grid-2">
+
+        <!-- Módulo 1 -->
+        <article class="card reveal" style="border-top:4px solid var(--pri)">
+          <div class="modulo-num">Módulo 1</div>
+          <h3 class="h2">Identidad y comunidad</h3>
+          <div class="modulo-objetivo">
+            Objetivo: construir pertenencia y orgullo colectivo.
+          </div>
+          <div class="modulo-contenidos-title">Contenidos</div>
+          <ul>
+            <li>Historia del Perú</li>
+            <li>Personajes históricos</li>
+            <li>Símbolos nacionales</li>
+            <li>Comunidad y pertenencia</li>
+          </ul>
+          <div class="modulo-ejemplo">
+            <strong>Ejemplo de sesión</strong>
+            Actividad sobre Santa Rosa de Lima: identidad peruana y servicio trabajados en práctica concreta con los niños.
+          </div>
+          <div class="btnrow" style="margin-top:14px">
+            <a class="btn primary" href="recursos/dinamica_santa_rosa_infantil.html">Ver dinámica: Santa Rosa de Lima →</a>
+          </div>
+          <div class="modulo-contenidos-title" style="margin-top:16px">Valores reforzados</div>
+          <div class="chips-row">
+            <span class="chip">Identidad peruana</span>
+            <span class="chip">Comunidad</span>
+            <span class="chip">Solidaridad</span>
+          </div>
+        </article>
+
+        <!-- Módulo 2 -->
+        <article class="card reveal" style="border-top:4px solid var(--gold);animation-delay:.1s">
+          <div class="modulo-num">Módulo 2</div>
+          <h3 class="h2">Valores personales</h3>
+          <div class="modulo-objetivo" style="border-left-color:var(--gold)">
+            Objetivo: desarrollar carácter y ética personal.
+          </div>
+          <div class="modulo-contenidos-title">Valor rector</div>
+          <div class="quote" style="margin:0 0 14px">
+            <p>"Servicio con propósito: formar capacidades, fortalecer carácter, construir ciudadanía."</p>
+            <div class="who">Yanapakuy</div>
+          </div>
+          <div class="modulo-contenidos-title">Valores del programa</div>
+          <div class="chips-row">
+            <span class="chip">Servicio</span>
+            <span class="chip">Disciplina</span>
+            <span class="chip">Responsabilidad</span>
+            <span class="chip">Perseverancia</span>
+            <span class="chip">Honestidad</span>
+            <span class="chip">Respeto</span>
+            <span class="chip">Trabajo en equipo</span>
+            <span class="chip">Excelencia</span>
+          </div>
+        </article>
+
+        <!-- Módulo 3 -->
+        <article class="card reveal" style="border-top:4px solid var(--acc);animation-delay:.15s">
+          <div class="modulo-num">Módulo 3</div>
+          <h3 class="h2">Disciplina y esfuerzo</h3>
+          <div class="modulo-objetivo" style="border-left-color:var(--acc)">
+            Objetivo: instalar hábitos que permitan progreso académico sostenido.
+          </div>
+          <div class="modulo-contenidos-title">Conceptos trabajados</div>
+          <ul>
+            <li>Esfuerzo sostenido</li>
+            <li>Mérito y constancia</li>
+            <li>Mentalidad de crecimiento</li>
+          </ul>
+          <div class="modulo-contenidos-title" style="margin-top:14px">Inspiración teórica</div>
+          <ul>
+            <li><strong>Angela Duckworth</strong> — perseverancia sostenida</li>
+            <li><strong>Carol Dweck</strong> — mentalidad de crecimiento</li>
+          </ul>
+        </article>
+
+        <!-- Módulo 4 -->
+        <article class="card reveal" style="border-top:4px solid var(--ok);animation-delay:.2s">
+          <div class="modulo-num">Módulo 4</div>
+          <h3 class="h2">Proyecto de vida</h3>
+          <div class="modulo-objetivo" style="border-left-color:var(--ok)">
+            Objetivo: ampliar el horizonte de aspiraciones de cada joven.
+          </div>
+          <div class="modulo-contenidos-title">Contenidos</div>
+          <ul>
+            <li>Aspiraciones y metas personales</li>
+            <li>Educación superior</li>
+            <li>Planificación de futuro</li>
+            <li>Liderazgo personal</li>
+          </ul>
+          <div class="modulo-ejemplo">
+            <strong>Enfoque</strong>
+            Soñar en el largo plazo, planear en el mediano, construir en el corto. Este módulo ayuda a cada joven a trazar su propio camino.
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
   <section class="section">
     <div class="container">
       <div class="card reveal" style="background:linear-gradient(135deg,var(--bg-warm),var(--surface));border-color:var(--line-warm)">
-        <div class="kicker">Medición sin burocracia</div>
-        <h2 class="h2">Indicadores simples</h2>
-        <p class="p small" style="margin-bottom:20px">Lo que importa medir, medido de forma que no paraliza la acción.</p>
-
-        <div class="grid grid-2">
-          <div class="card flat" style="border-left:4px solid var(--pri)">
-            <h3 class="h3">Aprendizaje</h3>
-            <ul>
-              <li>Asistencia y continuidad.</li>
-              <li>Progreso por objetivos semanales.</li>
-              <li>Evidencias: ejercicios, tareas, mini-pruebas.</li>
-            </ul>
-          </div>
-          <div class="card flat" style="border-left:4px solid var(--gold)">
-            <h3 class="h3">Carácter</h3>
-            <ul>
-              <li>Puntualidad.</li>
-              <li>Entrega de tareas pequeñas.</li>
-              <li>Trabajo en equipo y respeto.</li>
-            </ul>
-          </div>
-        </div>
-
+        <div class="kicker">Súmate</div>
+        <h2 class="h2">¿Quieres llevar este programa a Manchay?</h2>
+        <p class="p" style="max-width:80%">
+          Buscamos voluntarios presenciales y remotos comprometidos con la formación de carácter.
+          El proceso es simple: postulación, entrevista breve e inducción.
+        </p>
         <div class="btnrow" style="margin-top:20px">
-          <a class="btn primary" href="voluntariado.html">Sumarme como voluntario</a>
-          <a class="btn ghost"   href="actividades.html">Ver actividades</a>
+          <a class="btn primary" href="voluntariado.html">Participar como voluntario</a>
+          <a class="btn ghost" href="metodologia.html">Ver metodología</a>
         </div>
       </div>
     </div>
@@ -119,22 +310,24 @@
 <footer class="footer">
   <div class="container footer-grid">
     <div>
-      <div class="h3">YANAPAKUY</div>
-      <div class="small">Excelencia accesible.</div>
-      <div class="legal">© <span data-year></span> Yanapakuy. Asociación sin fines de lucro.</div>
+      <div class="h3">Yanapakuy — Juntos por el Perú</div>
+      <div class="small">Educación integral para escolares de recursos limitados.</div>
+      <div class="legal">© <span data-year></span> Yanapakuy. Asociación civil sin fines de lucro.</div>
     </div>
     <div>
       <div class="h3" style="font-size:14px;letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-body)">Más</div>
       <div class="small">
         <div><a href="metodologia.html">Metodología</a></div>
+        <div><a href="actividades.html">Actividades</a></div>
         <div><a href="documentos.html">Documentos</a></div>
       </div>
     </div>
     <div>
       <div class="h3" style="font-size:14px;letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-body)">Acción</div>
       <div class="small">
-        <div><a href="contacto.html">Contacto</a></div>
         <div><a href="voluntariado.html">Voluntariado</a></div>
+        <div><a href="contacto.html">Contacto</a></div>
+        <div><a href="https://www.instagram.com/yanapakuy.pe" target="_blank" rel="noopener">Instagram @yanapakuy.pe</a></div>
       </div>
     </div>
   </div>

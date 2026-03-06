@@ -3,22 +3,99 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Documentos — YANAPAKUY</title>
-  <meta name="description" content="Transparencia: documentos, reportes y políticas." />
+  <title>Documentos — Yanapakuy</title>
+  <meta name="description" content="Transparencia institucional de Yanapakuy: constitución legal, código de conducta, política de protección de menores y reporte de actividades." />
   <meta name="theme-color" content="#c45c1a" />
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--pri);
+      background: var(--pri-light);
+      border: 1px solid rgba(196,92,26,.20);
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--pri);
+      flex-shrink: 0;
+    }
+    .doc-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px;
+      background: var(--bg-warm);
+      border-radius: 14px;
+      border: 1px solid var(--line-warm);
+      margin-bottom: 10px;
+      text-decoration: none;
+      transition: box-shadow .15s, transform .15s;
+    }
+    .doc-item:last-child { margin-bottom: 0 }
+    .doc-item:hover { box-shadow: var(--shadow); transform: translateY(-1px) }
+    .doc-item-left { display: flex; align-items: center; gap: 14px }
+    .doc-item-icon {
+      font-size: 24px;
+      width: 44px; height: 44px;
+      background: var(--surface);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border: 1px solid var(--line);
+    }
+    .doc-item-name { font-weight: 700; font-size: 15px; color: var(--ink); margin: 0 0 2px }
+    .doc-item-desc { font-size: 13px; color: var(--muted); margin: 0 }
+    .doc-item-arrow { color: var(--muted); font-size: 18px; flex-shrink: 0 }
+    .doc-item.disabled { pointer-events: none; opacity: .55 }
+    .doc-badge-pronto {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: var(--gold-light);
+      color: var(--gold);
+      border: 1px solid rgba(217,119,6,.25);
+      white-space: nowrap;
+    }
+    .doc-badge-disponible {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: #d1fae5;
+      color: var(--ok);
+      border: 1px solid rgba(45,106,79,.20);
+      white-space: nowrap;
+    }
+  </style>
 </head>
 <body>
 
 <header class="header">
   <div class="container header-inner">
-    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="Yanapakuy" /></a>
+    <a class="brand" href="index.html" aria-label="Inicio Yanapakuy">
+      <img src="assets/logo.svg" alt="Yanapakuy" />
+    </a>
     <button class="navbtn" data-nav-toggle aria-expanded="false" aria-controls="nav">Menú</button>
-    <nav class="nav" id="nav" data-nav data-open="false">
+    <nav class="nav" id="nav" data-nav data-open="false" aria-label="Navegación principal">
       <a href="quienes-somos.html">Quiénes somos</a>
       <a href="metodologia.html">Metodología</a>
-      <a href="programas.html">Programas</a>
+      <a href="programas.html">Programa</a>
       <a href="actividades.html">Actividades</a>
       <a href="documentos.html" aria-current="page">Documentos</a>
       <a href="voluntariado.html">Voluntariado</a>
@@ -29,90 +106,110 @@
 
 <main>
 
+  <!-- HERO -->
   <section class="hero">
     <div class="container">
       <div class="hero-card">
-        <div class="kicker anim-up">Rendición de cuentas</div>
+        <div class="hero-eyebrow anim-up">Transparencia institucional</div>
         <h1 class="h1 anim-up">Documentos</h1>
-        <p class="p anim-up" style="max-width:520px;font-size:18px">
-          Publicación simple: PDFs y enlaces, ordenados por categoría y año.
+        <p class="p anim-up" style="max-width:80%;font-size:18px">
+          Somos una asociación civil legalmente constituida. Esta página recoge los documentos
+          que respaldan nuestra operación y generan confianza con voluntarios, aliados y familias.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Institucional + Políticas -->
+  <!-- INSTITUCIONAL -->
   <section class="section">
     <div class="container grid grid-2">
 
       <div class="card reveal" style="border-top:4px solid var(--pri)">
-        <div class="kicker">Organización</div>
-        <h2 class="h2">Institucional</h2>
-        <ul style="margin-top:12px">
-          <li>
-            <a href="#" aria-disabled="true" style="color:var(--muted)">Acta de constitución (PDF)</a>
-            <span class="small"> — pendiente</span>
-          </li>
-          <li>
-            <a href="#" aria-disabled="true" style="color:var(--muted)">Estatuto (PDF)</a>
-            <span class="small"> — pendiente</span>
-          </li>
-          <li>
-            <a href="#" aria-disabled="true" style="color:var(--muted)">Plan anual (PDF)</a>
-            <span class="small"> — pendiente</span>
-          </li>
-        </ul>
-        <p class="small" style="margin-top:14px;padding:10px;background:var(--bg-warm);border-radius:10px">
-          Reemplaza los "#" por enlaces reales (Drive público o archivos en <code>/assets/docs/</code>).
+        <div class="kicker">Constitución legal</div>
+        <h2 class="h2">Organización</h2>
+        <p class="p small" style="margin-bottom:16px">
+          Yanapakuy es una asociación civil sin fines de lucro, formalmente constituida en Perú.
+          Operamos con respaldo legal desde 2015.
         </p>
+        <div class="doc-item disabled">
+          <div class="doc-item-left">
+            <div class="doc-item-icon">📋</div>
+            <div>
+              <p class="doc-item-name">Acta de constitución</p>
+              <p class="doc-item-desc">Disponible a solicitud · info@yanapakuy.org.pe</p>
+            </div>
+          </div>
+          <span class="doc-badge-pronto">A solicitud</span>
+        </div>
       </div>
 
-      <div class="card reveal" style="border-top:4px solid var(--acc); animation-delay:.1s">
-        <div class="kicker">Obligatorios</div>
-        <h2 class="h2">Políticas</h2>
-        <ul style="margin-top:12px">
-          <li>
-            <a href="#" aria-disabled="true" style="color:var(--muted)">Protección de menores (PDF)</a>
-            <span class="badge" style="font-size:10px;padding:3px 7px;margin-left:6px">obligatorio</span>
-          </li>
-          <li>
-            <a href="#" aria-disabled="true" style="color:var(--muted)">Privacidad y datos personales (PDF)</a>
-          </li>
-          <li>
-            <a href="#" aria-disabled="true" style="color:var(--muted)">Código de conducta voluntarios (PDF)</a>
-          </li>
-        </ul>
+      <div class="card reveal" style="animation-delay:.1s;border-top:4px solid var(--acc)">
+        <div class="kicker">Para voluntarios</div>
+        <h2 class="h2">Conducta y protección</h2>
+        <p class="p small" style="margin-bottom:16px">
+          Antes de iniciar cualquier actividad con niños y adolescentes, todos los voluntarios
+          conocen y aceptan estos protocolos. No es un trámite — es un compromiso.
+        </p>
+        <a class="doc-item" href="recursos/codigo-conducta-voluntarios.html">
+          <div class="doc-item-left">
+            <div class="doc-item-icon">🤝</div>
+            <div>
+              <p class="doc-item-name">Código de conducta para voluntarios</p>
+              <p class="doc-item-desc">Principios y conductas esperadas · v1.0 · 2026</p>
+            </div>
+          </div>
+          <span class="doc-badge-disponible">Disponible</span>
+        </a>
+        <a class="doc-item" href="recursos/politica-proteccion-menores.html">
+          <div class="doc-item-left">
+            <div class="doc-item-icon">🛡️</div>
+            <div>
+              <p class="doc-item-name">Política de protección de menores</p>
+              <p class="doc-item-desc">Protocolos y compromisos · v1.0 · 2026</p>
+            </div>
+          </div>
+          <span class="doc-badge-disponible">Disponible</span>
+        </a>
       </div>
 
     </div>
   </section>
 
-  <!-- Reportes por año -->
+  <!-- REPORTES -->
   <section class="section">
     <div class="container">
       <div class="card reveal" style="background:linear-gradient(135deg,var(--bg-warm),var(--surface));border-color:var(--line-warm)">
-        <div class="kicker">Historial</div>
-        <h2 class="h2">Reportes por año</h2>
-        <p class="p small" style="margin-bottom:20px">Evidencias verificables de actividades y resultados.</p>
+        <div class="kicker">Transparencia</div>
+        <h2 class="h2">Reportes de actividades</h2>
+        <p class="p" style="max-width:85%;margin-bottom:20px">
+          Evidencia verificable del trabajo realizado. Cada sesión, cada módulo, cada presencia en Manchay.
+        </p>
 
-        <details open style="margin-bottom:10px">
-          <summary>📅 2026</summary>
-          <ul style="margin-top:8px">
-            <li><a href="#" aria-disabled="true" style="color:var(--muted)">Reporte de actividades (PDF)</a></li>
-            <li><a href="#" aria-disabled="true" style="color:var(--muted)">Evidencias (Drive)</a></li>
-          </ul>
-        </details>
+        <a class="doc-item" href="recursos/reporte-actividades-2022-2025.html">
+          <div class="doc-item-left">
+            <div class="doc-item-icon">📊</div>
+            <div>
+              <p class="doc-item-name">Reporte general 2022 — 2025</p>
+              <p class="doc-item-desc">Hitos, actividades y aprendizajes del ciclo territorial en Manchay</p>
+            </div>
+          </div>
+          <span class="doc-badge-disponible">Disponible</span>
+        </a>
 
-        <details>
-          <summary>📅 2025</summary>
-          <ul style="margin-top:8px">
-            <li><a href="#" aria-disabled="true" style="color:var(--muted)">Reporte de actividades (PDF)</a></li>
-          </ul>
-        </details>
+        <div class="doc-item disabled" style="margin-top:0">
+          <div class="doc-item-left">
+            <div class="doc-item-icon">📊</div>
+            <div>
+              <p class="doc-item-name">Reporte 2026</p>
+              <p class="doc-item-desc">En elaboración — ciclo en curso</p>
+            </div>
+          </div>
+          <span class="doc-badge-pronto">En curso</span>
+        </div>
 
         <div class="btnrow" style="margin-top:20px">
           <a class="btn primary" href="contacto.html">Solicitar información</a>
-          <a class="btn ghost"   href="voluntariado.html">Voluntariado</a>
+          <a class="btn ghost" href="voluntariado.html">Voluntariado</a>
         </div>
       </div>
     </div>
@@ -123,22 +220,24 @@
 <footer class="footer">
   <div class="container footer-grid">
     <div>
-      <div class="h3">YANAPAKUY</div>
-      <div class="small">Transparencia y comunidad.</div>
-      <div class="legal">© <span data-year></span> Yanapakuy. Asociación sin fines de lucro.</div>
+      <div class="h3">Yanapakuy — Juntos por el Perú</div>
+      <div class="small">Educación integral para escolares de recursos limitados.</div>
+      <div class="legal">© <span data-year></span> Yanapakuy. Asociación civil sin fines de lucro.</div>
     </div>
     <div>
       <div class="h3" style="font-size:14px;letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-body)">Más</div>
       <div class="small">
         <div><a href="quienes-somos.html">Quiénes somos</a></div>
         <div><a href="metodologia.html">Metodología</a></div>
+        <div><a href="programas.html">Programa</a></div>
       </div>
     </div>
     <div>
       <div class="h3" style="font-size:14px;letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-body)">Acción</div>
       <div class="small">
+        <div><a href="voluntariado.html">Voluntariado</a></div>
         <div><a href="contacto.html">Contacto</a></div>
-        <div><a href="programas.html">Programas</a></div>
+        <div><a href="https://www.instagram.com/yanapakuy.pe" target="_blank" rel="noopener">Instagram @yanapakuy.pe</a></div>
       </div>
     </div>
   </div>

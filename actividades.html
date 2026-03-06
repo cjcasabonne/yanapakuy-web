@@ -3,22 +3,120 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Actividades — YANAPAKUY</title>
-  <meta name="description" content="Actividades: timeline, fichas y galería." />
+  <title>Actividades — Yanapakuy</title>
+  <meta name="description" content="Actividades de Yanapakuy en Manchay: timeline de sesiones y galería fotográfica." />
   <meta name="theme-color" content="#c45c1a" />
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--pri);
+      background: var(--pri-light);
+      border: 1px solid rgba(196,92,26,.20);
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--pri);
+      flex-shrink: 0;
+    }
+
+    /* Timeline mejorado */
+    .t-date.proxima  { color: var(--pri) }
+    .t-date.pasada   { color: var(--ok) }
+    .t-date.proxima-dot::before  { background: var(--pri) }
+    .t-date.pasada-dot::before   { background: var(--ok) }
+    .t-item.proxima::before { background: var(--pri) }
+    .t-item.pasada::before  { background: var(--ok) }
+
+    /* Carrusel */
+    .carrusel-wrap {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      background: var(--bg-warm);
+      border: 1px solid var(--line-warm);
+    }
+    .carrusel-track {
+      display: flex;
+      gap: 12px;
+      padding: 16px;
+      will-change: transform;
+      cursor: grab;
+      user-select: none;
+    }
+    .carrusel-track:active { cursor: grabbing }
+    .carrusel-slide {
+      flex-shrink: 0;
+      width: 280px;
+      height: 210px;
+      border-radius: 14px;
+      overflow: hidden;
+      background: var(--line);
+    }
+    .carrusel-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .3s ease;
+    }
+    .carrusel-slide:hover img { transform: scale(1.04) }
+    .carrusel-controls {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 16px 16px;
+    }
+    .carrusel-btn {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      border: 1.5px solid var(--line-warm);
+      background: var(--surface);
+      cursor: pointer;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background .15s, transform .15s;
+    }
+    .carrusel-btn:hover { background: var(--pri-light); transform: scale(1.08) }
+    .carrusel-count {
+      font-size: 13px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      padding: 0 6px;
+    }
+
+    @media (max-width: 600px) {
+      .carrusel-slide { width: 220px; height: 165px }
+    }
+  </style>
 </head>
 <body>
 
 <header class="header">
   <div class="container header-inner">
-    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="Yanapakuy" /></a>
+    <a class="brand" href="index.html" aria-label="Inicio Yanapakuy">
+      <img src="assets/logo.svg" alt="Yanapakuy" />
+    </a>
     <button class="navbtn" data-nav-toggle aria-expanded="false" aria-controls="nav">Menú</button>
-    <nav class="nav" id="nav" data-nav data-open="false">
+    <nav class="nav" id="nav" data-nav data-open="false" aria-label="Navegación principal">
       <a href="quienes-somos.html">Quiénes somos</a>
       <a href="metodologia.html">Metodología</a>
-      <a href="programas.html">Programas</a>
+      <a href="programas.html">Programa</a>
       <a href="actividades.html" aria-current="page">Actividades</a>
       <a href="documentos.html">Documentos</a>
       <a href="voluntariado.html">Voluntariado</a>
@@ -29,83 +127,74 @@
 
 <main>
 
+  <!-- HERO -->
   <section class="hero">
     <div class="container">
       <div class="hero-card">
-        <div class="kicker anim-up">Calendario y registro</div>
+        <div class="hero-eyebrow anim-up">Presencial · Manchay, Lima</div>
         <h1 class="h1 anim-up">Actividades</h1>
-        <p class="p anim-up" style="max-width:520px;font-size:18px">
-          Timeline simple. Cada actividad puede tener su ficha y evidencias.
+        <p class="p anim-up" style="max-width:80%;font-size:18px">
+          Desde 2022 llegamos a Manchay cada dos semanas.
+          Aquí queda el registro.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Timeline + Ficha -->
+  <!-- ACTIVIDADES -->
   <section class="section">
     <div class="container grid grid-2">
 
-      <div class="card reveal">
-        <div class="kicker">Registro</div>
-        <h2 class="h2">Timeline</h2>
-        <ul class="timeline" style="margin-top:16px">
-          <li class="t-item">
-            <div class="t-date">Próximo</div>
-            <div class="t-title">Refuerzo académico — semana 1</div>
-            <p class="t-body">Metas cortas, práctica guiada, evidencias mínimas.</p>
-          </li>
-          <li class="t-item">
-            <div class="t-date">Próximo</div>
-            <div class="t-title">Taller de hábitos — planificación</div>
-            <p class="t-body">Agenda semanal, bloques de estudio, revisión de cumplimiento.</p>
-          </li>
-          <li class="t-item">
-            <div class="t-date">Pasado</div>
-            <div class="t-title">Identidad peruana — servicio con propósito</div>
-            <p class="t-body">Reflexión + actividad práctica de comunidad.</p>
-          </li>
-        </ul>
+      <div class="card reveal" style="border-top:4px solid var(--ok)">
+        <div class="kicker">Desde 2022 · Manchay</div>
+        <h2 class="h2">Lo que hemos trabajado</h2>
+        <p class="p" style="margin-top:12px">
+          Cada dos semanas, una sesión. Cada sesión, un pretexto para formar carácter, construir identidad y fortalecer comunidad.
+        </p>
+        <p class="p">
+          Hemos trabajado el calendario peruano como herramienta pedagógica: Fiestas Patrias, Día de la Madre, Día del Padre, Día de la Bandera, Canción Criolla, Santa Rosa de Lima, Día de Todos los Santos. También el entorno: el Fenómeno del Niño como punto de partida para hablar de resiliencia, territorio y responsabilidad compartida. Y la época: Navidad no como fecha comercial sino como cierre de ciclo y celebración de comunidad.
+        </p>
+        <p class="p">
+          Detrás de cada fecha, los mismos ejes: valores, identidad peruana y disciplina. El calendario es el hilo conductor — el carácter es el objetivo.
+        </p>
+        <div class="quote" style="margin-top:4px">
+          <p>"El ejemplo educa más que la palabra. La constancia, más que el talento."</p>
+          <div class="who">Yanapakuy</div>
+        </div>
       </div>
 
-      <div class="card reveal" style="animation-delay:.1s">
-        <div class="kicker">Plantilla</div>
-        <h2 class="h2">Ficha de actividad</h2>
-        <details open>
-          <summary>Ver estructura</summary>
-          <ul style="margin-top:8px">
-            <li><strong>Título:</strong> nombre claro</li>
-            <li><strong>Objetivo:</strong> 1 frase</li>
-            <li><strong>Público:</strong> edades / criterio</li>
-            <li><strong>Duración:</strong> minutos</li>
-            <li><strong>Materiales:</strong> lista</li>
-            <li><strong>Guion:</strong> 3–5 pasos</li>
-            <li><strong>Evidencia:</strong> foto + asistencia + breve nota</li>
-          </ul>
-        </details>
-        <div class="btnrow">
-          <a class="btn primary" href="documentos.html">Subir evidencias</a>
-          <a class="btn ghost"   href="voluntariado.html">Sumarme</a>
+      <div class="card reveal" style="animation-delay:.1s;border-top:4px solid var(--pri)">
+        <div class="kicker">2026 · Próximas sesiones</div>
+        <h2 class="h2">Retomamos en Manchay</h2>
+        <p class="p" style="margin-top:12px">
+          Estamos reorganizando el equipo para retomar el programa con más estructura y nuevos voluntarios. Las sesiones serán cada dos semanas, siguiendo el mismo formato de siempre: 2 horas, dinámica participativa, reflexión y cierre.
+        </p>
+        <p class="p">
+          Si quieres ser parte de las próximas sesiones — ya sea presencial o desde casa — este es el momento.
+        </p>
+        <div class="btnrow" style="margin-top:8px">
+          <a class="btn primary" href="voluntariado.html">Sumarme como voluntario</a>
+          <a class="btn ghost" href="contacto.html">Escribirnos</a>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- Galería placeholder -->
+  <!-- GALERÍA -->
   <section class="section">
     <div class="container">
-      <div class="card reveal" style="background:linear-gradient(135deg,var(--bg-warm),var(--surface));border-color:var(--line-warm)">
+      <div class="card reveal" style="background:linear-gradient(135deg,var(--bg-warm),var(--surface));border-color:var(--line-warm);padding-bottom:8px">
         <div class="kicker">Evidencias visuales</div>
-        <h2 class="h2">Galería</h2>
-        <div class="grid grid-3">
-          <div class="card flat" style="padding:0;overflow:hidden;border-radius:16px">
-            <img src="assets/img/foto1.jpg" alt="Actividad Yanapakuy 1" style="width:100%;height:220px;object-fit:cover;display:block" />
-          </div>
-          <div class="card flat" style="padding:0;overflow:hidden;border-radius:16px">
-            <img src="assets/img/foto2.jpg" alt="Actividad Yanapakuy 2" style="width:100%;height:220px;object-fit:cover;display:block" />
-          </div>
-          <div class="card flat" style="padding:0;overflow:hidden;border-radius:16px">
-            <img src="assets/img/foto3.jpg" alt="Actividad Yanapakuy 3" style="width:100%;height:220px;object-fit:cover;display:block" />
+        <h2 class="h2">Galería · Manchay</h2>
+
+
+        <div class="carrusel-wrap">
+          <div class="carrusel-track" id="carruselTrack"></div>
+          <div class="carrusel-controls">
+            <button class="carrusel-btn" id="carruselPrev" aria-label="Anterior">←</button>
+            <span class="carrusel-count" id="carruselCount"></span>
+            <button class="carrusel-btn" id="carruselNext" aria-label="Siguiente">→</button>
           </div>
         </div>
       </div>
@@ -117,27 +206,143 @@
 <footer class="footer">
   <div class="container footer-grid">
     <div>
-      <div class="h3">YANAPAKUY</div>
-      <div class="small">Comunidad fuerte, futuro sólido.</div>
-      <div class="legal">© <span data-year></span> Yanapakuy. Asociación sin fines de lucro.</div>
+      <div class="h3">Yanapakuy — Juntos por el Perú</div>
+      <div class="small">Educación integral para escolares de recursos limitados.</div>
+      <div class="legal">© <span data-year></span> Yanapakuy. Asociación civil sin fines de lucro.</div>
     </div>
     <div>
       <div class="h3" style="font-size:14px;letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-body)">Más</div>
       <div class="small">
-        <div><a href="programas.html">Programas</a></div>
+        <div><a href="programas.html">Programa</a></div>
         <div><a href="metodologia.html">Metodología</a></div>
+        <div><a href="documentos.html">Documentos</a></div>
       </div>
     </div>
     <div>
       <div class="h3" style="font-size:14px;letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-body)">Acción</div>
       <div class="small">
-        <div><a href="contacto.html">Contacto</a></div>
         <div><a href="voluntariado.html">Voluntariado</a></div>
+        <div><a href="contacto.html">Contacto</a></div>
+        <div><a href="https://www.instagram.com/yanapakuy.pe" target="_blank" rel="noopener">Instagram @yanapakuy.pe</a></div>
       </div>
     </div>
   </div>
 </footer>
 
 <script src="assets/app.js"></script>
+<script>
+(() => {
+  const track    = document.getElementById('carruselTrack');
+  const btnPrev  = document.getElementById('carruselPrev');
+  const btnNext  = document.getElementById('carruselNext');
+  const countEl  = document.getElementById('carruselCount');
+
+  const BASE     = 'assets/img/';
+  const MAX_PROBE = 50; // busca hasta foto50.jpg
+  const SLIDE_W  = 292; // 280px + 12px gap
+
+  let fotos   = [];
+  let current = 0;
+  let isDragging = false, startX = 0, scrollStart = 0;
+
+  // Detectar fotos disponibles probando imágenes
+  function probarFotos() {
+    let pending = MAX_PROBE;
+    let found   = [];
+
+    for (let i = 1; i <= MAX_PROBE; i++) {
+      const img = new Image();
+      const num = i;
+      img.onload = () => {
+        found.push(num);
+        pending--;
+        if (pending === 0) iniciar(found.sort((a,b) => a - b));
+      };
+      img.onerror = () => {
+        pending--;
+        if (pending === 0) iniciar(found.sort((a,b) => a - b));
+      };
+      img.src = BASE + 'foto' + i + '.jpg';
+    }
+  }
+
+  function iniciar(nums) {
+    fotos = nums;
+    if (!fotos.length) {
+      track.closest('.carrusel-wrap').style.display = 'none';
+      return;
+    }
+    renderSlides();
+    actualizarCount();
+  }
+
+  function renderSlides() {
+    track.innerHTML = '';
+    fotos.forEach((n, i) => {
+      const slide = document.createElement('div');
+      slide.className = 'carrusel-slide';
+      const img = document.createElement('img');
+      img.src = BASE + 'foto' + n + '.jpg';
+      img.alt = 'Actividad Yanapakuy ' + n;
+      img.loading = 'lazy';
+      slide.appendChild(img);
+      track.appendChild(slide);
+    });
+    irA(0, false);
+  }
+
+  function irA(idx, animate) {
+    current = Math.max(0, Math.min(idx, fotos.length - 1));
+    const offset = current * SLIDE_W;
+    track.style.transition = animate ? 'transform .35s cubic-bezier(.22,1,.36,1)' : 'none';
+    track.style.transform  = 'translateX(-' + offset + 'px)';
+    actualizarCount();
+  }
+
+  function actualizarCount() {
+    if (!fotos.length) return;
+    countEl.textContent = (current + 1) + ' / ' + fotos.length;
+  }
+
+  btnNext.addEventListener('click', () => irA(current + 1, true));
+  btnPrev.addEventListener('click', () => irA(current - 1, true));
+
+  // Arrastre con mouse
+  track.addEventListener('mousedown', e => {
+    isDragging = true;
+    startX     = e.clientX;
+    scrollStart = current;
+    track.style.transition = 'none';
+  });
+  window.addEventListener('mousemove', e => {
+    if (!isDragging) return;
+    const diff = startX - e.clientX;
+    const offset = scrollStart * SLIDE_W + diff;
+    track.style.transform = 'translateX(-' + offset + 'px)';
+  });
+  window.addEventListener('mouseup', e => {
+    if (!isDragging) return;
+    isDragging = false;
+    const diff = startX - e.clientX;
+    if (Math.abs(diff) > 60) {
+      irA(diff > 0 ? current + 1 : current - 1, true);
+    } else {
+      irA(current, true);
+    }
+  });
+
+  // Arrastre táctil
+  track.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+    scrollStart = current;
+  }, { passive: true });
+  track.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) irA(diff > 0 ? current + 1 : current - 1, true);
+  });
+
+  probarFotos();
+})();
+</script>
 </body>
 </html>

@@ -3,11 +3,74 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contacto — YANAPAKUY</title>
-  <meta name="description" content="Canales oficiales de contacto de Yanapakuy. Coordinación institucional, voluntariado y colaboración." />
+  <title>Contacto — Yanapakuy</title>
+  <meta name="description" content="Detrás de este sitio hay un equipo real, trabajando en Manchay. Escríbenos." />
   <meta name="theme-color" content="#c45c1a" />
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--pri);
+      background: var(--pri-light);
+      border: 1px solid rgba(196,92,26,.20);
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--pri);
+      flex-shrink: 0;
+    }
+    .hero-card .h1 {
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.08;
+    }
+    .contacto-intro {
+      font-size: 18px;
+      color: var(--ink-2);
+      line-height: 1.8;
+      margin: 0 0 16px;
+      max-width: 85%;
+    }
+    .canal-item {
+      padding: 16px;
+      background: var(--bg-warm);
+      border-radius: 13px;
+      margin-bottom: 10px;
+      border: 1px solid var(--line-warm);
+      transition: box-shadow .15s, transform .15s;
+    }
+    .canal-item:hover { box-shadow: var(--shadow-sm); transform: translateY(-1px) }
+    .canal-item:last-child { margin-bottom: 0 }
+    .canal-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-bottom: 5px;
+    }
+    .canal-value { font-weight: 600; font-size: 16px; color: var(--pri) }
+    .canal-value.muted { color: var(--muted); font-weight: 500; font-size: 14px }
+    .cierre-text {
+      font-family: var(--font-display);
+      font-size: clamp(18px, 2.4vw, 24px);
+      font-style: italic;
+      color: var(--ink-2);
+      line-height: 1.5;
+      margin: 0;
+    }
+  </style>
 </head>
 <body>
 
@@ -20,7 +83,7 @@
     <nav class="nav" id="nav" data-nav data-open="false" aria-label="Navegación principal">
       <a href="quienes-somos.html">Quiénes somos</a>
       <a href="metodologia.html">Metodología</a>
-      <a href="programas.html">Programas</a>
+      <a href="programas.html">Programa</a>
       <a href="actividades.html">Actividades</a>
       <a href="documentos.html">Documentos</a>
       <a href="voluntariado.html">Voluntariado</a>
@@ -31,71 +94,69 @@
 
 <main>
 
+  <!-- HERO -->
   <section class="hero">
     <div class="container">
       <div class="hero-card">
-        <div class="kicker anim-up">Canales oficiales</div>
-        <h1 class="h1 anim-up">Contacto</h1>
-        <p class="p anim-up" style="max-width:520px;font-size:18px">
-          Utiliza nuestros canales institucionales para coordinación,
-          voluntariado o colaboración con la comunidad.
+        <div class="hero-eyebrow anim-up">Canales oficiales · Yanapakuy</div>
+        <h1 class="h1 anim-up">Detrás de este sitio hay<br><em style="color:var(--pri);font-style:italic">un equipo real.</em></h1>
+        <p class="p anim-up" style="max-width:80%;font-size:18px;margin-top:16px">
+          Si algo de lo que leíste te movió — escríbenos. No necesitas tener todo claro.
+          No necesitas saber exactamente cómo quieres ayudar. Solo necesitas querer hacerlo.
+          Del resto hablamos.
         </p>
+        <div class="btnrow anim-up">
+          <a class="btn primary"
+            href="mailto:info@yanapakuy.org.pe?subject=Contacto%20Yanapakuy&body=Nombre%3A%0AMotivo%3A%0ADisponibilidad%3A%0ADetalle%3A%0A">
+            ✉️ Escribirnos ahora
+          </a>
+          <a class="btn ghost" href="voluntariado.html">Voluntariado</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Canales + Formulario -->
+  <!-- CANALES -->
   <section class="section">
     <div class="container grid grid-2">
 
       <article class="card reveal" style="border-top:4px solid var(--pri)">
-        <div class="kicker">Escríbenos</div>
-        <h2 class="h2">Canales directos</h2>
-
-        <ul style="margin-top:12px;list-style:none;padding:0">
-          <li style="padding:14px;background:var(--bg-warm);border-radius:12px;margin-bottom:10px">
-            <div class="small" style="font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px">Correo</div>
-            <a href="mailto:contacto@yanapakuy.org" style="font-weight:600;color:var(--pri)">contacto@yanapakuy.org</a>
-          </li>
-          <li style="padding:14px;background:var(--bg-warm);border-radius:12px;margin-bottom:10px">
-            <div class="small" style="font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px">Redes sociales</div>
-            <a href="#" aria-disabled="true" style="color:var(--muted);margin-right:10px">Instagram</a>
-            <a href="#" aria-disabled="true" style="color:var(--muted)">Facebook</a>
-          </li>
-          <li style="padding:14px;background:var(--bg-warm);border-radius:12px">
-            <div class="small" style="font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px">WhatsApp</div>
-            <span class="small">Disponible cuando el canal institucional esté habilitado</span>
-          </li>
-        </ul>
-
-        <div class="quote" style="margin-top:16px">
-          <p>"Si deseas apoyar, indica claramente qué ofreces, tu disponibilidad y la forma de coordinación."</p>
-          <div class="who">Criterio operativo</div>
+        <div class="kicker">Canales directos</div>
+        <h2 class="h2">Cómo encontrarnos</h2>
+        <div style="margin-top:14px">
+          <div class="canal-item">
+            <div class="canal-label">Correo institucional</div>
+            <a href="mailto:info@yanapakuy.org.pe" class="canal-value">info@yanapakuy.org.pe</a>
+          </div>
+          <div class="canal-item">
+            <div class="canal-label">Instagram</div>
+            <a href="https://www.instagram.com/yanapakuy.pe" target="_blank" rel="noopener" class="canal-value">@yanapakuy.pe</a>
+          </div>
+          <div class="canal-item">
+            <div class="canal-label">WhatsApp</div>
+            <span class="canal-value muted">Próximamente disponible</span>
+          </div>
         </div>
       </article>
 
-      <article class="card reveal" style="animation-delay:.1s; border-top:4px solid var(--gold)">
+      <article class="card reveal" style="animation-delay:.1s;border-top:4px solid var(--gold)">
         <div class="kicker">Acción rápida</div>
-        <h2 class="h2">Enviar mensaje</h2>
-
+        <h2 class="h2">Abrir correo</h2>
         <p class="p small" style="margin-bottom:20px">
-          El sitio funciona con alojamiento estático.
-          El contacto se realiza mediante correo institucional con plantilla lista para completar.
+          Hemos preparado una plantilla para que sea simple. Solo completa los campos y envía.
         </p>
-
-        <div style="padding:20px;background:var(--bg-warm);border-radius:14px;margin-bottom:16px;border:1px solid var(--line-warm)">
-          <div class="small" style="font-weight:700;margin-bottom:8px">La plantilla incluye:</div>
-          <ul class="small" style="margin:0">
+        <div style="padding:16px;background:var(--bg-warm);border-radius:14px;margin-bottom:18px;border:1px solid var(--line-warm)">
+          <div class="small" style="font-weight:700;color:var(--ink);margin-bottom:8px">La plantilla incluye:</div>
+          <ul class="small">
             <li>Nombre</li>
             <li>Motivo del contacto</li>
             <li>Disponibilidad</li>
             <li>Detalle</li>
           </ul>
         </div>
-
         <div class="btnrow" style="flex-direction:column">
           <a class="btn primary" style="width:100%;justify-content:center"
-            href="mailto:contacto@yanapakuy.org?subject=Contacto%20Yanapakuy&body=Nombre%3A%0AMotivo%3A%0ADisponibilidad%3A%0ADetalle%3A%0A">
+            href="mailto:info@yanapakuy.org.pe?subject=Contacto%20Yanapakuy&body=Nombre%3A%0AMotivo%3A%0ADisponibilidad%3A%0ADetalle%3A%0A">
             ✉️ Abrir correo con plantilla
           </a>
           <a class="btn ghost" style="width:100%;justify-content:center" href="voluntariado.html">
@@ -107,13 +168,32 @@
     </div>
   </section>
 
-  <!-- Privacidad -->
+  <!-- CIERRE -->
+  <section class="section">
+    <div class="container">
+      <div class="card reveal" style="background:var(--pri);border-color:transparent;padding:48px 44px;text-align:center">
+        <p class="cierre-text" style="color:rgba(255,255,255,.90);max-width:85%;margin:0 auto 24px">
+          "Cada mensaje que recibimos es una persona que decidió que esto le importa. Eso no es poco."
+        </p>
+        <div class="btnrow" style="justify-content:center">
+          <a class="btn" style="background:#fff;color:var(--pri);border-color:transparent;font-weight:800"
+            href="mailto:info@yanapakuy.org.pe?subject=Contacto%20Yanapakuy&body=Nombre%3A%0AMotivo%3A%0ADisponibilidad%3A%0ADetalle%3A%0A">
+            Escribirnos
+          </a>
+          <a class="btn" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.35)" href="voluntariado.html">
+            Voluntariado
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIVACIDAD -->
   <section class="section">
     <div class="container">
       <div class="card reveal" style="background:linear-gradient(135deg,var(--bg-warm),var(--surface));border-color:var(--line-warm)">
         <div class="kicker">Datos y privacidad</div>
         <h2 class="h2">Protección de datos</h2>
-
         <div class="grid grid-2" style="margin-top:16px">
           <div class="card flat" style="border-left:4px solid var(--ok)">
             <h3 class="h3">Uso de datos</h3>
@@ -124,7 +204,6 @@
             <p class="p small">Cuando las actividades involucren menores de edad, se aplican protocolos de protección y consentimiento establecidos por la organización.</p>
           </div>
         </div>
-
         <div class="btnrow" style="margin-top:16px">
           <a class="btn ghost" href="documentos.html">Ver políticas institucionales</a>
         </div>
@@ -137,9 +216,9 @@
 <footer class="footer">
   <div class="container footer-grid">
     <div>
-      <div class="h3">YANAPAKUY</div>
+      <div class="h3">Yanapakuy — Juntos por el Perú</div>
       <div class="small">Educación integral para escolares de recursos limitados.</div>
-      <div class="legal">© <span data-year></span> Yanapakuy. Asociación sin fines de lucro.</div>
+      <div class="legal">© <span data-year></span> Yanapakuy. Asociación civil sin fines de lucro.</div>
     </div>
     <div>
       <div class="h3" style="font-size:14px;letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-body)">Más</div>
@@ -149,10 +228,10 @@
       </div>
     </div>
     <div>
-      <div class="h3" style="font-size:14px;letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-body)">Más</div>
+      <div class="h3" style="font-size:14px;letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-body)">Acción</div>
       <div class="small">
-        <div><a href="programas.html">Programas</a></div>
-        <div><a href="actividades.html">Actividades</a></div>
+        <div><a href="voluntariado.html">Voluntariado</a></div>
+        <div><a href="https://www.instagram.com/yanapakuy.pe" target="_blank" rel="noopener">Instagram @yanapakuy.pe</a></div>
       </div>
     </div>
   </div>

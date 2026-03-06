@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Código de Conducta para Voluntarios — Yanapakuy</title>
+  <meta name="theme-color" content="#c45c1a" />
+  <link rel="icon" href="../assets/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../assets/styles.css" />
+  <style>
+    .doc-header {
+      background: var(--pri);
+      color: #fff;
+      padding: 48px 0 32px;
+    }
+    .doc-header .kicker { color: rgba(255,255,255,.65) }
+    .doc-header .h1 { color: #fff; margin-bottom: 8px }
+    .doc-header .sub { color: rgba(255,255,255,.80); font-size: 16px; max-width: 85% }
+    .doc-meta {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .doc-meta-item {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.60);
+    }
+    .doc-meta-item span { color: rgba(255,255,255,.90); display: block; font-size: 14px; margin-top: 2px }
+    .doc-body { padding: 40px 0 60px }
+    .doc-section { margin-bottom: 36px }
+    .doc-section-title {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--ink);
+      border-left: 4px solid var(--pri);
+      padding-left: 14px;
+      margin-bottom: 14px;
+      letter-spacing: -.01em;
+    }
+    .doc-section-num {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--pri);
+      margin-bottom: 4px;
+    }
+    .doc-p {
+      font-size: 16px;
+      color: var(--ink-2);
+      line-height: 1.75;
+      margin: 0 0 12px;
+    }
+    .doc-list {
+      margin: 0 0 12px;
+      padding-left: 1.4em;
+    }
+    .doc-list li {
+      font-size: 16px;
+      color: var(--ink-2);
+      line-height: 1.7;
+      margin: 6px 0;
+    }
+    .doc-list li strong { color: var(--ink) }
+    .doc-callout {
+      background: var(--pri-light);
+      border-left: 4px solid var(--pri);
+      border-radius: 0 14px 14px 0;
+      padding: 16px 20px;
+      margin: 16px 0;
+    }
+    .doc-callout p { margin: 0; font-size: 15px; color: var(--ink-2); line-height: 1.65 }
+    .doc-callout strong { color: var(--pri) }
+    .doc-warning {
+      background: #fff3cd;
+      border-left: 4px solid var(--gold);
+      border-radius: 0 14px 14px 0;
+      padding: 16px 20px;
+      margin: 16px 0;
+    }
+    .doc-warning p { margin: 0; font-size: 15px; color: var(--ink-2); line-height: 1.65 }
+    .doc-footer-note {
+      background: var(--bg-warm);
+      border: 1px solid var(--line-warm);
+      border-radius: 16px;
+      padding: 24px;
+      margin-top: 40px;
+      text-align: center;
+    }
+    .doc-footer-note p { font-size: 14px; color: var(--muted); margin: 0 }
+    .doc-footer-note strong { color: var(--ink) }
+    .print-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 16px;
+      padding: 10px 20px;
+      background: var(--pri);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      font-family: var(--font-body);
+    }
+    @media print {
+      .header, .doc-header .print-btn, .back-link { display: none }
+      .doc-header { padding: 24px 0 16px }
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      color: rgba(255,255,255,.75);
+      margin-bottom: 20px;
+      text-decoration: none;
+    }
+    .back-link:hover { color: #fff }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html" aria-label="Inicio Yanapakuy">
+      <img src="../assets/logo.svg" alt="Yanapakuy" />
+    </a>
+    <button class="navbtn" data-nav-toggle aria-expanded="false" aria-controls="nav">Menú</button>
+    <nav class="nav" id="nav" data-nav data-open="false">
+      <a href="../quienes-somos.html">Quiénes somos</a>
+      <a href="../metodologia.html">Metodología</a>
+      <a href="../programas.html">Programa</a>
+      <a href="../actividades.html">Actividades</a>
+      <a href="../documentos.html">Documentos</a>
+      <a href="../voluntariado.html">Voluntariado</a>
+      <a href="../contacto.html">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<div class="doc-header">
+  <div class="container">
+    <a class="back-link" href="../documentos.html">← Volver a Documentos</a>
+    <div class="kicker">Documento institucional</div>
+    <h1 class="h1">Código de Conducta<br>para Voluntarios</h1>
+    <p class="sub">Yanapakuy — Juntos por el Perú</p>
+    <div class="doc-meta">
+      <div class="doc-meta-item">Versión <span>1.0 · 2026</span></div>
+      <div class="doc-meta-item">Aplicación <span>Todos los voluntarios</span></div>
+      <div class="doc-meta-item">Territorio <span>Manchay, Lima</span></div>
+    </div>
+    <button class="print-btn" onclick="window.print()">Imprimir / Guardar PDF</button>
+  </div>
+</div>
+
+<div class="doc-body">
+  <div class="container" style="max-width:780px">
+
+    <div class="doc-callout">
+      <p><strong>Propósito de este documento:</strong> Establecer los principios y conductas esperadas de toda persona que participe como voluntaria en Yanapakuy, asegurando un entorno seguro, respetuoso y formativo para los niños, adolescentes y el equipo.</p>
+    </div>
+
+    <!-- 1 -->
+    <div class="doc-section">
+      <div class="doc-section-num">Artículo 1</div>
+      <div class="doc-section-title">Compromiso con la misión</div>
+      <p class="doc-p">El voluntario de Yanapakuy comprende y comparte la misión de la organización: promover el desarrollo académico y personal de niños y adolescentes en situación de vulnerabilidad mediante acompañamiento sostenido, formación de carácter e identidad.</p>
+      <p class="doc-p">El voluntario actúa con coherencia entre lo que enseña y lo que hace. <strong>El ejemplo educa más que la palabra.</strong></p>
+    </div>
+
+    <!-- 2 -->
+    <div class="doc-section">
+      <div class="doc-section-num">Artículo 2</div>
+      <div class="doc-section-title">Conducta con los estudiantes</div>
+      <ul class="doc-list">
+        <li>Tratar a cada estudiante con <strong>respeto, paciencia y dignidad</strong>, sin distinción de origen, nivel académico o condición.</li>
+        <li>Mantener un lenguaje adecuado, positivo y formativo en todo momento.</li>
+        <li>No establecer relaciones de favoritismo ni vínculos personales que excedan el marco del programa.</li>
+        <li>No compartir datos personales de los estudiantes con terceros ajenos a la organización.</li>
+        <li>Reportar al coordinador cualquier situación que pueda afectar el bienestar de un estudiante.</li>
+      </ul>
+    </div>
+
+    <!-- 3 -->
+    <div class="doc-section">
+      <div class="doc-section-num">Artículo 3</div>
+      <div class="doc-section-title">Puntualidad y constancia</div>
+      <p class="doc-p">La constancia es parte del método. La presencia regular del voluntario es en sí misma un mensaje formativo para los estudiantes.</p>
+      <ul class="doc-list">
+        <li>Asistir puntualmente a las sesiones programadas.</li>
+        <li>Comunicar con anticipación cualquier ausencia al coordinador.</li>
+        <li>Cumplir con los compromisos asumidos durante la inducción.</li>
+      </ul>
+    </div>
+
+    <!-- 4 -->
+    <div class="doc-section">
+      <div class="doc-section-num">Artículo 4</div>
+      <div class="doc-section-title">Protección de menores</div>
+      <div class="doc-warning">
+        <p><strong>Principio no negociable:</strong> La seguridad y el bienestar de los menores de edad tienen prioridad absoluta sobre cualquier otra consideración.</p>
+      </div>
+      <ul class="doc-list">
+        <li>Nunca estar a solas con un menor sin la presencia de otro adulto.</li>
+        <li>No realizar contacto físico inapropiado.</li>
+        <li>No fotografiar ni filmar a los estudiantes sin autorización expresa de la coordinación y de los padres o tutores.</li>
+        <li>No compartir imágenes de menores en redes sociales personales sin autorización.</li>
+        <li>Ante cualquier sospecha de maltrato o situación de riesgo, comunicar de inmediato al coordinador.</li>
+      </ul>
+    </div>
+
+    <!-- 5 -->
+    <div class="doc-section">
+      <div class="doc-section-num">Artículo 5</div>
+      <div class="doc-section-title">Relación con el equipo</div>
+      <ul class="doc-list">
+        <li>Colaborar con el equipo de voluntarios y coordinación con respeto y disposición.</li>
+        <li>Comunicar dudas, dificultades o sugerencias de forma directa y constructiva.</li>
+        <li>No actuar de forma unilateral en decisiones que afecten al programa o a los estudiantes.</li>
+        <li>Respetar la confidencialidad de la información institucional.</li>
+      </ul>
+    </div>
+
+    <!-- 6 -->
+    <div class="doc-section">
+      <div class="doc-section-num">Artículo 6</div>
+      <div class="doc-section-title">Uso de redes sociales e imagen institucional</div>
+      <ul class="doc-list">
+        <li>No publicar contenido en nombre de Yanapakuy sin autorización de la coordinación.</li>
+        <li>Cuidar la imagen de la organización en espacios digitales y presenciales.</li>
+        <li>El canal oficial de comunicación es <strong>@yanapakuy.pe</strong> en Instagram.</li>
+      </ul>
+    </div>
+
+    <!-- 7 -->
+    <div class="doc-section">
+      <div class="doc-section-num">Artículo 7</div>
+      <div class="doc-section-title">Consecuencias del incumplimiento</div>
+      <p class="doc-p">El incumplimiento de este código puede derivar en la suspensión temporal o definitiva de la participación como voluntario, según la gravedad de la situación. Las situaciones que pongan en riesgo la seguridad de menores serán tratadas con máxima seriedad y podrán derivarse a las autoridades competentes.</p>
+    </div>
+
+    <div class="doc-footer-note">
+      <p><strong>Yanapakuy — Juntos por el Perú</strong></p>
+      <p style="margin-top:6px">Asociación civil sin fines de lucro · Manchay, Lima · Desde 2015</p>
+      <p style="margin-top:6px">Contacto: <a href="mailto:info@yanapakuy.org.pe" style="color:var(--pri)">info@yanapakuy.org.pe</a> · <a href="https://www.instagram.com/yanapakuy.pe" target="_blank" rel="noopener" style="color:var(--pri)">@yanapakuy.pe</a></p>
+    </div>
+
+  </div>
+</div>
+
+<script src="../assets/app.js"></script>
+</body>
+</html>

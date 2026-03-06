@@ -3,11 +3,116 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Metodología — YANAPAKUY</title>
-  <meta name="description" content="Metodología Yanapakuy: disciplina diaria, acompañamiento y excelencia accesible con enfoque práctico." />
+  <title>Metodología — Yanapakuy</title>
+  <meta name="description" content="Metodología Yanapakuy: disciplina diaria, ruta de intervención y marco teórico aplicado en Manchay, Lima." />
   <meta name="theme-color" content="#c45c1a" />
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--pri);
+      background: var(--pri-light);
+      border: 1px solid rgba(196,92,26,.20);
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--pri);
+      flex-shrink: 0;
+    }
+
+    /* Ruta de intervención */
+    .ruta-list { list-style: none; padding: 0; margin: 0 }
+    .ruta-item {
+      display: flex;
+      gap: 16px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--line-warm);
+    }
+    .ruta-item:last-child { border-bottom: none; padding-bottom: 0 }
+    .ruta-num {
+      flex-shrink: 0;
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      background: var(--pri);
+      color: #fff;
+      font-weight: 800;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+    .ruta-body {}
+    .ruta-title { font-weight: 700; font-size: 16px; color: var(--ink); margin: 0 0 4px }
+    .ruta-desc  { font-size: 14px; color: var(--ink-2); margin: 0; line-height: 1.55 }
+
+    /* Marco teórico */
+    .marco-group { margin-bottom: 24px }
+    .marco-group:last-child { margin-bottom: 0 }
+    .marco-group-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 1px solid var(--line-warm);
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+    }
+    .marco-item {
+      padding: 13px 15px;
+      background: var(--bg-warm);
+      border-radius: 13px;
+      border-left: 3px solid var(--pri);
+      margin-bottom: 8px;
+    }
+    .marco-item:last-child { margin-bottom: 0 }
+    .marco-item:nth-child(2n) { border-left-color: var(--gold) }
+    .marco-item:nth-child(3n) { border-left-color: var(--acc) }
+    .marco-header {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 4px;
+      flex-wrap: wrap;
+    }
+    .marco-name { font-weight: 700; font-size: 15px; color: var(--ink) }
+    .marco-concepto {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--pri);
+      background: var(--pri-light);
+      padding: 2px 8px;
+      border-radius: 999px;
+    }
+    .marco-desc { font-size: 14px; color: var(--ink-2); line-height: 1.6; margin: 0 }
+
+    /* Principios */
+    .principio-item {
+      padding: 14px 16px;
+      border-radius: 13px;
+      background: var(--bg-warm);
+      margin-bottom: 10px;
+      border-left: 3px solid var(--pri);
+    }
+    .principio-item:nth-child(2n) { border-left-color: var(--gold) }
+    .principio-item:nth-child(3n) { border-left-color: var(--acc) }
+    .principio-item:last-child { margin-bottom: 0 }
+    .principio-title { font-weight: 700; font-size: 15px; color: var(--ink); margin: 0 0 3px }
+    .principio-desc  { font-size: 14px; color: var(--ink-2); margin: 0; line-height: 1.55 }
+  </style>
 </head>
 <body>
 
@@ -31,12 +136,13 @@
 
 <main>
 
+  <!-- HERO -->
   <section class="hero">
     <div class="container">
       <div class="hero-card">
-        <div class="kicker anim-up">Cómo trabajamos</div>
+        <div class="hero-eyebrow anim-up">Cómo trabajamos · Manchay, Lima</div>
         <h1 class="h1 anim-up">Metodología</h1>
-        <p class="p anim-up" style="max-width:560px;font-size:18px">
+        <p class="p anim-up" style="max-width:80%;font-size:18px">
           Estructura clara, exigencia con cuidado y hábitos sostenibles.
           Aprender no es un evento: <em>es un sistema.</em>
         </p>
@@ -50,102 +156,202 @@
     </div>
   </section>
 
-  <!-- Principios + Ruta -->
+  <!-- PRINCIPIOS + RUTA -->
   <section class="section">
     <div class="container grid grid-2">
 
       <article class="card reveal" style="border-top:4px solid var(--pri)">
         <div class="kicker">Fundamentos</div>
         <h2 class="h2">Principios operativos</h2>
-        <ul style="margin-top:10px">
-          <li><strong>Disciplina:</strong> rutinas, puntualidad, metas cortas y seguimiento.</li>
-          <li><strong>Perseverancia:</strong> progreso por repetición, no por talento.</li>
-          <li><strong>Responsabilidad:</strong> compromisos simples y evidencia de avance.</li>
-          <li><strong>Trabajo en equipo:</strong> apoyo entre pares y liderazgo por ejemplo.</li>
-          <li><strong>Identidad peruana:</strong> pertenencia y ciudadanía práctica.</li>
-        </ul>
-        <div class="quote" style="margin-top:16px">
+        <div style="margin-top:14px">
+          <div class="principio-item">
+            <div class="principio-title">Disciplina</div>
+            <p class="principio-desc">Rutinas, puntualidad, metas cortas y seguimiento. Lo que no se practica no se aprende.</p>
+          </div>
+          <div class="principio-item">
+            <div class="principio-title">Perseverancia</div>
+            <p class="principio-desc">El progreso viene de la repetición, no del talento. Grit antes que genio.</p>
+          </div>
+          <div class="principio-item">
+            <div class="principio-title">Responsabilidad</div>
+            <p class="principio-desc">Compromisos simples, evidencia de avance y rendición de cuentas mínima pero real.</p>
+          </div>
+          <div class="principio-item">
+            <div class="principio-title">Trabajo en equipo</div>
+            <p class="principio-desc">Apoyo entre pares, liderazgo por ejemplo, no por jerarquía.</p>
+          </div>
+          <div class="principio-item">
+            <div class="principio-title">Identidad peruana</div>
+            <p class="principio-desc">Pertenencia, orgullo y ciudadanía práctica como parte del proceso formativo.</p>
+          </div>
+        </div>
+        <div class="quote" style="margin-top:18px">
           <p>"Excelencia accesible: alto estándar con método, sin elitismo."</p>
           <div class="who">Yanapakuy</div>
         </div>
       </article>
 
-      <article class="card reveal" style="animation-delay:.1s; border-top:4px solid var(--acc)">
+      <article class="card reveal" style="animation-delay:.1s;border-top:4px solid var(--acc)">
         <div class="kicker">Paso a paso</div>
         <h2 class="h2">Ruta de intervención</h2>
-        <ol style="margin-top:10px;padding-left:1.4em">
-          <li style="margin:10px 0"><strong>Diagnóstico:</strong> nivel, hábitos y contexto.</li>
-          <li style="margin:10px 0"><strong>Plan:</strong> objetivos semanales y mensuales.</li>
-          <li style="margin:10px 0"><strong>Sesiones:</strong> práctica guiada y tareas pequeñas.</li>
-          <li style="margin:10px 0"><strong>Seguimiento:</strong> asistencia, evidencias y retroalimentación.</li>
-          <li style="margin:10px 0"><strong>Refuerzo:</strong> ajustes, mentoría y acompañamiento.</li>
-        </ol>
-        <p class="small" style="margin-top:10px">Lo que no se puede sostener, no se implementa.</p>
+        <ul class="ruta-list" style="margin-top:14px">
+          <li class="ruta-item">
+            <div class="ruta-num">1</div>
+            <div class="ruta-body">
+              <p class="ruta-title">Diagnóstico</p>
+              <p class="ruta-desc">Nivel académico, hábitos y contexto del estudiante. Sin asumir, sin etiquetar.</p>
+            </div>
+          </li>
+          <li class="ruta-item">
+            <div class="ruta-num">2</div>
+            <div class="ruta-body">
+              <p class="ruta-title">Plan</p>
+              <p class="ruta-desc">Objetivos semanales y mensuales ajustados a la realidad concreta del niño.</p>
+            </div>
+          </li>
+          <li class="ruta-item">
+            <div class="ruta-num">3</div>
+            <div class="ruta-body">
+              <p class="ruta-title">Sesiones</p>
+              <p class="ruta-desc">Práctica guiada cada dos semanas en Manchay, con tareas pequeñas entre sesiones.</p>
+            </div>
+          </li>
+          <li class="ruta-item">
+            <div class="ruta-num">4</div>
+            <div class="ruta-body">
+              <p class="ruta-title">Seguimiento</p>
+              <p class="ruta-desc">Asistencia, evidencias simples y retroalimentación directa. Sin burocracia.</p>
+            </div>
+          </li>
+          <li class="ruta-item">
+            <div class="ruta-num">5</div>
+            <div class="ruta-body">
+              <p class="ruta-title">Ajuste</p>
+              <p class="ruta-desc">Revisión del plan, mentoría y acompañamiento sostenido. Lo que no funciona, se cambia.</p>
+            </div>
+          </li>
+        </ul>
+        <p class="small" style="margin-top:16px;font-style:italic;color:var(--muted)">Lo que no se puede sostener, no se implementa.</p>
       </article>
 
     </div>
   </section>
 
-  <!-- Marco teórico -->
-  <section class="section">
-    <div class="container">
-      <div class="card reveal">
-        <div class="kicker">Base conceptual</div>
-        <h2 class="h2">Marco teórico (uso práctico)</h2>
-        <p class="p small" style="margin-bottom:20px">Referentes que informan nuestras decisiones — sin academicismo vacío.</p>
-
-        <div class="grid grid-2">
-          <details open style="animation-delay:.05s">
-            <summary>📖 Freire y ciudadanía</summary>
-            <p class="p" style="margin-top:8px">Educación para comprender la realidad y actuar con responsabilidad.</p>
-          </details>
-          <details open style="animation-delay:.10s">
-            <summary>🏛️ Bourdieu y capital cultural</summary>
-            <p class="p" style="margin-top:8px">Reducimos brechas con estructura, lenguaje académico y referentes.</p>
-          </details>
-          <details style="animation-delay:.15s">
-            <summary>📈 Heckman y retorno social</summary>
-            <p class="p" style="margin-top:8px">Invertir temprano en habilidades y carácter multiplica oportunidades.</p>
-          </details>
-          <details style="animation-delay:.20s">
-            <summary>🧠 Duckworth, Frankl, Dweck</summary>
-            <p class="p" style="margin-top:8px">Perseverancia, sentido y mentalidad de crecimiento sostienen la continuidad.</p>
-          </details>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Convivencia -->
+  <!-- MARCO TEÓRICO -->
   <section class="section">
     <div class="container">
       <div class="card reveal" style="background:linear-gradient(135deg,var(--bg-warm),var(--surface));border-color:var(--line-warm)">
-        <div class="kicker">Acuerdos básicos</div>
-        <h2 class="h2">Reglas mínimas de convivencia</h2>
+        <div class="kicker">Base conceptual</div>
+        <h2 class="h2">Marco teórico — uso práctico</h2>
+        <p class="p" style="max-width:85%;margin-bottom:28px">
+          Referentes que informan nuestras decisiones concretas — sin academicismo vacío.
+        </p>
 
-        <div class="grid grid-2" style="margin-top:16px">
-          <div class="card flat" style="border-left:4px solid var(--acc)">
-            <h3 class="h3">Para estudiantes</h3>
-            <ul>
-              <li>Puntualidad.</li>
-              <li>Respeto.</li>
-              <li>Tarea pequeña, constante.</li>
-              <li>Honestidad: decir "no entendí" es válido.</li>
-            </ul>
+        <div class="grid grid-3" style="gap:24px">
+
+          <div class="marco-group">
+            <div class="marco-group-title">Educación no formal</div>
+            <div class="marco-item">
+              <div class="marco-header">
+                <span class="marco-name">Philip Coombs</span>
+                <span class="marco-concepto">Educación no formal</span>
+              </div>
+              <p class="marco-desc">Actividades organizadas fuera del sistema oficial para facilitar aprendizajes específicos. Yanapakuy opera exactamente en ese espacio.</p>
+            </div>
+            <div class="marco-item">
+              <div class="marco-header">
+                <span class="marco-name">Jaume Trilla</span>
+                <span class="marco-concepto">Tiempo libre con propósito</span>
+              </div>
+              <p class="marco-desc">Uso del tiempo libre con intencionalidad educativa. Nuestras sesiones no son recreo ni tarea — son formación con propósito.</p>
+            </div>
+
+            <div class="marco-group-title" style="margin-top:20px">Sociología</div>
+            <div class="marco-item">
+              <div class="marco-header">
+                <span class="marco-name">Pierre Bourdieu</span>
+                <span class="marco-concepto">Capital cultural</span>
+              </div>
+              <p class="marco-desc">Capital cultural como mecanismo de reproducción social. Yanapakuy interviene para compensar esa brecha.</p>
+            </div>
+            <div class="marco-item">
+              <div class="marco-header">
+                <span class="marco-name">Bernard Lahire</span>
+                <span class="marco-concepto">Ambición posible</span>
+              </div>
+              <p class="marco-desc">La ambición educativa es posible con un vínculo protector sostenido. El voluntario es ese vínculo.</p>
+            </div>
           </div>
-          <div class="card flat" style="border-left:4px solid var(--pri)">
-            <h3 class="h3">Para voluntarios</h3>
-            <ul>
-              <li>Ejemplo: coherencia entre palabra y acción.</li>
-              <li>Registro simple: asistencia y avances.</li>
-              <li>Protección de menores: protocolos y límites claros.</li>
-            </ul>
+
+          <div class="marco-group">
+            <div class="marco-group-title">Psicopedagogía</div>
+            <div class="marco-item">
+              <div class="marco-header">
+                <span class="marco-name">Lev Vygotsky</span>
+                <span class="marco-concepto">Zona de Desarrollo Próximo</span>
+              </div>
+              <p class="marco-desc">El voluntario como mediador entre lo que el niño puede solo y lo que puede con apoyo estructurado.</p>
+            </div>
+            <div class="marco-item">
+              <div class="marco-header">
+                <span class="marco-name">David Ausubel</span>
+                <span class="marco-concepto">Aprendizaje significativo</span>
+              </div>
+              <p class="marco-desc">Nada se aprende de verdad si no se conecta con lo que ya se sabe. Partimos del contexto real del niño.</p>
+            </div>
+            <div class="marco-item">
+              <div class="marco-header">
+                <span class="marco-name">Albert Bandura</span>
+                <span class="marco-concepto">Autoeficacia y modelado</span>
+              </div>
+              <p class="marco-desc">Ver a alguien parecido lograr algo cambia lo que crees posible. Los voluntarios no solo enseñan — modelan.</p>
+            </div>
+            <div class="marco-item">
+              <div class="marco-header">
+                <span class="marco-name">Urie Bronfenbrenner</span>
+                <span class="marco-concepto">Influencia sistémica</span>
+              </div>
+              <p class="marco-desc">El niño no aprende solo en el aula. Su barrio y comunidad forman parte del proceso. Por eso trabajamos en el territorio.</p>
+            </div>
           </div>
+
+          <div class="marco-group">
+            <div class="marco-group-title">Carácter y sentido</div>
+            <div class="marco-item">
+              <div class="marco-header">
+                <span class="marco-name">Angela Duckworth</span>
+                <span class="marco-concepto">Perseverancia sostenida</span>
+              </div>
+              <p class="marco-desc">El talento sin constancia no llega lejos. Nuestras sesiones en Manchay son en sí mismas un ejercicio de grit.</p>
+            </div>
+            <div class="marco-item">
+              <div class="marco-header">
+                <span class="marco-name">Viktor Frankl</span>
+                <span class="marco-concepto">Sentido como motor</span>
+              </div>
+              <p class="marco-desc">Quien tiene un por qué aguanta cualquier cómo. Ayudamos a los jóvenes a construir ese sentido.</p>
+            </div>
+            <div class="marco-item">
+              <div class="marco-header">
+                <span class="marco-name">Carol Dweck</span>
+                <span class="marco-concepto">Mentalidad de crecimiento</span>
+              </div>
+              <p class="marco-desc">La inteligencia no es fija. Con la retroalimentación correcta, cualquier niño puede aprender a aprender.</p>
+            </div>
+            <div class="marco-item">
+              <div class="marco-header">
+                <span class="marco-name">Paulo Freire</span>
+                <span class="marco-concepto">Conciencia crítica</span>
+              </div>
+              <p class="marco-desc">Educar es despertar conciencia, no depositar información. Nuestros talleres de ciudadanía parten de esa base.</p>
+            </div>
+          </div>
+
         </div>
 
-        <div class="btnrow" style="margin-top:20px">
+        <div class="btnrow" style="margin-top:24px">
           <a class="btn primary" href="programas.html">Ver programas</a>
-          <a class="btn ghost"   href="documentos.html">Políticas y documentos</a>
+          <a class="btn ghost" href="documentos.html">Políticas y documentos</a>
         </div>
       </div>
     </div>
@@ -156,9 +362,9 @@
 <footer class="footer">
   <div class="container footer-grid">
     <div>
-      <div class="h3">YANAPAKUY</div>
+      <div class="h3">Yanapakuy — Juntos por el Perú</div>
       <div class="small">Disciplina, comunidad, futuro.</div>
-      <div class="legal">© <span data-year></span> Yanapakuy. Asociación sin fines de lucro.</div>
+      <div class="legal">© <span data-year></span> Yanapakuy. Asociación civil sin fines de lucro.</div>
     </div>
     <div>
       <div class="h3" style="font-size:14px;letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-body)">Más</div>
@@ -173,6 +379,7 @@
       <div class="small">
         <div><a href="voluntariado.html">Voluntariado</a></div>
         <div><a href="contacto.html">Contacto</a></div>
+        <div><a href="https://www.instagram.com/yanapakuy.pe" target="_blank" rel="noopener">Instagram @yanapakuy.pe</a></div>
       </div>
     </div>
   </div>

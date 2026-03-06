@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>30 de agosto – Dinámica Infantil | Santa Rosa de Lima</title>
+  <style>
+    :root{
+      --bg:#f9fafb;
+      --card:#ffffff;
+      --ink:#0f172a;
+      --accent:#f59e0b;
+      --accent-2:#60a5fa;
+      --ok:#22c55e;
+      --danger:#ef4444;
+      --muted:#6b7280;
+    }
+    html,body{height:100%;}
+    body{
+      margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+      Noto Sans, "Helvetica Neue", Arial;
+      background:var(--bg); color:var(--ink); line-height:1.5; font-size:18px;
+    }
+    .wrap{max-width:980px; margin:0 auto; padding:16px;}
+    .title{
+      display:flex; gap:12px; align-items:center; justify-content:center;
+      font-weight:800; font-size:clamp(22px,4vw,34px); margin:14px 0 4px;
+    }
+    .subtitle{ text-align:center; color:var(--muted); margin:0 0 18px; }
+    .toolbar{ display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin:8px 0 22px; }
+    .btn{ border:0; padding:10px 14px; border-radius:12px; background:var(--accent);
+      color:#111; font-weight:700; cursor:pointer; box-shadow:0 2px 0 rgba(0,0,0,.15);
+    }
+    .btn.secondary{ background:var(--accent-2); color:#062; }
+    .btn.print{ background:var(--ok); color:#052; }
+    .card{ background:var(--card); border-radius:18px; padding:18px; box-shadow:0 8px 24px rgba(0,0,0,.06);
+      border:1px solid rgba(15,23,42,.06);
+    }
+    .card h2{ display:flex; align-items:center; gap:8px; margin:0 0 8px; font-size:22px; }
+    .timechip{ font-size:14px; background:#fff3; color:#111; border:1px dashed var(--muted); padding:4px 8px; border-radius:999px; }
+    .lead{ margin:6px 0 14px; }
+    ul{ margin:8px 0 8px 22px; }
+    li{ margin:6px 0; }
+    .quote{ background:#fff7ed; border-left:6px solid var(--accent); padding:10px 12px; border-radius:10px; }
+    .steps{ display:grid; gap:8px; }
+    .step{ background:#f8fafc; border:1px solid rgba(2,6,23,.08); padding:12px; border-radius:12px; }
+    details{ background:#f1f5f9; border-radius:12px; padding:10px 12px; border:1px solid rgba(2,6,23,.08); }
+    summary{ cursor:pointer; font-weight:700; }
+
+    /* Timer */
+    .timer{ display:flex; align-items:center; gap:10px; margin:8px 0 10px; flex-wrap:wrap; }
+    .clock{ font: 700 22px/1 monospace; background:#0b1324; color:#e2e8f0; padding:6px 10px; border-radius:10px; }
+    .controls button{ border:0; padding:8px 10px; border-radius:10px; font-weight:700; cursor:pointer; }
+    .controls .start{ background:var(--ok); color:#052; }
+    .controls .pause{ background:#fde047; }
+    .controls .reset{ background:#fecaca; }
+    .bar{ height:8px; background:#e5e7eb; border-radius:999px; overflow:hidden; }
+    .bar > span{ display:block; height:100%; width:100%; background:linear-gradient(90deg,var(--accent),var(--accent-2)); transition:width .4s linear; }
+
+    .footer{ text-align:center; color:var(--muted); font-size:14px; margin:26px 0 10px; }
+
+    .sticker{ font-size:22px; }
+
+    @media print{
+      .toolbar, .controls { display:none !important; }
+      .wrap{ padding:0; }
+      body{ background:white; }
+      .card{ box-shadow:none; break-inside:avoid; }
+    }
+
+    /* Hero */
+    .hero{
+      width:100%; background:linear-gradient(135deg, #fde68a, #93c5fd);
+      padding:26px 16px; text-align:center;
+    }
+    .hero h1{margin:0 0 6px; font-size:clamp(20px,4.6vw,34px);}
+    .hero p{margin:0; color:#1f2937; font-weight:600;}
+
+    /* Sub-banner con imagen */
+    .sub-banner{
+      text-align:center;
+      margin:12px 0 24px;
+    }
+    .sub-banner img{
+      max-width:100%;
+      height:auto;
+      display:inline-block;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>YANAPAKUY – Juntos por el Perú</h1>
+    <p>30 de agosto: Santa Rosa de Lima — Actividad infantil</p>
+  </div>
+
+  <div class="sub-banner">
+    <img src="https://elmontonero.pe/upload/uploads_images/columna_cecilia_32.jpg"
+         alt="Santa Rosa de Lima" />
+  </div>
+
+  <div class="wrap">
+    <h1 class="title">🎉 30 de agosto: ¡Aprendemos jugando! <span class="sticker">🖍️📜</span></h1>
+    <p class="subtitle">Dinámica infantil de 1 hora – identidad peruana, servicio y trabajo en equipo.</p>
+
+    <div class="toolbar">
+      <button class="btn print" onclick="window.print()">🖨️ Imprimir</button>
+      <button class="btn secondary" id="expandAll">🔽 Abrir todo</button>
+      <button class="btn secondary" id="collapseAll">🔼 Cerrar todo</button>
+    </div>
+
+
+    <!-- PUNTO 1 -->
+    <section class="card" id="p1">
+      <h2>1) Introducción <span class="timechip">10 min</span> <span class="sticker">👋</span></h2>
+      <p class="lead"><strong>Objetivo:</strong> dar el marco del día, activar participación y la idea <em>identidad + servicio</em>.</p>
+
+      <div class="timer" data-minutes="10">
+        <span class="clock" aria-live="polite">10:00</span>
+        <div class="controls">
+          <button class="start">▶️ Iniciar</button>
+          <button class="pause">⏸️ Pausa</button>
+          <button class="reset">↩️ Reiniciar</button>
+        </div>
+        <div class="bar" style="flex:1 1 220px"><span></span></div>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <strong>0:00 – 1:30 | Saludo y contexto</strong>
+          <ul>
+            <li>“Hoy es <strong>30 de agosto</strong>, <em>Día de Santa Rosa de Lima</em>, un día que, más allá de la religión, es parte de nuestra <strong>historia peruana</strong>.”</li>
+            <li>“Fue la <strong>primera santa de América</strong> y su recuerdo nos invita a pensar en el valor del <strong>servicio a los demás</strong>.”</li>
+          </ul>
+        </div>
+        <div class="step">
+          <strong>1:30 – 4:00 | Preguntas rompehielo (levantar manos)</strong>
+          <ul>
+            <li>“¿Quién sabía que hoy era <strong>feriado</strong> por Santa Rosa de Lima?”</li>
+            <li>“¿Quién ha escuchado del <strong>pozo de los deseos</strong>?”</li>
+            <li>“¿Quién piensa más en el feriado que en la <strong>historia</strong> detrás de la fecha?”</li>
+          </ul>
+          <p class="quote">Se buscan risas y participación rápida 😊.</p>
+        </div>
+        <div class="step">
+          <strong>4:00 – 7:30 | Micro–historia contada</strong>
+          <p>“Hace más de 400 años, en la <strong>Lima del Virreinato</strong>, una joven decidió dedicar su vida a ayudar: cuidaba enfermos, daba comida a los necesitados, y así ganó fama en todo el continente. En <strong>1671</strong> fue declarada la primera santa de América. Eso puso al <strong>Perú</strong> en el mapa del mundo. Hoy, su ejemplo nos recuerda que <strong>servir y ayudar</strong> también es parte de nuestra identidad como peruanos.”</p>
+        </div>
+        <div class="step">
+          <strong>7:30 – 10:00 | Actividad express con colores (2–3 min)</strong>
+          <ul>
+            <li>Pide que cada participante <strong>dibuje rápido</strong> algo que represente “<em>ayudar</em>” o “<em>servir</em>”. Ejemplos: dar agua, compartir comida, acompañar a alguien.</li>
+            <li>Luego, que <strong>levanten sus dibujos</strong>.</li>
+            <li>Concluye: “¡Miren cuántas formas distintas hay de servir! Eso es lo que hoy recordamos: el <strong>valor del servicio</strong> y la <strong>solidaridad</strong>, que nos unen como comunidad.”</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUNTO 2 -->
+    <section class="card" id="p2">
+      <h2>2) Contexto histórico y cultural <span class="timechip">10 min</span> <span class="sticker">🏛️</span></h2>
+      <p class="lead"><strong>Objetivo:</strong> ubicar la época de Santa Rosa, conectar con identidad peruana y mantener preguntas/dibujos.</p>
+
+      <div class="timer" data-minutes="10">
+        <span class="clock" aria-live="polite">10:00</span>
+        <div class="controls">
+          <button class="start">▶️ Iniciar</button>
+          <button class="pause">⏸️ Pausa</button>
+          <button class="reset">↩️ Reiniciar</button>
+        </div>
+        <div class="bar" style="flex:1 1 220px"><span></span></div>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <strong>0:00 – 2:00 | Transición breve desde el Punto 1</strong>
+          <ul>
+            <li>“Ya vimos la importancia del <strong>servicio</strong>. Ahora, entendamos un poco el <strong>contexto histórico y cultural</strong> de Santa Rosa.”</li>
+            <li>“Ella vivió en la <strong>Lima del Virreinato</strong>, cuando nuestra ciudad era la capital más importante de América del Sur.”</li>
+          </ul>
+        </div>
+        <div class="step">
+          <strong>2:00 – 5:00 | Explicación breve (datos clave, narrados)</strong>
+          <ul>
+            <li>“Santa Rosa <strong>nació en 1586</strong>, cuando Lima era una ciudad pequeña pero llena de contrastes: ricos y pobres, españoles e indígenas.”</li>
+            <li>“Fue reconocida por su <strong>servicio a los enfermos y necesitados</strong>, y eso la convirtió en un símbolo de <strong>solidaridad</strong> en una sociedad muy desigual.”</li>
+            <li>“En <strong>1671</strong>, el Papa la declaró primera santa de América. Eso hizo que todo el mundo escuchara hablar del <strong>Perú</strong>.”</li>
+            <li>“Por eso hoy es también <strong>patrona de América, Filipinas</strong> y de nuestras <strong>Fuerzas Armadas y Policía Nacional</strong>.”</li>
+          </ul>
+          <p class="quote">Cuéntalo como un mini-cuento para enganchar 📖.</p>
+        </div>
+        <div class="step">
+          <strong>5:00 – 8:00 | Preguntas participativas</strong>
+          <ul>
+            <li>“¿Sabían que Lima, en esa época, era llamada la ‘<strong>Ciudad de los Reyes</strong>’?”</li>
+            <li>“¿Quién cree que Santa Rosa era <strong>rica</strong>? (👉 Explicar: no, vivía con sencillez, pero ayudaba con lo que tenía).”</li>
+            <li>“¿Por qué creen que un personaje así terminó siendo recordado en <strong>todo el mundo</strong>?”</li>
+          </ul>
+        </div>
+        <div class="step">
+          <strong>8:00 – 10:00 | Mini–actividad con colores</strong>
+          <ul>
+            <li>“Ahora dibujen rápido un <strong>símbolo de Lima antigua</strong>. Puede ser: una iglesia, un mercado, un barco, una calle colonial… lo que imaginen.”</li>
+            <li>Tras 2 min, <strong>levanten sus dibujos</strong>.</li>
+            <li>Cierre: “Así como ustedes ven distintos símbolos, Santa Rosa fue un <strong>símbolo vivo del servicio</strong> y de la <strong>identidad peruana</strong>, recordado en todo el continente.”</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUNTO 3 -->
+    <section class="card" id="p3">
+      <h2>3) Dinámica participativa <span class="timechip">20 min</span> <span class="sticker">🧠🎯</span></h2>
+      <p class="lead"><strong>Objetivo:</strong> interactuar, reforzar identidad/servicio/historia, y jugar con sentido.</p>
+
+      <div class="timer" data-minutes="20">
+        <span class="clock" aria-live="polite">20:00</span>
+        <div class="controls">
+          <button class="start">▶️ Iniciar</button>
+          <button class="pause">⏸️ Pausa</button>
+          <button class="reset">↩️ Reiniciar</button>
+        </div>
+        <div class="bar" style="flex:1 1 220px"><span></span></div>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <strong>0:00 – 2:00 | Explicación de la dinámica</strong>
+          <ul>
+            <li>Divide en <strong>2–3 equipos</strong> (según el tamaño del grupo).</li>
+            <li>“Jugaremos una <strong>trivia</strong> de valores e historia. Cada respuesta correcta = <strong>1 punto</strong>. Al final, hay un <strong>reto de dibujo</strong> para desempatar.”</li>
+          </ul>
+        </div>
+
+        <details open>
+          <summary>2:00 – 15:00 | Trivia (preguntas y respuestas rápidas)</summary>
+          <div class="step">
+            <p><em>Historia y cultura</em></p>
+            <ol>
+              <li>¿En qué ciudad nació Santa Rosa? — <strong>Respuesta:</strong> Lima.</li>
+              <li>¿En qué año fue declarada santa? — <strong>Respuesta:</strong> 1671.</li>
+              <li>¿Cuál era el nombre real de Santa Rosa? — <strong>Respuesta:</strong> Isabel Flores de Oliva.</li>
+              <li>¿Cuál era el apodo de Lima en el Virreinato? — <strong>Respuesta:</strong> Ciudad de los Reyes.</li>
+            </ol>
+            <p><em>Valores y ejemplos</em></p>
+            <ol start="5">
+              <li>¿Qué valor representaba más en su vida diaria? — <strong>Respuesta:</strong> Servicio/solidaridad.</li>
+              <li>Si hoy hablamos de servicio, ¿qué ejemplo actual podemos dar? — <strong>Respuesta:</strong> Abierta (ayudar en casa, voluntariado, etc.).</li>
+            </ol>
+            <p><em>Curiosidades</em></p>
+            <ol start="7">
+              <li>¿Qué tradición existe en Lima con el “pozo de Santa Rosa”? — <strong>Respuesta:</strong> Tirar cartas o deseos escritos.</li>
+              <li>¿De qué instituciones del Perú es patrona? — <strong>Respuesta:</strong> Fuerzas Armadas y Policía Nacional.</li>
+            </ol>
+            <p class="quote">Ronda por equipos; si no responden, rebote al siguiente. ~60–90 s por pregunta.</p>
+          </div>
+        </details>
+
+        <div class="step">
+          <strong>15:00 – 18:00 | Reto de dibujo colectivo</strong>
+          <ul>
+            <li>“Cada equipo dibuja en <strong>2 minutos</strong> cómo imaginan a <strong>Lima antigua</strong> o una escena de <strong>ayuda/servicio</strong>.”</li>
+            <li>Todos muestran su hoja; puedes dar <strong>puntos extra</strong> al equipo más creativo.</li>
+          </ul>
+        </div>
+        <div class="step">
+          <strong>18:00 – 20:00 | Cierre y resumen</strong>
+          <ul>
+            <li>“Hoy vimos que la <strong>historia</strong> no solo se recuerda, también se <strong>vive en valores</strong>: servicio, solidaridad y orgullo de ser peruanos.”</li>
+            <li>Aplauso general al equipo ganador 👏.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUNTO 4 -->
+    <section class="card" id="p4">
+      <h2>4) Reflexión grupal <span class="timechip">10 min</span> <span class="sticker">🫶</span></h2>
+      <p class="lead"><strong>Objetivo:</strong> pasar del juego a pensar y elegir un valor para vivirlo.</p>
+
+      <div class="timer" data-minutes="10">
+        <span class="clock" aria-live="polite">10:00</span>
+        <div class="controls">
+          <button class="start">▶️ Iniciar</button>
+          <button class="pause">⏸️ Pausa</button>
+          <button class="reset">↩️ Reiniciar</button>
+        </div>
+        <div class="bar" style="flex:1 1 220px"><span></span></div>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <strong>0:00 – 2:00 | Conexión con la dinámica anterior</strong>
+          <ul>
+            <li>“Ya vimos la historia y jugamos la trivia. Ahora pensemos: ¿qué <strong>valores</strong> de Santa Rosa siguen vivos hoy?”</li>
+          </ul>
+        </div>
+        <div class="step">
+          <strong>2:00 – 6:00 | Ejercicio individual con colores</strong>
+          <ul>
+            <li>Consigna:
+              <ul>
+                <li>“En su hoja, escriban o dibujen en grande <strong>un valor</strong> que asocien con Santa Rosa (ej.: servicio, solidaridad, humildad, ayuda, valentía).”</li>
+                <li>“Al lado, dibujen cómo podrían <strong>vivir ese valor</strong> en su día a día.”</li>
+              </ul>
+            </li>
+            <li>Ejemplos:
+              <ul>
+                <li><em>Solidaridad</em> → ayudar a un compañero con la tarea.</li>
+                <li><em>Servicio</em> → acompañar a un adulto mayor de la familia.</li>
+                <li><em>Humildad</em> → aceptar errores y aprender.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="step">
+          <strong>6:00 – 9:00 | Compartir grupal (rápido)</strong>
+          <ul>
+            <li>2–3 voluntarios muestran su hoja (30 s cada uno).</li>
+            <li>Refuerza con frases:
+              <ul>
+                <li>“La historia cobra sentido cuando la <strong>aplicamos hoy</strong>.”</li>
+                <li>“No hace falta ser famoso para <strong>servir</strong>; valen las pequeñas acciones diarias.”</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="step">
+          <strong>9:00 – 10:00 | Cierre reflexivo</strong>
+          <p>“Si hace 400 años una joven peruana marcó al mundo con su servicio, nosotros también podemos hacerlo en pequeño: en casa, en el barrio, en la escuela. Hoy no solo recordamos una fecha: reconocemos que la <strong>identidad peruana</strong> también se construye <strong>sirviendo y ayudando</strong>.”</p>
+          <p class="quote">Invita a un aplauso o a levantar las hojas como símbolo colectivo 🖍️.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUNTO 5 -->
+    <section class="card" id="p5">
+      <h2>5) Cierre <span class="timechip">10 min</span> <span class="sticker">🎬</span></h2>
+      <p class="lead"><strong>Objetivo:</strong> dar sentido final, motivar a aplicar valores y cerrar en comunidad.</p>
+
+      <div class="timer" data-minutes="10">
+        <span class="clock" aria-live="polite">10:00</span>
+        <div class="controls">
+          <button class="start">▶️ Iniciar</button>
+          <button class="pause">⏸️ Pausa</button>
+          <button class="reset">↩️ Reiniciar</button>
+        </div>
+        <div class="bar" style="flex:1 1 220px"><span></span></div>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <strong>0:00 – 3:00 | Síntesis del recorrido</strong>
+          <ul>
+            <li>“Hoy recordamos el <strong>30 de agosto</strong>, Día de Santa Rosa de Lima.
+              <ul>
+                <li>Empezamos con la <strong>importancia de la fecha</strong> para la historia del Perú.</li>
+                <li>Vimos la <strong>Lima del Virreinato</strong> y cómo una joven marcó al mundo.</li>
+                <li>Jugamos y aprendimos que la <strong>identidad</strong> se construye desde los <strong>valores</strong>.</li>
+                <li>Y cada uno encontró un <strong>valor</strong> para aplicar en su vida diaria.”</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="step">
+          <strong>3:00 – 7:00 | Discurso motivador (puedes leerlo casi textual)</strong>
+          <p>“Hace más de 400 años, una joven peruana decidió que la mejor forma de vivir era <strong>servir a los demás</strong>. No tenía riqueza ni poder, pero sí un corazón dispuesto. Ese ejemplo trascendió tanto que el Perú quedó inscrito en la historia del mundo.</p>
+          <p>Hoy nosotros también podemos dejar huella. No hace falta hacer cosas grandes: basta con pequeños gestos diarios —<em>ayudar en casa, apoyar a un compañero, escuchar a quien lo necesita</em>—. Eso mantiene viva nuestra <strong>identidad peruana</strong>: la <strong>solidaridad</strong>, la <strong>entrega</strong> y el <strong>servicio</strong>.”</p>
+        </div>
+        <div class="step">
+          <strong>7:00 – 9:00 | Dinámica simbólica de cierre</strong>
+          <ul>
+            <li>Pide a todos <strong>levantar la hoja</strong> en alto (con su valor o dibujo del punto 4).</li>
+            <li>Di: “Miren a su alrededor: todos tenemos algo que aportar. Cada valor es distinto, pero <strong>juntos</strong> formamos una <strong>comunidad fuerte</strong>.”</li>
+            <li>Aplauso colectivo para sellar la actividad 👏.</li>
+          </ul>
+        </div>
+        <div class="step">
+          <strong>9:00 – 10:00 | Última frase + despedida</strong>
+          <p>“Que este <strong>30 de agosto</strong> no sea solo un feriado, sino un recordatorio de que la <strong>historia</strong> se construye cada día con nuestras acciones. ¡Sigamos siendo parte de un <strong>Perú</strong> que sirve, que ayuda y que crece en comunidad!”</p>
+          <p><em>Agradecimiento y cierre.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <p class="footer">Hecho con cariño para niñas y niños – YANAPAKUY 🧡</p>
+
+  </div>
+
+  <script>
+    const expandAllBtn = document.getElementById('expandAll');
+    const collapseAllBtn = document.getElementById('collapseAll');
+    expandAllBtn?.addEventListener('click', ()=>{
+      document.querySelectorAll('details').forEach(d=> d.open = true);
+    });
+    collapseAllBtn?.addEventListener('click', ()=>{
+      document.querySelectorAll('details').forEach(d=> d.open = false);
+    });
+
+    const pad = n => String(n).padStart(2,'0');
+    document.querySelectorAll('.timer').forEach(timer=>{
+      const mins = Number(timer.dataset.minutes || 10);
+      const clock = timer.querySelector('.clock');
+      const bar = timer.querySelector('.bar > span');
+      let total = mins * 60;
+      let left = total;
+      let tick = null;
+
+      function render(){
+        const m = Math.floor(left/60), s = left%60;
+        clock.textContent = `${pad(m)}:${pad(s)}`;
+        const p = Math.max(0, Math.min(1, left/total));
+        bar.style.width = (p*100).toFixed(1)+"%";
+      }
+      function start(){ if(tick) return; tick = setInterval(()=>{ left=Math.max(0,left-1); render(); if(left===0){ stop(); clock.style.background = '#7c3aed'; } },1000); }
+      function stop(){ clearInterval(tick); tick=null; }
+      function reset(){ stop(); left=total; clock.style.background='#0b1324'; render(); }
+      render();
+
+      timer.querySelector('.start')?.addEventListener('click', start);
+      timer.querySelector('.pause')?.addEventListener('click', stop);
+      timer.querySelector('.reset')?.addEventListener('click', reset);
+    });
+  </script>
+</body>
+</html>
