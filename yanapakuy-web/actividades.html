@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Actividades — YANAPAKUY</title>
+  <meta name="description" content="Actividades: timeline, fichas y galería." />
+  <meta name="theme-color" content="#1d4ed8" />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="Yanapakuy" /></a>
+      <button class="navbtn" data-nav-toggle aria-expanded="false" aria-controls="nav">Menú</button>
+      <nav class="nav" id="nav" data-nav data-open="false">
+        <a href="quienes-somos.html">Quiénes somos</a>
+        <a href="metodologia.html">Metodología</a>
+        <a href="programas.html">Programas</a>
+        <a href="actividades.html" aria-current="page">Actividades</a>
+        <a href="documentos.html">Documentos</a>
+        <a href="voluntariado.html">Voluntariado</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="card">
+        <div class="kicker">Calendario y registro</div>
+        <h1 class="h1">Actividades</h1>
+        <p class="p">Timeline simple. Cada actividad puede tener su ficha y evidencias.</p>
+      </div>
+
+      <section class="section grid grid-2">
+        <div class="card">
+          <h2 class="h2">Timeline</h2>
+          <ul class="timeline">
+            <li class="t-item">
+              <div class="t-date">Próximo</div>
+              <div class="t-title">Refuerzo académico — semana 1</div>
+              <p class="t-body">Metas cortas, práctica guiada, evidencias mínimas.</p>
+            </li>
+            <li class="t-item">
+              <div class="t-date">Próximo</div>
+              <div class="t-title">Taller de hábitos — planificación</div>
+              <p class="t-body">Agenda semanal, bloques de estudio, revisión de cumplimiento.</p>
+            </li>
+            <li class="t-item">
+              <div class="t-date">Pasado</div>
+              <div class="t-title">Identidad peruana — servicio con propósito</div>
+              <p class="t-body">Reflexión + actividad práctica de comunidad.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2 class="h2">Ficha de actividad (plantilla)</h2>
+          <details open>
+            <summary>Ver estructura</summary>
+            <ul>
+              <li><strong>Título:</strong> nombre claro</li>
+              <li><strong>Objetivo:</strong> 1 frase</li>
+              <li><strong>Público:</strong> edades/criterio</li>
+              <li><strong>Duración:</strong> minutos</li>
+              <li><strong>Materiales:</strong> lista</li>
+              <li><strong>Guion:</strong> 3–5 pasos</li>
+              <li><strong>Evidencia:</strong> foto + asistencia + breve nota</li>
+            </ul>
+          </details>
+          <div class="btnrow">
+            <a class="btn primary" href="documentos.html">Subir evidencias (links)</a>
+            <a class="btn ghost" href="voluntariado.html">Sumarme</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 class="h2">Galería (placeholder)</h2>
+        <p class="p small">
+          Coloca fotos optimizadas en /assets/img/ y enlázalas aquí. Mantén pocas por página.
+        </p>
+        <div class="grid grid-3">
+          <div class="card flat"><div class="small">Foto 1 (placeholder)</div></div>
+          <div class="card flat"><div class="small">Foto 2 (placeholder)</div></div>
+          <div class="card flat"><div class="small">Foto 3 (placeholder)</div></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="h3">YANAPAKUY</div>
+        <div class="small">Comunidad fuerte, futuro sólido.</div>
+        <div class="legal">© <span data-year></span> Yanapakuy.</div>
+      </div>
+      <div class="small">
+        <div><a href="programas.html">Programas</a></div>
+        <div><a href="metodologia.html">Metodología</a></div>
+      </div>
+      <div class="small">
+        <div><a href="contacto.html">Contacto</a></div>
+        <div><a href="voluntariado.html">Voluntariado</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
