@@ -4,154 +4,190 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>YANAPAKUY — Educación integral para primera generación</title>
-  <meta name="description" content="Yanapakuy: educación integral para escolares de recursos limitados. Disciplina diaria, excelencia accesible, comunidad fuerte." />
-  <meta name="theme-color" content="#1d4ed8" />
+  <meta name="description" content="Yanapakuy promueve educación integral para escolares de recursos limitados: disciplina diaria, excelencia accesible y comunidad." />
+  <meta name="theme-color" content="#c45c1a" />
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-  <header class="header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Ir a inicio">
-        <img src="assets/logo.svg" alt="Yanapakuy" />
-      </a>
 
-      <button class="navbtn" data-nav-toggle aria-expanded="false" aria-controls="nav">
-        Menú
-      </button>
+<!-- ═══════════════════════ HEADER ═══════════════════════ -->
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Inicio Yanapakuy">
+      <img src="assets/logo.svg" alt="Yanapakuy" />
+    </a>
+    <button class="navbtn" data-nav-toggle aria-expanded="false" aria-controls="nav">
+      Menú
+    </button>
+    <nav class="nav" id="nav" data-nav data-open="false" aria-label="Navegación principal">
+      <a href="quienes-somos.html">Quiénes somos</a>
+      <a href="metodologia.html">Metodología</a>
+      <a href="programas.html">Programas</a>
+      <a href="actividades.html">Actividades</a>
+      <a href="documentos.html">Documentos</a>
+      <a href="voluntariado.html">Voluntariado</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </div>
+</header>
 
-      <nav class="nav" id="nav" data-nav data-open="false" aria-label="Navegación principal">
-        <a href="quienes-somos.html">Quiénes somos</a>
-        <a href="metodologia.html">Metodología</a>
-        <a href="programas.html">Programas</a>
-        <a href="actividades.html">Actividades</a>
-        <a href="documentos.html">Documentos</a>
-        <a href="voluntariado.html">Voluntariado</a>
-        <a href="contacto.html">Contacto</a>
-      </nav>
-    </div>
-  </header>
+<main>
 
-  <main>
-    <section class="hero">
-      <div class="container">
-        <div class="hero-card">
-          <div class="kicker">Asociación sin fines de lucro</div>
-          <h1 class="h1">Educación integral para primera generación</h1>
-          <p class="p">
-            Formamos mente, carácter y ciudadanía en escolares de recursos limitados.
-            Disciplina diaria, excelencia accesible y comunidad fuerte.
-          </p>
+  <!-- ═══════════════════════ HERO ═══════════════════════ -->
+  <section class="hero" aria-label="Presentación">
+    <div class="container">
+      <div class="hero-card">
+        <div class="kicker anim-up">Asociación educativa sin fines de lucro · Lima, Perú</div>
 
-          <div class="btnrow">
-            <a class="btn primary" href="voluntariado.html">Quiero ser voluntario</a>
-            <a class="btn ghost" href="programas.html">Ver programas</a>
-            <a class="btn accent" href="contacto.html">Aliados y apoyo</a>
-          </div>
+        <h1 class="h1 anim-up">
+          Educación integral<br>
+          <em style="color:var(--pri);font-style:italic">para primera generación</em>
+        </h1>
 
-          <div class="hero-meta" aria-label="Ideas fuerza">
-            <span class="chip">Servicio con propósito</span>
-            <span class="chip">Disciplina diaria</span>
-            <span class="chip">Nadie queda atrás</span>
-            <span class="chip">Comunidad fuerte, futuro sólido</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container grid grid-3">
-        <article class="card">
-          <div class="badge">Qué hacemos</div>
-          <h2 class="h2">Refuerzo académico</h2>
-          <p class="p">Rutinas claras, metas semanales y acompañamiento. Aprender con estructura.</p>
-          <p class="small">Enfoque: matemática, comunicación, hábitos de estudio.</p>
-        </article>
-        <article class="card">
-          <div class="badge">Qué hacemos</div>
-          <h2 class="h2">Carácter y perseverancia</h2>
-          <p class="p">Disciplina, responsabilidad y trabajo en equipo como práctica diaria.</p>
-          <p class="small">Enfoque: hábitos, autocontrol, compromiso.</p>
-        </article>
-        <article class="card">
-          <div class="badge">Qué hacemos</div>
-          <h2 class="h2">Ciudadanía e identidad</h2>
-          <p class="p">Orgullo peruano con pensamiento crítico: servir, construir, liderar.</p>
-          <p class="small">Enfoque: comunidad, valores, pertenencia.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container grid grid-2">
-        <div class="card">
-          <h2 class="h2">Impacto (medible y simple)</h2>
-          <p class="p">Coloca aquí cifras reales cuando las tengas. No inventar números.</p>
-          <div class="kpis" aria-label="Indicadores de impacto">
-            <div class="kpi">
-              <p class="label">Estudiantes activos</p>
-              <p class="value">—</p>
-            </div>
-            <div class="kpi">
-              <p class="label">Sesiones realizadas</p>
-              <p class="value">—</p>
-            </div>
-            <div class="kpi">
-              <p class="label">Voluntarios</p>
-              <p class="value">—</p>
-            </div>
-            <div class="kpi">
-              <p class="label">Continuidad educativa</p>
-              <p class="value">—</p>
-            </div>
-          </div>
-          <hr class="hr" />
-          <div class="quote">
-            <p>“La identidad se construye sirviendo. La disciplina transforma talento en resultado.”</p>
-            <div class="who">YANAPAKUY — Ideas fuerza</div>
-          </div>
-        </div>
-
-        <div class="card">
-          <h2 class="h2">Actividades recientes</h2>
-          <ul class="timeline" aria-label="Actividades">
-            <li class="t-item">
-              <div class="t-date">Próximo</div>
-              <div class="t-title">Sesión de hábitos de estudio</div>
-              <p class="t-body">Rutina semanal, planificación y control de avances.</p>
-            </li>
-            <li class="t-item">
-              <div class="t-date">Reciente</div>
-              <div class="t-title">Taller de identidad peruana</div>
-              <p class="t-body">Comunidad, servicio y responsabilidad compartida.</p>
-            </li>
-            <li class="t-item">
-              <div class="t-date">Reciente</div>
-              <div class="t-title">Refuerzo académico</div>
-              <p class="t-body">Metas cortas, práctica guiada y seguimiento.</p>
-            </li>
-          </ul>
-
-          <div class="btnrow">
-            <a class="btn primary" href="actividades.html">Ver timeline completo</a>
-            <a class="btn ghost" href="documentos.html">Ver documentos</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container card">
-        <h2 class="h2">Marco que nos guía</h2>
-        <p class="p">
-          Unimos educación liberadora, lectura social de la desigualdad, inversión en capital humano,
-          perseverancia sostenida, sentido de vida y mentalidad de crecimiento.
+        <p class="p anim-up">
+          Formamos mente, carácter y ciudadanía en escolares de recursos limitados.
+          Disciplina diaria, excelencia accesible y comunidad comprometida.
         </p>
 
-        <div class="grid grid-2">
+        <div class="btnrow anim-up">
+          <a class="btn primary" href="voluntariado.html">Participar como voluntario</a>
+          <a class="btn accent" href="programas.html">Explorar programas</a>
+          <a class="btn ghost"  href="contacto.html">Aliados y colaboración</a>
+        </div>
+
+        <div class="hero-meta anim-up" aria-label="Ideas fuerza">
+          <span class="chip">Servicio con propósito</span>
+          <span class="chip">Disciplina diaria</span>
+          <span class="chip">Excelencia accesible</span>
+          <span class="chip">Nadie queda atrás</span>
+          <span class="chip">Comunidad fuerte, futuro sólido</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ QUÉ HACEMOS ════════════════ -->
+  <section class="section" aria-label="Qué hacemos">
+    <div class="container">
+
+      <!-- Section label -->
+      <div style="margin-bottom:16px">
+        <div class="kicker">Nuestro trabajo</div>
+        <h2 class="h2" style="margin:0">Tres ejes de formación</h2>
+      </div>
+
+      <div class="grid grid-3">
+        <article class="card reveal" style="border-top: 4px solid var(--pri)">
+          <div class="badge" style="margin-bottom:12px">Refuerzo académico</div>
+          <h3 class="h2">Mente</h3>
+          <p class="p">Rutinas claras, metas semanales y acompañamiento. Aprender con estructura.</p>
+          <p class="small">Matemática · Comunicación · Hábitos de estudio</p>
+        </article>
+
+        <article class="card reveal" style="border-top: 4px solid var(--gold); animation-delay:.1s">
+          <div class="badge" style="margin-bottom:12px">Carácter y perseverancia</div>
+          <h3 class="h2">Carácter</h3>
+          <p class="p">Disciplina, responsabilidad y trabajo en equipo como práctica diaria.</p>
+          <p class="small">Hábitos · Autocontrol · Compromiso</p>
+        </article>
+
+        <article class="card reveal" style="border-top: 4px solid var(--acc); animation-delay:.2s">
+          <div class="badge" style="background:var(--acc-light); border-color:rgba(37,99,176,.25); color:var(--acc); margin-bottom:12px">Ciudadanía e identidad</div>
+          <h3 class="h2">Ciudadanía</h3>
+          <p class="p">Identidad peruana y pensamiento crítico: servir, construir y liderar.</p>
+          <p class="small">Comunidad · Valores · Pertenencia</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ IMPACTO + ACTIVIDADES ═══════ -->
+  <section class="section" aria-label="Impacto y actividades">
+    <div class="container grid grid-2">
+
+      <section class="card reveal" aria-label="Impacto">
+        <div class="kicker">Indicadores</div>
+        <h2 class="h2">Impacto</h2>
+        <p class="p small">Mostraremos indicadores cuando existan registros verificables.</p>
+
+        <div class="kpis" aria-label="Indicadores">
+          <div class="kpi">
+            <p class="label">Estudiantes activos</p>
+            <p class="value">—</p>
+          </div>
+          <div class="kpi">
+            <p class="label">Sesiones realizadas</p>
+            <p class="value">—</p>
+          </div>
+          <div class="kpi">
+            <p class="label">Voluntarios</p>
+            <p class="value">—</p>
+          </div>
+          <div class="kpi">
+            <p class="label">Continuidad educativa</p>
+            <p class="value">—</p>
+          </div>
+        </div>
+
+        <hr class="hr" />
+
+        <div class="quote">
+          <p>"La identidad se construye sirviendo. La disciplina transforma el esfuerzo en resultado."</p>
+          <div class="who">Yanapakuy</div>
+        </div>
+      </section>
+
+      <section class="card reveal" aria-label="Actividades recientes" style="animation-delay:.12s">
+        <div class="kicker">Últimas actividades</div>
+        <h2 class="h2">En terreno</h2>
+
+        <ul class="timeline" aria-label="Timeline de actividades">
+          <li class="t-item">
+            <div class="t-date">Próximo</div>
+            <div class="t-title">Sesión de hábitos de estudio</div>
+            <p class="t-body">Planificación semanal, rutina sostenible y control de avances.</p>
+          </li>
+          <li class="t-item">
+            <div class="t-date">Reciente</div>
+            <div class="t-title">Taller de identidad peruana</div>
+            <p class="t-body">Comunidad, servicio y responsabilidad compartida.</p>
+          </li>
+          <li class="t-item">
+            <div class="t-date">Reciente</div>
+            <div class="t-title">Refuerzo académico</div>
+            <p class="t-body">Metas cortas, práctica guiada y seguimiento.</p>
+          </li>
+        </ul>
+
+        <div class="btnrow">
+          <a class="btn primary" href="actividades.html">Ver actividades</a>
+          <a class="btn ghost"   href="documentos.html">Ver documentos</a>
+        </div>
+      </section>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ MARCO Y VALORES ════════════ -->
+  <section class="section" aria-label="Marco y valores">
+    <div class="container">
+      <div class="card reveal" style="
+        background: linear-gradient(135deg, var(--bg-warm) 0%, var(--surface) 100%);
+        border-color: var(--line-warm);
+      ">
+        <div class="kicker">Fundamentos</div>
+        <h2 class="h2">Marco que nos guía</h2>
+        <p class="p" style="max-width:620px">
+          Integramos educación transformadora, lectura social de la desigualdad,
+          inversión en capital humano, perseverancia sostenida, sentido de vida
+          y mentalidad de crecimiento — con enfoque práctico.
+        </p>
+
+        <div class="grid grid-2" style="margin-top:16px">
           <details open class="card flat">
-            <summary>Autores</summary>
-            <ul>
+            <summary>Referentes teóricos</summary>
+            <ul style="margin-top:8px">
               <li>Paulo Freire</li>
               <li>Pierre Bourdieu</li>
               <li>James Heckman</li>
@@ -161,49 +197,91 @@
             </ul>
           </details>
 
-          <details class="card flat">
-            <summary>Valores permanentes</summary>
-            <ul>
-              <li>Servicio</li>
-              <li>Disciplina</li>
-              <li>Perseverancia</li>
-              <li>Responsabilidad</li>
-              <li>Identidad peruana</li>
-              <li>Trabajo en equipo</li>
-              <li>Excelencia</li>
-            </ul>
+          <details open class="card flat">
+            <summary>Valores que practicamos</summary>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:10px">
+              <span class="chip">Servicio</span>
+              <span class="chip">Disciplina</span>
+              <span class="chip">Perseverancia</span>
+              <span class="chip">Responsabilidad</span>
+              <span class="chip">Identidad peruana</span>
+              <span class="chip">Trabajo en equipo</span>
+              <span class="chip">Excelencia</span>
+            </div>
           </details>
         </div>
-      </div>
-    </section>
-  </main>
 
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <div class="h3">YANAPAKUY</div>
-        <div class="small">Educación integral para escolares de recursos limitados.</div>
-        <div class="legal">© <span data-year></span> Yanapakuy. Asociación sin fines de lucro.</div>
-      </div>
-      <div>
-        <div class="h3">Navegación</div>
-        <div class="small">
-          <div><a href="quienes-somos.html">Quiénes somos</a></div>
-          <div><a href="programas.html">Programas</a></div>
-          <div><a href="actividades.html">Actividades</a></div>
-          <div><a href="documentos.html">Documentos</a></div>
-        </div>
-      </div>
-      <div>
-        <div class="h3">Acción</div>
-        <div class="small">
-          <div><a href="voluntariado.html">Voluntariado</a></div>
-          <div><a href="contacto.html">Contacto</a></div>
+        <div class="btnrow" style="margin-top:20px">
+          <a class="btn primary" href="quienes-somos.html">Conocer la organización</a>
+          <a class="btn ghost"   href="metodologia.html">Ver metodología</a>
         </div>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <script src="assets/app.js"></script>
+  <!-- ═══════════════════════ CTA VOLUNTARIADO ═══════════ -->
+  <section class="section" aria-label="Llamado a la acción">
+    <div class="container">
+      <div class="card reveal" style="
+        text-align:center;
+        background: var(--pri);
+        border-color: transparent;
+        color: #fff;
+        padding: 52px 40px;
+      ">
+        <div class="kicker" style="color:rgba(255,255,255,.70)">Súmate</div>
+        <h2 class="h2" style="color:#fff; font-size:clamp(24px,3vw,36px); margin-bottom:12px">
+          La constancia transforma la buena intención en impacto real
+        </h2>
+        <p style="color:rgba(255,255,255,.82); max-width:520px; margin:0 auto 24px; font-size:16px">
+          Buscamos voluntarios con disciplina y vocación de servicio.
+          El proceso es simple: postulación, entrevista breve e inducción.
+        </p>
+        <div class="btnrow" style="justify-content:center">
+          <a class="btn" style="background:#fff; color:var(--pri); border-color:transparent; font-weight:800" href="voluntariado.html">
+            Postular como voluntario
+          </a>
+          <a class="btn" style="background:transparent; color:#fff; border-color:rgba(255,255,255,.40)" href="contacto.html">
+            Escribirnos
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <div>
+      <div class="h3">YANAPAKUY</div>
+      <div class="small">Educación integral para escolares de recursos limitados.</div>
+      <div class="legal">© <span data-year></span> Yanapakuy. Asociación sin fines de lucro.</div>
+    </div>
+
+    <div>
+      <div class="h3" style="font-size:14px;letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-body)">Navegación</div>
+      <div class="small">
+        <div><a href="quienes-somos.html">Quiénes somos</a></div>
+        <div><a href="programas.html">Programas</a></div>
+        <div><a href="actividades.html">Actividades</a></div>
+        <div><a href="documentos.html">Documentos</a></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="h3" style="font-size:14px;letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-body)">Acción</div>
+      <div class="small">
+        <div><a href="voluntariado.html">Voluntariado</a></div>
+        <div><a href="contacto.html">Contacto</a></div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
 </body>
 </html>

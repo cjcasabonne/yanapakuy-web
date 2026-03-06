@@ -5,73 +5,91 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Quiénes somos — YANAPAKUY</title>
   <meta name="description" content="Misión, visión, valores y población objetivo de Yanapakuy." />
-  <meta name="theme-color" content="#1d4ed8" />
+  <meta name="theme-color" content="#c45c1a" />
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-  <header class="header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Ir a inicio">
-        <img src="assets/logo.svg" alt="Yanapakuy" />
-      </a>
-      <button class="navbtn" data-nav-toggle aria-expanded="false" aria-controls="nav">Menú</button>
-      <nav class="nav" id="nav" data-nav data-open="false" aria-label="Navegación principal">
-        <a href="quienes-somos.html" aria-current="page">Quiénes somos</a>
-        <a href="metodologia.html">Metodología</a>
-        <a href="programas.html">Programas</a>
-        <a href="actividades.html">Actividades</a>
-        <a href="documentos.html">Documentos</a>
-        <a href="voluntariado.html">Voluntariado</a>
-        <a href="contacto.html">Contacto</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="section">
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Ir a inicio">
+      <img src="assets/logo.svg" alt="Yanapakuy" />
+    </a>
+    <button class="navbtn" data-nav-toggle aria-expanded="false" aria-controls="nav">Menú</button>
+    <nav class="nav" id="nav" data-nav data-open="false" aria-label="Navegación principal">
+      <a href="quienes-somos.html" aria-current="page">Quiénes somos</a>
+      <a href="metodologia.html">Metodología</a>
+      <a href="programas.html">Programas</a>
+      <a href="actividades.html">Actividades</a>
+      <a href="documentos.html">Documentos</a>
+      <a href="voluntariado.html">Voluntariado</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- Hero interno -->
+  <section class="hero">
     <div class="container">
-      <div class="card">
-        <div class="kicker">Identidad institucional</div>
-        <h1 class="h1">Quiénes somos</h1>
-        <p class="p">
-          Yanapakuy es una asociación orientada a la educación integral de escolares de recursos limitados,
-          con énfasis en primera generación de estudiantes.
+      <div class="hero-card">
+        <div class="kicker anim-up">Identidad institucional</div>
+        <h1 class="h1 anim-up">Quiénes<br><em style="color:var(--pri);font-style:italic">somos</em></h1>
+        <p class="p anim-up" style="max-width:560px;font-size:18px">
+          Yanapakuy es una asociación orientada a la educación integral de escolares
+          de recursos limitados, con énfasis en primera generación de estudiantes.
         </p>
       </div>
+    </div>
+  </section>
 
-      <div class="section grid grid-2">
-        <section class="card">
-          <h2 class="h2">Misión</h2>
-          <p class="p">Formar capacidades académicas y carácter, fortaleciendo ciudadanía y sentido de pertenencia.</p>
-          <hr class="hr" />
-          <h2 class="h2">Visión</h2>
-          <p class="p">Una comunidad donde la primera generación tiene estructura, acompañamiento y expectativas altas.</p>
-        </section>
+  <!-- Misión / Visión -->
+  <section class="section">
+    <div class="container grid grid-2">
 
-        <section class="card">
-          <h2 class="h2">Valores</h2>
-          <div class="grid">
-            <div class="badge">Servicio</div>
-            <div class="badge">Disciplina</div>
-            <div class="badge">Perseverancia</div>
-            <div class="badge">Responsabilidad</div>
-            <div class="badge">Identidad peruana</div>
-            <div class="badge">Trabajo en equipo</div>
-            <div class="badge">Excelencia</div>
-          </div>
-          <hr class="hr" />
-          <div class="quote">
-            <p>Servicio con propósito: formar capacidades, fortalecer carácter, construir ciudadanía.</p>
-            <div class="who">Principio rector</div>
-          </div>
-        </section>
-      </div>
+      <section class="card reveal" style="border-top:4px solid var(--pri)">
+        <div class="kicker">Norte institucional</div>
+        <h2 class="h2">Misión</h2>
+        <p class="p">Formar capacidades académicas y carácter, fortaleciendo ciudadanía y sentido de pertenencia.</p>
+        <hr class="hr" />
+        <h2 class="h2">Visión</h2>
+        <p class="p">Una comunidad donde la primera generación tiene estructura, acompañamiento y expectativas altas.</p>
+      </section>
 
-      <section class="card">
+      <section class="card reveal" style="animation-delay:.1s; border-top:4px solid var(--gold)">
+        <div class="kicker">Lo que practicamos</div>
+        <h2 class="h2">Valores</h2>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 16px">
+          <span class="chip">Servicio</span>
+          <span class="chip">Disciplina</span>
+          <span class="chip">Perseverancia</span>
+          <span class="chip">Responsabilidad</span>
+          <span class="chip">Identidad peruana</span>
+          <span class="chip">Trabajo en equipo</span>
+          <span class="chip">Excelencia</span>
+        </div>
+        <hr class="hr" />
+        <div class="quote">
+          <p>"Servicio con propósito: formar capacidades, fortalecer carácter, construir ciudadanía."</p>
+          <div class="who">Principio rector</div>
+        </div>
+      </section>
+
+    </div>
+  </section>
+
+  <!-- Población objetivo -->
+  <section class="section">
+    <div class="container">
+      <div class="card reveal">
+        <div class="kicker">A quiénes acompañamos</div>
         <h2 class="h2">Población objetivo</h2>
         <p class="p"><strong>Primera generación.</strong> Jóvenes con alto potencial y baja estructura externa.</p>
-        <div class="grid grid-2">
-          <div class="card flat">
+
+        <div class="grid grid-2" style="margin-top:16px">
+          <div class="card flat" style="border-left:4px solid #e57373">
             <h3 class="h3">Barreras típicas</h3>
             <ul>
               <li>Capital cultural académico limitado en el hogar.</li>
@@ -79,7 +97,7 @@
               <li>Falta de referentes y acompañamiento sostenido.</li>
             </ul>
           </div>
-          <div class="card flat">
+          <div class="card flat" style="border-left:4px solid var(--ok)">
             <h3 class="h3">Lo que sí hay</h3>
             <ul>
               <li>Resiliencia y disposición.</li>
@@ -88,59 +106,71 @@
             </ul>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
 
-      <section class="section card">
+  <!-- Gobernanza -->
+  <section class="section">
+    <div class="container">
+      <div class="card reveal" style="background:linear-gradient(135deg,var(--bg-warm),var(--surface));border-color:var(--line-warm)">
+        <div class="kicker">Estructura interna</div>
         <h2 class="h2">Gobernanza y equipo</h2>
         <p class="p">Mantener simple: roles claros, rendición de cuentas, protección de menores.</p>
-        <div class="grid grid-3">
-          <div class="card flat">
+
+        <div class="grid grid-3" style="margin-top:16px">
+          <div class="card" style="text-align:center;padding:24px 16px">
+            <div style="font-size:32px;margin-bottom:8px">🧭</div>
             <h3 class="h3">Dirección</h3>
             <p class="p small">Define estrategia, aprueba lineamientos y resguarda integridad institucional.</p>
           </div>
-          <div class="card flat">
+          <div class="card" style="text-align:center;padding:24px 16px">
+            <div style="font-size:32px;margin-bottom:8px">📋</div>
             <h3 class="h3">Coordinación</h3>
             <p class="p small">Planifica programas, calendariza sesiones, controla asistencia y avances.</p>
           </div>
-          <div class="card flat">
+          <div class="card" style="text-align:center;padding:24px 16px">
+            <div style="font-size:32px;margin-bottom:8px">🤝</div>
             <h3 class="h3">Voluntariado</h3>
             <p class="p small">Ejecuta sesiones, acompaña estudiantes, reporta y sostiene disciplina educativa.</p>
           </div>
         </div>
 
-        <div class="btnrow">
+        <div class="btnrow" style="margin-top:20px">
           <a class="btn primary" href="documentos.html">Transparencia y documentos</a>
-          <a class="btn ghost" href="voluntariado.html">Sumarme como voluntario</a>
-        </div>
-      </section>
-    </div>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <div class="h3">YANAPAKUY</div>
-        <div class="small">Formación integral para primera generación.</div>
-        <div class="legal">© <span data-year></span> Yanapakuy.</div>
-      </div>
-      <div>
-        <div class="h3">Navegación</div>
-        <div class="small">
-          <div><a href="metodologia.html">Metodología</a></div>
-          <div><a href="programas.html">Programas</a></div>
-          <div><a href="actividades.html">Actividades</a></div>
-        </div>
-      </div>
-      <div>
-        <div class="h3">Acción</div>
-        <div class="small">
-          <div><a href="voluntariado.html">Voluntariado</a></div>
-          <div><a href="contacto.html">Contacto</a></div>
+          <a class="btn ghost"   href="voluntariado.html">Sumarme como voluntario</a>
         </div>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <script src="assets/app.js"></script>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="h3">YANAPAKUY</div>
+      <div class="small">Formación integral para primera generación.</div>
+      <div class="legal">© <span data-year></span> Yanapakuy. Asociación sin fines de lucro.</div>
+    </div>
+    <div>
+      <div class="h3" style="font-size:14px;letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-body)">Navegación</div>
+      <div class="small">
+        <div><a href="metodologia.html">Metodología</a></div>
+        <div><a href="programas.html">Programas</a></div>
+        <div><a href="actividades.html">Actividades</a></div>
+      </div>
+    </div>
+    <div>
+      <div class="h3" style="font-size:14px;letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-body)">Acción</div>
+      <div class="small">
+        <div><a href="voluntariado.html">Voluntariado</a></div>
+        <div><a href="contacto.html">Contacto</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
 </body>
 </html>

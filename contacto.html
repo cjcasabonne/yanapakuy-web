@@ -4,101 +4,160 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contacto — YANAPAKUY</title>
-  <meta name="description" content="Contacto y canales oficiales de Yanapakuy." />
-  <meta name="theme-color" content="#1d4ed8" />
+  <meta name="description" content="Canales oficiales de contacto de Yanapakuy. Coordinación institucional, voluntariado y colaboración." />
+  <meta name="theme-color" content="#c45c1a" />
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-  <header class="header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="Yanapakuy" /></a>
-      <button class="navbtn" data-nav-toggle aria-expanded="false" aria-controls="nav">Menú</button>
-      <nav class="nav" id="nav" data-nav data-open="false">
-        <a href="quienes-somos.html">Quiénes somos</a>
-        <a href="metodologia.html">Metodología</a>
-        <a href="programas.html">Programas</a>
-        <a href="actividades.html">Actividades</a>
-        <a href="documentos.html">Documentos</a>
-        <a href="voluntariado.html">Voluntariado</a>
-        <a href="contacto.html" aria-current="page">Contacto</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="section">
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Inicio Yanapakuy">
+      <img src="assets/logo.svg" alt="Yanapakuy" />
+    </a>
+    <button class="navbtn" data-nav-toggle aria-expanded="false" aria-controls="nav">Menú</button>
+    <nav class="nav" id="nav" data-nav data-open="false" aria-label="Navegación principal">
+      <a href="quienes-somos.html">Quiénes somos</a>
+      <a href="metodologia.html">Metodología</a>
+      <a href="programas.html">Programas</a>
+      <a href="actividades.html">Actividades</a>
+      <a href="documentos.html">Documentos</a>
+      <a href="voluntariado.html">Voluntariado</a>
+      <a href="contacto.html" aria-current="page">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
     <div class="container">
-      <div class="card">
-        <div class="kicker">Canales oficiales</div>
-        <h1 class="h1">Contacto</h1>
-        <p class="p">Usa un canal único y verificable. Evita dispersión.</p>
-      </div>
-
-      <section class="section grid grid-2">
-        <div class="card">
-          <h2 class="h2">Escríbenos</h2>
-          <ul>
-            <li><strong>Correo:</strong> <a href="mailto:contacto@yanapakuy.org">contacto@yanapakuy.org</a></li>
-            <li><strong>Redes:</strong> <a href="#" aria-disabled="true">Instagram</a> / <a href="#" aria-disabled="true">Facebook</a></li>
-            <li><strong>WhatsApp:</strong> <span class="small">colocar si aplica</span></li>
-          </ul>
-
-          <div class="quote">
-            <p>Si quieres apoyar, indica: qué ofreces, disponibilidad y forma de coordinación.</p>
-            <div class="who">Criterio operativo</div>
-          </div>
-        </div>
-
-        <div class="card">
-          <h2 class="h2">Mensaje directo (mailto)</h2>
-          <p class="small">En hosting estático, el formulario real requiere backend. Aquí se usa mailto.</p>
-
-          <div class="btnrow">
-            <a class="btn primary"
-              href="mailto:contacto@yanapakuy.org?subject=Contacto%20Yanapakuy&body=Nombre%3A%0AMotivo%3A%0ADisponibilidad%3A%0ADetalle%3A%0A">
-              Abrir correo con plantilla
-            </a>
-            <a class="btn ghost" href="voluntariado.html">Voluntariado</a>
-          </div>
-
-          <hr class="hr" />
-          <p class="small">
-            Reemplaza contacto@yanapakuy.org por tu correo real. Si usas Google Form, coloca el link y elimina el mailto.
-          </p>
-        </div>
-      </section>
-
-      <section class="card">
-        <h2 class="h2">Privacidad</h2>
-        <p class="p small">
-          Los datos se usan solo para coordinación institucional. No se comparten con terceros.
-          Si trabajas con menores, aplica política de protección y consentimiento.
+      <div class="hero-card">
+        <div class="kicker anim-up">Canales oficiales</div>
+        <h1 class="h1 anim-up">Contacto</h1>
+        <p class="p anim-up" style="max-width:520px;font-size:18px">
+          Utiliza nuestros canales institucionales para coordinación,
+          voluntariado o colaboración con la comunidad.
         </p>
-        <div class="btnrow">
-          <a class="btn ghost" href="documentos.html">Ver políticas</a>
-        </div>
-      </section>
-    </div>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <div class="h3">YANAPAKUY</div>
-        <div class="small">Educación integral con comunidad.</div>
-        <div class="legal">© <span data-year></span> Yanapakuy.</div>
       </div>
+    </div>
+  </section>
+
+  <!-- Canales + Formulario -->
+  <section class="section">
+    <div class="container grid grid-2">
+
+      <article class="card reveal" style="border-top:4px solid var(--pri)">
+        <div class="kicker">Escríbenos</div>
+        <h2 class="h2">Canales directos</h2>
+
+        <ul style="margin-top:12px;list-style:none;padding:0">
+          <li style="padding:14px;background:var(--bg-warm);border-radius:12px;margin-bottom:10px">
+            <div class="small" style="font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px">Correo</div>
+            <a href="mailto:contacto@yanapakuy.org" style="font-weight:600;color:var(--pri)">contacto@yanapakuy.org</a>
+          </li>
+          <li style="padding:14px;background:var(--bg-warm);border-radius:12px;margin-bottom:10px">
+            <div class="small" style="font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px">Redes sociales</div>
+            <a href="#" aria-disabled="true" style="color:var(--muted);margin-right:10px">Instagram</a>
+            <a href="#" aria-disabled="true" style="color:var(--muted)">Facebook</a>
+          </li>
+          <li style="padding:14px;background:var(--bg-warm);border-radius:12px">
+            <div class="small" style="font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px">WhatsApp</div>
+            <span class="small">Disponible cuando el canal institucional esté habilitado</span>
+          </li>
+        </ul>
+
+        <div class="quote" style="margin-top:16px">
+          <p>"Si deseas apoyar, indica claramente qué ofreces, tu disponibilidad y la forma de coordinación."</p>
+          <div class="who">Criterio operativo</div>
+        </div>
+      </article>
+
+      <article class="card reveal" style="animation-delay:.1s; border-top:4px solid var(--gold)">
+        <div class="kicker">Acción rápida</div>
+        <h2 class="h2">Enviar mensaje</h2>
+
+        <p class="p small" style="margin-bottom:20px">
+          El sitio funciona con alojamiento estático.
+          El contacto se realiza mediante correo institucional con plantilla lista para completar.
+        </p>
+
+        <div style="padding:20px;background:var(--bg-warm);border-radius:14px;margin-bottom:16px;border:1px solid var(--line-warm)">
+          <div class="small" style="font-weight:700;margin-bottom:8px">La plantilla incluye:</div>
+          <ul class="small" style="margin:0">
+            <li>Nombre</li>
+            <li>Motivo del contacto</li>
+            <li>Disponibilidad</li>
+            <li>Detalle</li>
+          </ul>
+        </div>
+
+        <div class="btnrow" style="flex-direction:column">
+          <a class="btn primary" style="width:100%;justify-content:center"
+            href="mailto:contacto@yanapakuy.org?subject=Contacto%20Yanapakuy&body=Nombre%3A%0AMotivo%3A%0ADisponibilidad%3A%0ADetalle%3A%0A">
+            ✉️ Abrir correo con plantilla
+          </a>
+          <a class="btn ghost" style="width:100%;justify-content:center" href="voluntariado.html">
+            Participar como voluntario
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Privacidad -->
+  <section class="section">
+    <div class="container">
+      <div class="card reveal" style="background:linear-gradient(135deg,var(--bg-warm),var(--surface));border-color:var(--line-warm)">
+        <div class="kicker">Datos y privacidad</div>
+        <h2 class="h2">Protección de datos</h2>
+
+        <div class="grid grid-2" style="margin-top:16px">
+          <div class="card flat" style="border-left:4px solid var(--ok)">
+            <h3 class="h3">Uso de datos</h3>
+            <p class="p small">Los datos compartidos a través de nuestros canales se utilizan únicamente para coordinación institucional. No se comparten con terceros.</p>
+          </div>
+          <div class="card flat" style="border-left:4px solid var(--pri)">
+            <h3 class="h3">Menores de edad</h3>
+            <p class="p small">Cuando las actividades involucren menores de edad, se aplican protocolos de protección y consentimiento establecidos por la organización.</p>
+          </div>
+        </div>
+
+        <div class="btnrow" style="margin-top:16px">
+          <a class="btn ghost" href="documentos.html">Ver políticas institucionales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="h3">YANAPAKUY</div>
+      <div class="small">Educación integral para escolares de recursos limitados.</div>
+      <div class="legal">© <span data-year></span> Yanapakuy. Asociación sin fines de lucro.</div>
+    </div>
+    <div>
+      <div class="h3" style="font-size:14px;letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-body)">Más</div>
       <div class="small">
         <div><a href="quienes-somos.html">Quiénes somos</a></div>
         <div><a href="documentos.html">Documentos</a></div>
       </div>
+    </div>
+    <div>
+      <div class="h3" style="font-size:14px;letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-body)">Más</div>
       <div class="small">
         <div><a href="programas.html">Programas</a></div>
         <div><a href="actividades.html">Actividades</a></div>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <script src="assets/app.js"></script>
+<script src="assets/app.js"></script>
 </body>
 </html>

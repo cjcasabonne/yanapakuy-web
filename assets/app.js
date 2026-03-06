@@ -1,15 +1,33 @@
-/* Yanapakuy - JS mínimo: navegación móvil + año en footer */
+/* Yanapakuy — JS: nav, año, scroll reveal */
 (() => {
+  // Nav toggle
   const navBtn = document.querySelector('[data-nav-toggle]');
-  const nav = document.querySelector('[data-nav]');
+  const nav    = document.querySelector('[data-nav]');
   if (navBtn && nav) {
     navBtn.addEventListener('click', () => {
-      const isOpen = nav.getAttribute('data-open') === 'true';
-      nav.setAttribute('data-open', String(!isOpen));
-      navBtn.setAttribute('aria-expanded', String(!isOpen));
+      const open = nav.getAttribute('data-open') === 'true';
+      nav.setAttribute('data-open', String(!open));
+      navBtn.setAttribute('aria-expanded', String(!open));
     });
   }
 
+  // Year
   const y = document.querySelector('[data-year]');
   if (y) y.textContent = String(new Date().getFullYear());
+
+  // Scroll reveal
+  const targets = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && targets.length) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.10 });
+    targets.forEach(t => io.observe(t));
+  } else {
+    targets.forEach(t => t.classList.add('visible'));
+  }
 })();

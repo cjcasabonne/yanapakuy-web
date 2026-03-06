@@ -5,68 +5,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Programas — YANAPAKUY</title>
   <meta name="description" content="Programas: refuerzo académico, carácter y ciudadanía." />
-  <meta name="theme-color" content="#1d4ed8" />
+  <meta name="theme-color" content="#c45c1a" />
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-  <header class="header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="Yanapakuy" /></a>
-      <button class="navbtn" data-nav-toggle aria-expanded="false" aria-controls="nav">Menú</button>
-      <nav class="nav" id="nav" data-nav data-open="false">
-        <a href="quienes-somos.html">Quiénes somos</a>
-        <a href="metodologia.html">Metodología</a>
-        <a href="programas.html" aria-current="page">Programas</a>
-        <a href="actividades.html">Actividades</a>
-        <a href="documentos.html">Documentos</a>
-        <a href="voluntariado.html">Voluntariado</a>
-        <a href="contacto.html">Contacto</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="section">
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="Yanapakuy" /></a>
+    <button class="navbtn" data-nav-toggle aria-expanded="false" aria-controls="nav">Menú</button>
+    <nav class="nav" id="nav" data-nav data-open="false">
+      <a href="quienes-somos.html">Quiénes somos</a>
+      <a href="metodologia.html">Metodología</a>
+      <a href="programas.html" aria-current="page">Programas</a>
+      <a href="actividades.html">Actividades</a>
+      <a href="documentos.html">Documentos</a>
+      <a href="voluntariado.html">Voluntariado</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
     <div class="container">
-      <div class="card">
-        <div class="kicker">Qué ofrecemos</div>
-        <h1 class="h1">Programas</h1>
-        <p class="p">Diseñados para ser sostenibles con presupuesto cero y alto estándar metodológico.</p>
+      <div class="hero-card">
+        <div class="kicker anim-up">Qué ofrecemos</div>
+        <h1 class="h1 anim-up">Programas</h1>
+        <p class="p anim-up" style="max-width:540px;font-size:18px">
+          Diseñados para ser sostenibles con presupuesto cero
+          y alto estándar metodológico.
+        </p>
       </div>
+    </div>
+  </section>
 
-      <section class="section grid grid-3">
-        <article class="card">
-          <div class="badge">Programa</div>
-          <h2 class="h2">Refuerzo académico</h2>
-          <p class="p">Matemática y comunicación con práctica guiada, metas semanales y evidencias.</p>
-          <hr class="hr" />
-          <p class="small"><strong>Frecuencia:</strong> semanal</p>
-          <p class="small"><strong>Medición:</strong> asistencia + checklist + mini-evaluaciones</p>
-        </article>
+  <!-- Tres programas -->
+  <section class="section">
+    <div class="container grid grid-3">
 
-        <article class="card">
-          <div class="badge">Programa</div>
-          <h2 class="h2">Disciplina y hábitos</h2>
-          <p class="p">Rutinas de estudio, puntualidad, orden, planificación y responsabilidad.</p>
-          <hr class="hr" />
-          <p class="small"><strong>Frecuencia:</strong> semanal</p>
-          <p class="small"><strong>Medición:</strong> hábitos (sí/no) por semana</p>
-        </article>
+      <article class="card reveal" style="border-top:4px solid var(--pri)">
+        <div class="badge" style="margin-bottom:14px">Programa 1</div>
+        <div style="font-size:28px;margin-bottom:10px">📚</div>
+        <h2 class="h2">Refuerzo académico</h2>
+        <p class="p">Matemática y comunicación con práctica guiada, metas semanales y evidencias.</p>
+        <hr class="hr" />
+        <p class="small"><strong>Frecuencia:</strong> semanal</p>
+        <p class="small"><strong>Medición:</strong> asistencia + checklist + mini-evaluaciones</p>
+      </article>
 
-        <article class="card">
-          <div class="badge">Programa</div>
-          <h2 class="h2">Ciudadanía e identidad</h2>
-          <p class="p">Comunidad, servicio, liderazgo y orgullo peruano con acción práctica.</p>
-          <hr class="hr" />
-          <p class="small"><strong>Frecuencia:</strong> quincenal/mensual</p>
-          <p class="small"><strong>Medición:</strong> participación + proyectos comunitarios</p>
-        </article>
-      </section>
+      <article class="card reveal" style="border-top:4px solid var(--gold); animation-delay:.1s">
+        <div class="badge" style="margin-bottom:14px">Programa 2</div>
+        <div style="font-size:28px;margin-bottom:10px">⏰</div>
+        <h2 class="h2">Disciplina y hábitos</h2>
+        <p class="p">Rutinas de estudio, puntualidad, orden, planificación y responsabilidad.</p>
+        <hr class="hr" />
+        <p class="small"><strong>Frecuencia:</strong> semanal</p>
+        <p class="small"><strong>Medición:</strong> hábitos (sí/no) por semana</p>
+      </article>
 
-      <section class="card">
-        <h2 class="h2">Indicadores simples (sin burocracia)</h2>
+      <article class="card reveal" style="border-top:4px solid var(--acc); animation-delay:.2s">
+        <div class="badge" style="background:var(--acc-light);border-color:rgba(37,99,176,.25);color:var(--acc);margin-bottom:14px">Programa 3</div>
+        <div style="font-size:28px;margin-bottom:10px">🇵🇪</div>
+        <h2 class="h2">Ciudadanía e identidad</h2>
+        <p class="p">Comunidad, servicio, liderazgo y orgullo peruano con acción práctica.</p>
+        <hr class="hr" />
+        <p class="small"><strong>Frecuencia:</strong> quincenal / mensual</p>
+        <p class="small"><strong>Medición:</strong> participación + proyectos comunitarios</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Indicadores -->
+  <section class="section">
+    <div class="container">
+      <div class="card reveal" style="background:linear-gradient(135deg,var(--bg-warm),var(--surface));border-color:var(--line-warm)">
+        <div class="kicker">Medición sin burocracia</div>
+        <h2 class="h2">Indicadores simples</h2>
+        <p class="p small" style="margin-bottom:20px">Lo que importa medir, medido de forma que no paraliza la acción.</p>
+
         <div class="grid grid-2">
-          <div class="card flat">
+          <div class="card flat" style="border-left:4px solid var(--pri)">
             <h3 class="h3">Aprendizaje</h3>
             <ul>
               <li>Asistencia y continuidad.</li>
@@ -74,7 +96,7 @@
               <li>Evidencias: ejercicios, tareas, mini-pruebas.</li>
             </ul>
           </div>
-          <div class="card flat">
+          <div class="card flat" style="border-left:4px solid var(--gold)">
             <h3 class="h3">Carácter</h3>
             <ul>
               <li>Puntualidad.</li>
@@ -83,32 +105,41 @@
             </ul>
           </div>
         </div>
-        <div class="btnrow">
-          <a class="btn primary" href="voluntariado.html">Sumarme como voluntario</a>
-          <a class="btn ghost" href="actividades.html">Ver actividades</a>
-        </div>
-      </section>
-    </div>
-  </main>
 
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <div class="h3">YANAPAKUY</div>
-        <div class="small">Excelencia accesible.</div>
-        <div class="legal">© <span data-year></span> Yanapakuy.</div>
+        <div class="btnrow" style="margin-top:20px">
+          <a class="btn primary" href="voluntariado.html">Sumarme como voluntario</a>
+          <a class="btn ghost"   href="actividades.html">Ver actividades</a>
+        </div>
       </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="h3">YANAPAKUY</div>
+      <div class="small">Excelencia accesible.</div>
+      <div class="legal">© <span data-year></span> Yanapakuy. Asociación sin fines de lucro.</div>
+    </div>
+    <div>
+      <div class="h3" style="font-size:14px;letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-body)">Más</div>
       <div class="small">
         <div><a href="metodologia.html">Metodología</a></div>
         <div><a href="documentos.html">Documentos</a></div>
       </div>
+    </div>
+    <div>
+      <div class="h3" style="font-size:14px;letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-body)">Acción</div>
       <div class="small">
         <div><a href="contacto.html">Contacto</a></div>
         <div><a href="voluntariado.html">Voluntariado</a></div>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <script src="assets/app.js"></script>
+<script src="assets/app.js"></script>
 </body>
 </html>

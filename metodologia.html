@@ -4,108 +4,136 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Metodología — YANAPAKUY</title>
-  <meta name="description" content="Metodología de intervención: disciplina diaria, acompañamiento y excelencia accesible." />
-  <meta name="theme-color" content="#1d4ed8" />
+  <meta name="description" content="Metodología Yanapakuy: disciplina diaria, acompañamiento y excelencia accesible con enfoque práctico." />
+  <meta name="theme-color" content="#c45c1a" />
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-  <header class="header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="Yanapakuy" /></a>
-      <button class="navbtn" data-nav-toggle aria-expanded="false" aria-controls="nav">Menú</button>
-      <nav class="nav" id="nav" data-nav data-open="false">
-        <a href="quienes-somos.html">Quiénes somos</a>
-        <a href="metodologia.html" aria-current="page">Metodología</a>
-        <a href="programas.html">Programas</a>
-        <a href="actividades.html">Actividades</a>
-        <a href="documentos.html">Documentos</a>
-        <a href="voluntariado.html">Voluntariado</a>
-        <a href="contacto.html">Contacto</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="section">
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Inicio Yanapakuy">
+      <img src="assets/logo.svg" alt="Yanapakuy" />
+    </a>
+    <button class="navbtn" data-nav-toggle aria-expanded="false" aria-controls="nav">Menú</button>
+    <nav class="nav" id="nav" data-nav data-open="false" aria-label="Navegación principal">
+      <a href="quienes-somos.html">Quiénes somos</a>
+      <a href="metodologia.html" aria-current="page">Metodología</a>
+      <a href="programas.html">Programas</a>
+      <a href="actividades.html">Actividades</a>
+      <a href="documentos.html">Documentos</a>
+      <a href="voluntariado.html">Voluntariado</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
     <div class="container">
-      <div class="card">
-        <div class="kicker">Cómo trabajamos</div>
-        <h1 class="h1">Metodología</h1>
-        <p class="p">
-          Estructura clara, exigencia con cuidado, hábitos sostenibles. Aprender no es evento: es sistema.
+      <div class="hero-card">
+        <div class="kicker anim-up">Cómo trabajamos</div>
+        <h1 class="h1 anim-up">Metodología</h1>
+        <p class="p anim-up" style="max-width:560px;font-size:18px">
+          Estructura clara, exigencia con cuidado y hábitos sostenibles.
+          Aprender no es un evento: <em>es un sistema.</em>
         </p>
-        <div class="hero-meta">
+        <div class="hero-meta anim-up">
           <span class="chip">Servicio con propósito</span>
           <span class="chip">Disciplina diaria</span>
           <span class="chip">Excelencia accesible</span>
           <span class="chip">Nadie queda atrás</span>
         </div>
       </div>
+    </div>
+  </section>
 
-      <section class="section grid grid-2">
-        <div class="card">
-          <h2 class="h2">Principios operativos</h2>
-          <ul>
-            <li><strong>Disciplina:</strong> rutinas, puntualidad, metas cortas, seguimiento.</li>
-            <li><strong>Perseverancia:</strong> progreso por repetición, no por talento.</li>
-            <li><strong>Responsabilidad:</strong> compromisos simples, evidencia de avance.</li>
-            <li><strong>Trabajo en equipo:</strong> pares, apoyo, liderazgo por ejemplo.</li>
-            <li><strong>Identidad peruana:</strong> pertenencia y ciudadanía práctica.</li>
-          </ul>
-          <div class="quote">
-            <p>Excelencia accesible: alto estándar con método, no elitismo.</p>
-            <div class="who">YANAPAKUY</div>
-          </div>
+  <!-- Principios + Ruta -->
+  <section class="section">
+    <div class="container grid grid-2">
+
+      <article class="card reveal" style="border-top:4px solid var(--pri)">
+        <div class="kicker">Fundamentos</div>
+        <h2 class="h2">Principios operativos</h2>
+        <ul style="margin-top:10px">
+          <li><strong>Disciplina:</strong> rutinas, puntualidad, metas cortas y seguimiento.</li>
+          <li><strong>Perseverancia:</strong> progreso por repetición, no por talento.</li>
+          <li><strong>Responsabilidad:</strong> compromisos simples y evidencia de avance.</li>
+          <li><strong>Trabajo en equipo:</strong> apoyo entre pares y liderazgo por ejemplo.</li>
+          <li><strong>Identidad peruana:</strong> pertenencia y ciudadanía práctica.</li>
+        </ul>
+        <div class="quote" style="margin-top:16px">
+          <p>"Excelencia accesible: alto estándar con método, sin elitismo."</p>
+          <div class="who">Yanapakuy</div>
         </div>
+      </article>
 
-        <div class="card">
-          <h2 class="h2">Ruta de intervención</h2>
-          <ol>
-            <li><strong>Diagnóstico:</strong> nivel, hábitos, contexto.</li>
-            <li><strong>Plan:</strong> objetivos semanales y mensuales.</li>
-            <li><strong>Sesiones:</strong> práctica guiada + tareas pequeñas.</li>
-            <li><strong>Seguimiento:</strong> asistencia, evidencias, retroalimentación.</li>
-            <li><strong>Refuerzo:</strong> ajustes, mentoría y acompañamiento.</li>
-          </ol>
-          <p class="small">Evitamos complejidad. Lo que no se puede sostener, no se implementa.</p>
-        </div>
-      </section>
+      <article class="card reveal" style="animation-delay:.1s; border-top:4px solid var(--acc)">
+        <div class="kicker">Paso a paso</div>
+        <h2 class="h2">Ruta de intervención</h2>
+        <ol style="margin-top:10px;padding-left:1.4em">
+          <li style="margin:10px 0"><strong>Diagnóstico:</strong> nivel, hábitos y contexto.</li>
+          <li style="margin:10px 0"><strong>Plan:</strong> objetivos semanales y mensuales.</li>
+          <li style="margin:10px 0"><strong>Sesiones:</strong> práctica guiada y tareas pequeñas.</li>
+          <li style="margin:10px 0"><strong>Seguimiento:</strong> asistencia, evidencias y retroalimentación.</li>
+          <li style="margin:10px 0"><strong>Refuerzo:</strong> ajustes, mentoría y acompañamiento.</li>
+        </ol>
+        <p class="small" style="margin-top:10px">Lo que no se puede sostener, no se implementa.</p>
+      </article>
 
-      <section class="card">
+    </div>
+  </section>
+
+  <!-- Marco teórico -->
+  <section class="section">
+    <div class="container">
+      <div class="card reveal">
+        <div class="kicker">Base conceptual</div>
         <h2 class="h2">Marco teórico (uso práctico)</h2>
+        <p class="p small" style="margin-bottom:20px">Referentes que informan nuestras decisiones — sin academicismo vacío.</p>
+
         <div class="grid grid-2">
-          <details open>
-            <summary>Freire y ciudadanía</summary>
-            <p class="p">Educación como práctica de libertad: leer la realidad, actuar con responsabilidad.</p>
+          <details open style="animation-delay:.05s">
+            <summary>📖 Freire y ciudadanía</summary>
+            <p class="p" style="margin-top:8px">Educación para comprender la realidad y actuar con responsabilidad.</p>
           </details>
-          <details open>
-            <summary>Bourdieu y capital cultural</summary>
-            <p class="p">Romper reproducción de desventaja creando estructura, lenguaje académico y referentes.</p>
+          <details open style="animation-delay:.10s">
+            <summary>🏛️ Bourdieu y capital cultural</summary>
+            <p class="p" style="margin-top:8px">Reducimos brechas con estructura, lenguaje académico y referentes.</p>
           </details>
-          <details>
-            <summary>Heckman y retorno social</summary>
-            <p class="p">Inversión temprana en habilidades y carácter genera alto impacto en movilidad social.</p>
+          <details style="animation-delay:.15s">
+            <summary>📈 Heckman y retorno social</summary>
+            <p class="p" style="margin-top:8px">Invertir temprano en habilidades y carácter multiplica oportunidades.</p>
           </details>
-          <details>
-            <summary>Duckworth, Frankl, Dweck</summary>
-            <p class="p">Perseverancia sostenida, sentido y mentalidad de crecimiento como motores de continuidad.</p>
+          <details style="animation-delay:.20s">
+            <summary>🧠 Duckworth, Frankl, Dweck</summary>
+            <p class="p" style="margin-top:8px">Perseverancia, sentido y mentalidad de crecimiento sostienen la continuidad.</p>
           </details>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
 
-      <section class="section card">
-        <h2 class="h2">Reglas mínimas (código de convivencia)</h2>
-        <div class="grid grid-2">
-          <div class="card flat">
+  <!-- Convivencia -->
+  <section class="section">
+    <div class="container">
+      <div class="card reveal" style="background:linear-gradient(135deg,var(--bg-warm),var(--surface));border-color:var(--line-warm)">
+        <div class="kicker">Acuerdos básicos</div>
+        <h2 class="h2">Reglas mínimas de convivencia</h2>
+
+        <div class="grid grid-2" style="margin-top:16px">
+          <div class="card flat" style="border-left:4px solid var(--acc)">
             <h3 class="h3">Para estudiantes</h3>
             <ul>
               <li>Puntualidad.</li>
               <li>Respeto.</li>
-              <li>Tarea pequeña pero constante.</li>
-              <li>Honestidad: decir “no entendí” es válido.</li>
+              <li>Tarea pequeña, constante.</li>
+              <li>Honestidad: decir "no entendí" es válido.</li>
             </ul>
           </div>
-          <div class="card flat">
+          <div class="card flat" style="border-left:4px solid var(--pri)">
             <h3 class="h3">Para voluntarios</h3>
             <ul>
               <li>Ejemplo: coherencia entre palabra y acción.</li>
@@ -114,33 +142,42 @@
             </ul>
           </div>
         </div>
-        <div class="btnrow">
-          <a class="btn primary" href="programas.html">Ver programas</a>
-          <a class="btn ghost" href="documentos.html">Políticas y documentos</a>
-        </div>
-      </section>
-    </div>
-  </main>
 
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <div class="h3">YANAPAKUY</div>
-        <div class="small">Disciplina, comunidad, futuro.</div>
-        <div class="legal">© <span data-year></span> Yanapakuy.</div>
+        <div class="btnrow" style="margin-top:20px">
+          <a class="btn primary" href="programas.html">Ver programas</a>
+          <a class="btn ghost"   href="documentos.html">Políticas y documentos</a>
+        </div>
       </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="h3">YANAPAKUY</div>
+      <div class="small">Disciplina, comunidad, futuro.</div>
+      <div class="legal">© <span data-year></span> Yanapakuy. Asociación sin fines de lucro.</div>
+    </div>
+    <div>
+      <div class="h3" style="font-size:14px;letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-body)">Más</div>
       <div class="small">
         <div><a href="quienes-somos.html">Quiénes somos</a></div>
         <div><a href="programas.html">Programas</a></div>
         <div><a href="actividades.html">Actividades</a></div>
       </div>
+    </div>
+    <div>
+      <div class="h3" style="font-size:14px;letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-body)">Acción</div>
       <div class="small">
         <div><a href="voluntariado.html">Voluntariado</a></div>
         <div><a href="contacto.html">Contacto</a></div>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <script src="assets/app.js"></script>
+<script src="assets/app.js"></script>
 </body>
 </html>

@@ -5,98 +5,145 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Documentos — YANAPAKUY</title>
   <meta name="description" content="Transparencia: documentos, reportes y políticas." />
-  <meta name="theme-color" content="#1d4ed8" />
+  <meta name="theme-color" content="#c45c1a" />
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-  <header class="header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="Yanapakuy" /></a>
-      <button class="navbtn" data-nav-toggle aria-expanded="false" aria-controls="nav">Menú</button>
-      <nav class="nav" id="nav" data-nav data-open="false">
-        <a href="quienes-somos.html">Quiénes somos</a>
-        <a href="metodologia.html">Metodología</a>
-        <a href="programas.html">Programas</a>
-        <a href="actividades.html">Actividades</a>
-        <a href="documentos.html" aria-current="page">Documentos</a>
-        <a href="voluntariado.html">Voluntariado</a>
-        <a href="contacto.html">Contacto</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="section">
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="Yanapakuy" /></a>
+    <button class="navbtn" data-nav-toggle aria-expanded="false" aria-controls="nav">Menú</button>
+    <nav class="nav" id="nav" data-nav data-open="false">
+      <a href="quienes-somos.html">Quiénes somos</a>
+      <a href="metodologia.html">Metodología</a>
+      <a href="programas.html">Programas</a>
+      <a href="actividades.html">Actividades</a>
+      <a href="documentos.html" aria-current="page">Documentos</a>
+      <a href="voluntariado.html">Voluntariado</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
     <div class="container">
-      <div class="card">
-        <div class="kicker">Transparencia</div>
-        <h1 class="h1">Documentos</h1>
-        <p class="p">Publicación simple: PDFs y enlaces. Orden por año.</p>
+      <div class="hero-card">
+        <div class="kicker anim-up">Rendición de cuentas</div>
+        <h1 class="h1 anim-up">Documentos</h1>
+        <p class="p anim-up" style="max-width:520px;font-size:18px">
+          Publicación simple: PDFs y enlaces, ordenados por categoría y año.
+        </p>
       </div>
-
-      <section class="section grid grid-2">
-        <div class="card">
-          <h2 class="h2">Institucional</h2>
-          <ul>
-            <li><a href="#" aria-disabled="true">Acta de constitución (PDF)</a> <span class="small">— pendiente</span></li>
-            <li><a href="#" aria-disabled="true">Estatuto (PDF)</a> <span class="small">— pendiente</span></li>
-            <li><a href="#" aria-disabled="true">Plan anual (PDF)</a> <span class="small">— pendiente</span></li>
-          </ul>
-          <p class="small">Reemplaza los “#” por enlaces reales (Drive público o archivos en /assets/docs/).</p>
-        </div>
-
-        <div class="card">
-          <h2 class="h2">Políticas</h2>
-          <ul>
-            <li><a href="#" aria-disabled="true">Protección de menores (PDF)</a> <span class="small">— obligatorio</span></li>
-            <li><a href="#" aria-disabled="true">Privacidad y datos personales (PDF)</a></li>
-            <li><a href="#" aria-disabled="true">Código de conducta voluntarios (PDF)</a></li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="card">
-        <h2 class="h2">Reportes por año</h2>
-        <details open>
-          <summary>2026</summary>
-          <ul>
-            <li><a href="#" aria-disabled="true">Reporte de actividades (PDF)</a></li>
-            <li><a href="#" aria-disabled="true">Evidencias (Drive)</a></li>
-          </ul>
-        </details>
-        <details>
-          <summary>2025</summary>
-          <ul>
-            <li><a href="#" aria-disabled="true">Reporte de actividades (PDF)</a></li>
-          </ul>
-        </details>
-
-        <div class="btnrow">
-          <a class="btn primary" href="contacto.html">Solicitar información</a>
-          <a class="btn ghost" href="voluntariado.html">Voluntariado</a>
-        </div>
-      </section>
     </div>
-  </main>
+  </section>
 
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <div class="h3">YANAPAKUY</div>
-        <div class="small">Transparencia y comunidad.</div>
-        <div class="legal">© <span data-year></span> Yanapakuy.</div>
+  <!-- Institucional + Políticas -->
+  <section class="section">
+    <div class="container grid grid-2">
+
+      <div class="card reveal" style="border-top:4px solid var(--pri)">
+        <div class="kicker">Organización</div>
+        <h2 class="h2">Institucional</h2>
+        <ul style="margin-top:12px">
+          <li>
+            <a href="#" aria-disabled="true" style="color:var(--muted)">Acta de constitución (PDF)</a>
+            <span class="small"> — pendiente</span>
+          </li>
+          <li>
+            <a href="#" aria-disabled="true" style="color:var(--muted)">Estatuto (PDF)</a>
+            <span class="small"> — pendiente</span>
+          </li>
+          <li>
+            <a href="#" aria-disabled="true" style="color:var(--muted)">Plan anual (PDF)</a>
+            <span class="small"> — pendiente</span>
+          </li>
+        </ul>
+        <p class="small" style="margin-top:14px;padding:10px;background:var(--bg-warm);border-radius:10px">
+          Reemplaza los "#" por enlaces reales (Drive público o archivos en <code>/assets/docs/</code>).
+        </p>
       </div>
+
+      <div class="card reveal" style="border-top:4px solid var(--acc); animation-delay:.1s">
+        <div class="kicker">Obligatorios</div>
+        <h2 class="h2">Políticas</h2>
+        <ul style="margin-top:12px">
+          <li>
+            <a href="#" aria-disabled="true" style="color:var(--muted)">Protección de menores (PDF)</a>
+            <span class="badge" style="font-size:10px;padding:3px 7px;margin-left:6px">obligatorio</span>
+          </li>
+          <li>
+            <a href="#" aria-disabled="true" style="color:var(--muted)">Privacidad y datos personales (PDF)</a>
+          </li>
+          <li>
+            <a href="#" aria-disabled="true" style="color:var(--muted)">Código de conducta voluntarios (PDF)</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Reportes por año -->
+  <section class="section">
+    <div class="container">
+      <div class="card reveal" style="background:linear-gradient(135deg,var(--bg-warm),var(--surface));border-color:var(--line-warm)">
+        <div class="kicker">Historial</div>
+        <h2 class="h2">Reportes por año</h2>
+        <p class="p small" style="margin-bottom:20px">Evidencias verificables de actividades y resultados.</p>
+
+        <details open style="margin-bottom:10px">
+          <summary>📅 2026</summary>
+          <ul style="margin-top:8px">
+            <li><a href="#" aria-disabled="true" style="color:var(--muted)">Reporte de actividades (PDF)</a></li>
+            <li><a href="#" aria-disabled="true" style="color:var(--muted)">Evidencias (Drive)</a></li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>📅 2025</summary>
+          <ul style="margin-top:8px">
+            <li><a href="#" aria-disabled="true" style="color:var(--muted)">Reporte de actividades (PDF)</a></li>
+          </ul>
+        </details>
+
+        <div class="btnrow" style="margin-top:20px">
+          <a class="btn primary" href="contacto.html">Solicitar información</a>
+          <a class="btn ghost"   href="voluntariado.html">Voluntariado</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="h3">YANAPAKUY</div>
+      <div class="small">Transparencia y comunidad.</div>
+      <div class="legal">© <span data-year></span> Yanapakuy. Asociación sin fines de lucro.</div>
+    </div>
+    <div>
+      <div class="h3" style="font-size:14px;letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-body)">Más</div>
       <div class="small">
         <div><a href="quienes-somos.html">Quiénes somos</a></div>
         <div><a href="metodologia.html">Metodología</a></div>
       </div>
+    </div>
+    <div>
+      <div class="h3" style="font-size:14px;letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-body)">Acción</div>
       <div class="small">
         <div><a href="contacto.html">Contacto</a></div>
         <div><a href="programas.html">Programas</a></div>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <script src="assets/app.js"></script>
+<script src="assets/app.js"></script>
 </body>
 </html>
