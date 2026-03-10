@@ -1,11 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
-
-@font-face {
-  font-family: 'Chalkboard';
-  src: url('Chalkboard-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 :root {
   /* Warm, earthy palette */
@@ -40,7 +33,7 @@
   --pad:      20px;
 
   /* Type */
-  --font-display: 'Chalkboard', 'Fraunces', Georgia, serif;
+  --font-display: 'Lilita One', Georgia, serif;
   --font-body:    'Plus Jakarta Sans', system-ui, sans-serif;
 }
 
@@ -85,18 +78,18 @@ li { margin: 6px 0 }
 /* ─── Typography ────────────────────────────── */
 .h1 {
   font-family: var(--font-display);
-  font-size: clamp(32px, 4.8vw, 52px);
-  font-weight: 700;
-  line-height: 1.12;
-  letter-spacing: -.02em;
+  font-size: clamp(30px, 4.8vw, 50px);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -.01em;
   margin: 0 0 12px;
   color: var(--ink);
 }
 .h2 {
   font-family: var(--font-display);
-  font-size: clamp(22px, 2.8vw, 30px);
-  font-weight: 600;
-  letter-spacing: -.01em;
+  font-size: clamp(20px, 2.8vw, 28px);
+  font-weight: 400;
+  letter-spacing: 0em;
   margin: 0 0 10px;
 }
 .h3 {
@@ -259,7 +252,7 @@ li { margin: 6px 0 }
   padding: 16px;
 }
 .kpi .label { font-size: 12px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; margin: 0 0 4px }
-.kpi .value { font-family: var(--font-display); font-size: 26px; font-weight: 700; color: var(--ink); margin: 0 }
+.kpi .value { font-family: var(--font-display); font-size: 26px; font-weight: 400; color: var(--ink); margin: 0 }
 
 /* ─── Quote ──────────────────────────────────── */
 .quote {
@@ -269,7 +262,7 @@ li { margin: 6px 0 }
   border-radius: 0 14px 14px 0;
   margin-top: 14px;
 }
-.quote p { margin: 0; font-style: italic; font-family: var(--font-display); font-size: 16px; color: var(--ink-2) }
+.quote p { margin: 0; font-style: normal; font-family: var(--font-display); font-size: 16px; color: var(--ink-2) }
 .quote .who { margin-top: 8px; color: var(--muted); font-size: 13px; font-weight: 700 }
 
 /* ─── Timeline ───────────────────────────────── */
@@ -318,9 +311,9 @@ details[open] summary { margin-bottom: 10px; color: var(--pri) }
 .footer a:hover { color: var(--pri) }
 .footer .h3 {
   font-family: var(--font-display);
-  font-size: 20px; font-weight: 700;
+  font-size: 20px; font-weight: 400;
   color: var(--ink); margin: 0 0 10px;
-  letter-spacing: -.01em;
+  letter-spacing: 0;
 }
 .legal { font-size: 12px; color: var(--muted); margin-top: 10px }
 .footer .small div { margin: 5px 0 }
