@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Actividades — Yanapakuy</title>
-  <meta name="description" content="Actividades de Yanapakuy en Manchay: timeline de sesiones y galería fotográfica." />
+  <meta name="description" content="Actividades de Yanapakuy en Manchay: registro de sesiones y galería fotográfica." />
   <meta name="theme-color" content="#c45c1a" />
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/styles.css" />
@@ -26,21 +26,20 @@
     }
     .hero-eyebrow::before {
       content: '';
-      width: 8px; height: 8px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
       background: var(--pri);
       flex-shrink: 0;
     }
 
-    /* Timeline mejorado */
-    .t-date.proxima  { color: var(--pri) }
-    .t-date.pasada   { color: var(--ok) }
-    .t-date.proxima-dot::before  { background: var(--pri) }
-    .t-date.pasada-dot::before   { background: var(--ok) }
+    .t-date.proxima { color: var(--pri) }
+    .t-date.pasada { color: var(--ok) }
+    .t-date.proxima-dot::before { background: var(--pri) }
+    .t-date.pasada-dot::before { background: var(--ok) }
     .t-item.proxima::before { background: var(--pri) }
-    .t-item.pasada::before  { background: var(--ok) }
+    .t-item.pasada::before { background: var(--ok) }
 
-    /* Carrusel */
     .carrusel-wrap {
       position: relative;
       overflow: hidden;
@@ -80,7 +79,8 @@
       padding: 12px 16px 16px;
     }
     .carrusel-btn {
-      width: 38px; height: 38px;
+      width: 38px;
+      height: 38px;
       border-radius: 50%;
       border: 1.5px solid var(--line-warm);
       background: var(--surface);
@@ -98,6 +98,39 @@
       display: flex;
       align-items: center;
       padding: 0 6px;
+    }
+
+    .foto-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .foto-item {
+      border-radius: 18px;
+      overflow: hidden;
+      height: 340px;
+      background: var(--line);
+      border: 1px solid var(--line-warm);
+    }
+    .foto-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .35s ease;
+    }
+    .foto-item:hover img {
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 700px) {
+      .foto-grid {
+        grid-template-columns: 1fr;
+      }
+      .foto-item {
+        height: 240px;
+      }
     }
 
     @media (max-width: 600px) {
@@ -127,21 +160,19 @@
 
 <main>
 
-  <!-- HERO -->
   <section class="hero">
     <div class="container">
       <div class="hero-card">
         <div class="hero-eyebrow anim-up">Presencial · Manchay, Lima</div>
         <h1 class="h1 anim-up">Actividades</h1>
         <p class="p anim-up" style="max-width:80%;font-size:18px">
-          Desde 2022 llegamos a Manchay cada dos semanas.
-          Aquí queda el registro.
+          Desde 2022 realizamos sesiones periódicas en Manchay.
+          Aquí queda el registro del trabajo realizado.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- ACTIVIDADES -->
   <section class="section">
     <div class="container grid grid-2">
 
@@ -149,16 +180,16 @@
         <div class="kicker">Desde 2022 · Manchay</div>
         <h2 class="h2">Lo que hemos trabajado</h2>
         <p class="p" style="margin-top:12px">
-          Cada dos semanas, una sesión. Cada sesión, un pretexto para formar carácter, construir identidad y fortalecer comunidad.
+          Cada dos semanas desarrollamos una sesión con actividades formativas, dinámicas participativas y espacios de reflexión.
         </p>
         <p class="p">
-          Hemos trabajado el calendario peruano como herramienta pedagógica: Fiestas Patrias, Día de la Madre, Día del Padre, Día de la Bandera, Canción Criolla, Santa Rosa de Lima, Día de Todos los Santos. También el entorno: el Fenómeno del Niño como punto de partida para hablar de resiliencia, territorio y responsabilidad compartida. Y la época: Navidad no como fecha comercial sino como cierre de ciclo y celebración de comunidad.
+          Hemos trabajado fechas del calendario peruano como Fiestas Patrias, Día de la Madre, Día del Padre, Día de la Bandera, Canción Criolla, Santa Rosa de Lima, Día de Todos los Santos y Navidad, utilizándolas como base para abordar identidad, convivencia, valores y comunidad.
         </p>
         <p class="p">
-          Detrás de cada fecha, los mismos ejes: valores, identidad peruana y disciplina. El calendario es el hilo conductor — el carácter es el objetivo.
+          También se han incorporado temas vinculados al entorno, como el Fenómeno del Niño, para conversar sobre territorio, prevención, responsabilidad compartida y respuesta colectiva.
         </p>
         <div class="quote" style="margin-top:4px">
-          <p>"El ejemplo educa más que la palabra. La constancia, más que el talento."</p>
+          <p>"La continuidad permite sostener el trabajo educativo en el tiempo."</p>
           <div class="who">Yanapakuy</div>
         </div>
       </div>
@@ -167,10 +198,10 @@
         <div class="kicker">2026 · Próximas sesiones</div>
         <h2 class="h2">Retomamos en Manchay</h2>
         <p class="p" style="margin-top:12px">
-          Estamos reorganizando el equipo para retomar el programa con más estructura y nuevos voluntarios. Las sesiones serán cada dos semanas, siguiendo el mismo formato de siempre: 2 horas, dinámica participativa, reflexión y cierre.
+          Estamos reorganizando el equipo para retomar el programa con mayor continuidad y nuevas incorporaciones al voluntariado. Las sesiones mantendrán el formato habitual: trabajo presencial, dinámica participativa, espacio de reflexión y cierre.
         </p>
         <p class="p">
-          Si quieres ser parte de las próximas sesiones — ya sea presencial o desde casa — este es el momento.
+          Si quieres participar en las próximas sesiones, de manera presencial o remota, puedes sumarte al equipo.
         </p>
         <div class="btnrow" style="margin-top:8px">
           <a class="btn primary" href="voluntariado.html">Sumarme como voluntario</a>
@@ -181,13 +212,21 @@
     </div>
   </section>
 
-  <!-- GALERÍA -->
+  <section class="section">
+    <div class="container">
+      <div class="card reveal">
+        <div class="kicker">Registro</div>
+        <h2 class="h2">Sesiones en campo</h2>
+        <div class="foto-grid" id="fotoGrid"></div>
+      </div>
+    </div>
+  </section>
+
   <section class="section">
     <div class="container">
       <div class="card reveal" style="background:linear-gradient(135deg,var(--bg-warm),var(--surface));border-color:var(--line-warm);padding-bottom:8px">
         <div class="kicker">Evidencias visuales</div>
         <h2 class="h2">Galería · Manchay</h2>
-
 
         <div class="carrusel-wrap">
           <div class="carrusel-track" id="carruselTrack"></div>
@@ -232,70 +271,121 @@
 <script src="assets/app.js"></script>
 <script>
 (() => {
-  const track    = document.getElementById('carruselTrack');
-  const btnPrev  = document.getElementById('carruselPrev');
-  const btnNext  = document.getElementById('carruselNext');
-  const countEl  = document.getElementById('carruselCount');
+  const track = document.getElementById('carruselTrack');
+  const btnPrev = document.getElementById('carruselPrev');
+  const btnNext = document.getElementById('carruselNext');
+  const countEl = document.getElementById('carruselCount');
+  const fotoGrid = document.getElementById('fotoGrid');
 
-  const BASE     = 'assets/img/';
-  const MAX_PROBE = 50; // busca hasta foto50.jpg
-  const SLIDE_W  = 292; // 280px + 12px gap
-
-  let fotos   = [];
+  const BASE = 'assets/img/';
+  const MAX_PROBE = 50;
+  let fotos = [];
   let current = 0;
-  let isDragging = false, startX = 0, scrollStart = 0;
+  let isDragging = false;
+  let startX = 0;
+  let scrollStart = 0;
+  let slideWidth = 292;
 
-  // Detectar fotos disponibles probando imágenes
+  function getSlideWidth() {
+    const slide = track.querySelector('.carrusel-slide');
+    if (!slide) return 292;
+    const styles = window.getComputedStyle(track);
+    const gap = parseFloat(styles.columnGap || styles.gap || 12);
+    return slide.offsetWidth + gap;
+  }
+
+  function shuffle(arr) {
+    const clone = [...arr];
+    for (let i = clone.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [clone[i], clone[j]] = [clone[j], clone[i]];
+    }
+    return clone;
+  }
+
   function probarFotos() {
     let pending = MAX_PROBE;
-    let found   = [];
+    const found = [];
 
     for (let i = 1; i <= MAX_PROBE; i++) {
       const img = new Image();
       const num = i;
+
       img.onload = () => {
         found.push(num);
         pending--;
-        if (pending === 0) iniciar(found.sort((a,b) => a - b));
+        if (pending === 0) iniciar(found.sort((a, b) => a - b));
       };
+
       img.onerror = () => {
         pending--;
-        if (pending === 0) iniciar(found.sort((a,b) => a - b));
+        if (pending === 0) iniciar(found.sort((a, b) => a - b));
       };
+
       img.src = BASE + 'foto' + i + '.jpg';
     }
   }
 
   function iniciar(nums) {
     fotos = nums;
+
     if (!fotos.length) {
-      track.closest('.carrusel-wrap').style.display = 'none';
+      if (track.closest('.carrusel-wrap')) track.closest('.carrusel-wrap').style.display = 'none';
+      if (fotoGrid) fotoGrid.style.display = 'none';
       return;
     }
+
+    renderFotosGrandes();
     renderSlides();
+
+    slideWidth = getSlideWidth();
+    irA(0, false);
     actualizarCount();
+  }
+
+  function renderFotosGrandes() {
+    if (!fotoGrid) return;
+
+    const seleccion = shuffle(fotos).slice(0, 4);
+    fotoGrid.innerHTML = '';
+
+    seleccion.forEach(n => {
+      const item = document.createElement('div');
+      item.className = 'foto-item';
+
+      const img = document.createElement('img');
+      img.src = BASE + 'foto' + n + '.jpg';
+      img.alt = 'Registro fotográfico Yanapakuy ' + n;
+      img.loading = 'lazy';
+
+      item.appendChild(img);
+      fotoGrid.appendChild(item);
+    });
   }
 
   function renderSlides() {
     track.innerHTML = '';
-    fotos.forEach((n, i) => {
+
+    fotos.forEach(n => {
       const slide = document.createElement('div');
       slide.className = 'carrusel-slide';
+
       const img = document.createElement('img');
       img.src = BASE + 'foto' + n + '.jpg';
       img.alt = 'Actividad Yanapakuy ' + n;
       img.loading = 'lazy';
+
       slide.appendChild(img);
       track.appendChild(slide);
     });
-    irA(0, false);
   }
 
   function irA(idx, animate) {
     current = Math.max(0, Math.min(idx, fotos.length - 1));
-    const offset = current * SLIDE_W;
+    slideWidth = getSlideWidth();
+    const offset = current * slideWidth;
     track.style.transition = animate ? 'transform .35s cubic-bezier(.22,1,.36,1)' : 'none';
-    track.style.transform  = 'translateX(-' + offset + 'px)';
+    track.style.transform = 'translateX(-' + offset + 'px)';
     actualizarCount();
   }
 
@@ -307,19 +397,21 @@
   btnNext.addEventListener('click', () => irA(current + 1, true));
   btnPrev.addEventListener('click', () => irA(current - 1, true));
 
-  // Arrastre con mouse
   track.addEventListener('mousedown', e => {
     isDragging = true;
-    startX     = e.clientX;
+    startX = e.clientX;
     scrollStart = current;
+    slideWidth = getSlideWidth();
     track.style.transition = 'none';
   });
+
   window.addEventListener('mousemove', e => {
     if (!isDragging) return;
     const diff = startX - e.clientX;
-    const offset = scrollStart * SLIDE_W + diff;
+    const offset = scrollStart * slideWidth + diff;
     track.style.transform = 'translateX(-' + offset + 'px)';
   });
+
   window.addEventListener('mouseup', e => {
     if (!isDragging) return;
     isDragging = false;
@@ -331,14 +423,23 @@
     }
   });
 
-  // Arrastre táctil
   track.addEventListener('touchstart', e => {
     startX = e.touches[0].clientX;
     scrollStart = current;
+    slideWidth = getSlideWidth();
   }, { passive: true });
+
   track.addEventListener('touchend', e => {
     const diff = startX - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 50) irA(diff > 0 ? current + 1 : current - 1, true);
+    if (Math.abs(diff) > 50) {
+      irA(diff > 0 ? current + 1 : current - 1, true);
+    } else {
+      irA(current, true);
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (fotos.length) irA(current, false);
   });
 
   probarFotos();
