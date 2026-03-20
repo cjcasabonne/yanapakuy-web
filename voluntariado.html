@@ -4,106 +4,29 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Voluntariado — Yanapakuy</title>
-  <meta name="description" content="Dar tiempo es dar lo más valioso que tienes. Únete a Yanapakuy como voluntario en Manchay, Lima." />
+  <meta name="description" content="Participa como voluntario en Yanapakuy. Trabajo presencial en Manchay o apoyo remoto en actividades educativas y operativas." />
   <meta name="theme-color" content="#c45c1a" />
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/styles.css" />
   <style>
-    .hero-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      color: var(--pri);
-      background: var(--pri-light);
-      border: 1px solid rgba(196,92,26,.20);
-      padding: 6px 14px;
-      border-radius: 999px;
-      margin-bottom: 20px;
-    }
-    .hero-eyebrow::before {
-      content: '';
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: var(--pri);
-      flex-shrink: 0;
-    }
-    .hero-card .h1 {
-      font-size: clamp(38px, 6vw, 64px);
-      line-height: 1.06;
-    }
-    .reflexion-text {
-      font-size: 18px;
-      color: var(--ink-2);
-      line-height: 1.8;
-      margin: 0 0 16px;
-    }
-    .ods-item {
-      display: flex;
-      gap: 16px;
-      padding: 18px;
-      background: var(--bg-warm);
-      border-radius: 16px;
-      border: 1px solid var(--line-warm);
-      margin-bottom: 10px;
-    }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--pri); background: var(--pri-light); border: 1px solid rgba(196,92,26,.20); padding: 6px 14px; border-radius: 999px; margin-bottom: 20px; }
+    .hero-eyebrow::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--pri); flex-shrink: 0; }
+    .hero-card .h1 { font-size: clamp(38px, 6vw, 64px); line-height: 1.06; }
+    .reflexion-text { font-size: 18px; color: var(--ink-2); line-height: 1.8; margin: 0 0 16px; }
+    .ods-item { display: flex; gap: 16px; padding: 18px; background: var(--bg-warm); border-radius: 16px; border: 1px solid var(--line-warm); margin-bottom: 10px; }
     .ods-item:last-child { margin-bottom: 0 }
-    .ods-num {
-      flex-shrink: 0;
-      font-family: var(--font-display);
-      font-size: 13px;
-      font-weight: 800;
-      color: var(--pri);
-      background: var(--pri-light);
-      border: 1px solid rgba(196,92,26,.20);
-      padding: 6px 10px;
-      border-radius: 10px;
-      height: fit-content;
-      white-space: nowrap;
-    }
+    .ods-num { flex-shrink: 0; font-family: var(--font-display); font-size: 13px; font-weight: 800; color: var(--pri); background: var(--pri-light); border: 1px solid rgba(196,92,26,.20); padding: 6px 10px; border-radius: 10px; height: fit-content; white-space: nowrap; }
     .ods-title { font-weight: 700; font-size: 16px; color: var(--ink); margin: 0 0 4px }
     .ods-desc  { font-size: 14px; color: var(--ink-2); margin: 0; line-height: 1.6 }
     .perfil-icon { font-size: 34px; margin-bottom: 12px; display: block }
-    .perfil-clave {
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: .06em;
-      margin-top: 14px;
-    }
+    .perfil-clave { font-size: 12px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; margin-top: 14px; }
     .proceso-list { list-style: none; padding: 0; margin: 0 }
-    .proceso-item {
-      display: flex;
-      gap: 16px;
-      padding: 14px 0;
-      border-bottom: 1px solid var(--line-warm);
-    }
+    .proceso-item { display: flex; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line-warm); }
     .proceso-item:last-child { border-bottom: none; padding-bottom: 0 }
-    .proceso-num {
-      flex-shrink: 0;
-      width: 30px; height: 30px;
-      border-radius: 50%;
-      background: var(--pri);
-      color: #fff;
-      font-weight: 800;
-      font-size: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 2px;
-    }
+    .proceso-num { flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%; background: var(--pri); color: #fff; font-weight: 800; font-size: 14px; display: flex; align-items: center; justify-content: center; margin-top: 2px; }
     .proceso-title { font-weight: 700; font-size: 15px; color: var(--ink); margin: 0 0 3px }
     .proceso-desc  { font-size: 14px; color: var(--ink-2); margin: 0; line-height: 1.55 }
-    .voluntario-text {
-      font-size: 17px;
-      color: var(--ink-2);
-      line-height: 1.75;
-      margin: 0;
-    }
+    .voluntario-text { font-size: 17px; color: var(--ink-2); line-height: 1.75; margin: 0; }
   </style>
 </head>
 <body>
@@ -128,16 +51,13 @@
 
 <main>
 
-  <!-- HERO -->
   <section class="hero">
     <div class="container">
       <div class="hero-card">
-        <div class="hero-eyebrow anim-up">Únete · Manchay, Lima · 2026</div>
-        <h1 class="h1 anim-up">Dar tiempo es dar<br><em style="color:var(--pri);font-style:italic">lo más valioso que tienes.</em></h1>
+        <div class="hero-eyebrow anim-up">Participa · Manchay, Lima · 2026</div>
+        <h1 class="h1 anim-up">Participar implica<br><em style="color:var(--pri);font-style:italic">compromiso sostenido.</em></h1>
         <div class="btnrow anim-up">
-          <a class="btn primary" href="mailto:info@yanapakuy.org.pe?subject=Voluntariado%20Yanapakuy&body=Nombre%3A%0ADisponibilidad%3A%0APerfil%20de%20inter%C3%A9s%3A%0AExperiencia%20breve%3A%0A">
-            Quiero ser voluntario
-          </a>
+          <a class="btn primary" href="mailto:info@yanapakuy.org.pe?subject=Voluntariado%20Yanapakuy&body=Nombre%3A%0ADisponibilidad%3A%0APerfil%20de%20inter%C3%A9s%3A%0AExperiencia%20breve%3A%0A">Quiero ser voluntario</a>
           <a class="btn ghost" href="metodologia.html">Conocer la metodología</a>
           <a class="btn accent" href="https://link.mercadopago.com.pe/yanapakuyjuntos" target="_blank" rel="noopener">💛 Apoyar con una donación</a>
         </div>
@@ -145,36 +65,28 @@
     </div>
   </section>
 
-  <!-- REFLEXIÓN -->
   <section class="section">
     <div class="container grid grid-2">
 
       <div class="card reveal" style="border-top:4px solid var(--pri)">
         <div class="kicker">Por qué importa</div>
-        <h2 class="h2">Aparecer</h2>
+        <h2 class="h2">Participación directa</h2>
         <p class="reflexion-text">
-          Vivimos en una época donde es fácil opinar, compartir y aplaudir desde lejos.
-          Voluntariado es otra cosa. Es aparecer. Es mirar a un niño a los ojos cada dos semanas
-          y decirle — con tu presencia — que vale la pena. Que alguien apostó por él.
+          El voluntariado implica presencia y continuidad. No es solo participar en actividades puntuales, sino sostener un vínculo a lo largo del tiempo mediante sesiones periódicas.
         </p>
         <p class="reflexion-text">
-          No enseñamos solo matemática o historia. Enseñamos que el esfuerzo tiene sentido.
-          Que hay adultos que cumplen lo que prometen. Que la comunidad existe y se construye
-          entre todos. Tú eres parte de ese mensaje.
+          El trabajo se centra en acompañar procesos educativos, reforzar contenidos y mantener un entorno de aprendizaje consistente. La regularidad es el factor que permite generar resultados.
         </p>
       </div>
 
       <div class="card reveal" style="animation-delay:.1s;border-top:4px solid var(--gold)">
         <div class="kicker">El voluntario Yanapakuy</div>
-        <h2 class="h2">Lo que buscamos</h2>
+        <h2 class="h2">Perfil requerido</h2>
         <p class="voluntario-text">
-          No buscamos al más preparado — buscamos al más constante. Alguien que entienda
-          que el impacto no viene de una sesión brillante sino de aparecer cada dos semanas,
-          sin excusas, con energía y con método. Alguien que sepa que enseñar es también
-          modelar: lo que haces vale más que lo que dices.
+          Se requiere constancia, responsabilidad y capacidad de trabajo en equipo. El rol no depende de sesiones aisladas, sino de continuidad en el tiempo y cumplimiento de compromisos.
         </p>
         <div class="quote" style="margin-top:20px">
-          <p>"La constancia transforma la buena intención en impacto real."</p>
+          <p>"La continuidad operativa sostiene los resultados."</p>
           <div class="who">Yanapakuy</div>
         </div>
       </div>
@@ -182,96 +94,91 @@
     </div>
   </section>
 
-  <!-- ODS -->
   <section class="section">
     <div class="container">
       <div class="card reveal" style="background:linear-gradient(135deg,var(--bg-warm),var(--surface));border-color:var(--line-warm)">
         <div class="kicker">Marco global</div>
-        <h2 class="h2">Tu voluntariado, impacto mundial</h2>
+        <h2 class="h2">Alineamiento</h2>
         <p class="p" style="max-width:85%;margin-bottom:24px">
-          El trabajo de Yanapakuy se alinea con los Objetivos de Desarrollo Sostenible
-          de las Naciones Unidas. Cada sesión en Manchay es un paso concreto en esa dirección.
+          Las actividades se alinean con objetivos educativos y de desarrollo social reconocidos a nivel internacional.
         </p>
         <div class="ods-item">
           <div class="ods-num">ODS 4</div>
           <div>
             <p class="ods-title">Educación de calidad</p>
-            <p class="ods-desc">Cada sesión presencial en Manchay es un paso concreto hacia una educación más equitativa para quienes menos acceso tienen. No como slogan — como práctica bisemanal.</p>
+            <p class="ods-desc">Refuerzo académico mediante sesiones periódicas y acompañamiento continuo.</p>
           </div>
         </div>
         <div class="ods-item">
           <div class="ods-num">ODS 16</div>
           <div>
-            <p class="ods-title">Instituciones sólidas y ciudadanía responsable</p>
-            <p class="ods-desc">Formamos jóvenes que entienden sus derechos, practican sus responsabilidades y construyen comunidad desde el respeto. Ciudadanía no se declama — se practica.</p>
+            <p class="ods-title">Ciudadanía</p>
+            <p class="ods-desc">Promoción de convivencia, respeto y participación responsable en comunidad.</p>
           </div>
         </div>
         <div class="ods-item">
           <div class="ods-num">ODS 17</div>
           <div>
-            <p class="ods-title">Alianzas para los objetivos</p>
-            <p class="ods-desc">Yanapakuy existe porque personas distintas se unen por una causa común. Cada voluntario es una alianza en acción. Cada sesión, una prueba de que el trabajo colectivo transforma.</p>
+            <p class="ods-title">Alianzas</p>
+            <p class="ods-desc">Trabajo colaborativo entre voluntarios, organización y comunidad.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PERFILES + PROCESO -->
   <section class="section">
     <div class="container grid grid-2">
 
       <div class="card reveal" style="border-top:4px solid var(--pri)">
-        <div class="kicker">¿Cómo puedo participar?</div>
-        <h2 class="h2">Dos formas de sumarte</h2>
+        <div class="kicker">¿Cómo participar?</div>
+        <h2 class="h2">Modalidades</h2>
         <div style="margin-top:16px">
           <div style="padding:18px;background:var(--bg-warm);border-radius:16px;margin-bottom:12px;border:1px solid var(--line-warm)">
             <span class="perfil-icon">🏘️</span>
             <div class="badge" style="margin-bottom:8px">Presencial</div>
             <h3 class="h2" style="font-size:20px;margin-bottom:8px">Voluntario presencial</h3>
-            <p class="p small">Va a Manchay cada dos semanas. Acompaña directamente a los niños en sesiones de 2 horas. Es el corazón del programa.</p>
-            <p class="perfil-clave">Clave: presencia, ejemplo y constancia.</p>
+            <p class="p small">Participación en sesiones en Manchay con interacción directa con estudiantes.</p>
+            <p class="perfil-clave">Clave: asistencia regular y cumplimiento.</p>
           </div>
           <div style="padding:18px;background:var(--bg-warm);border-radius:16px;border:1px solid var(--line-warm)">
             <span class="perfil-icon">💻</span>
             <div class="badge" style="background:var(--acc-light);border-color:rgba(37,99,176,.25);color:var(--acc);margin-bottom:8px">Remoto</div>
             <h3 class="h2" style="font-size:20px;margin-bottom:8px">Voluntario remoto</h3>
-            <p class="p small">Apoya desde cualquier lugar. Diseña materiales, gestiona comunicaciones o apoya la coordinación operativa.</p>
-            <p class="perfil-clave">Clave: orden, cumplimiento y confiabilidad.</p>
+            <p class="p small">Apoyo en desarrollo de materiales, coordinación y tareas operativas.</p>
+            <p class="perfil-clave">Clave: organización y cumplimiento de entregables.</p>
           </div>
         </div>
       </div>
 
       <div class="card reveal" style="animation-delay:.1s;background:linear-gradient(135deg,var(--bg-warm),var(--surface));border-color:var(--line-warm)">
-        <div class="kicker">Cómo sumarte</div>
-        <h2 class="h2">Proceso de incorporación</h2>
+        <div class="kicker">Proceso</div>
+        <h2 class="h2">Incorporación</h2>
         <ul class="proceso-list" style="margin-top:16px">
           <li class="proceso-item">
             <div class="proceso-num">1</div>
             <div>
               <p class="proceso-title">Postulación</p>
-              <p class="proceso-desc">Correo con tu nombre, disponibilidad y perfil de interés. Sin formularios largos.</p>
+              <p class="proceso-desc">Envío de datos básicos por correo.</p>
             </div>
           </li>
           <li class="proceso-item">
             <div class="proceso-num">2</div>
             <div>
-              <p class="proceso-title">Entrevista breve</p>
-              <p class="proceso-desc">Conversación de 20–30 minutos para conocernos y ver el encaje.</p>
+              <p class="proceso-title">Evaluación</p>
+              <p class="proceso-desc">Revisión de perfil y coordinación inicial.</p>
             </div>
           </li>
           <li class="proceso-item">
             <div class="proceso-num">3</div>
             <div>
-              <p class="proceso-title">Inducción</p>
-              <p class="proceso-desc">Metodología, protocolos de protección de menores y primera sesión acompañada.</p>
+              <p class="proceso-title">Inicio</p>
+              <p class="proceso-desc">Inducción y asignación de actividades.</p>
             </div>
           </li>
         </ul>
         <div class="btnrow" style="margin-top:24px">
-          <a class="btn primary" href="mailto:info@yanapakuy.org.pe?subject=Voluntariado%20Yanapakuy&body=Nombre%3A%0ADisponibilidad%3A%0APerfil%20de%20inter%C3%A9s%3A%0AExperiencia%20breve%3A%0A">
-            Enviar postulación
-          </a>
+          <a class="btn primary" href="mailto:info@yanapakuy.org.pe?subject=Voluntariado%20Yanapakuy&body=Nombre%3A%0ADisponibilidad%3A%0APerfil%20de%20inter%C3%A9s%3A%0AExperiencia%20breve%3A%0A">Enviar postulación</a>
         </div>
       </div>
 
@@ -284,7 +191,7 @@
   <div class="container footer-grid">
     <div>
       <div class="h3">Yanapakuy — Juntos por el Perú</div>
-      <div class="small">Educación integral para escolares de recursos limitados.</div>
+      <div class="small">Formación académica y acompañamiento educativo.</div>
       <div class="legal">© <span data-year></span> Yanapakuy. Asociación civil sin fines de lucro.</div>
     </div>
     <div>
