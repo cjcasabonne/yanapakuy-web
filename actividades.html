@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Actividades — Yanapakuy</title>
-  <meta name="description" content="Actividades de Yanapakuy en Manchay: registro de sesiones y galería fotográfica." />
+  <meta name="description" content="Actividades de Yanapakuy en Manchay: timeline de sesiones y galería fotográfica." />
   <meta name="theme-color" content="#c45c1a" />
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/styles.css" />
@@ -26,20 +26,80 @@
     }
     .hero-eyebrow::before {
       content: '';
-      width: 8px;
-      height: 8px;
+      width: 8px; height: 8px;
       border-radius: 50%;
       background: var(--pri);
       flex-shrink: 0;
     }
 
-    .t-date.proxima { color: var(--pri) }
-    .t-date.pasada { color: var(--ok) }
-    .t-date.proxima-dot::before { background: var(--pri) }
-    .t-date.pasada-dot::before { background: var(--ok) }
-    .t-item.proxima::before { background: var(--pri) }
-    .t-item.pasada::before { background: var(--ok) }
+    /* Grid de actividades con iconos */
+    .actividades-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 20px 0 8px;
+    }
+    @media (max-width: 680px) {
+      .actividades-grid { grid-template-columns: repeat(2, 1fr); }
+    }
 
+    .act-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 10px;
+      border-radius: 14px;
+      background: var(--bg-warm);
+      border: 1px solid var(--line-warm);
+      text-align: center;
+      text-decoration: none;
+      color: var(--ink);
+      transition: transform .18s, box-shadow .18s, background .18s, border-color .18s;
+      cursor: default;
+    }
+    a.act-item {
+      cursor: pointer;
+    }
+    a.act-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(196,92,26,.15);
+      background: var(--pri-light);
+      border-color: rgba(196,92,26,.35);
+      color: var(--pri);
+    }
+    a.act-item:hover .act-icon {
+      transform: scale(1.12);
+    }
+    .act-icon {
+      font-size: 28px;
+      line-height: 1;
+      transition: transform .18s;
+      display: block;
+    }
+    .act-label {
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--ink-2);
+      letter-spacing: .01em;
+    }
+    a.act-item:hover .act-label {
+      color: var(--pri);
+    }
+    .act-link-hint {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--pri);
+      background: var(--pri-light);
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(196,92,26,.20);
+    }
+
+    /* Carrusel */
     .carrusel-wrap {
       position: relative;
       overflow: hidden;
@@ -79,8 +139,7 @@
       padding: 12px 16px 16px;
     }
     .carrusel-btn {
-      width: 38px;
-      height: 38px;
+      width: 38px; height: 38px;
       border-radius: 50%;
       border: 1.5px solid var(--line-warm);
       background: var(--surface);
@@ -100,39 +159,6 @@
       padding: 0 6px;
     }
 
-    .foto-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-      margin-top: 18px;
-    }
-    .foto-item {
-      border-radius: 18px;
-      overflow: hidden;
-      height: 340px;
-      background: var(--line);
-      border: 1px solid var(--line-warm);
-    }
-    .foto-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform .35s ease;
-    }
-    .foto-item:hover img {
-      transform: scale(1.03);
-    }
-
-    @media (max-width: 700px) {
-      .foto-grid {
-        grid-template-columns: 1fr;
-      }
-      .foto-item {
-        height: 240px;
-      }
-    }
-
     @media (max-width: 600px) {
       .carrusel-slide { width: 220px; height: 165px }
     }
@@ -145,7 +171,7 @@
     <a class="brand" href="index.html" aria-label="Inicio Yanapakuy">
       <img src="assets/logo.svg" alt="Yanapakuy" />
     </a>
-    <button class="navbtn" data-nav-toggle aria-expanded="false" aria-controls="nav" aria-label="Abrir menú"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect y="3" width="20" height="2.2" rx="1.1" fill="currentColor"/><rect y="9" width="20" height="2.2" rx="1.1" fill="currentColor"/><rect y="15" width="20" height="2.2" rx="1.1" fill="currentColor"/></svg></button>
+    <button class="navbtn" data-nav-toggle aria-expanded="false" aria-controls="nav">Menú</button>
     <nav class="nav" id="nav" data-nav data-open="false" aria-label="Navegación principal">
       <a href="quienes-somos.html">Quiénes somos</a>
       <a href="metodologia.html">Metodología</a>
@@ -166,8 +192,8 @@
         <div class="hero-eyebrow anim-up">Presencial · Manchay, Lima</div>
         <h1 class="h1 anim-up">Actividades</h1>
         <p class="p anim-up" style="max-width:80%;font-size:18px">
-          Desde 2022 realizamos sesiones periódicas en Manchay.
-          Aquí queda el registro del trabajo realizado.
+          Desde 2022 llegamos a Manchay cada dos semanas.
+          Aquí queda el registro.
         </p>
       </div>
     </div>
@@ -180,16 +206,54 @@
         <div class="kicker">Desde 2022 · Manchay</div>
         <h2 class="h2">Lo que hemos trabajado</h2>
         <p class="p" style="margin-top:12px">
-          Cada dos semanas desarrollamos una sesión con actividades formativas, dinámicas participativas y espacios de reflexión.
+          Cada dos semanas, una sesión. Cada sesión, un pretexto para formar carácter, construir identidad y fortalecer comunidad.
         </p>
         <p class="p">
-          Hemos trabajado fechas del calendario peruano como Fiestas Patrias, Día de la Madre, Día del Padre, Día de la Bandera, Canción Criolla, Santa Rosa de Lima, Día de Todos los Santos y Navidad, utilizándolas como base para abordar identidad, convivencia, valores y comunidad.
+          Hemos trabajado el calendario peruano como herramienta pedagógica. También el entorno y la época — Navidad no como fecha comercial sino como cierre de ciclo. Detrás de cada fecha, los mismos ejes: valores, identidad peruana y disciplina.
         </p>
-        <p class="p">
-          También se han incorporado temas vinculados al entorno, como el Fenómeno del Niño, para conversar sobre territorio, prevención, responsabilidad compartida y respuesta colectiva.
-        </p>
-        <div class="quote" style="margin-top:4px">
-          <p>"La continuidad permite sostener el trabajo educativo en el tiempo."</p>
+
+        <div class="actividades-grid">
+          <div class="act-item">
+            <span class="act-icon">🇵🇪</span>
+            <span class="act-label">Fiestas Patrias</span>
+          </div>
+          <div class="act-item">
+            <span class="act-icon">👩‍👧</span>
+            <span class="act-label">Día de la Madre</span>
+          </div>
+          <div class="act-item">
+            <span class="act-icon">👨‍👦</span>
+            <span class="act-label">Día del Padre</span>
+          </div>
+          <div class="act-item">
+            <span class="act-icon">🏳️</span>
+            <span class="act-label">Día de la Bandera</span>
+          </div>
+          <div class="act-item">
+            <span class="act-icon">🎶</span>
+            <span class="act-label">Canción Criolla</span>
+          </div>
+          <a class="act-item" href="dinamica_santa_rosa_infantil.html">
+            <span class="act-icon">🌹</span>
+            <span class="act-label">Santa Rosa de Lima</span>
+            <span class="act-link-hint">Ver dinámica →</span>
+          </a>
+          <div class="act-item">
+            <span class="act-icon">🕯️</span>
+            <span class="act-label">Día de Todos los Santos</span>
+          </div>
+          <div class="act-item">
+            <span class="act-icon">🌊</span>
+            <span class="act-label">Fenómeno del Niño</span>
+          </div>
+          <div class="act-item">
+            <span class="act-icon">🎄</span>
+            <span class="act-label">Navidad</span>
+          </div>
+        </div>
+
+        <div class="quote" style="margin-top:12px">
+          <p>"El ejemplo educa más que la palabra. La constancia, más que el talento."</p>
           <div class="who">Yanapakuy</div>
         </div>
       </div>
@@ -198,10 +262,10 @@
         <div class="kicker">2026 · Próximas sesiones</div>
         <h2 class="h2">Retomamos en Manchay</h2>
         <p class="p" style="margin-top:12px">
-          Estamos reorganizando el equipo para retomar el programa con mayor continuidad y nuevas incorporaciones al voluntariado. Las sesiones mantendrán el formato habitual: trabajo presencial, dinámica participativa, espacio de reflexión y cierre.
+          Estamos reorganizando el equipo para retomar el programa con más estructura y nuevos voluntarios. Las sesiones serán cada dos semanas, siguiendo el mismo formato de siempre: 2 horas, dinámica participativa, reflexión y cierre.
         </p>
         <p class="p">
-          Si quieres participar en las próximas sesiones, de manera presencial o remota, puedes sumarte al equipo.
+          Si quieres ser parte de las próximas sesiones — ya sea presencial o desde casa — este es el momento.
         </p>
         <div class="btnrow" style="margin-top:8px">
           <a class="btn primary" href="voluntariado.html">Sumarme como voluntario</a>
@@ -214,20 +278,9 @@
 
   <section class="section">
     <div class="container">
-      <div class="card reveal">
-        <div class="kicker">Registro</div>
-        <h2 class="h2">Sesiones en campo</h2>
-        <div class="foto-grid" id="fotoGrid"></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
       <div class="card reveal" style="background:linear-gradient(135deg,var(--bg-warm),var(--surface));border-color:var(--line-warm);padding-bottom:8px">
         <div class="kicker">Evidencias visuales</div>
         <h2 class="h2">Galería · Manchay</h2>
-
         <div class="carrusel-wrap">
           <div class="carrusel-track" id="carruselTrack"></div>
           <div class="carrusel-controls">
@@ -271,121 +324,69 @@
 <script src="assets/app.js"></script>
 <script>
 (() => {
-  const track = document.getElementById('carruselTrack');
-  const btnPrev = document.getElementById('carruselPrev');
-  const btnNext = document.getElementById('carruselNext');
-  const countEl = document.getElementById('carruselCount');
-  const fotoGrid = document.getElementById('fotoGrid');
+  const track    = document.getElementById('carruselTrack');
+  const btnPrev  = document.getElementById('carruselPrev');
+  const btnNext  = document.getElementById('carruselNext');
+  const countEl  = document.getElementById('carruselCount');
 
-  const BASE = 'assets/img/';
+  const BASE      = 'assets/img/';
   const MAX_PROBE = 50;
-  let fotos = [];
+  const SLIDE_W   = 292;
+
+  let fotos   = [];
   let current = 0;
-  let isDragging = false;
-  let startX = 0;
-  let scrollStart = 0;
-  let slideWidth = 292;
-
-  function getSlideWidth() {
-    const slide = track.querySelector('.carrusel-slide');
-    if (!slide) return 292;
-    const styles = window.getComputedStyle(track);
-    const gap = parseFloat(styles.columnGap || styles.gap || 12);
-    return slide.offsetWidth + gap;
-  }
-
-  function shuffle(arr) {
-    const clone = [...arr];
-    for (let i = clone.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [clone[i], clone[j]] = [clone[j], clone[i]];
-    }
-    return clone;
-  }
+  let isDragging = false, startX = 0, scrollStart = 0;
 
   function probarFotos() {
     let pending = MAX_PROBE;
-    const found = [];
+    let found   = [];
 
     for (let i = 1; i <= MAX_PROBE; i++) {
       const img = new Image();
       const num = i;
-
       img.onload = () => {
         found.push(num);
         pending--;
-        if (pending === 0) iniciar(found.sort((a, b) => a - b));
+        if (pending === 0) iniciar(found.sort((a,b) => a - b));
       };
-
       img.onerror = () => {
         pending--;
-        if (pending === 0) iniciar(found.sort((a, b) => a - b));
+        if (pending === 0) iniciar(found.sort((a,b) => a - b));
       };
-
       img.src = BASE + 'foto' + i + '.jpg';
     }
   }
 
   function iniciar(nums) {
     fotos = nums;
-
     if (!fotos.length) {
-      if (track.closest('.carrusel-wrap')) track.closest('.carrusel-wrap').style.display = 'none';
-      if (fotoGrid) fotoGrid.style.display = 'none';
+      track.closest('.carrusel-wrap').style.display = 'none';
       return;
     }
-
-    renderFotosGrandes();
     renderSlides();
-
-    slideWidth = getSlideWidth();
-    irA(0, false);
     actualizarCount();
-  }
-
-  function renderFotosGrandes() {
-    if (!fotoGrid) return;
-
-    const seleccion = shuffle(fotos).slice(0, 4);
-    fotoGrid.innerHTML = '';
-
-    seleccion.forEach(n => {
-      const item = document.createElement('div');
-      item.className = 'foto-item';
-
-      const img = document.createElement('img');
-      img.src = BASE + 'foto' + n + '.jpg';
-      img.alt = 'Registro fotográfico Yanapakuy ' + n;
-      img.loading = 'lazy';
-
-      item.appendChild(img);
-      fotoGrid.appendChild(item);
-    });
   }
 
   function renderSlides() {
     track.innerHTML = '';
-
-    fotos.forEach(n => {
+    fotos.forEach((n) => {
       const slide = document.createElement('div');
       slide.className = 'carrusel-slide';
-
       const img = document.createElement('img');
       img.src = BASE + 'foto' + n + '.jpg';
       img.alt = 'Actividad Yanapakuy ' + n;
       img.loading = 'lazy';
-
       slide.appendChild(img);
       track.appendChild(slide);
     });
+    irA(0, false);
   }
 
   function irA(idx, animate) {
     current = Math.max(0, Math.min(idx, fotos.length - 1));
-    slideWidth = getSlideWidth();
-    const offset = current * slideWidth;
+    const offset = current * SLIDE_W;
     track.style.transition = animate ? 'transform .35s cubic-bezier(.22,1,.36,1)' : 'none';
-    track.style.transform = 'translateX(-' + offset + 'px)';
+    track.style.transform  = 'translateX(-' + offset + 'px)';
     actualizarCount();
   }
 
@@ -399,19 +400,16 @@
 
   track.addEventListener('mousedown', e => {
     isDragging = true;
-    startX = e.clientX;
+    startX     = e.clientX;
     scrollStart = current;
-    slideWidth = getSlideWidth();
     track.style.transition = 'none';
   });
-
   window.addEventListener('mousemove', e => {
     if (!isDragging) return;
     const diff = startX - e.clientX;
-    const offset = scrollStart * slideWidth + diff;
+    const offset = scrollStart * SLIDE_W + diff;
     track.style.transform = 'translateX(-' + offset + 'px)';
   });
-
   window.addEventListener('mouseup', e => {
     if (!isDragging) return;
     isDragging = false;
@@ -426,20 +424,10 @@
   track.addEventListener('touchstart', e => {
     startX = e.touches[0].clientX;
     scrollStart = current;
-    slideWidth = getSlideWidth();
   }, { passive: true });
-
   track.addEventListener('touchend', e => {
     const diff = startX - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 50) {
-      irA(diff > 0 ? current + 1 : current - 1, true);
-    } else {
-      irA(current, true);
-    }
-  });
-
-  window.addEventListener('resize', () => {
-    if (fotos.length) irA(current, false);
+    if (Math.abs(diff) > 50) irA(diff > 0 ? current + 1 : current - 1, true);
   });
 
   probarFotos();
