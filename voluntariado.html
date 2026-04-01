@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Voluntariado — Yanapakuy</title>
+  <meta name="description" content="Participa como voluntario en Yanapakuy. Trabajo presencial en Manchay o apoyo remoto en actividades educativas y operativas." />
+  <meta name="theme-color" content="#269947" />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    /* ══════════════════════════════════════════════════
+       VOLUNTARIADO 2.0
+    ══════════════════════════════════════════════════ */
+
+    .hero-2 {
+      display: grid;
+      grid-template-columns: 1fr 44%;
+      min-height: calc(100dvh - 65px);
+      overflow: hidden;
+      background: var(--surface);
+    }
+    .hero-2-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 64px clamp(24px, 5vw, 56px) 64px
+               max(var(--pad), calc((100vw - var(--max)) / 2 + var(--pad)));
+    }
+    .hero-2-media {
+      position: relative;
+      overflow: hidden;
+      background: var(--bg-warm);
+      min-height: 420px;
+    }
+    .hero-2-media img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 24%;
+    }
+    .hero-2-media::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 88px;
+      background: linear-gradient(to right, var(--surface), transparent);
+      z-index: 1;
+      pointer-events: none;
+    }
+    .display-h {
+      font-family: var(--font-display);
+      font-size: clamp(40px, 5vw, 68px);
+      line-height: 1.02;
+      letter-spacing: -.03em;
+      margin: 0 0 18px;
+      color: var(--ink);
+    }
+    .display-h em {
+      color: var(--pri);
+      font-style: italic;
+      display: block;
+    }
+    .hero-2-desc {
+      font-size: 18px;
+      color: var(--ink-2);
+      line-height: 1.72;
+      max-width: 560px;
+      margin: 0 0 26px;
+    }
+    .hero-cta-note {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+    .hero-cta-note .chip {
+      background: var(--bg-warm);
+    }
+
+    .impact-band {
+      background: #0a2218;
+      padding: 44px 0;
+    }
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      text-align: center;
+    }
+    .impact-item {
+      padding: 0 22px;
+      border-right: 1px solid rgba(255,255,255,.10);
+    }
+    .impact-item:last-child { border-right: 0 }
+    .impact-n {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 38px;
+      line-height: 1;
+      color: #fff;
+    }
+    .impact-l {
+      display: block;
+      margin-top: 8px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.76);
+    }
+
+    .editorial-split {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      background: var(--surface);
+      border: 1px solid var(--line);
+    }
+    .editorial-body {
+      padding: 48px 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .editorial-media {
+      position: relative;
+      min-height: 380px;
+      overflow: hidden;
+    }
+    .editorial-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .reflexion-text {
+      font-size: 17px;
+      color: var(--ink-2);
+      line-height: 1.76;
+      margin: 0 0 14px;
+    }
+    .voluntario-text {
+      font-size: 16px;
+      color: var(--ink-2);
+      line-height: 1.72;
+      margin: 0;
+    }
+
+    .modalidades-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .modalidad-card {
+      padding: 22px 20px;
+      background: var(--bg-warm);
+      border-radius: 18px;
+      border: 1px solid var(--line-warm);
+      box-shadow: var(--shadow-sm);
+      height: 100%;
+    }
+    .perfil-icon {
+      font-size: 34px;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .perfil-clave {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-top: 14px;
+    }
+
+    .ods-band {
+      position: relative;
+      height: 400px;
+      overflow: hidden;
+    }
+    .ods-band img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 34%;
+      display: block;
+    }
+    .ods-band::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(10,34,24,.82), rgba(10,34,24,.28));
+    }
+    .ods-band-inner {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+    }
+    .ods-band-copy {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 max(var(--pad), calc((100vw - var(--max)) / 2 + var(--pad)));
+      color: #fff;
+    }
+    .ods-band-copy .kicker { color: rgba(255,255,255,.7) }
+    .ods-band-copy h2 {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 3.0vw, 42px);
+    font-weight: 400;
+    line-height: 1.12;
+    letter-spacing: 0.02em;
+    margin: 0 0 10px;
+    color: #fff;
+    text-shadow: 0 2px 6px rgba(0,0,0,.25);
+    }
+    .ods-band-copy p {
+      max-width: 540px;
+      margin: 0;
+      color: rgba(255,255,255,.78);
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .ods-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .ods-item {
+      display: flex;
+      gap: 16px;
+      padding: 18px;
+      background: var(--bg-warm);
+      border-radius: 16px;
+      border: 1px solid var(--line-warm);
+      height: 100%;
+    }
+    .ods-num {
+      flex-shrink: 0;
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--pri);
+      background: var(--pri-light);
+      border: 1px solid rgba(38,153,71,.20);
+      padding: 6px 10px;
+      border-radius: 10px;
+      height: fit-content;
+      white-space: nowrap;
+    }
+    .ods-title {
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--ink);
+      margin: 0 0 4px;
+    }
+    .ods-desc {
+      font-size: 14px;
+      color: var(--ink-2);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .proceso-panel {
+      background: linear-gradient(135deg,var(--bg-warm),var(--surface));
+      border-color: var(--line-warm);
+    }
+    .proceso-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .proceso-item {
+      display: flex;
+      gap: 16px;
+      padding: 15px 0;
+      border-bottom: 1px solid var(--line-warm);
+    }
+    .proceso-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .proceso-num {
+      flex-shrink: 0;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--pri);
+      color: #fff;
+      font-weight: 800;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+    .proceso-title {
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--ink);
+      margin: 0 0 3px;
+    }
+    .proceso-desc {
+      font-size: 14px;
+      color: var(--ink-2);
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    .quote-big {
+      text-align: center;
+      padding: 84px 24px;
+      background: var(--bg-warm);
+      border-top: 1px solid var(--line-warm);
+      border-bottom: 1px solid var(--line-warm);
+    }
+    .quote-big p {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3vw, 38px);
+      line-height: 1.25;
+      color: var(--ink);
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .cta-final {
+      position: relative;
+      overflow: hidden;
+      background: #0a2218;
+      padding: 88px 0;
+      text-align: center;
+    }
+    .cta-final::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 900px 500px at 15% 50%, rgba(38,153,71,.18), transparent 60%),
+        radial-gradient(ellipse 700px 400px at 85% 50%, rgba(38,153,71,.12), transparent 60%);
+      pointer-events: none;
+    }
+    .cta-final-inner {
+      position: relative;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--pad);
+    }
+    .cta-kicker {
+      display: block;
+      margin-bottom: 16px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--pri-light);
+    }
+    .cta-h {
+      font-family: var(--font-display);
+      font-size: clamp(30px, 3.8vw, 54px);
+      line-height: 1.05;
+      color: #fff;
+      margin: 0 0 16px;
+      letter-spacing: -.02em;
+      font-weight: 400;
+    }
+    .cta-sub {
+      font-size: 17px;
+      color: rgba(255,255,255,.7);
+      max-width: 620px;
+      margin: 0 auto 32px;
+      line-height: 1.7;
+    }
+    .btn-white {
+      background: #fff;
+      color: var(--pri);
+      border-color: transparent;
+      font-weight: 800;
+    }
+    .btn-white:hover {
+      background: var(--pri-light);
+      color: var(--pri-2);
+    }
+    .btn-ghost-white {
+      background: transparent;
+      color: #fff;
+      border-color: rgba(255,255,255,.30);
+    }
+    .btn-ghost-white:hover {
+      background: rgba(255,255,255,.08);
+      color: #fff;
+      box-shadow: none;
+    }
+
+    @media (max-width: 960px) {
+      .hero-2,
+      .editorial-split {
+        grid-template-columns: 1fr;
+      }
+      .hero-2-media {
+        order: -1;
+        min-height: 300px;
+      }
+      .hero-2-media::before { display: none }
+      .hero-2-text { padding: 40px var(--pad) 48px }
+      .editorial-body { padding: 40px var(--pad) }
+      .editorial-media { min-height: 280px }
+      .impact-grid { grid-template-columns: repeat(2, 1fr) }
+      .impact-item:nth-child(2) { border-right: 0 }
+      .impact-item:nth-child(3),
+      .impact-item:nth-child(4) {
+        border-top: 1px solid rgba(255,255,255,.10);
+        padding-top: 22px;
+      }
+      .ods-grid,
+      .modalidades-wrap { grid-template-columns: 1fr }
+    }
+
+    @media (max-width: 600px) {
+      .impact-band { padding: 32px 0 }
+      .impact-item { padding: 0 14px }
+      .impact-n { font-size: 30px }
+      .ods-band { height: 300px }
+      .quote-big { padding: 60px 18px }
+      .cta-final { padding: 64px 0 }
+    }
+  </style>
+</head>
+<body>
+<a class="skip-link" href="#main">Ir al contenido principal</a>
+
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Inicio Yanapakuy">
+      <img src="assets/logo.svg" alt="Yanapakuy" />
+    </a>
+    <button class="navbtn" data-nav-toggle aria-expanded="false" aria-controls="nav" aria-label="Abrir menú"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect y="3" width="20" height="2.2" rx="1.1" fill="currentColor"/><rect y="9" width="20" height="2.2" rx="1.1" fill="currentColor"/><rect y="15" width="20" height="2.2" rx="1.1" fill="currentColor"/></svg></button>
+    <nav class="nav" id="nav" data-nav data-open="false" aria-label="Navegación principal">
+      <a href="quienes-somos.html">Quiénes somos</a>
+      <a href="metodologia.html">Metodología</a>
+      <a href="programas.html">Programa</a>
+      <a href="actividades.html">Actividades</a>
+      <a href="documentos.html">Documentos</a>
+      <a href="voluntariado.html" aria-current="page">Voluntariado</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero-2" aria-label="Voluntariado Yanapakuy">
+    <div class="hero-2-text">
+      <div class="hero-eyebrow anim-up">Participa · Manchay, Lima · 2026</div>
+      <h1 class="display-h anim-up">Participar implica<em>compromiso sostenido.</em></h1>
+      <p class="hero-2-desc anim-up">
+        El voluntariado en Yanapakuy no gira alrededor de apariciones puntuales. Importa la permanencia,
+        la palabra cumplida y la capacidad de sostener presencia donde más se necesita.
+      </p>
+      <div class="btnrow anim-up">
+        <a class="btn primary" href="mailto:info@yanapakuy.org.pe?subject=Voluntariado%20Yanapakuy&body=Nombre%3A%0ADisponibilidad%3A%0APerfil%20de%20inter%C3%A9s%3A%0AExperiencia%20breve%3A%0A">Quiero ser voluntario</a>
+        <a class="btn ghost" href="metodologia.html">Conocer la metodología</a>
+        <a class="btn accent" href="https://link.mercadopago.com.pe/yanapakuyjuntos" target="_blank" rel="noopener">💛 Apoyar con una donación</a>
+      </div>
+      <div class="hero-cta-note anim-up">
+        <span class="chip">Presencial en Manchay</span>
+        <span class="chip">Apoyo remoto</span>
+        <span class="chip">Inducción simple</span>
+        <span class="chip">Seguimiento real</span>
+      </div>
+    </div>
+
+    <div class="hero-2-media" aria-hidden="true">
+      <img id="heroRandom" src="assets/img/foto1.jpg" alt="Voluntariado Yanapakuy" fetchpriority="high" />
+    </div>
+  </section>
+
+  <div class="impact-band" aria-label="Datos clave del voluntariado">
+    <div class="container">
+      <div class="impact-grid">
+        <div class="impact-item">
+          <span class="impact-n">2026</span>
+          <span class="impact-l">Nueva convocatoria</span>
+        </div>
+        <div class="impact-item">
+          <span class="impact-n">Manchay</span>
+          <span class="impact-l">Trabajo en territorio</span>
+        </div>
+        <div class="impact-item">
+          <span class="impact-n">2 vías</span>
+          <span class="impact-l">Presencial y remoto</span>
+        </div>
+        <div class="impact-item">
+          <span class="impact-n">1 criterio</span>
+          <span class="impact-l">Continuidad</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section" aria-label="Sentido del voluntariado">
+    <div class="container">
+      <div class="editorial-split reveal">
+        <div class="editorial-body">
+          <div class="kicker">Por qué importa</div>
+          <h2 class="h2" style="margin-bottom:18px">Participación directa</h2>
+          <p class="reflexion-text">
+            El voluntariado implica presencia y continuidad. No es solo participar en actividades puntuales, sino sostener un vínculo a lo largo del tiempo mediante sesiones periódicas.
+          </p>
+          <p class="reflexion-text">
+            El trabajo se centra en acompañar procesos educativos, reforzar contenidos y mantener un entorno de aprendizaje consistente. La regularidad es el factor que permite generar resultados.
+          </p>
+          <div class="quote" style="margin-top:10px">
+            <p>"La continuidad operativa sostiene los resultados."</p>
+            <div class="who">Yanapakuy</div>
+          </div>
+        </div>
+        <div class="editorial-media" aria-hidden="true">
+          <img id="editorialRandom" src="assets/img/foto2.jpg" alt="Voluntariado en Manchay" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Modalidades y proceso">
+    <div class="container grid grid-2">
+
+      <article class="card reveal" style="border-top:4px solid var(--gold)">
+        <div class="kicker">El voluntario Yanapakuy</div>
+        <h2 class="h2">Perfil requerido</h2>
+        <p class="voluntario-text" style="margin-top:14px">
+          Se requiere constancia, responsabilidad y capacidad de trabajo en equipo. El rol no depende de sesiones aisladas, sino de continuidad en el tiempo y cumplimiento de compromisos.
+        </p>
+
+        <div class="modalidades-wrap">
+          <div class="modalidad-card">
+            <span class="perfil-icon">🏘️</span>
+            <div class="badge" style="margin-bottom:8px">Presencial</div>
+            <h3 class="h2" style="font-size:20px;margin-bottom:8px">Voluntario presencial</h3>
+            <p class="p small">Participación en sesiones en Manchay con interacción directa con estudiantes.</p>
+            <p class="perfil-clave">Clave: asistencia regular y cumplimiento.</p>
+          </div>
+          <div class="modalidad-card">
+            <span class="perfil-icon">💻</span>
+            <div class="badge" style="background:var(--acc-light);border-color:rgba(37,99,176,.25);color:var(--acc);margin-bottom:8px">Remoto</div>
+            <h3 class="h2" style="font-size:20px;margin-bottom:8px">Voluntario remoto</h3>
+            <p class="p small">Apoyo en desarrollo de materiales, coordinación y tareas operativas.</p>
+            <p class="perfil-clave">Clave: organización y cumplimiento de entregables.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card proceso-panel reveal" style="animation-delay:.1s">
+        <div class="kicker">Proceso</div>
+        <h2 class="h2">Incorporación</h2>
+        <ul class="proceso-list" style="margin-top:16px">
+          <li class="proceso-item">
+            <div class="proceso-num">1</div>
+            <div>
+              <p class="proceso-title">Postulación</p>
+              <p class="proceso-desc">Envío de datos básicos por correo.</p>
+            </div>
+          </li>
+          <li class="proceso-item">
+            <div class="proceso-num">2</div>
+            <div>
+              <p class="proceso-title">Evaluación</p>
+              <p class="proceso-desc">Revisión de perfil y coordinación inicial.</p>
+            </div>
+          </li>
+          <li class="proceso-item">
+            <div class="proceso-num">3</div>
+            <div>
+              <p class="proceso-title">Inicio</p>
+              <p class="proceso-desc">Inducción y asignación de actividades.</p>
+            </div>
+          </li>
+        </ul>
+        <div class="btnrow" style="margin-top:24px">
+          <a class="btn primary" href="mailto:info@yanapakuy.org.pe?subject=Voluntariado%20Yanapakuy&body=Nombre%3A%0ADisponibilidad%3A%0APerfil%20de%20inter%C3%A9s%3A%0AExperiencia%20breve%3A%0A">Enviar postulación</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="ods-band" aria-label="Alineamiento institucional">
+    <img id="bandRandom" src="assets/img/foto3.jpg" alt="Acción educativa Yanapakuy" loading="lazy" />
+    <div class="ods-band-inner">
+      <div class="ods-band-copy">
+        <div class="kicker">Marco global</div>
+        <h2>Alineamiento</h2>
+        <p>Las actividades se alinean con objetivos educativos y de desarrollo social reconocidos a nivel internacional.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Objetivos de desarrollo sostenible">
+    <div class="container">
+      <div class="ods-grid reveal">
+        <div class="ods-item">
+          <div class="ods-num">ODS 4</div>
+          <div>
+            <p class="ods-title">Educación de calidad</p>
+            <p class="ods-desc">Refuerzo académico mediante sesiones periódicas y acompañamiento continuo.</p>
+          </div>
+        </div>
+        <div class="ods-item">
+          <div class="ods-num">ODS 16</div>
+          <div>
+            <p class="ods-title">Ciudadanía</p>
+            <p class="ods-desc">Promoción de convivencia, respeto y participación responsable en comunidad.</p>
+          </div>
+        </div>
+        <div class="ods-item">
+          <div class="ods-num">ODS 17</div>
+          <div>
+            <p class="ods-title">Alianzas</p>
+            <p class="ods-desc">Trabajo colaborativo entre voluntarios, organización y comunidad.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-big" aria-label="Cierre conceptual">
+    <p>Quien decide quedarse, enseñar, organizar y volver a empezar cada dos semanas cambia mucho más que una jornada: ayuda a construir continuidad donde más falta hace.</p>
+  </section>
+
+  <section class="cta-final" aria-label="Llamado final a voluntariado">
+    <div class="cta-final-inner reveal">
+      <span class="cta-kicker">Convocatoria 2026</span>
+      <h2 class="cta-h">Esta es la página donde se toma la decisión.</h2>
+      <p class="cta-sub">
+        Si puedes comprometerte con disciplina, cumplimiento y vocación de servicio, este es el momento de entrar. Presencial o remoto: lo importante es sostener el proceso.
+      </p>
+      <div class="btnrow" style="justify-content:center">
+        <a class="btn btn-white" href="mailto:info@yanapakuy.org.pe?subject=Voluntariado%20Yanapakuy&body=Nombre%3A%0ADisponibilidad%3A%0APerfil%20de%20inter%C3%A9s%3A%0AExperiencia%20breve%3A%0A">Quiero postular</a>
+        <a class="btn btn-ghost-white" href="https://link.mercadopago.com.pe/yanapakuyjuntos" target="_blank" rel="noopener">Apoyar con una donación</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="h3">Yanapakuy — Juntos por el Perú</div>
+      <div class="small">Formación académica y acompañamiento educativo.</div>
+      <div class="legal">© <span data-year></span> Yanapakuy. Asociación civil sin fines de lucro.</div>
+    </div>
+    <div>
+      <div class="footer-nav-h">Más</div>
+      <div class="small">
+        <div><a href="programas.html">Programa</a></div>
+        <div><a href="actividades.html">Actividades</a></div>
+        <div><a href="metodologia.html">Metodología</a></div>
+      </div>
+    </div>
+    <div>
+      <div class="footer-nav-h">Acción</div>
+      <div class="small">
+        <div><a href="contacto.html">Contacto</a></div>
+        <div><a href="documentos.html">Documentos</a></div>
+        <div><a href="https://www.instagram.com/yanapakuy.pe" target="_blank" rel="noopener">Instagram @yanapakuy.pe</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script src="assets/fotos.js"></script>
+<script>
+(() => {
+  const BASE = 'assets/img/';
+  const entries = [['heroRandom','Voluntariado Yanapakuy'],['editorialRandom','Voluntariado en Manchay'],['bandRandom','Acción educativa Yanapakuy']];
+  const picks = FOTOS.map(v => ({v, s: Math.random()})).sort((a,b)=>a.s-b.s).map(x=>x.v);
+  entries.forEach(([id, alt], i) => {
+    const el = document.getElementById(id);
+    if (el) { el.src = BASE + picks[i % picks.length]; el.alt = alt; }
+  });
+})();
+</script>
+</body>
+</html>

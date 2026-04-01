@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reporte de Actividades 2022–2025 — Yanapakuy</title>
+  <meta name="theme-color" content="#c45c1a" />
+  <link rel="icon" href="../assets/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../assets/styles.css" />
+  <style>
+    .doc-header {
+      background: linear-gradient(135deg, #1c1410 0%, #3d2e24 100%);
+      color: #fff;
+      padding: 48px 0 32px;
+    }
+    .doc-header .kicker { color: rgba(255,255,255,.55) }
+    .doc-header .h1 { color: #fff; margin-bottom: 8px }
+    .doc-header .sub { color: rgba(255,255,255,.75); font-size: 16px; max-width: 85% }
+    .doc-meta { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px }
+    .doc-meta-item { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.55) }
+    .doc-meta-item span { color: rgba(255,255,255,.90); display: block; font-size: 14px; margin-top: 2px }
+    .doc-body { padding: 40px 0 60px }
+    .doc-section { margin-bottom: 40px }
+    .doc-section-title {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--ink);
+      border-left: 4px solid var(--gold);
+      padding-left: 14px;
+      margin-bottom: 14px;
+    }
+    .doc-section-num { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px }
+    .doc-p { font-size: 16px; color: var(--ink-2); line-height: 1.75; margin: 0 0 12px }
+    .doc-list { margin: 0 0 12px; padding-left: 1.4em }
+    .doc-list li { font-size: 16px; color: var(--ink-2); line-height: 1.7; margin: 6px 0 }
+    .doc-callout {
+      background: var(--gold-light);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 14px 14px 0;
+      padding: 16px 20px;
+      margin: 16px 0;
+    }
+    .doc-callout p { margin: 0; font-size: 15px; color: var(--ink-2); line-height: 1.65 }
+
+    /* Actividades grid */
+    .actividades-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .actividad-chip {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px 16px;
+      background: var(--bg-warm);
+      border-radius: 14px;
+      border: 1px solid var(--line-warm);
+    }
+    .actividad-icon { font-size: 22px; flex-shrink: 0; margin-top: 1px }
+    .actividad-nombre { font-weight: 700; font-size: 15px; color: var(--ink); margin: 0 0 3px }
+    .actividad-desc { font-size: 13px; color: var(--muted); margin: 0; line-height: 1.5 }
+
+    /* Hito */
+    .hito-item {
+      display: flex;
+      gap: 16px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--line-warm);
+    }
+    .hito-item:last-child { border-bottom: none }
+    .hito-año {
+      flex-shrink: 0;
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--pri);
+      width: 52px;
+    }
+    .hito-text { font-size: 15px; color: var(--ink-2); line-height: 1.65 }
+    .hito-text strong { color: var(--ink) }
+
+    .doc-footer-note {
+      background: var(--bg-warm); border: 1px solid var(--line-warm);
+      border-radius: 16px; padding: 24px; margin-top: 40px; text-align: center;
+    }
+    .doc-footer-note p { font-size: 14px; color: var(--muted); margin: 0 }
+    .print-btn {
+      display: inline-flex; align-items: center; gap: 8px; margin-top: 16px;
+      padding: 10px 20px; background: var(--pri); color: #fff; border: none;
+      border-radius: 10px; font-weight: 700; font-size: 14px; cursor: pointer;
+      font-family: var(--font-body);
+    }
+    .back-link {
+      display: inline-flex; align-items: center; gap: 6px; font-size: 14px;
+      font-weight: 600; color: rgba(255,255,255,.70); margin-bottom: 20px; text-decoration: none;
+    }
+    .back-link:hover { color: #fff }
+    @media print { .header, .print-btn, .back-link { display: none } }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html" aria-label="Inicio Yanapakuy">
+      <img src="../assets/logo.svg" alt="Yanapakuy" />
+    </a>
+    <button class="navbtn" data-nav-toggle aria-expanded="false" aria-controls="nav" aria-label="Abrir menú"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect y="3" width="20" height="2.2" rx="1.1" fill="currentColor"/><rect y="9" width="20" height="2.2" rx="1.1" fill="currentColor"/><rect y="15" width="20" height="2.2" rx="1.1" fill="currentColor"/></svg></button>
+    <nav class="nav" id="nav" data-nav data-open="false">
+      <a href="../quienes-somos.html">Quiénes somos</a>
+      <a href="../metodologia.html">Metodología</a>
+      <a href="../programas.html">Programa</a>
+      <a href="../actividades.html">Actividades</a>
+      <a href="../documentos.html">Documentos</a>
+      <a href="../voluntariado.html">Voluntariado</a>
+      <a href="../contacto.html">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<div class="doc-header">
+  <div class="container">
+    <a class="back-link" href="../documentos.html">← Volver a Documentos</a>
+    <div class="kicker">Transparencia institucional</div>
+    <h1 class="h1">Reporte de Actividades<br>2022 — 2025</h1>
+    <p class="sub">Registro del trabajo de Yanapakuy en Manchay desde el inicio del enfoque territorial.</p>
+    <div class="doc-meta">
+      <div class="doc-meta-item">Período <span>2022 — 2025</span></div>
+      <div class="doc-meta-item">Territorio <span>Manchay, Lima</span></div>
+      <div class="doc-meta-item">Frecuencia <span>Cada 2 semanas</span></div>
+      <div class="doc-meta-item">Duración por sesión <span>2 horas</span></div>
+    </div>
+    <button class="print-btn" onclick="window.print()">Imprimir / Guardar PDF</button>
+  </div>
+</div>
+
+<div class="doc-body">
+  <div class="container" style="max-width:780px">
+
+    <div class="doc-callout">
+      <p>En 2022 Yanapakuy adoptó un enfoque territorial: trabajar con los mismos niños, en el mismo barrio, de forma sostenida. Este reporte recoge el trabajo realizado desde ese cambio de modelo hasta el cierre del ciclo 2025.</p>
+    </div>
+
+    <!-- Hitos por año -->
+    <div class="doc-section">
+      <div class="doc-section-num">Cronología</div>
+      <div class="doc-section-title">Hitos por año</div>
+
+      <div class="hito-item">
+        <div class="hito-año">2022</div>
+        <div class="hito-text"><strong>Inicio del enfoque territorial en Manchay.</strong> Primera sesión con niños del barrio. Modelo: presencia sostenida, cada dos semanas, mismos estudiantes, comunidad real.</div>
+      </div>
+      <div class="hito-item">
+        <div class="hito-año">2023</div>
+        <div class="hito-text"><strong>Consolidación del programa.</strong> Sesiones regulares con los cuatro módulos formativos: identidad y comunidad, valores personales, disciplina y esfuerzo, proyecto de vida.</div>
+      </div>
+      <div class="hito-item">
+        <div class="hito-año">2024</div>
+        <div class="hito-text"><strong>Mayor diversidad temática.</strong> Incorporación de sesiones vinculadas al calendario peruano y al entorno local. Equipo de voluntarios activo.</div>
+      </div>
+      <div class="hito-item">
+        <div class="hito-año">2025</div>
+        <div class="hito-text"><strong>Cierre de ciclo y reorganización.</strong> Evaluación del modelo, sistematización de aprendizajes y preparación para el relanzamiento en 2026.</div>
+      </div>
+    </div>
+
+    <!-- Actividades realizadas -->
+    <div class="doc-section">
+      <div class="doc-section-num">Registro temático</div>
+      <div class="doc-section-title">Actividades realizadas 2022–2025</div>
+      <p class="doc-p">Las sesiones se organizaron en torno al programa formativo y al calendario peruano, usando cada fecha como punto de partida para trabajar valores, identidad y carácter.</p>
+
+      <div class="actividades-grid">
+        <div class="actividad-chip">
+          <span class="actividad-icon">🇵🇪</span>
+          <div>
+            <p class="actividad-nombre">Fiestas Patrias</p>
+            <p class="actividad-desc">Identidad nacional, historia del Perú y orgullo colectivo.</p>
+          </div>
+        </div>
+        <div class="actividad-chip">
+          <span class="actividad-icon">🌸</span>
+          <div>
+            <p class="actividad-nombre">Santa Rosa de Lima</p>
+            <p class="actividad-desc">Identidad peruana y servicio con propósito. <a href="dinamica_santa_rosa_infantil.html" style="color:var(--pri);font-weight:600">Ver ficha →</a></p>
+          </div>
+        </div>
+        <div class="actividad-chip">
+          <span class="actividad-icon">👨‍👩‍👧</span>
+          <div>
+            <p class="actividad-nombre">Día de la Madre y del Padre</p>
+            <p class="actividad-desc">Familia, gratitud y lazos comunitarios.</p>
+          </div>
+        </div>
+        <div class="actividad-chip">
+          <span class="actividad-icon">🚩</span>
+          <div>
+            <p class="actividad-nombre">Día de la Bandera</p>
+            <p class="actividad-desc">Símbolos nacionales, historia y pertenencia.</p>
+          </div>
+        </div>
+        <div class="actividad-chip">
+          <span class="actividad-icon">🎵</span>
+          <div>
+            <p class="actividad-nombre">Canción Criolla</p>
+            <p class="actividad-desc">Cultura peruana, música y expresión colectiva.</p>
+          </div>
+        </div>
+        <div class="actividad-chip">
+          <span class="actividad-icon">🕯️</span>
+          <div>
+            <p class="actividad-nombre">Día de Todos los Santos</p>
+            <p class="actividad-desc">Tradiciones peruanas, memoria y comunidad.</p>
+          </div>
+        </div>
+        <div class="actividad-chip">
+          <span class="actividad-icon">🌊</span>
+          <div>
+            <p class="actividad-nombre">Fenómeno del Niño</p>
+            <p class="actividad-desc">Resiliencia, territorio y responsabilidad compartida.</p>
+          </div>
+        </div>
+        <div class="actividad-chip">
+          <span class="actividad-icon">🌱</span>
+          <div>
+            <p class="actividad-nombre">Cambio Climático</p>
+            <p class="actividad-desc">Conciencia ambiental, entorno local y acción ciudadana.</p>
+          </div>
+        </div>
+        <div class="actividad-chip">
+          <span class="actividad-icon">⭐</span>
+          <div>
+            <p class="actividad-nombre">Navidad</p>
+            <p class="actividad-desc">Cierre de ciclo, celebración comunitaria y valores de servicio.</p>
+          </div>
+        </div>
+        <div class="actividad-chip">
+          <span class="actividad-icon">💪</span>
+          <div>
+            <p class="actividad-nombre">Valores personales</p>
+            <p class="actividad-desc">Disciplina, responsabilidad, perseverancia y trabajo en equipo.</p>
+          </div>
+        </div>
+        <div class="actividad-chip">
+          <span class="actividad-icon">📚</span>
+          <div>
+            <p class="actividad-nombre">Hábitos de estudio</p>
+            <p class="actividad-desc">Planificación, constancia y mentalidad de crecimiento.</p>
+          </div>
+        </div>
+        <div class="actividad-chip">
+          <span class="actividad-icon">🔭</span>
+          <div>
+            <p class="actividad-nombre">Proyecto de vida</p>
+            <p class="actividad-desc">Soñar en el largo plazo, planear en el mediano, construir en el corto.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Aprendizajes -->
+    <div class="doc-section">
+      <div class="doc-section-num">Aprendizajes</div>
+      <div class="doc-section-title">Lo que nos dejó este ciclo</div>
+      <p class="doc-p">El enfoque territorial demostró su valor: los niños que participaron de forma continua mostraron mayor cohesión de grupo, más disposición al aprendizaje y vínculos más sólidos con los voluntarios.</p>
+      <p class="doc-p">La presencia sostenida — cada dos semanas, mismos niños, mismos voluntarios — es el corazón del modelo. No hay atajo para construir confianza.</p>
+      <p class="doc-p">El ciclo 2022–2025 sienta las bases para el relanzamiento del programa en 2026 con metodología más estructurada, equipo renovado y mayor documentación de evidencias.</p>
+    </div>
+
+    <div class="doc-footer-note">
+      <p><strong>Yanapakuy — Juntos por el Perú</strong></p>
+      <p style="margin-top:6px">Asociación civil sin fines de lucro · Manchay, Lima · Desde 2015</p>
+      <p style="margin-top:6px">Contacto: <a href="mailto:info@yanapakuy.org.pe" style="color:var(--pri)">info@yanapakuy.org.pe</a> · <a href="https://www.instagram.com/yanapakuy.pe" target="_blank" rel="noopener" style="color:var(--pri)">@yanapakuy.pe</a></p>
+    </div>
+
+  </div>
+</div>
+
+<script src="../assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,814 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Metodología — Yanapakuy</title>
+  <meta name="description" content="Metodología Yanapakuy: disciplina diaria, ruta de intervención y marco teórico aplicado en Manchay, Lima." />
+  <meta name="theme-color" content="#269947" />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    /* ══════════════════════════════════════════════════
+       METODOLOGIA 2.0 — layout extras
+    ══════════════════════════════════════════════════ */
+
+    .hero-2 {
+      display: grid;
+      grid-template-columns: 1fr 44%;
+      min-height: calc(100dvh - 65px);
+      overflow: hidden;
+      background: var(--surface);
+    }
+    .hero-2-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 64px clamp(24px, 5vw, 56px) 64px
+               max(var(--pad), calc((100vw - var(--max)) / 2 + var(--pad)));
+    }
+    .hero-2-photos {
+      position: relative;
+      overflow: hidden;
+      background: var(--bg-warm);
+      min-height: 360px;
+    }
+    .hero-2-photos img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+    }
+    .hero-2-photos::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 84px;
+      background: linear-gradient(to right, var(--surface), transparent);
+      z-index: 1;
+      pointer-events: none;
+    }
+    .display-h {
+      font-family: var(--font-display);
+      font-size: clamp(38px, 4.6vw, 62px);
+      line-height: 1.06;
+      letter-spacing: -.02em;
+      margin: 0 0 18px;
+      color: var(--ink);
+    }
+    .display-h em {
+      font-style: italic;
+      color: var(--pri);
+    }
+    .hero-2-desc {
+      font-size: 18px;
+      color: var(--ink-2);
+      line-height: 1.65;
+      max-width: 560px;
+      margin: 0 0 24px;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 28px;
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      flex-wrap: wrap;
+    }
+    .hero-stat { display: flex; flex-direction: column; gap: 3px }
+    .hero-stat-n {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--ink);
+      line-height: 1;
+    }
+    .hero-stat-l {
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+    }
+
+    .impact-band {
+      background: #0a2218;
+      padding: 48px 0;
+    }
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      text-align: center;
+    }
+    .impact-item {
+      padding: 0 24px;
+      border-right: 1px solid rgba(255,255,255,.10);
+    }
+    .impact-item:last-child { border-right: 0 }
+    .impact-n {
+      font-family: var(--font-display);
+      font-size: 40px;
+      color: #fff;
+      line-height: 1;
+      display: block;
+    }
+    .impact-l {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      color: rgba(255,255,255,.76);
+      margin-top: 8px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .section-header { margin-bottom: 0 }
+    .section-header .kicker { margin-bottom: 6px }
+    .section-header .h2 { margin: 0 0 8px }
+    .section-header-sub {
+      font-size: 16px;
+      color: var(--ink-2);
+      line-height: 1.6;
+      max-width: 620px;
+      margin: 0;
+    }
+
+    .ruta-editorial {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      display: grid;
+      grid-template-columns: 1.06fr .94fr;
+      min-height: 480px;
+      background: var(--surface);
+    }
+    .ruta-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 52px 48px;
+      background: var(--surface);
+    }
+    .ruta-photo {
+      position: relative;
+      overflow: hidden;
+      min-height: 280px;
+      background: var(--bg-warm);
+    }
+    .ruta-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+    .ruta-photo::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(10,34,24,.16) 0%, rgba(10,34,24,.04) 100%);
+      pointer-events: none;
+    }
+
+    .ruta-list { list-style: none; padding: 0; margin: 20px 0 0 }
+    .ruta-item {
+      display: flex;
+      gap: 16px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--line-warm);
+    }
+    .ruta-item:last-child { border-bottom: none; padding-bottom: 0 }
+    .ruta-num {
+      flex-shrink: 0;
+      width: 34px; height: 34px;
+      border-radius: 50%;
+      background: var(--pri);
+      color: #fff;
+      font-weight: 800;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+      box-shadow: 0 8px 22px rgba(38,153,71,.22);
+    }
+    .ruta-title { font-weight: 700; font-size: 16px; color: var(--ink); margin: 0 0 4px }
+    .ruta-desc  { font-size: 14px; color: var(--ink-2); margin: 0; line-height: 1.58 }
+
+    .principios-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .principio-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-top: 4px solid var(--pri);
+      border-radius: var(--radius);
+      padding: 30px 26px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      min-height: 230px;
+    }
+    .principio-num {
+      font-family: var(--font-display);
+      font-size: 56px;
+      line-height: 1;
+      color: var(--pri-light);
+      display: block;
+      margin-bottom: 12px;
+    }
+    .principio-title {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 400;
+      color: var(--ink);
+      margin: 8px 0 10px;
+    }
+    .principio-desc { font-size: 15px; color: var(--ink-2); line-height: 1.65; margin: 0 }
+
+    .foto-band {
+      position: relative;
+      overflow: hidden;
+      height: 420px;
+    }
+    .foto-band img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      display: block;
+    }
+    .foto-band-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(10,34,24,.82) 0%, rgba(10,34,24,.26) 68%);
+      display: flex;
+      align-items: center;
+    }
+    .foto-band-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 max(var(--pad), calc((100vw - var(--max)) / 2 + var(--pad)));
+      width: 100%;
+    }
+    .foto-quote { max-width: 620px }
+    .foto-quote-text {
+      font-family: var(--font-display);
+      font-size: clamp(22px, 2.8vw, 36px);
+      color: #fff;
+      line-height: 1.25;
+      margin: 0 0 16px;
+    }
+    .foto-quote-who {
+      font-size: 12px;
+      font-weight: 700;
+      color: rgba(255,255,255,.80);
+      text-transform: uppercase;
+      letter-spacing: .12em;
+    }
+
+    .marco-panel {
+      background: linear-gradient(135deg,var(--bg-warm),var(--surface));
+      border-color: var(--line-warm);
+    }
+    .marco-group { margin-bottom: 24px }
+    .marco-group:last-child { margin-bottom: 0 }
+    .marco-group-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 1px solid var(--line-warm);
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+    }
+    .marco-item {
+      padding: 14px 16px;
+      background: var(--surface);
+      border-radius: 13px;
+      border-left: 3px solid var(--pri);
+      margin-bottom: 10px;
+      box-shadow: 0 8px 24px rgba(15,23,42,.04);
+    }
+    .marco-item:last-child { margin-bottom: 0 }
+    .marco-item:nth-child(2n) { border-left-color: var(--gold) }
+    .marco-item:nth-child(3n) { border-left-color: var(--acc) }
+    .marco-header {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 4px;
+      flex-wrap: wrap;
+    }
+    .marco-name { font-weight: 700; font-size: 15px; color: var(--ink) }
+    .marco-concepto {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--pri);
+      background: var(--pri-light);
+      padding: 2px 8px;
+      border-radius: 999px;
+    }
+    .marco-desc { font-size: 14px; color: var(--ink-2); line-height: 1.6; margin: 0 }
+
+    .cta-final {
+      background: #0a2218;
+      position: relative;
+      overflow: hidden;
+      padding: 88px 0;
+      text-align: center;
+    }
+    .cta-final::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 900px 500px at 15% 50%, rgba(38,153,71,.18), transparent 60%),
+        radial-gradient(ellipse 700px 400px at 85% 50%, rgba(38,153,71,.10), transparent 60%);
+      pointer-events: none;
+    }
+    .cta-final-inner {
+      position: relative;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--pad);
+    }
+    .cta-kicker {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--pri-light);
+      display: block;
+      margin-bottom: 16px;
+    }
+    .cta-h {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 3.4vw, 48px);
+      color: #fff;
+      line-height: 1.1;
+      margin: 0 0 16px;
+      letter-spacing: -.01em;
+      font-weight: 400;
+    }
+    .cta-sub {
+      font-size: 17px;
+      color: rgba(255,255,255,.65);
+      max-width: 620px;
+      margin: 0 auto 36px;
+      line-height: 1.65;
+    }
+    .cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap }
+    .btn-white {
+      background: #fff;
+      color: var(--pri);
+      border-color: transparent;
+      font-weight: 800;
+    }
+    .btn-white:hover { background: var(--pri-light); color: var(--pri-2) }
+    .btn-ghost-white {
+      background: transparent;
+      color: #fff;
+      border-color: rgba(255,255,255,.28);
+    }
+    .btn-ghost-white:hover {
+      background: rgba(255,255,255,.10);
+      color: #fff;
+      box-shadow: none;
+    }
+
+    @media (max-width: 980px) {
+      .principios-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 860px) {
+      .hero-2 {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+      .hero-2-photos {
+        height: 56vw;
+        min-height: 240px;
+        order: -1;
+      }
+      .hero-2-photos::before { display: none }
+      .hero-2-text { padding: 40px var(--pad) 48px }
+
+      .impact-grid { grid-template-columns: repeat(2, 1fr) }
+      .impact-item:nth-child(2) { border-right: 0 }
+      .impact-item:nth-child(3),
+      .impact-item:nth-child(4) {
+        border-top: 1px solid rgba(255,255,255,.10);
+        padding-top: 24px;
+        margin-top: 0;
+      }
+      .impact-item { padding: 0 16px }
+
+      .ruta-editorial {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+      .ruta-copy { padding: 40px var(--pad) 36px }
+      .ruta-photo { height: 56vw; min-height: 220px; order: -1 }
+
+      .principios-grid { grid-template-columns: 1fr; }
+      .foto-band { height: 320px }
+      .cta-final { padding: 64px 0 }
+    }
+
+    @media (max-width: 480px) {
+      .hero-stats { gap: 16px }
+      .impact-band { padding: 32px 0 }
+      .impact-n { font-size: 32px }
+      .foto-band { height: 250px }
+      .foto-quote-text { font-size: 20px }
+      .cta-final { padding: 48px 0 }
+    }
+  </style>
+</head>
+<body>
+<a class="skip-link" href="#main">Ir al contenido principal</a>
+
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Inicio Yanapakuy">
+      <img src="assets/logo.svg" alt="Yanapakuy" />
+    </a>
+    <button class="navbtn" data-nav-toggle aria-expanded="false" aria-controls="nav" aria-label="Abrir menú"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect y="3" width="20" height="2.2" rx="1.1" fill="currentColor"/><rect y="9" width="20" height="2.2" rx="1.1" fill="currentColor"/><rect y="15" width="20" height="2.2" rx="1.1" fill="currentColor"/></svg></button>
+    <nav class="nav" id="nav" data-nav data-open="false" aria-label="Navegación principal">
+      <a href="quienes-somos.html">Quiénes somos</a>
+      <a href="metodologia.html" aria-current="page">Metodología</a>
+      <a href="programas.html">Programas</a>
+      <a href="actividades.html">Actividades</a>
+      <a href="documentos.html">Documentos</a>
+      <a href="voluntariado.html">Voluntariado</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero-2" aria-label="Presentación de metodología">
+    <div class="hero-2-text">
+      <div class="hero-eyebrow anim-up">Cómo trabajamos · Manchay, Lima</div>
+      <h1 class="display-h anim-up">Metodología</h1>
+      <p class="hero-2-desc anim-up">
+        Estructura clara, exigencia con cuidado y hábitos sostenibles.
+        Aprender no es un evento: <em>es un sistema.</em>
+      </p>
+      <div class="hero-meta anim-up">
+        <span class="chip">Servicio con propósito</span>
+        <span class="chip">Disciplina diaria</span>
+        <span class="chip">Excelencia accesible</span>
+        <span class="chip">Nadie queda atrás</span>
+      </div>
+      <div class="hero-stats anim-up" aria-label="Datos clave de la metodología">
+        <div class="hero-stat">
+          <span class="hero-stat-n">5 pasos</span>
+          <span class="hero-stat-l">Intervención</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-n">2 sem.</span>
+          <span class="hero-stat-l">Frecuencia</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-n">Territorio</span>
+          <span class="hero-stat-l">Manchay</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-n">Sistema</span>
+          <span class="hero-stat-l">Hábitos</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-2-photos" aria-hidden="true">
+      <img id="heroRandom" src="assets/img/foto1.jpg" alt="Actividad educativa de Yanapakuy" width="900" height="700" fetchpriority="high" />
+    </div>
+  </section>
+
+  <div class="impact-band" aria-label="Resumen metodológico">
+    <div class="container">
+      <div class="impact-grid">
+        <div class="impact-item">
+          <span class="impact-n">5</span>
+          <span class="impact-l">Principios operativos</span>
+        </div>
+        <div class="impact-item">
+          <span class="impact-n">5</span>
+          <span class="impact-l">Pasos de ruta</span>
+        </div>
+        <div class="impact-item">
+          <span class="impact-n">2 sem.</span>
+          <span class="impact-l">Sesiones en territorio</span>
+        </div>
+        <div class="impact-item">
+          <span class="impact-n">Sistema</span>
+          <span class="impact-l">No evento aislado</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section" aria-label="Principios operativos">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="kicker">Fundamentos</div>
+        <h2 class="h2">Principios operativos</h2>
+        <p class="section-header-sub">
+          La metodología parte de hábitos concretos, seguimiento realista y exigencia sostenida. La consistencia es parte del método.
+        </p>
+      </div>
+
+      <div class="principios-grid">
+        <article class="principio-card reveal" style="border-top-color:var(--pri)">
+          <span class="principio-num" aria-hidden="true">01</span>
+          <h3 class="principio-title">Disciplina</h3>
+          <p class="principio-desc">Rutinas, puntualidad, metas cortas y seguimiento. Lo que no se practica no se aprende.</p>
+        </article>
+
+        <article class="principio-card reveal" style="border-top-color:var(--gold);animation-delay:.08s">
+          <span class="principio-num" aria-hidden="true" style="color:#ede58a">02</span>
+          <h3 class="principio-title">Perseverancia</h3>
+          <p class="principio-desc">El progreso viene de la repetición, no del talento. Grit antes que genio.</p>
+        </article>
+
+        <article class="principio-card reveal" style="border-top-color:var(--acc);animation-delay:.16s">
+          <span class="principio-num" aria-hidden="true" style="color:var(--acc-light)">03</span>
+          <h3 class="principio-title">Responsabilidad</h3>
+          <p class="principio-desc">Compromisos simples, evidencia de avance y rendición de cuentas mínima pero real.</p>
+        </article>
+
+        <article class="principio-card reveal" style="border-top-color:var(--ok);animation-delay:.24s">
+          <span class="principio-num" aria-hidden="true" style="color:#d7f3e3">04</span>
+          <h3 class="principio-title">Trabajo en equipo</h3>
+          <p class="principio-desc">Apoyo entre pares, liderazgo por ejemplo, no por jerarquía.</p>
+        </article>
+
+        <article class="principio-card reveal" style="border-top-color:var(--pri);animation-delay:.32s">
+          <span class="principio-num" aria-hidden="true">05</span>
+          <h3 class="principio-title">Identidad peruana</h3>
+          <p class="principio-desc">Pertenencia, orgullo y ciudadanía práctica como parte del proceso formativo.</p>
+        </article>
+
+        <article class="principio-card reveal" style="border-top-color:var(--gold);animation-delay:.40s">
+          <span class="principio-num" aria-hidden="true" style="color:#ede58a">∞</span>
+          <h3 class="principio-title">Estándar</h3>
+          <p class="principio-desc">"Excelencia accesible: alto estándar con método, sin elitismo."</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Ruta de intervención">
+    <div class="container">
+      <div class="ruta-editorial reveal">
+        <div class="ruta-copy">
+          <div class="kicker">Paso a paso</div>
+          <h2 class="h2" style="margin-bottom:16px">Ruta de intervención</h2>
+          <p class="p" style="margin:0 0 8px;max-width:640px">
+            La intervención sigue una secuencia simple y sostenida. Sin burocracia, sin sobrecarga, sin asumir que todos parten del mismo punto.
+          </p>
+          <ul class="ruta-list">
+            <li class="ruta-item">
+              <div class="ruta-num">1</div>
+              <div class="ruta-body">
+                <p class="ruta-title">Diagnóstico</p>
+                <p class="ruta-desc">Nivel académico, hábitos y contexto del estudiante. Sin asumir, sin etiquetar.</p>
+              </div>
+            </li>
+            <li class="ruta-item">
+              <div class="ruta-num">2</div>
+              <div class="ruta-body">
+                <p class="ruta-title">Plan</p>
+                <p class="ruta-desc">Objetivos semanales y mensuales ajustados a la realidad concreta del niño.</p>
+              </div>
+            </li>
+            <li class="ruta-item">
+              <div class="ruta-num">3</div>
+              <div class="ruta-body">
+                <p class="ruta-title">Sesiones</p>
+                <p class="ruta-desc">Práctica guiada cada dos semanas en Manchay, con tareas pequeñas entre sesiones.</p>
+              </div>
+            </li>
+            <li class="ruta-item">
+              <div class="ruta-num">4</div>
+              <div class="ruta-body">
+                <p class="ruta-title">Seguimiento</p>
+                <p class="ruta-desc">Asistencia, evidencias simples y retroalimentación directa. Sin burocracia.</p>
+              </div>
+            </li>
+            <li class="ruta-item">
+              <div class="ruta-num">5</div>
+              <div class="ruta-body">
+                <p class="ruta-title">Ajuste</p>
+                <p class="ruta-desc">Revisión del plan, mentoría y acompañamiento sostenido. Lo que no funciona, se cambia.</p>
+              </div>
+            </li>
+          </ul>
+          <p class="small" style="margin-top:18px;font-style:italic;color:var(--muted)">Lo que no se puede sostener, no se implementa.</p>
+        </div>
+
+        <div class="ruta-photo" aria-hidden="true">
+          <img id="rutaRandom" src="assets/img/foto2.jpg" alt="Sesión de Yanapakuy en Manchay" width="900" height="700" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="foto-band" aria-hidden="true">
+    <img id="bandaRandom" src="assets/img/foto3.jpg" alt="Comunidad Yanapakuy" width="1200" height="800" loading="lazy" />
+    <div class="foto-band-overlay">
+      <div class="foto-band-inner">
+        <blockquote class="foto-quote">
+          <p class="foto-quote-text">
+            "Aprender no es un evento. Es un sistema sostenido de hábitos, seguimiento y sentido."
+          </p>
+          <footer class="foto-quote-who">Yanapakuy · Metodología aplicada</footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
+  <section class="section" aria-label="Marco teórico">
+    <div class="container">
+      <div class="card marco-panel reveal">
+        <div class="kicker">Base conceptual</div>
+        <h2 class="h2">Marco teórico — uso práctico</h2>
+        <p class="p" style="max-width:85%;margin-bottom:28px">
+          Referentes que informan nuestras decisiones concretas — sin academicismo vacío.
+        </p>
+
+        <div class="grid grid-3" style="gap:24px">
+
+          <div class="marco-group">
+            <div class="marco-group-title">Educación no formal</div>
+            <div class="marco-item">
+              <div class="marco-header">
+                <span class="marco-name">Philip Coombs</span>
+                <span class="marco-concepto">Educación no formal</span>
+              </div>
+              <p class="marco-desc">Actividades organizadas fuera del sistema oficial para facilitar aprendizajes específicos. Yanapakuy opera exactamente en ese espacio.</p>
+            </div>
+            <div class="marco-item">
+              <div class="marco-header">
+                <span class="marco-name">Jaume Trilla</span>
+                <span class="marco-concepto">Tiempo libre con propósito</span>
+              </div>
+              <p class="marco-desc">Uso del tiempo libre con intencionalidad educativa. Nuestras sesiones no son recreo ni tarea — son formación con propósito.</p>
+            </div>
+
+            <div class="marco-group-title" style="margin-top:20px">Sociología</div>
+            <div class="marco-item">
+              <div class="marco-header">
+                <span class="marco-name">Pierre Bourdieu</span>
+                <span class="marco-concepto">Capital cultural</span>
+              </div>
+              <p class="marco-desc">Capital cultural como mecanismo de reproducción social. Yanapakuy interviene para compensar esa brecha.</p>
+            </div>
+            <div class="marco-item">
+              <div class="marco-header">
+                <span class="marco-name">Bernard Lahire</span>
+                <span class="marco-concepto">Ambición posible</span>
+              </div>
+              <p class="marco-desc">La ambición educativa es posible con un vínculo protector sostenido. El voluntario es ese vínculo.</p>
+            </div>
+          </div>
+
+          <div class="marco-group">
+            <div class="marco-group-title">Psicopedagogía</div>
+            <div class="marco-item">
+              <div class="marco-header">
+                <span class="marco-name">Lev Vygotsky</span>
+                <span class="marco-concepto">Zona de Desarrollo Próximo</span>
+              </div>
+              <p class="marco-desc">El voluntario como mediador entre lo que el niño puede solo y lo que puede con apoyo estructurado.</p>
+            </div>
+            <div class="marco-item">
+              <div class="marco-header">
+                <span class="marco-name">David Ausubel</span>
+                <span class="marco-concepto">Aprendizaje significativo</span>
+              </div>
+              <p class="marco-desc">Nada se aprende de verdad si no se conecta con lo que ya se sabe. Partimos del contexto real del niño.</p>
+            </div>
+            <div class="marco-item">
+              <div class="marco-header">
+                <span class="marco-name">Albert Bandura</span>
+                <span class="marco-concepto">Autoeficacia y modelado</span>
+              </div>
+              <p class="marco-desc">Ver a alguien parecido lograr algo cambia lo que crees posible. Los voluntarios no solo enseñan — modelan.</p>
+            </div>
+            <div class="marco-item">
+              <div class="marco-header">
+                <span class="marco-name">Urie Bronfenbrenner</span>
+                <span class="marco-concepto">Influencia sistémica</span>
+              </div>
+              <p class="marco-desc">El niño no aprende solo en el aula. Su barrio y comunidad forman parte del proceso. Por eso trabajamos en el territorio.</p>
+            </div>
+          </div>
+
+          <div class="marco-group">
+            <div class="marco-group-title">Carácter y sentido</div>
+            <div class="marco-item">
+              <div class="marco-header">
+                <span class="marco-name">Angela Duckworth</span>
+                <span class="marco-concepto">Perseverancia sostenida</span>
+              </div>
+              <p class="marco-desc">El talento sin constancia no llega lejos. Nuestras sesiones en Manchay son en sí mismas un ejercicio de grit.</p>
+            </div>
+            <div class="marco-item">
+              <div class="marco-header">
+                <span class="marco-name">Viktor Frankl</span>
+                <span class="marco-concepto">Sentido como motor</span>
+              </div>
+              <p class="marco-desc">Quien tiene un por qué aguanta cualquier cómo. Ayudamos a los jóvenes a construir ese sentido.</p>
+            </div>
+            <div class="marco-item">
+              <div class="marco-header">
+                <span class="marco-name">Carol Dweck</span>
+                <span class="marco-concepto">Mentalidad de crecimiento</span>
+              </div>
+              <p class="marco-desc">La inteligencia no es fija. Con la retroalimentación correcta, cualquier niño puede aprender a aprender.</p>
+            </div>
+            <div class="marco-item">
+              <div class="marco-header">
+                <span class="marco-name">Paulo Freire</span>
+                <span class="marco-concepto">Conciencia crítica</span>
+              </div>
+              <p class="marco-desc">Educar es despertar conciencia, no depositar información. Nuestros talleres de ciudadanía parten de esa base.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="btnrow" style="margin-top:24px">
+          <a class="btn primary" href="programas.html">Ver programas</a>
+          <a class="btn ghost" href="documentos.html">Políticas y documentos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final" aria-label="Llamado a la acción">
+    <div class="cta-final-inner reveal">
+      <span class="cta-kicker">Implementación</span>
+      <h2 class="cta-h">La metodología solo vale si se sostiene en el tiempo.</h2>
+      <p class="cta-sub">
+        Buscamos voluntarios y aliados capaces de ejecutar con constancia, criterio y vocación de servicio. La forma importa, pero la continuidad importa más.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-white" href="voluntariado.html">Participar como voluntario</a>
+        <a class="btn btn-ghost-white" href="contacto.html">Escribirnos</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="h3">Yanapakuy — Juntos por el Perú</div>
+      <div class="small">Disciplina, comunidad, futuro.</div>
+      <div class="legal">© <span data-year></span> Yanapakuy. Asociación civil sin fines de lucro.</div>
+    </div>
+    <div>
+      <div class="footer-nav-h">Más</div>
+      <div class="small">
+        <div><a href="quienes-somos.html">Quiénes somos</a></div>
+        <div><a href="programas.html">Programas</a></div>
+        <div><a href="actividades.html">Actividades</a></div>
+      </div>
+    </div>
+    <div>
+      <div class="footer-nav-h">Acción</div>
+      <div class="small">
+        <div><a href="voluntariado.html">Voluntariado</a></div>
+        <div><a href="contacto.html">Contacto</a></div>
+        <div><a href="https://www.instagram.com/yanapakuy.pe" target="_blank" rel="noopener">Instagram @yanapakuy.pe</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script src="assets/fotos.js"></script>
+<script>
+(() => {
+  const BASE = 'assets/img/';
+  const ids = ['heroRandom', 'rutaRandom', 'bandaRandom'];
+  const picks = FOTOS.map(v => ({v, s: Math.random()})).sort((a,b)=>a.s-b.s).map(x=>x.v);
+  ids.forEach((id, i) => {
+    const el = document.getElementById(id);
+    if (el) el.src = BASE + picks[i % picks.length];
+  });
+})();
+</script>
+</body>
+</html>
