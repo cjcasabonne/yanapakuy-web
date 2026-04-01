@@ -312,6 +312,86 @@
       .quote-big { padding: 60px 18px }
       .cta-final { padding: 64px 0 }
     }
+    .marco-banner {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 18px;
+      background: var(--surface);
+      border: 1px solid rgba(38,153,71,.18);
+      border-radius: 22px;
+      padding: 18px 20px 18px 26px;
+      box-shadow: var(--shadow);
+      color: var(--ink);
+      margin: 0 auto 28px;
+      max-width: var(--max);
+    }
+    .marco-banner::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 10px;
+      background: linear-gradient(180deg, var(--pri) 0%, #70ba87 100%);
+    }
+    .marco-content { position: relative; z-index: 1; min-width: 0; }
+    .marco-kicker {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--pri);
+    }
+    .marco-heading {
+      margin: 0 0 4px;
+      font-size: 24px;
+      line-height: 1.08;
+      font-family: var(--font-display);
+      font-weight: 400;
+      letter-spacing: .01em;
+      color: var(--ink);
+    }
+    .marco-text {
+      margin: 0;
+      max-width: 560px;
+      font-size: 14px;
+      line-height: 1.55;
+      color: var(--ink-2);
+    }
+    .marco-action {
+      position: relative;
+      z-index: 1;
+      white-space: nowrap;
+      align-self: stretch;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 0 18px;
+      min-height: 52px;
+      border-radius: 16px;
+      background: var(--pri-light);
+      color: var(--pri);
+      border: 1px solid transparent;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      transition: transform .15s, background .15s, color .15s;
+    }
+    .marco-action:hover {
+      transform: translateY(-1px);
+      background: rgba(38,153,71,.14);
+      color: var(--pri-2);
+    }
+    @media (max-width: 860px) {
+      .marco-banner { grid-template-columns: 1fr; padding-right: 18px; }
+      .marco-action { min-height: 48px; }
+    }
   </style>
 </head>
 <body>
@@ -514,6 +594,15 @@
   <section class="quote-big" aria-label="Cierre conceptual">
     <p>Quien decide quedarse, ense&ntilde;ar, organizar y volver a empezar cada dos semanas cambia mucho m&aacute;s que una jornada: ayuda a construir continuidad donde m&aacute;s falta hace.</p>
   </section>
+
+  <div class="marco-banner" aria-label="Marco te&oacute;rico">
+    <div class="marco-content">
+      <span class="marco-kicker">Fundamento pedag&oacute;gico</span>
+      <h2 class="marco-heading">Conoce nuestro marco te&oacute;rico</h2>
+      <p class="marco-text">Antes de postular, puedes entender mejor el tipo de acompa&ntilde;amiento que buscamos y la base educativa que lo sostiene.</p>
+    </div>
+    <a class="marco-action" href="marco-teorico.html">Explorar &rarr;</a>
+  </div>
 
   <section class="cta-final" aria-label="Llamado final a voluntariado">
     <div class="cta-final-inner reveal">
