@@ -1,0 +1,1297 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sesión 2 | Metas personales, colegio y hábitos de estudio | Yanapakuy</title>
+  <meta name="description" content="Guía completa para voluntarios de Yanapakuy sobre metas personales, colegio y hábitos de estudio. Documento práctico, pedagógico y listo para usar en campo." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" />
+  <style>
+    :root {
+      --bg: #f6fbf7;
+      --surface: #ffffff;
+      --surface-soft: #f1faf3;
+      --surface-warm: #fff7e7;
+      --surface-blue: #eef5ff;
+      --surface-rose: #fff1ef;
+      --ink: #102016;
+      --ink-2: #284233;
+      --muted: #587261;
+      --line: rgba(16, 32, 22, .08);
+      --pri: #269947;
+      --pri-dark: #1e7b39;
+      --acc: #3a4da1;
+      --gold: #8a6f00;
+      --shadow-sm: 0 6px 18px rgba(20, 58, 35, .08);
+      --shadow: 0 18px 40px rgba(20, 58, 35, .10);
+      --radius: 22px;
+      --radius-sm: 16px;
+      --max: 1120px;
+      --font-display: "Lilita One", Georgia, serif;
+      --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(38,153,71,.10), transparent 25%),
+        linear-gradient(180deg, #fbfdf9 0%, var(--bg) 100%);
+      line-height: 1.65;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul, ol { margin: 0; padding-left: 1.25rem; }
+    li { margin: .4rem 0; }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 20px 56px;
+    }
+
+    .topbar {
+      padding: 26px 0 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .brand img {
+      width: 72px;
+      height: auto;
+    }
+    .brand-copy {
+      display: grid;
+      gap: 3px;
+    }
+    .brand-copy strong {
+      font-size: 13px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--pri);
+    }
+    .brand-copy span {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .toolbar {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      border: 0;
+      border-radius: 14px;
+      padding: 11px 15px;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      background: var(--surface);
+      color: var(--ink);
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn.primary {
+      background: var(--pri);
+      color: #fff;
+    }
+    .btn.secondary {
+      background: var(--surface-blue);
+      color: #1d4f92;
+    }
+    .btn.warm {
+      background: #dff7e6;
+      color: #17653a;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-radius: 30px;
+      padding: 34px 28px;
+      color: #fff;
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,.18), transparent 32%),
+        linear-gradient(135deg, #0f3d29 0%, #165e3d 52%, #23944a 100%);
+      box-shadow: 0 26px 48px rgba(13, 57, 36, .18);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -60px -60px auto;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(246,213,79,.22), transparent 70%);
+      pointer-events: none;
+    }
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.76);
+      margin-bottom: 12px;
+    }
+    .hero-kicker::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: #f6d54f;
+      box-shadow: 0 0 0 6px rgba(246,213,79,.14);
+    }
+    .hero h1 {
+      margin: 0 0 12px;
+      font-family: var(--font-display);
+      font-size: clamp(34px, 5vw, 62px);
+      line-height: 1.02;
+      font-weight: 400;
+      letter-spacing: -.02em;
+    }
+    .hero p {
+      margin: 0;
+      max-width: 820px;
+      font-size: 18px;
+      color: rgba(255,255,255,.88);
+    }
+
+    .hero-meta {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 12px;
+      margin-top: 22px;
+    }
+    .hero-meta-item {
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 18px;
+      padding: 14px;
+    }
+    .hero-meta-item strong {
+      display: block;
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.70);
+      margin-bottom: 5px;
+    }
+    .hero-meta-item span {
+      display: block;
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .quicknav {
+      margin: 18px 0 0;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .quicknav a {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.14);
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .section {
+      margin-top: 26px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 24px 22px;
+    }
+    .section-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .section-head h2 {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3vw, 34px);
+      line-height: 1.08;
+      font-weight: 400;
+    }
+    .chip {
+      white-space: nowrap;
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: var(--surface-warm);
+      border: 1px solid rgba(196,92,26,.16);
+      color: #8a4d1c;
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .lead {
+      margin: 0 0 16px;
+      font-size: 17px;
+      color: var(--ink-2);
+    }
+
+    .grid-2, .grid-3, .grid-4 {
+      display: grid;
+      gap: 14px;
+    }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+    .grid-4 { grid-template-columns: repeat(4, minmax(0,1fr)); }
+
+    .box {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 16px;
+    }
+    .box.soft { background: var(--surface-soft); }
+    .box.warm { background: var(--surface-warm); }
+    .box.blue { background: var(--surface-blue); }
+    .box.rose { background: var(--surface-rose); }
+    .box h3, .box h4 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      line-height: 1.25;
+    }
+    .box p:last-child,
+    .box ul:last-child,
+    .box ol:last-child {
+      margin-bottom: 0;
+    }
+
+    .quote {
+      margin-top: 14px;
+      background: #fff9e8;
+      border-left: 5px solid var(--gold);
+      border-radius: 14px;
+      padding: 14px 16px;
+      color: var(--ink-2);
+    }
+
+    .timeline {
+      display: grid;
+      gap: 12px;
+    }
+    .timeline-step {
+      display: grid;
+      grid-template-columns: 128px minmax(0,1fr);
+      gap: 14px;
+      align-items: flex-start;
+      background: #fcfefb;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 14px;
+    }
+    .timeline-time {
+      border-radius: 14px;
+      background: var(--surface-soft);
+      color: #145734;
+      text-align: center;
+      font-weight: 800;
+      padding: 10px 12px;
+    }
+    .timeline-step h3 {
+      margin: 0 0 8px;
+      font-size: 19px;
+    }
+    .timeline-step p {
+      margin: 0;
+    }
+
+    .checklist {
+      display: grid;
+      gap: 10px;
+    }
+    .check {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      background: #fbfdf9;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 12px 14px;
+    }
+    .check-bullet {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      background: rgba(38,153,71,.12);
+      color: var(--pri);
+      font-weight: 800;
+      flex: 0 0 auto;
+    }
+    .check strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    details {
+      margin-top: 12px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fcfefb;
+      padding: 0 14px;
+    }
+    summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 14px 0;
+      font-weight: 800;
+    }
+    summary::-webkit-details-marker { display: none; }
+    details[open] summary { color: var(--pri); }
+    .details-body {
+      padding: 0 0 14px;
+      color: var(--ink-2);
+    }
+
+    .session-block {
+      margin-top: 18px;
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+    }
+    .session-block:first-of-type {
+      margin-top: 0;
+      border-top: 0;
+      padding-top: 0;
+    }
+    .session-block h3 {
+      margin: 0 0 8px;
+      font-size: 22px;
+    }
+    .session-meta {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .session-meta span {
+      border-radius: 999px;
+      background: var(--surface-soft);
+      padding: 7px 11px;
+      font-size: 13px;
+      font-weight: 800;
+      color: #17653a;
+    }
+
+    .timer {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 12px 0 14px;
+    }
+    .clock {
+      font: 700 22px/1.1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      background: #0e1726;
+      color: #e6eef8;
+      border-radius: 12px;
+      padding: 8px 10px;
+      min-width: 84px;
+      text-align: center;
+    }
+    .timer-controls {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .timer-controls button {
+      border: 0;
+      border-radius: 10px;
+      padding: 8px 10px;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .timer-controls .start { background: #22c55e; color: #063b18; }
+    .timer-controls .pause { background: #fde047; color: #5a4800; }
+    .timer-controls .reset { background: #fecaca; color: #7f1d1d; }
+    .bar {
+      flex: 1 1 220px;
+      height: 8px;
+      background: #e4ebea;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .bar > span {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, #f0ba28, #68a3ff);
+      transition: width .35s linear;
+    }
+
+    .footer-note {
+      margin-top: 28px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media print {
+      .toolbar,
+      .quicknav,
+      .timer-controls {
+        display: none !important;
+      }
+      body { background: #fff; }
+      .hero, .card { box-shadow: none; }
+      .card { break-inside: avoid; }
+      .wrap { padding-bottom: 0; }
+    }
+
+    @media (max-width: 980px) {
+      .grid-4 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .hero-meta { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    }
+
+    @media (max-width: 760px) {
+      .grid-2, .grid-3, .grid-4, .hero-meta, .timeline-step {
+        grid-template-columns: 1fr;
+      }
+      .section-head {
+        flex-direction: column;
+      }
+      .chip {
+        align-self: flex-start;
+      }
+      .hero {
+        padding: 26px 20px;
+      }
+      .card {
+        padding: 20px 18px;
+      }
+      .wrap {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <img src="../../../assets/logo.svg" alt="Logo de Yanapakuy" />
+        <div class="brand-copy">
+          <strong>Yanapakuy 2026</strong>
+          <span>Guía de sesión y orientación pedagógica</span>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <button class="btn warm" type="button" onclick="window.print()">Imprimir</button>
+        <button class="btn secondary" type="button" id="expandAll">Abrir todo</button>
+        <button class="btn secondary" type="button" id="collapseAll">Cerrar todo</button>
+      </div>
+    </div>
+
+    <section class="hero">
+      <div class="hero-kicker">Sesión 2 · 25 de abril de 2026</div>
+      <h1>Metas personales, colegio y hábitos de estudio</h1>
+      <p>
+        Formar no es solo acompañar tareas. También es ayudar a que cada estudiante mire su año con dirección,
+        distinga qué quiere construir y entienda que los hábitos de hoy sostienen el proyecto de vida de mañana.
+      </p>
+
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <strong>Grupo sugerido</strong>
+          <span>10 a 16 años</span>
+        </div>
+        <div class="hero-meta-item">
+          <strong>Duración</strong>
+          <span>120 minutos</span>
+        </div>
+        <div class="hero-meta-item">
+          <strong>Eje formativo</strong>
+          <span>Disciplina y perseverancia</span>
+        </div>
+        <div class="hero-meta-item">
+          <strong>Producto final</strong>
+          <span>Meta clara + hábito concreto</span>
+        </div>
+      </div>
+
+      <nav class="quicknav" aria-label="Navegación interna">
+        <a href="#presentacion">Presentación</a>
+        <a href="#ficha">Ficha rápida</a>
+        <a href="#guion">Guion completo</a>
+        <a href="#apoyo">Apoyo al voluntario</a>
+        <a href="#dinamica">Dinámica</a>
+        <a href="#recomendaciones">Conducción</a>
+      </nav>
+    </section>
+
+    <section class="section" id="presentacion">
+      <div class="card">
+        <div class="section-head">
+          <h2>Presentación general</h2>
+          <span class="chip">Sentido de la actividad</span>
+        </div>
+        <p class="lead">
+          Esta actividad trabaja el tema de las metas desde un enfoque formativo y realista. No se trata de pedir a los alumnos que “sueñen bonito”
+          ni de llenar una hoja con deseos sueltos. Se busca que puedan reconocer qué quieren construir este año, por qué eso importa y qué hábitos
+          diarios necesitan para acercarse a ello.
+        </p>
+
+        <div class="grid-3">
+          <div class="box soft">
+            <h3>¿De qué trata?</h3>
+            <p>De ayudar a los estudiantes a pensar con más dirección su año, conectando metas personales con esfuerzo escolar y hábitos de estudio.</p>
+          </div>
+          <div class="box blue">
+            <h3>¿Por qué importa?</h3>
+            <p>Porque muchos niños y adolescentes quieren mejorar, pero no siempre saben cómo convertir ese deseo en acciones concretas y sostenidas.</p>
+          </div>
+          <div class="box warm">
+            <h3>¿Qué busca Yanapakuy?</h3>
+            <p>Formar criterio, constancia y sentido del trabajo bien hecho. La meta no es solo “ir mejor en clases”, sino crecer en responsabilidad y proyecto de vida.</p>
+          </div>
+        </div>
+
+        <div class="quote">
+          En Yanapakuy, una meta no vale por sonar ambiciosa. Vale cuando ordena decisiones, fortalece hábitos y ayuda al alumno a tomarse en serio su propio camino.
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ficha">
+      <div class="card">
+        <div class="section-head">
+          <h2>Ficha rápida para el voluntario</h2>
+          <span class="chip">Consulta rápida</span>
+        </div>
+
+        <div class="grid-4">
+          <div class="box">
+            <h3>Edad / grupo</h3>
+            <p>Niños mayores y adolescentes. Referencia sugerida: 10 a 16 años.</p>
+          </div>
+          <div class="box">
+            <h3>Duración</h3>
+            <p>120 minutos en una sesión completa de sábado.</p>
+          </div>
+          <div class="box">
+            <h3>Modalidad</h3>
+            <p>Trabajo grupal con momentos individuales, en parejas y en plenario.</p>
+          </div>
+          <div class="box">
+            <h3>Valor principal</h3>
+            <p>Disciplina con sentido, perseverancia y responsabilidad personal.</p>
+          </div>
+        </div>
+
+        <div class="grid-2" style="margin-top:14px;">
+          <div class="box soft">
+            <h3>Materiales</h3>
+            <ul>
+              <li>Hojas bond o cuadernos</li>
+              <li>Lápices, lapiceros y colores</li>
+              <li>Papelotes o pizarra si hay disponibilidad</li>
+              <li>Cinta o masking tape si se van a pegar metas en pared</li>
+              <li>Tarjetas pequeñas o post-its, si se cuenta con ellos</li>
+            </ul>
+          </div>
+          <div class="box blue">
+            <h3>Competencias y capacidades</h3>
+            <ul>
+              <li>Comunicación oral y expresión de ideas</li>
+              <li>Comprensión y formulación de metas</li>
+              <li>Reflexión personal y autorregulación</li>
+              <li>Organización del estudio y pensamiento secuencial</li>
+              <li>Participación, escucha y respeto en grupo</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <div class="section-head">
+          <h2>Propósito pedagógico</h2>
+          <span class="chip">Marco formativo</span>
+        </div>
+        <p class="lead">
+          El aprendizaje central esperado es que los alumnos comprendan que una meta no es solo un deseo, sino una dirección que exige orden, constancia y decisiones concretas.
+          Esta sesión trabaja la dimensión formativa de la responsabilidad personal: pensar el año, valorar el colegio como parte del propio desarrollo y reconocer que los hábitos
+          cotidianos pueden acercar o alejar de lo que uno quiere construir.
+        </p>
+
+        <div class="grid-3">
+          <div class="box soft">
+            <h3>Aprendizaje central</h3>
+            <p>Distinguir entre “querer algo” y “organizarse para alcanzarlo”.</p>
+          </div>
+          <div class="box blue">
+            <h3>Habilidad promovida</h3>
+            <p>Planificación básica, reflexión personal y toma de decisiones realistas.</p>
+          </div>
+          <div class="box warm">
+            <h3>Aporte formativo</h3>
+            <p>Fortalece hábitos, disciplina, comunicación clara y valoración del estudio como parte del proyecto de vida.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <div class="section-head">
+          <h2>Resultados esperados</h2>
+          <span class="chip">Qué debería quedar</span>
+        </div>
+
+        <div class="checklist">
+          <div class="check">
+            <div class="check-bullet">1</div>
+            <div>
+              <strong>Comprensión</strong>
+              <span>Que los alumnos comprendan que una meta requiere esfuerzo sostenido y no solo entusiasmo momentáneo.</span>
+            </div>
+          </div>
+          <div class="check">
+            <div class="check-bullet">2</div>
+            <div>
+              <strong>Expresión</strong>
+              <span>Que puedan nombrar al menos una meta importante para este año y explicar por qué les importa.</span>
+            </div>
+          </div>
+          <div class="check">
+            <div class="check-bullet">3</div>
+            <div>
+              <strong>Producción</strong>
+              <span>Que formulen uno o dos hábitos concretos de estudio o conducta que puedan empezar a practicar esta misma semana.</span>
+            </div>
+          </div>
+          <div class="check">
+            <div class="check-bullet">4</div>
+            <div>
+              <strong>Actitud</strong>
+              <span>Que aumente la disposición a tomarse en serio el trabajo escolar, la puntualidad, el orden y la perseverancia.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="guion">
+      <div class="card">
+        <div class="section-head">
+          <h2>Guion completo de la sesión</h2>
+          <span class="chip">Paso a paso</span>
+        </div>
+        <p class="lead">
+          Lo que sigue está pensado para que un voluntario sin experiencia pueda conducir la actividad completa. No hace falta memorizar cada frase, pero sí entender el sentido de cada tramo y el tipo de conducción que requiere.
+        </p>
+
+        <div class="timeline">
+          <article class="timeline-step">
+            <div class="timeline-time">0-15 min</div>
+            <div>
+              <h3>1. Bienvenida y reencuentro</h3>
+              <p>Se retoma el vínculo de la sesión anterior, se baja la tensión inicial y se prepara el paso hacia un tema más personal.</p>
+            </div>
+          </article>
+          <article class="timeline-step">
+            <div class="timeline-time">15-30 min</div>
+            <div>
+              <h3>2. Activación y rompehielo</h3>
+              <p>Se activa la participación con una dinámica breve para pasar del “cómo llegué” al “qué quiero construir”.</p>
+            </div>
+          </article>
+          <article class="timeline-step">
+            <div class="timeline-time">30-50 min</div>
+            <div>
+              <h3>3. Introducción al tema</h3>
+              <p>Se explica qué es una meta, por qué el colegio importa y cómo los hábitos hacen posible el avance.</p>
+            </div>
+          </article>
+          <article class="timeline-step">
+            <div class="timeline-time">50-85 min</div>
+            <div>
+              <h3>4. Desarrollo principal</h3>
+              <p>Los alumnos piensan, escriben y comparten metas personales y metas vinculadas al estudio.</p>
+            </div>
+          </article>
+          <article class="timeline-step">
+            <div class="timeline-time">85-105 min</div>
+            <div>
+              <h3>5. Dinámica participativa</h3>
+              <p>Se aterriza la reflexión en hábitos concretos, con apoyo del grupo y del voluntario.</p>
+            </div>
+          </article>
+          <article class="timeline-step">
+            <div class="timeline-time">105-120 min</div>
+            <div>
+              <h3>6. Reflexión y cierre</h3>
+              <p>Se ordena el aprendizaje, se formula un compromiso simple y se conecta la sesión con la vida diaria.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="session-block">
+          <h3>1. Bienvenida y reencuentro</h3>
+          <div class="session-meta">
+            <span>Objetivo: recuperar vínculo</span>
+            <span>Duración: 15 min</span>
+          </div>
+
+          <div class="timer" data-minutes="15">
+            <span class="clock" aria-live="polite">15:00</span>
+            <div class="timer-controls">
+              <button class="start" type="button">Iniciar</button>
+              <button class="pause" type="button">Pausa</button>
+              <button class="reset" type="button">Reiniciar</button>
+            </div>
+            <div class="bar"><span></span></div>
+          </div>
+
+          <div class="grid-2">
+            <div class="box soft">
+              <h4>Qué hace el voluntario</h4>
+              <ul>
+                <li>Saluda por nombre y observa el ánimo del grupo.</li>
+                <li>Pregunta brevemente cómo les fue en la semana.</li>
+                <li>Recuerda en una frase el sentido de Yanapakuy: estudiar, crecer y tomarse en serio el propio camino.</li>
+              </ul>
+            </div>
+            <div class="box blue">
+              <h4>Qué puede decir</h4>
+              <p>&ldquo;La semana pasada empezamos como grupo. Hoy vamos a pensar en algo importante: qué queremos construir este año y cómo no dejar que eso se quede solo en palabras.&rdquo;</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="session-block">
+          <h3>2. Activación o rompehielo</h3>
+          <div class="session-meta">
+            <span>Objetivo: abrir participación</span>
+            <span>Duración: 15 min</span>
+          </div>
+
+          <div class="timer" data-minutes="15">
+            <span class="clock" aria-live="polite">15:00</span>
+            <div class="timer-controls">
+              <button class="start" type="button">Iniciar</button>
+              <button class="pause" type="button">Pausa</button>
+              <button class="reset" type="button">Reiniciar</button>
+            </div>
+            <div class="bar"><span></span></div>
+          </div>
+
+          <div class="box warm">
+            <h4>Dinámica breve: “Si este año saliera bien...”</h4>
+            <p>Pide que completen oralmente una frase: <strong>&ldquo;Si este año me fuera bien, me gustaría que al final pudiera decir que...&rdquo;</strong></p>
+            <p>Deja respuestas libres, pero anímalos a ser concretos: aprobar cursos, ser más ordenado, dejar de postergar, leer mejor, pelear menos, ayudar más en casa.</p>
+          </div>
+
+          <div class="quote">
+            El rompehielo no es solo para “animar”. Aquí ya empieza el contenido: el alumno empieza a imaginar el año con dirección.
+          </div>
+        </div>
+
+        <div class="session-block">
+          <h3>3. Introducción al tema</h3>
+          <div class="session-meta">
+            <span>Objetivo: clarificar la idea de meta</span>
+            <span>Duración: 20 min</span>
+          </div>
+
+          <div class="timer" data-minutes="20">
+            <span class="clock" aria-live="polite">20:00</span>
+            <div class="timer-controls">
+              <button class="start" type="button">Iniciar</button>
+              <button class="pause" type="button">Pausa</button>
+              <button class="reset" type="button">Reiniciar</button>
+            </div>
+            <div class="bar"><span></span></div>
+          </div>
+
+          <div class="grid-2">
+            <div class="box">
+              <h4>Explicación sencilla</h4>
+              <p>Una meta no es solamente algo que me gustaría. Es algo que quiero lograr y por lo que estoy dispuesto a ordenar tiempo, esfuerzo y conducta.</p>
+              <p>También es importante decir que una meta no tiene que ser enorme para ser valiosa. A veces una meta seria es empezar a cumplir tareas, llegar más puntual o mejorar la manera de estudiar.</p>
+            </div>
+            <div class="box blue">
+              <h4>Conexión con el colegio</h4>
+              <p>El colegio no es solo un lugar para recibir notas. Es un espacio donde se entrenan hábitos: escuchar, terminar procesos, leer con atención, preguntar, insistir, organizarse.</p>
+              <p>Por eso las metas personales y el trabajo escolar no van separados. Muchas veces se sostienen mutuamente.</p>
+            </div>
+          </div>
+
+          <details>
+            <summary>Frases útiles para esta parte</summary>
+            <div class="details-body">
+              <ul>
+                <li>&ldquo;Soñar con algo es bueno. Pero crecer de verdad empieza cuando uno se pregunta qué tiene que cambiar desde hoy.&rdquo;</li>
+                <li>&ldquo;No todo depende de la motivación. Muchas veces depende del hábito.&rdquo;</li>
+                <li>&ldquo;Una meta seria se nota en lo pequeño: cómo llego, cómo estudio, cómo respondo cuando algo me cuesta.&rdquo;</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <div class="session-block">
+          <h3>4. Desarrollo principal</h3>
+          <div class="session-meta">
+            <span>Objetivo: formular metas reales</span>
+            <span>Duración: 35 min</span>
+          </div>
+
+          <div class="timer" data-minutes="35">
+            <span class="clock" aria-live="polite">35:00</span>
+            <div class="timer-controls">
+              <button class="start" type="button">Iniciar</button>
+              <button class="pause" type="button">Pausa</button>
+              <button class="reset" type="button">Reiniciar</button>
+            </div>
+            <div class="bar"><span></span></div>
+          </div>
+
+          <div class="grid-3">
+            <div class="box soft">
+              <h4>Paso 1</h4>
+              <p>Pide que cada alumno escriba una meta personal importante para este año.</p>
+            </div>
+            <div class="box blue">
+              <h4>Paso 2</h4>
+              <p>Luego, que escriba una meta relacionada con el colegio o el estudio.</p>
+            </div>
+            <div class="box warm">
+              <h4>Paso 3</h4>
+              <p>Finalmente, que explique por qué esa meta importa y qué podría impedirle avanzar.</p>
+            </div>
+          </div>
+
+          <div class="grid-2" style="margin-top:14px;">
+            <div class="box">
+              <h4>Preguntas guía del voluntario</h4>
+              <ul>
+                <li>¿Qué te gustaría que estuviera mejor en diciembre que hoy?</li>
+                <li>¿Qué parte de tu vida sientes que necesita más orden o esfuerzo?</li>
+                <li>¿Qué relación tiene eso con el colegio, con tu casa o con tu manera de estudiar?</li>
+              </ul>
+            </div>
+            <div class="box rose">
+              <h4>Qué cuidar</h4>
+              <ul>
+                <li>No ridiculizar metas pequeñas.</li>
+                <li>No exigir metas “bonitas” solo para que suenen bien.</li>
+                <li>No dejar que todo quede en respuestas muy generales como “quiero ser mejor”.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="session-block">
+          <h3>5. Dinámica participativa</h3>
+          <div class="session-meta">
+            <span>Objetivo: convertir metas en hábitos</span>
+            <span>Duración: 20 min</span>
+          </div>
+
+          <div class="timer" data-minutes="20">
+            <span class="clock" aria-live="polite">20:00</span>
+            <div class="timer-controls">
+              <button class="start" type="button">Iniciar</button>
+              <button class="pause" type="button">Pausa</button>
+              <button class="reset" type="button">Reiniciar</button>
+            </div>
+            <div class="bar"><span></span></div>
+          </div>
+
+          <div class="box soft">
+            <h4>Consigna central</h4>
+            <p>Cada alumno elige una meta principal y debe escribir dos hábitos concretos que lo acerquen a ella esta semana.</p>
+          </div>
+
+          <div class="grid-2" style="margin-top:14px;">
+            <div class="box blue">
+              <h4>Ejemplos</h4>
+              <ul>
+                <li>Meta: mejorar en Matemática → Hábito: revisar 15 minutos diarios y preguntar cuando no entiendo.</li>
+                <li>Meta: ser más responsable → Hábito: preparar mi cuaderno la noche anterior y llegar puntual.</li>
+                <li>Meta: pelear menos en clase → Hábito: no responder de inmediato y cambiarme de lugar si me distraigo.</li>
+              </ul>
+            </div>
+            <div class="box warm">
+              <h4>Qué debe revisar el voluntario</h4>
+              <ul>
+                <li>Que el hábito sea claro.</li>
+                <li>Que sea posible en una semana.</li>
+                <li>Que se pueda observar.</li>
+                <li>Que realmente tenga relación con la meta.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="session-block">
+          <h3>6. Espacio de reflexión y cierre</h3>
+          <div class="session-meta">
+            <span>Objetivo: dejar una decisión concreta</span>
+            <span>Duración: 15 min</span>
+          </div>
+
+          <div class="timer" data-minutes="15">
+            <span class="clock" aria-live="polite">15:00</span>
+            <div class="timer-controls">
+              <button class="start" type="button">Iniciar</button>
+              <button class="pause" type="button">Pausa</button>
+              <button class="reset" type="button">Reiniciar</button>
+            </div>
+            <div class="bar"><span></span></div>
+          </div>
+
+          <div class="grid-2">
+            <div class="box">
+              <h4>Preguntas de reflexión</h4>
+              <ul>
+                <li>¿Qué meta te importa de verdad este año?</li>
+                <li>¿Qué hábito vas a empezar desde esta semana?</li>
+                <li>¿Qué te suele frenar y cómo podrías responder mejor esta vez?</li>
+              </ul>
+            </div>
+            <div class="box blue">
+              <h4>Qué puede decir el voluntario al cerrar</h4>
+              <p>&ldquo;Las metas no cambian la vida por escribirse en una hoja. Cambian la vida cuando empiezan a ordenar la semana, las decisiones y la manera de responder al esfuerzo.&rdquo;</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="apoyo">
+      <div class="card">
+        <div class="section-head">
+          <h2>Contenido de apoyo para el voluntario</h2>
+          <span class="chip">Explicación simple del tema</span>
+        </div>
+
+        <div class="grid-2">
+          <div class="box soft">
+            <h3>Ideas clave que debe transmitir</h3>
+            <ul>
+              <li>Tener metas ayuda a no vivir el año a la deriva.</li>
+              <li>El colegio importa porque enseña capacidades y hábitos, no solo contenidos.</li>
+              <li>Las metas se sostienen con pequeñas repeticiones, no solo con ganas.</li>
+              <li>Un alumno puede cambiar mucho cuando empieza a tomarse en serio pocas cosas, pero de verdad.</li>
+            </ul>
+          </div>
+          <div class="box blue">
+            <h3>Errores comunes o confusiones posibles</h3>
+            <ul>
+              <li>Confundir meta con deseo momentáneo.</li>
+              <li>Proponer objetivos demasiado grandes sin pasos intermedios.</li>
+              <li>Pensar que el hábito “aparece” cuando uno se siente motivado.</li>
+              <li>Ver el colegio solo como obligación y no como entrenamiento para la vida.</li>
+            </ul>
+          </div>
+        </div>
+
+        <details>
+          <summary>Cómo explicarlo a niños en lenguaje sencillo</summary>
+          <div class="details-body">
+            <p>Una meta es como elegir a dónde quieres llegar. El hábito es el camino que haces una y otra vez para acercarte. Si quieres llegar, no basta con decirlo: tienes que caminar.</p>
+            <p>También se puede explicar así: la meta es el “para qué”; el hábito es el “cómo”.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Marco cultural y formativo de Yanapakuy</summary>
+          <div class="details-body">
+            <p>Yanapakuy acompaña a niños y adolescentes en su formación académica y personal. Por eso el tema de metas no se trabaja como coaching vacío ni como charla motivacional superficial. Se trabaja como formación del carácter: aprender a pensar, decidir, insistir y responder con seriedad al estudio, al grupo y a la propia vida.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <div class="section-head">
+          <h2>Preguntas orientadoras</h2>
+          <span class="chip">Para abrir, profundizar y cerrar</span>
+        </div>
+
+        <div class="grid-3">
+          <div class="box soft">
+            <h3>Preguntas de apertura</h3>
+            <ul>
+              <li>¿Qué te gustaría lograr este año?</li>
+              <li>¿Qué cosa quisieras que estuviera mejor en diciembre?</li>
+              <li>¿Qué área de tu vida sientes que necesita más esfuerzo?</li>
+            </ul>
+          </div>
+          <div class="box blue">
+            <h3>Preguntas para profundizar</h3>
+            <ul>
+              <li>¿Por qué esa meta es importante para ti?</li>
+              <li>¿Qué te ha frenado antes?</li>
+              <li>¿Qué tendrías que cambiar en tu rutina para acercarte a eso?</li>
+            </ul>
+          </div>
+          <div class="box warm">
+            <h3>Preguntas para conectar con la vida diaria</h3>
+            <ul>
+              <li>¿Qué haces hoy que te acerca a esa meta?</li>
+              <li>¿Qué hábito pequeño podría ayudarte esta semana?</li>
+              <li>¿Cómo influye el colegio en lo que quieres llegar a ser?</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="box" style="margin-top:14px;">
+          <h3>Preguntas de cierre y reflexión</h3>
+          <ul>
+            <li>¿Qué compromiso real te llevas hoy?</li>
+            <li>¿Qué hábito vas a empezar a practicar desde ahora?</li>
+            <li>¿Qué te gustaría que el grupo note diferente en ti dentro de algunas semanas?</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="dinamica">
+      <div class="card">
+        <div class="section-head">
+          <h2>Dinámica o actividad práctica</h2>
+          <span class="chip">Aplicación directa</span>
+        </div>
+        <p class="lead">
+          La dinámica principal busca que cada estudiante formule una meta importante y la conecte con hábitos posibles. No basta con escribir algo bonito: el objetivo es que lo pensado pueda convertirse en acción.
+        </p>
+
+        <div class="grid-2">
+          <div class="box soft">
+            <h3>Instrucciones paso a paso</h3>
+            <ol>
+              <li>Entrega una hoja a cada participante.</li>
+              <li>Pide que la dividan en tres partes: “Mi meta”, “Por qué importa”, “Qué hábitos necesito”.</li>
+              <li>Da unos minutos para trabajo individual.</li>
+              <li>Luego, en parejas, que expliquen su meta y escuchen si el compañero la entiende bien.</li>
+              <li>Finalmente, cada uno ajusta sus hábitos para que sean más concretos.</li>
+            </ol>
+          </div>
+          <div class="box blue">
+            <h3>Organización sugerida</h3>
+            <ul>
+              <li>Inicio individual para pensar sin copiar respuestas.</li>
+              <li>Trabajo en parejas para verbalizar y aclarar.</li>
+              <li>Puesta en común parcial, no necesariamente de todos, para no alargar demasiado.</li>
+            </ul>
+          </div>
+        </div>
+
+        <details>
+          <summary>Variante si el grupo es pequeño</summary>
+          <div class="details-body">
+            <p>Se puede hacer en formato más conversado, casi como mesa redonda. Cada alumno comparte su meta y entre todos ayudan a convertirla en un hábito mejor formulado.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Variante si el grupo está distraído o es muy heterogéneo en edad</summary>
+          <div class="details-body">
+            <p>Reduce la cantidad de escritura y usa tarjetas con ejemplos. En lugar de pedir varias metas, trabaja solo una meta y un hábito. Con los más pequeños, conviene usar ejemplos más concretos: estudiar 15 minutos, ordenar el cuaderno, levantar la mano antes de hablar, traer materiales.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <div class="section-head">
+          <h2>Apoyo académico transversal</h2>
+          <span class="chip">Solo cuando aporte valor</span>
+        </div>
+
+        <div class="grid-3">
+          <div class="box soft">
+            <h3>Lectura y comprensión</h3>
+            <p>Se trabaja cuando el alumno debe leer consignas, entender diferencias entre meta y hábito, y escuchar ideas de otros con atención.</p>
+          </div>
+          <div class="box blue">
+            <h3>Escritura</h3>
+            <p>Se refuerza al pedir que redacten una meta y la expliquen con sus propias palabras, ordenando ideas con mayor claridad.</p>
+          </div>
+          <div class="box warm">
+            <h3>Matemática básica / organización</h3>
+            <p>Puede aparecer al pensar tiempos, frecuencia y secuencia: cuántos días, cuántos minutos, qué orden de acciones tendrá un hábito.</p>
+          </div>
+        </div>
+
+        <div class="box" style="margin-top:14px;">
+          <h3>Inglés básico, solo si tiene sentido</h3>
+          <p>Se puede aprovechar una palabra puntual como <em>goal</em> o <em>habit</em> para enriquecer vocabulario, pero no debe forzarse si distrae del propósito principal.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="recomendaciones">
+      <div class="card">
+        <div class="section-head">
+          <h2>Recomendaciones de conducción</h2>
+          <span class="chip">Para uso real en campo</span>
+        </div>
+
+        <div class="checklist">
+          <div class="check">
+            <div class="check-bullet">A</div>
+            <div>
+              <strong>Cómo mantener la atención</strong>
+              <span>Alterna explicación, pregunta y producción. No hables demasiado tiempo seguido sin pedir alguna respuesta o participación.</span>
+            </div>
+          </div>
+          <div class="check">
+            <div class="check-bullet">B</div>
+            <div>
+              <strong>Cómo explicar con claridad</strong>
+              <span>Usa ejemplos concretos. Si dices “disciplina”, tradúcelo enseguida a acciones visibles: llegar, traer materiales, terminar, volver a intentar.</span>
+            </div>
+          </div>
+          <div class="check">
+            <div class="check-bullet">C</div>
+            <div>
+              <strong>Cómo incluir a alumnos tímidos</strong>
+              <span>Dales primero tiempo para escribir y luego invítalos a compartir algo breve. A muchos les cuesta menos hablar cuando ya pensaron antes.</span>
+            </div>
+          </div>
+          <div class="check">
+            <div class="check-bullet">D</div>
+            <div>
+              <strong>Cómo manejar silencios o respuestas parciales</strong>
+              <span>No llenes el vacío demasiado rápido. Repite la pregunta de otro modo, ofrece un ejemplo y deja unos segundos reales para pensar.</span>
+            </div>
+          </div>
+          <div class="check">
+            <div class="check-bullet">E</div>
+            <div>
+              <strong>Qué hacer si sobra tiempo</strong>
+              <span>Pide que mejoren su formulación: que vuelvan su hábito más claro, más realista o más medible. También puedes pedir que lo compartan con otro compañero.</span>
+            </div>
+          </div>
+          <div class="check">
+            <div class="check-bullet">F</div>
+            <div>
+              <strong>Qué hacer si falta tiempo</strong>
+              <span>Prioriza que cada alumno salga con una meta y un hábito, aunque la puesta en común sea más breve. No sacrifiques el aterrizaje final.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <div class="section-head">
+          <h2>Mensaje de cierre</h2>
+          <span class="chip">Idea fuerza final</span>
+        </div>
+        <p class="lead">
+          Una meta empieza a tener valor cuando deja de ser solo una idea bonita y se convierte en una forma de vivir la semana.
+          El esfuerzo cotidiano, el orden en el estudio y la seriedad con la que uno responde a sus responsabilidades también forman carácter.
+          En Yanapakuy, crecer no es solo sacar mejores notas: es aprender a construir una vida con más dirección, más disciplina y más sentido de servicio.
+        </p>
+      </div>
+    </section>
+
+    <p class="footer-note">Yanapakuy 2026 · Sesión 2 sobre metas personales, colegio y hábitos de estudio.</p>
+  </main>
+
+  <script>
+    const allDetails = Array.from(document.querySelectorAll("details"));
+    const expandAll = document.getElementById("expandAll");
+    const collapseAll = document.getElementById("collapseAll");
+
+    expandAll?.addEventListener("click", () => {
+      allDetails.forEach((item) => { item.open = true; });
+    });
+
+    collapseAll?.addEventListener("click", () => {
+      allDetails.forEach((item) => { item.open = false; });
+    });
+
+    document.querySelectorAll(".timer").forEach((timer) => {
+      const totalMinutes = Number(timer.dataset.minutes || 10);
+      const totalSeconds = totalMinutes * 60;
+      const clock = timer.querySelector(".clock");
+      const bar = timer.querySelector(".bar > span");
+      const startBtn = timer.querySelector(".start");
+      const pauseBtn = timer.querySelector(".pause");
+      const resetBtn = timer.querySelector(".reset");
+
+      let remaining = totalSeconds;
+      let interval = null;
+
+      function render() {
+        const min = Math.floor(remaining / 60);
+        const sec = remaining % 60;
+        clock.textContent = `${String(min).padStart(2, "0")}:${String(sec).padStart(2, "0")}`;
+        const pct = (remaining / totalSeconds) * 100;
+        bar.style.width = `${pct}%`;
+      }
+
+      function start() {
+        if (interval) return;
+        interval = setInterval(() => {
+          if (remaining > 0) {
+            remaining -= 1;
+            render();
+          } else {
+            clearInterval(interval);
+            interval = null;
+          }
+        }, 1000);
+      }
+
+      function pause() {
+        clearInterval(interval);
+        interval = null;
+      }
+
+      function reset() {
+        clearInterval(interval);
+        interval = null;
+        remaining = totalSeconds;
+        render();
+      }
+
+      startBtn?.addEventListener("click", start);
+      pauseBtn?.addEventListener("click", pause);
+      resetBtn?.addEventListener("click", reset);
+
+      render();
+    });
+  </script>
+</body>
+</html>
