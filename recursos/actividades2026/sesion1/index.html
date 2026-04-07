@@ -1,780 +1,146 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Actividad 1 - Inicio, identidad y ciudadanía | Yanapakuy</title>
-  <meta name="description" content="Guía práctica para la primera sesión de Yanapakuy 2026: bienvenida, acuerdos, identidad peruana, ciudadanía y conversación sobre las elecciones generales del 12 de abril de 2026." />
+  <meta name="description" content="Guía completa para la primera sesión de Yanapakuy 2026: bienvenida, acuerdos, identidad y ciudadanía ante las elecciones generales del 12 de abril de 2026." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" />
-  <link rel="stylesheet" href="../../../assets/styles.css" />
-  <style>
-    :root {
-      --doc-max: 1080px;
-      --doc-pad: 20px;
-      --doc-line: rgba(11, 24, 17, .08);
-      --doc-soft: #f5fbf5;
-      --doc-warm: #fff8eb;
-      --doc-blue: #eef5ff;
-      --doc-danger: #fff1ef;
-      --doc-deep: #0f3d29;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: var(--font-body);
-      background:
-        radial-gradient(circle at top left, rgba(38,153,71,.08), transparent 28%),
-        linear-gradient(180deg, #fbfdf9 0%, #f7fbf7 100%);
-      color: var(--ink);
-    }
-    .doc-shell {
-      max-width: var(--doc-max);
-      margin: 0 auto;
-      padding: 0 var(--doc-pad) 48px;
-    }
-    .doc-top {
-      padding: 28px 0 18px;
-    }
-    .doc-brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 18px;
-    }
-    .doc-brand img {
-      width: 72px;
-      height: auto;
-      display: block;
-    }
-    .doc-brand-copy {
-      display: grid;
-      gap: 4px;
-    }
-    .doc-brand-copy strong {
-      font-size: 13px;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--pri);
-    }
-    .doc-brand-copy span {
-      color: var(--muted);
-      font-size: 14px;
-    }
-    .hero {
-      border-radius: 28px;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at top left, rgba(255,255,255,.20), transparent 34%),
-        linear-gradient(135deg, #0f3d29 0%, #165f3d 58%, #23944a 100%);
-      color: #fff;
-      padding: 34px 28px;
-      box-shadow: 0 22px 44px rgba(16,58,37,.18);
-    }
-    .hero-kicker {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,.72);
-      margin-bottom: 10px;
-    }
-    .hero-kicker::before {
-      content: '';
-      width: 9px;
-      height: 9px;
-      border-radius: 999px;
-      background: #f6d54f;
-      box-shadow: 0 0 0 5px rgba(246,213,79,.16);
-    }
-    .hero h1 {
-      margin: 0 0 12px;
-      font-family: var(--font-display);
-      font-size: clamp(32px, 5vw, 58px);
-      line-height: 1.02;
-      font-weight: 400;
-      letter-spacing: -.02em;
-    }
-    .hero p {
-      margin: 0;
-      max-width: 820px;
-      color: rgba(255,255,255,.86);
-      font-size: 18px;
-      line-height: 1.7;
-    }
-    .hero-meta {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 22px;
-    }
-    .hero-meta-item {
-      background: rgba(255,255,255,.10);
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 18px;
-      padding: 14px 14px 12px;
-    }
-    .hero-meta-item strong {
-      display: block;
-      font-size: 12px;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,.68);
-      margin-bottom: 5px;
-    }
-    .hero-meta-item span {
-      display: block;
-      font-size: 16px;
-      font-weight: 700;
-      color: #fff;
-    }
-    .toolbar {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin: 20px 0 6px;
-    }
-    .toolbar button {
-      border: 0;
-      border-radius: 14px;
-      padding: 11px 16px;
-      font: inherit;
-      font-weight: 700;
-      cursor: pointer;
-      background: var(--pri-light);
-      color: var(--pri);
-      box-shadow: var(--shadow-sm);
-    }
-    .toolbar button.secondary {
-      background: #eaf3ff;
-      color: #184a93;
-    }
-    .toolbar button.print {
-      background: #dff7e6;
-      color: #17653a;
-    }
-    .section {
-      margin-top: 24px;
-    }
-    .section-card {
-      background: #fff;
-      border: 1px solid var(--doc-line);
-      border-radius: 24px;
-      padding: 24px 22px;
-      box-shadow: var(--shadow);
-    }
-    .section-head {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 14px;
-      margin-bottom: 14px;
-    }
-    .section-head h2 {
-      margin: 0;
-      font-size: clamp(24px, 3vw, 34px);
-      line-height: 1.08;
-      font-family: var(--font-display);
-      font-weight: 400;
-    }
-    .time-chip {
-      white-space: nowrap;
-      border-radius: 999px;
-      padding: 8px 12px;
-      background: var(--doc-warm);
-      border: 1px solid rgba(196,92,26,.18);
-      color: #8a4d1c;
-      font-size: 13px;
-      font-weight: 800;
-    }
-    .lead {
-      margin: 0 0 16px;
-      color: var(--ink-2);
-      line-height: 1.72;
-      font-size: 17px;
-    }
-    .grid-2,
-    .grid-3 {
-      display: grid;
-      gap: 14px;
-    }
-    .grid-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
-    .grid-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
-    .box {
-      background: #fff;
-      border: 1px solid var(--doc-line);
-      border-radius: 18px;
-      padding: 16px 16px 14px;
-    }
-    .box h3,
-    .box h4 {
-      margin: 0 0 8px;
-      font-size: 18px;
-    }
-    .box p:last-child,
-    .box ul:last-child {
-      margin-bottom: 0;
-    }
-    .box.soft { background: var(--doc-soft); }
-    .box.blue { background: var(--doc-blue); }
-    .box.warn { background: var(--doc-warm); }
-    .box.danger { background: var(--doc-danger); }
-    .quote {
-      margin-top: 14px;
-      border-left: 5px solid var(--gold);
-      background: #fff9e8;
-      border-radius: 14px;
-      padding: 14px 16px;
-      color: var(--ink-2);
-    }
-    .checklist {
-      display: grid;
-      gap: 10px;
-    }
-    .check-item {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      background: #fbfdf9;
-      border: 1px solid var(--doc-line);
-      border-radius: 16px;
-      padding: 12px 14px;
-    }
-    .check-bullet {
-      width: 28px;
-      height: 28px;
-      border-radius: 999px;
-      display: grid;
-      place-items: center;
-      background: rgba(38,153,71,.12);
-      color: var(--pri);
-      font-weight: 800;
-      flex: 0 0 auto;
-    }
-    .check-item strong {
-      display: block;
-      margin-bottom: 4px;
-    }
-    .timeline {
-      display: grid;
-      gap: 12px;
-    }
-    .timeline-step {
-      display: grid;
-      grid-template-columns: 124px minmax(0,1fr);
-      gap: 14px;
-      align-items: flex-start;
-      background: #fcfefb;
-      border: 1px solid var(--doc-line);
-      border-radius: 18px;
-      padding: 14px;
-    }
-    .timeline-time {
-      border-radius: 14px;
-      background: var(--doc-soft);
-      color: var(--doc-deep);
-      font-weight: 800;
-      padding: 10px 12px;
-      text-align: center;
-    }
-    .timeline-step h3 {
-      margin: 0 0 8px;
-      font-size: 19px;
-    }
-    .timeline-step p,
-    .timeline-step ul {
-      margin-top: 0;
-      margin-bottom: 10px;
-    }
-    details {
-      margin-top: 12px;
-      border: 1px solid var(--doc-line);
-      border-radius: 16px;
-      background: #fcfefb;
-      padding: 0 14px;
-    }
-    summary {
-      cursor: pointer;
-      list-style: none;
-      font-weight: 800;
-      padding: 14px 0;
-    }
-    summary::-webkit-details-marker { display: none; }
-    details[open] summary {
-      color: var(--pri);
-    }
-    details .details-body {
-      padding: 0 0 14px;
-      color: var(--ink-2);
-    }
-    .footer-note {
-      margin-top: 28px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 14px;
-    }
-    @media print {
-      .toolbar { display: none !important; }
-      body { background: #fff; }
-      .doc-shell { padding-bottom: 0; }
-      .section-card,
-      .hero { box-shadow: none; }
-      .section-card { break-inside: avoid; }
-    }
-    @media (max-width: 900px) {
-      .hero-meta,
-      .grid-3 { grid-template-columns: repeat(2, minmax(0,1fr)); }
-    }
-    @media (max-width: 760px) {
-      .grid-2,
-      .grid-3,
-      .hero-meta,
-      .timeline-step {
-        grid-template-columns: 1fr;
-      }
-      .hero,
-      .section-card {
-        padding: 22px 18px;
-      }
-      .doc-shell {
-        padding-left: 16px;
-        padding-right: 16px;
-      }
-      .section-head {
-        flex-direction: column;
-      }
-      .time-chip {
-        align-self: flex-start;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="../session-styles.css" />
 </head>
 <body>
-  <main class="doc-shell">
-    <div class="doc-top">
-      <div class="doc-brand">
-        <img src="../../../assets/logo.svg" alt="Logo de Yanapakuy" />
-        <div class="doc-brand-copy">
-          <strong>Yanapakuy 2026</strong>
-          <span>Guía de sesión y orientación pedagógica</span>
-        </div>
-      </div>
-
-      <section class="hero">
-        <div class="hero-kicker">Sesión 1 · Apertura del ciclo</div>
-        <h1>Inicio, identidad y ciudadanía</h1>
-        <p>
-          Guía de referencia para la primera sesión del ciclo 2026. El objetivo no es solo romper el hielo: buscamos
-          abrir el año con pertenencia, acuerdos claros y una conversación sencilla sobre cómo se vive la ciudadanía en la vida diaria
-          y ante las elecciones generales del <strong>12 de abril de 2026</strong>.
-        </p>
-        <div class="hero-meta">
-          <div class="hero-meta-item">
-            <strong>Duración</strong>
-            <span>120 minutos</span>
-          </div>
-          <div class="hero-meta-item">
-            <strong>Enfoque</strong>
-            <span>Vínculo, orden y criterio</span>
-          </div>
-          <div class="hero-meta-item">
-            <strong>Grupo</strong>
-            <span>Niños, adolescentes y voluntarios</span>
-          </div>
-          <div class="hero-meta-item">
-            <strong>Cierre esperado</strong>
-            <span>Compromiso personal</span>
-          </div>
-        </div>
-      </section>
-
-      <div class="toolbar">
-        <button class="print" type="button" onclick="window.print()">Imprimir</button>
-        <button class="secondary" type="button" id="expandAll">Abrir todo</button>
-        <button class="secondary" type="button" id="collapseAll">Cerrar todo</button>
-      </div>
-    </div>
-
-    <section class="section">
-      <div class="section-card">
-        <div class="section-head">
-          <h2>Presentación de la sesión</h2>
-          <span class="time-chip">Visión general</span>
-        </div>
-        <p class="lead">
-          Esta guía está pensada para ayudar a un voluntario a conducir con seguridad una sesión inicial. No hace falta leer cada frase de memoria:
-          lo importante es sostener el sentido de cada bloque, cuidar el ambiente y cerrar con una idea clara de pertenencia y responsabilidad.
-        </p>
-        <div class="grid-3">
-          <div class="box soft">
-            <h3>Prioridad pedagógica</h3>
-            <p>Primero vínculo, luego orden, después contenido. Si el grupo entra frío o disperso, no corras: afirma la relación antes de exigir atención larga.</p>
-          </div>
-          <div class="box blue">
-            <h3>Estilo del encuentro</h3>
-            <p>Cercano, firme y sereno. No infantilices a los mayores ni vuelvas solemne una conversación que debe sentirse concreta y cotidiana.</p>
-          </div>
-          <div class="box warn">
-            <h3>Resultado esperado</h3>
-            <p>Que el grupo salga entendiendo tres cosas: que Yanapakuy es un espacio serio, que todos tienen un rol y que la ciudadanía se practica antes de votar.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-card">
-        <div class="section-head">
-          <h2>Ruta completa de la sesión</h2>
-          <span class="time-chip">120 minutos</span>
-        </div>
-        <div class="timeline">
-          <article class="timeline-step">
-            <div class="timeline-time">0-20 min</div>
-            <div>
-              <h3>1. Recepción e integración</h3>
-              <p>Romper la tensión inicial, aprender nombres y generar una primera sensación de bienvenida.</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <div class="timeline-time">20-35 min</div>
-            <div>
-              <h3>2. ¿Qué es Yanapakuy?</h3>
-              <p>Explicar que no somos solo apoyo escolar: somos acompañamiento, hábito, criterio y comunidad.</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <div class="timeline-time">35-50 min</div>
-            <div>
-              <h3>3. Acuerdos del grupo</h3>
-              <p>Instalar reglas simples y comprensibles para estudiar, convivir y cuidarse entre todos.</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <div class="timeline-time">50-80 min</div>
-            <div>
-              <h3>4. Perú e identidad</h3>
-              <p>Conectar pertenencia, historia cercana y orgullo por lo que somos, sin caer en discursos vacíos.</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <div class="timeline-time">80-110 min</div>
-            <div>
-              <h3>5. Ciudadanía y elecciones del 12 de abril de 2026</h3>
-              <p>Traducir la idea de ciudadanía a decisiones, cuidado del entorno, información y responsabilidad pública.</p>
-            </div>
-          </article>
-          <article class="timeline-step">
-            <div class="timeline-time">110-120 min</div>
-            <div>
-              <h3>6. Cierre y compromiso</h3>
-              <p>Dejar una idea final concreta y un compromiso pequeño pero exigible para la siguiente semana.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-card">
-        <div class="section-head">
-          <h2>1. Recepción e integración</h2>
-          <span class="time-chip">20 min</span>
-        </div>
-        <p class="lead"><strong>Objetivo:</strong> bajar la timidez inicial, hacer visible a cada participante y marcar que este espacio tiene calidez, pero también dirección.</p>
-        <div class="grid-2">
-          <div class="box soft">
-            <h3>Qué hacer</h3>
-            <ul>
-              <li>Recibe a cada participante por su nombre si ya lo conoces; si no, pregúntalo con naturalidad.</li>
-              <li>Haz una dinámica breve de presentación: nombre, edad y algo que esperan del año.</li>
-              <li>Intercala una pregunta fácil para activar al grupo: qué les gusta del sábado, qué materia les cuesta o qué esperan de Yanapakuy.</li>
-            </ul>
-          </div>
-          <div class="box blue">
-            <h3>Frase de arranque sugerida</h3>
-            <p>&ldquo;Hoy no venimos solo a pasar lista ni a hacer tareas. Hoy empezamos un espacio que quiere ayudarles a estudiar mejor, convivir mejor y pensar mejor.&rdquo;</p>
-            <p>&ldquo;Queremos que este sea un lugar donde uno se sienta acompañado, pero también retado a crecer.&rdquo;</p>
-          </div>
-        </div>
-        <div class="quote">Si el grupo está frío, alarga la presentación y acorta la explicación. Ganar atención genuina al inicio te ahorra desorden después.</div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-card">
-        <div class="section-head">
-          <h2>2. ¿Qué es Yanapakuy?</h2>
-          <span class="time-chip">15 min</span>
-        </div>
-        <p class="lead"><strong>Objetivo:</strong> presentar el sentido del espacio sin llenarlo de discurso institucional. Debe quedar claro para qué existe y qué espera del grupo.</p>
-        <div class="grid-2">
-          <div class="box">
-            <h3>Idea central</h3>
-            <p>Yanapakuy no es una guardería ni un lugar para "cumplir" el sábado. Es un espacio de acompañamiento donde el estudio, la conducta y la forma de relacionarnos importan.</p>
-          </div>
-          <div class="box warn">
-            <h3>Mensaje clave para decir en voz alta</h3>
-            <p>&ldquo;Aquí queremos ayudarles con tareas, sí. Pero también queremos formar hábitos, respeto, confianza y ganas de salir adelante.&rdquo;</p>
-          </div>
-        </div>
-        <details>
-          <summary>Ideas que conviene nombrar</summary>
-          <div class="details-body">
-            <ul>
-              <li>La constancia importa más que venir un solo día con entusiasmo.</li>
-              <li>Preguntar no da vergüenza; quedarse callado y perderse, sí perjudica.</li>
-              <li>Los voluntarios no están para hacer las tareas por ellos, sino para acompañarlos a entender y avanzar.</li>
-            </ul>
-          </div>
-        </details>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-card">
-        <div class="section-head">
-          <h2>3. Acuerdos del grupo</h2>
-          <span class="time-chip">15 min</span>
-        </div>
-        <p class="lead"><strong>Objetivo:</strong> construir normas sencillas que ordenen el grupo desde el primer día y que después puedan recordarse sin sonar arbitrarias.</p>
-        <div class="checklist">
-          <div class="check-item">
-            <div class="check-bullet">1</div>
-            <div>
-              <strong>Escuchamos cuando alguien habla</strong>
-              <span>No se trata de silencio militar, sino de respeto básico para que todos puedan participar.</span>
-            </div>
-          </div>
-          <div class="check-item">
-            <div class="check-bullet">2</div>
-            <div>
-              <strong>Cuidamos materiales y espacio</strong>
-              <span>Lo público y lo compartido también se cuida. Esta idea prepara el terreno para ciudadanía.</span>
-            </div>
-          </div>
-          <div class="check-item">
-            <div class="check-bullet">3</div>
-            <div>
-              <strong>Intentamos antes de rendirnos</strong>
-              <span>El error no es fracaso; es parte del aprendizaje. Lo importante es insistir con ayuda.</span>
-            </div>
-          </div>
-          <div class="check-item">
-            <div class="check-bullet">4</div>
-            <div>
-              <strong>Nos tratamos con respeto</strong>
-              <span>No burlas, no humillación, no violencia. El grupo tiene que sentirse seguro.</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-card">
-        <div class="section-head">
-          <h2>4. Perú e identidad</h2>
-          <span class="time-chip">30 min</span>
-        </div>
-        <p class="lead"><strong>Objetivo:</strong> activar orgullo, pertenencia y lectura del entorno. La identidad funciona mejor cuando se conecta con experiencias concretas y no solo con símbolos abstractos.</p>
-        <div class="grid-2">
-          <div class="box soft">
-            <h3>Pregunta de entrada</h3>
-            <p>&ldquo;¿Qué imagen, comida, costumbre, paisaje o persona se les viene primero a la cabeza cuando piensan en el Perú?&rdquo;</p>
-            <p>Deja que aparezcan respuestas diversas: barrio, familia, música, colegio, trabajo, fútbol, fiestas, comida o problemas del país.</p>
-          </div>
-          <div class="box blue">
-            <h3>Punto de unión</h3>
-            <p>La idea no es idealizar al Perú, sino reconocer que pertenecemos a una historia común y que ese país también se construye con nuestras decisiones pequeñas.</p>
-          </div>
-        </div>
-        <details>
-          <summary>Mini dinámica sugerida</summary>
-          <div class="details-body">
-            <ol>
-              <li>Divide al grupo en pares o ternas.</li>
-              <li>Pide que escriban o digan dos cosas que valoran del Perú y una cosa que les duele o quisieran cambiar.</li>
-              <li>Cierra mostrando que amar al país también implica hacerse cargo de mejorarlo.</li>
-            </ol>
-          </div>
-        </details>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-card">
-        <div class="section-head">
-          <h2>5. Ciudadanía y elecciones del 12 de abril de 2026</h2>
-          <span class="time-chip">30 min</span>
-        </div>
-        <p class="lead">
-          <strong>Objetivo:</strong> explicar la ciudadanía como práctica diaria y conectarla con el proceso electoral del <strong>12 de abril de 2026</strong>.
-          Esta parte no busca decir por quién votar. Busca ayudar al grupo a entender por qué importa informarse, elegir con criterio y respetar lo público.
-        </p>
-
-        <div class="grid-2">
-          <div class="box warn">
-            <h3>Mensaje principal</h3>
-            <p>Ser ciudadano no empieza a los 18. Empieza cuando uno aprende a respetar reglas justas, escuchar, informarse, cuidar lo común y asumir consecuencias.</p>
-          </div>
-          <div class="box blue">
-            <h3>Conexión con abril de 2026</h3>
-            <p>El domingo <strong>12 de abril de 2026</strong> el Perú vive una jornada electoral importante. Aunque varios del grupo todavía no voten, sí pueden entender que una democracia sana necesita personas que no elijan por impulso, por broma ni por pura pelea.</p>
-          </div>
-        </div>
-
-        <div class="grid-3" style="margin-top:14px;">
-          <div class="box soft">
-            <h3>Ideas centrales del bloque</h3>
-            <ul>
-              <li>Votar es una responsabilidad, no un juego.</li>
-              <li>Informarse importa más que repetir lo que otros dicen.</li>
-              <li>Una mala decisión pública termina afectando la vida diaria de todos.</li>
-              <li>La ciudadanía también se practica en la casa, el barrio y el aula.</li>
-            </ul>
-          </div>
-          <div class="box danger">
-            <h3>Cuidados del enfoque</h3>
-            <ul>
-              <li>No pedir que el grupo apoye a un candidato o partido.</li>
-              <li>No burlarse de opiniones políticas familiares.</li>
-              <li>No convertir la sesión en propaganda.</li>
-              <li>No usar datos dudosos ni frases incendiarias para "animar" la conversación.</li>
-            </ul>
-          </div>
-          <div class="box">
-            <h3>Pregunta que ordena la conversación</h3>
-            <p>&ldquo;¿Qué tipo de ciudadano necesita un país para no equivocarse tan fácilmente al elegir autoridades?&rdquo;</p>
-          </div>
-        </div>
-
-        <details open>
-          <summary>Desarrollo sugerido del bloque</summary>
-          <div class="details-body">
-            <p>&ldquo;En estos días el país está cerca de las elecciones del 12 de abril de 2026. Algunos aquí todavía no votan, pero todos sí viven las consecuencias de lo que pasa en el país: en la escuela, en la seguridad, en los servicios y en las oportunidades.&rdquo;</p>
-            <p>&ldquo;Por eso hablar de ciudadanía no es hablar solo de política. Es hablar de responsabilidad, de criterio y de no dejarse llevar por cualquier cosa. Un ciudadano serio escucha, pregunta, compara y piensa antes de decidir.&rdquo;</p>
-            <p>&ldquo;Así como aquí pedimos respeto, constancia y cuidado del espacio, un país también necesita eso: personas que no destruyan lo común, que no normalicen la mentira y que entiendan que elegir mal afecta a muchos.&rdquo;</p>
-          </div>
-        </details>
-
-        <details>
-          <summary>Dinámica central</summary>
-          <div class="details-body">
-            <ol>
-              <li>Plantea tres casos cortos: una persona que vota sin leer nada, otra que se informa y conversa, y otra que dice que todo da igual.</li>
-              <li>Pide al grupo que identifique cuál actitud ayuda más al país y por qué.</li>
-              <li>Cierra con esta idea: &ldquo;La ciudadanía madura no es gritar más fuerte; es pensar mejor y actuar con responsabilidad.&rdquo;</li>
-            </ol>
-          </div>
-        </details>
-
-        <details>
-          <summary>Preguntas para profundizar sin politizar</summary>
-          <div class="details-body">
-            <ul>
-              <li>¿Qué decisiones pequeñas muestran que una persona respeta lo común?</li>
-              <li>¿Por qué creen que a veces la gente opina sin informarse?</li>
-              <li>¿Qué pasa en un barrio o un país cuando todos dicen "no me importa"?</li>
-              <li>¿Qué hábitos debería aprender una persona joven para votar mejor en el futuro?</li>
-            </ul>
-          </div>
-        </details>
-
-        <div class="quote">
-          Idea de cierre para este bloque: <strong>la democracia no se cuida solo el día de la votación; se cuida formando personas que piensan, respetan y se hacen cargo.</strong>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-card">
-        <div class="section-head">
-          <h2>6. Cierre y compromiso</h2>
-          <span class="time-chip">10 min</span>
-        </div>
-        <p class="lead"><strong>Objetivo:</strong> terminar con una idea simple, exigente y recordable. El cierre debe sonar a comienzo, no a despedida vacía.</p>
-        <div class="grid-2">
-          <div class="box">
-            <h3>Preguntas de salida</h3>
-            <ul>
-              <li>¿Qué te gustaría construir este año en Yanapakuy?</li>
-              <li>¿Qué hábito necesitas mejorar para aprovechar el espacio?</li>
-              <li>¿Qué significa para ti portarte como un buen compañero o un buen ciudadano?</li>
-            </ul>
-          </div>
-          <div class="box soft">
-            <h3>Compromiso sugerido</h3>
-            <p>Pide que cada participante diga una acción concreta para la semana siguiente: llegar puntual, traer cuaderno, preguntar más, no interrumpir o ayudar a otro compañero.</p>
-          </div>
-        </div>
-        <div class="quote">Frase final sugerida: &ldquo;Yanapakuy empieza hoy no solo como un lugar para estudiar, sino como un espacio para aprender a vivir con más disciplina, más respeto y más sentido de responsabilidad.&rdquo;</div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-card">
-        <div class="section-head">
-          <h2>Claves de conducción</h2>
-          <span class="time-chip">Criterios</span>
-        </div>
-        <div class="checklist">
-          <div class="check-item">
-            <div class="check-bullet">A</div>
-            <div>
-              <strong>No hables demasiado pronto</strong>
-              <span>Primero escucha y mide al grupo; luego ajusta el ritmo.</span>
-            </div>
-          </div>
-          <div class="check-item">
-            <div class="check-bullet">B</div>
-            <div>
-              <strong>No conviertas ciudadanía en sermón</strong>
-              <span>Mejor preguntas concretas y ejemplos cotidianos que discursos largos.</span>
-            </div>
-          </div>
-          <div class="check-item">
-            <div class="check-bullet">C</div>
-            <div>
-              <strong>No improvises neutralidad</strong>
-              <span>Habla de responsabilidad, información y respeto; no de preferencias partidarias ni consignas electorales.</span>
-            </div>
-          </div>
-          <div class="check-item">
-            <div class="check-bullet">D</div>
-            <div>
-              <strong>Cierra con acción</strong>
-              <span>Todo buen inicio deja una tarea interior o una decisión concreta para la semana.</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <p class="footer-note">Yanapakuy 2026 · Sesión de inicio sobre identidad, convivencia y ciudadanía.</p>
-  </main>
-
+  <div id="app"></div>
   <script>
-    const details = Array.from(document.querySelectorAll('details'));
-    const expandAll = document.getElementById('expandAll');
-    const collapseAll = document.getElementById('collapseAll');
-
-    expandAll?.addEventListener('click', () => {
-      details.forEach((item) => { item.open = true; });
+    window.YANAPAKUY_SESSIONS = Object.assign({}, window.YANAPAKUY_SESSIONS, {
+      1: {
+        number: 1,
+        date: "Apertura del ciclo 2026",
+        title: "Inicio, identidad y ciudadanía",
+        theme: "Inicio, identidad y ciudadanía",
+        axis: "Vínculo, orden y criterio",
+        result: "compromiso personal de inicio",
+        footerTheme: "inicio, identidad, convivencia y ciudadanía",
+        hero: "La primera sesión abre el año con pertenencia, acuerdos claros y una conversación sencilla sobre cómo se vive la ciudadanía en la vida diaria y ante las elecciones generales del 12 de abril de 2026.",
+        presentation: "Esta guía está pensada para ayudar a un voluntario a conducir con seguridad la sesión inicial. Importa sostener el sentido de cada bloque, cuidar el ambiente y cerrar con una idea clara de pertenencia y responsabilidad.",
+        why: "Porque el primer encuentro define mucho del año: si logra vínculo, orden y sentido, el grupo entiende que Yanapakuy es un espacio serio de acompañamiento y crecimiento.",
+        learning: "Comprender que Yanapakuy no es solo apoyo escolar, sino también hábito, convivencia, identidad y ciudadanía vivida en lo cotidiano.",
+        contribution: "Fortalece pertenencia, responsabilidad grupal, cuidado de lo común y criterio cívico desde el inicio del ciclo.",
+        quote: "Primero vínculo, luego orden, después contenido. Si el grupo entra frío o disperso, no corras: afirmar la relación al inicio te ahorra desorden después.",
+        materials: ["Cartulina o papelote para acuerdos", "Plumones o tizas", "Hojas o cuadernos", "Lápices y lapiceros"],
+        competencies: ["Participación y escucha", "Convivencia y acuerdos", "Identidad y pertenencia", "Ciudadanía y criterio básico"],
+        purpose: "La sesión busca que el grupo entienda desde el primer día que Yanapakuy es un espacio de acompañamiento serio, donde estudiar, convivir y pensar mejor van juntos. También introduce la idea de ciudadanía como práctica diaria, no solo como voto.",
+        cognitive: "Distinguir qué es Yanapakuy, qué se espera del grupo y cómo se relaciona la ciudadanía con decisiones cotidianas.",
+        emotional: "Bajar tensión inicial, generar confianza y favorecer una disposición de apertura y pertenencia.",
+        social: "Construir acuerdos, reconocer el rol de cada uno y valorar el cuidado del espacio y del grupo.",
+        results: [
+          { title: "Comprensión", text: "Entender que Yanapakuy es un espacio serio de estudio, acompañamiento y convivencia." },
+          { title: "Expresión", text: "Poder decir qué esperan del año, qué acuerdos consideran importantes y qué significa para ellos la ciudadanía." },
+          { title: "Producción", text: "Construir acuerdos simples de grupo y un compromiso pequeño pero exigible para la siguiente semana." },
+          { title: "Actitud", text: "Salir con una idea más clara de pertenencia, responsabilidad y cuidado de lo común." }
+        ],
+        script: "La sesión debe sentirse cercana, firme y serena. No conviene llenar de discurso institucional ni volver solemne la conversación: importa que el grupo entre en confianza, entienda el sentido del espacio y cierre con una idea usable de ciudadanía y compromiso.",
+        timeline: [
+          { time: "0-20 min", title: "Recepción e integración", text: "Romper la tensión inicial, aprender nombres y generar una primera sensación de bienvenida." },
+          { time: "20-35 min", title: "¿Qué es Yanapakuy?", text: "Explicar que no es solo apoyo escolar: también es acompañamiento, hábito, criterio y comunidad." },
+          { time: "35-50 min", title: "Acuerdos del grupo", text: "Instalar reglas simples y comprensibles para estudiar, convivir y cuidarse entre todos." },
+          { time: "50-80 min", title: "Perú e identidad", text: "Conectar pertenencia, historia cercana y orgullo por lo que somos, sin caer en discursos vacíos." },
+          { time: "80-110 min", title: "Ciudadanía y elecciones del 12 de abril de 2026", text: "Traducir la idea de ciudadanía a decisiones, cuidado del entorno, información y responsabilidad pública." },
+          { time: "110-120 min", title: "Cierre y compromiso", text: "Dejar una idea final concreta y un compromiso pequeño para la siguiente semana." }
+        ],
+        blocks: [
+          {
+            title: "Recepción e integración",
+            objective: "bajar la timidez inicial y hacer visible a cada participante",
+            minutes: 20,
+            volunteer: ["Recibe a cada participante por su nombre si ya lo conoces; si no, pregúntalo con naturalidad.", "Haz una dinámica breve de presentación: nombre, edad y algo que esperan del año.", "Intercala una pregunta fácil para activar al grupo: qué les gusta del sábado, qué materia les cuesta o qué esperan de Yanapakuy."],
+            say: "&ldquo;Hoy no venimos solo a pasar lista ni a hacer tareas. Hoy empezamos un espacio que quiere ayudarles a estudiar mejor, convivir mejor y pensar mejor.&rdquo;",
+            questions: ["¿Qué esperas de este año en Yanapakuy?", "¿Qué te gustaría que pase contigo en este espacio?", "¿Qué hace que un lugar se sienta seguro y acogedor?"],
+            care: ["Si el grupo está frío, alarga la presentación y acorta la explicación.", "No fuerces humor ni exposición personal temprana.", "Busca que todos participen al menos una vez de forma simple."]
+          },
+          {
+            title: "¿Qué es Yanapakuy?",
+            objective: "presentar el sentido del espacio sin llenarlo de discurso",
+            minutes: 15,
+            volunteer: ["Explica que Yanapakuy no es una guardería ni un lugar para cumplir el sábado.", "Muestra que estudiar, la conducta y la forma de relacionarnos importan juntos.", "Aterriza el mensaje en cosas concretas: puntualidad, respeto, esfuerzo y acompañamiento."],
+            say: "&ldquo;Queremos que este sea un lugar donde uno se sienta acompañado, pero también retado a crecer.&rdquo;",
+            questions: ["¿Qué diferencia a un espacio serio de uno donde todo da igual?", "¿Por qué estudiar y convivir mejor van juntos?", "¿Qué necesitaría pasar para que este grupo funcione bien?"],
+            care: ["No lo vuelvas una charla institucional larga.", "Conecta rápido con la experiencia de los estudiantes.", "Evita frases demasiado abstractas."]
+          },
+          {
+            title: "Acuerdos del grupo",
+            objective: "construir normas sencillas que ordenen el grupo desde el primer día",
+            minutes: 15,
+            steps: ["Recoge con el grupo reglas simples para estudiar, convivir y cuidar el espacio.", "Ordénalas en tres ejes: respeto, trabajo y cuidado mutuo.", "Cierra con pocas ideas memorables que después puedan recordarse sin sonar arbitrarias."],
+            questions: ["¿Qué cosas no deberían pasar en este espacio?", "¿Qué ayuda a que todos puedan aprender mejor?", "¿Qué significa cuidar a otro también en la manera de hablar?"],
+            care: ["No llenes la sesión de reglas largas.", "Subraya especialmente: no burlas, no humillación, no violencia.", "Busca que el grupo entienda el porqué de cada acuerdo."]
+          },
+          {
+            title: "Perú e identidad",
+            objective: "conectar pertenencia, historia cercana y amor concreto por el país",
+            minutes: 30,
+            steps: ["Divide al grupo en pares o ternas.", "Pide que nombren dos cosas que valoran del Perú y una que quisieran mejorar.", "Cierra mostrando que amar al país también implica hacerse cargo de mejorarlo."],
+            questions: ["¿Qué valoras de ser peruano?", "¿Qué te gustaría que fuera mejor en el país?", "¿Por qué identidad no significa orgullo vacío?"],
+            care: ["Evita discursos patrioteros.", "Busca ejemplos concretos de vida, cultura, esfuerzo y comunidad.", "No dejes que la conversación se vuelva solo queja."]
+          },
+          {
+            title: "Ciudadanía y elecciones del 12 de abril de 2026",
+            objective: "explicar la ciudadanía como práctica diaria y conectarla con el proceso electoral",
+            minutes: 30,
+            extra: `<div class="box soft"><h4>Idea central</h4><p>La ciudadanía no empieza el día del voto. Empieza antes: en la forma de informarse, en cómo se cuida lo común, en el respeto al otro y en la capacidad de pensar antes de decidir.</p></div><div class="grid-2" style="margin-top:14px;"><div class="box blue"><h4>Conexión con abril de 2026</h4><p>El domingo <strong>12 de abril de 2026</strong> el Perú vive una jornada electoral importante. Aunque varios del grupo todavía no voten, sí pueden entender que una democracia sana necesita personas que no elijan por impulso, por broma ni por pura pelea.</p></div><div class="box warm"><h4>Qué evitar decir</h4><ul><li>No pedir que el grupo apoye a un candidato o partido.</li><li>No burlarse de opiniones políticas familiares.</li><li>No convertir la sesión en propaganda.</li><li>No usar datos dudosos ni frases incendiarias para “animar” la conversación.</li></ul></div></div><details><summary>Frases sugeridas para esta parte</summary><div class="details-body"><p>&ldquo;Así como aquí pedimos respeto, constancia y cuidado del espacio, un país también necesita eso: personas que no destruyan lo común y que entiendan que elegir mal afecta a muchos.&rdquo;</p><p>&ldquo;La ciudadanía madura no es gritar más fuerte; es pensar mejor y actuar con responsabilidad.&rdquo;</p></div></details>`
+          },
+          {
+            title: "Cierre y compromiso",
+            objective: "dejar una idea final concreta y una tarea moral pequeña",
+            minutes: 10,
+            volunteer: ["Recoge una idea del grupo sobre lo que se llevan del encuentro.", "Pide un compromiso pequeño para la siguiente semana.", "Cierra subrayando que la ciudadanía se practica antes de votar y que el grupo ya empezó a entrenarla."],
+            say: "&ldquo;Hoy no solo empezó un ciclo. También empezó una forma de estar juntos: con más cuidado, más seriedad y más responsabilidad.&rdquo;",
+            questions: ["¿Qué compromiso pequeño te llevas?", "¿Qué acuerdo del grupo te parece más importante?", "¿Qué gesto concreto de ciudadanía puedes practicar esta semana?"],
+            care: ["No cierres apurado.", "Valora compromisos sencillos pero exigibles.", "Deja una idea que se pueda recordar la semana siguiente."]
+          }
+        ],
+        support: {
+          ideas: ["Yanapakuy no es solo refuerzo escolar: es también acompañamiento, hábito, criterio y comunidad.", "La ciudadanía no se enseña solo hablando de elecciones; también se enseña en la forma de convivir, informarse y cuidar lo público."],
+          frame: "La sesión se apoya en educación no formal y formación ciudadana: el sábado no es relleno, sino un tiempo educativo que construye vínculo, hábito y criterio.",
+          warnings: ["No infantilizar a los mayores ni volver solemne una conversación que debe sentirse concreta.", "No convertir la parte de ciudadanía en propaganda ni pelea.", "No llenar la sesión de reglas o conceptos sin aterrizarlos."],
+          sensitive: "Si aparecen opiniones políticas familiares fuertes o burlas, vuelve al criterio general: informarse, pensar antes de decidir y respetar lo común. No conviertas la sesión en debate partidario."
+        },
+        questions: {
+          open: ["¿Qué esperas de este año en Yanapakuy?", "¿Qué hace que un grupo se sienta seguro?", "¿Qué te gustaría que pase contigo este ciclo?"],
+          deep: ["¿Qué diferencia hay entre un espacio serio y uno donde todo da igual?", "¿Por qué la ciudadanía empieza antes del voto?", "¿Qué necesita un grupo para aprender y convivir bien?"],
+          life: ["¿Qué gesto concreto de ciudadanía puedes practicar esta semana?", "¿Qué acuerdo del grupo se conecta más con tu vida diaria?", "¿Cómo se nota el respeto a lo común en casa, escuela o barrio?"],
+          close: ["¿Qué idea te llevas hoy sobre Yanapakuy?", "¿Qué compromiso pequeño asumes?", "¿Qué significa para ti empezar bien el año como grupo?"]
+        },
+        activity: {
+          lead: "La dinámica principal combina acuerdo de grupo e identidad/ciudadanía: el objetivo es que el estudiante no solo participe, sino que salga con una idea visible de pertenencia y responsabilidad.",
+          steps: ["En pares o ternas, nombren dos cosas que valoran del Perú y una que quisieran mejorar.", "Conecten esa reflexión con una actitud ciudadana concreta.", "Escriban un acuerdo o compromiso pequeño para la siguiente semana.", "Compartan una idea breve con el grupo.", "Revisen si su compromiso es claro y posible."],
+          organization: ["Momento breve de integración al inicio.", "Trabajo en pares o ternas para bajar timidez.", "Puesta en común corta y guiada."],
+          example: "&ldquo;Valoro la solidaridad de mi gente y me duele la violencia. Esta semana quiero practicar más respeto al hablar y cuidar mejor el espacio común.&rdquo;",
+          review: ["Que el compromiso sea concreto.", "Que la idea de ciudadanía no quede en discurso abstracto.", "Que el producto conecte identidad, responsabilidad y vida diaria.", "Que todos puedan participar aunque sea de forma breve."],
+          small: "Si el grupo es pequeño, se puede hacer una sola lluvia de ideas y luego pedir compromisos individuales.",
+          distracted: "Si el grupo está disperso, reduce escritura y trabaja con tres preguntas visibles en pizarra para guiar respuestas cortas."
+        },
+        academic: {
+          reading: "Se trabaja al escuchar consignas, distinguir ideas clave y comprender que identidad y ciudadanía tienen relación con la vida diaria.",
+          writing: "Se refuerza al formular un acuerdo o compromiso breve, claro y personal.",
+          math: "Puede aparecer al organizar tiempos de participación o al secuenciar acciones del grupo durante el encuentro.",
+          english: "Si tiene sentido, puede aparecer vocabulario puntual como <em>community</em> o <em>citizenship</em>, pero no debe distraer del propósito principal."
+        },
+        recommendations: [
+          { title: "Primero mide al grupo", text: "Escucha y observa antes de acelerar el ritmo. La primera sesión necesita aterrizaje humano." },
+          { title: "No sermonees", text: "Alterna explicación, preguntas y participación; el sentido del espacio se entiende mejor cuando se vive." },
+          { title: "Aterriza ciudadanía", text: "Tradúcela a respeto, cuidado de lo común, información y criterio, no solo a elecciones." },
+          { title: "Incluye a los tímidos", text: "Las respuestas en pares o ternas facilitan mucho la participación temprana." },
+          { title: "Si sobra tiempo", text: "Profundiza en los acuerdos del grupo o en ejemplos concretos de ciudadanía cotidiana." },
+          { title: "Si falta tiempo", text: "Prioriza que el grupo entienda el sentido de Yanapakuy y cierre con un compromiso pequeño." }
+        ],
+        closing: "Abrir bien el año también es una forma de formarse. Cuando el grupo entiende que este espacio pide respeto, esfuerzo y cuidado de lo común, la ciudadanía deja de ser una palabra lejana y empieza a hacerse vida."
+      }
     });
-
-    collapseAll?.addEventListener('click', () => {
-      details.forEach((item) => { item.open = false; });
-    });
+  </script>
+  <script src="../session-renderer.js"></script>
+  <script>
+    renderSession(window.YANAPAKUY_SESSIONS[1]);
   </script>
 </body>
 </html>
-
-
-
-
-
