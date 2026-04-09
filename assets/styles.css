@@ -530,6 +530,18 @@ details[open] summary::after { content: '−'; color: var(--pri) }
   display: flex;
   justify-content: center;
   margin-top: 2rem;
+  overflow: hidden;
+}
+.instagram-embed-wrapper .instagram-media {
+  max-width: 100% !important;
+  min-width: 0 !important;
+  width: 100% !important;
+}
+@media (max-width: 600px) {
+  .instagram-embed-wrapper {
+    margin-left: calc(-1 * var(--pad));
+    margin-right: calc(-1 * var(--pad));
+  }
 }
 
 /* ── WHATSAPP FLOAT ─────────────────────────────────────────── */
