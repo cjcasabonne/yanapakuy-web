@@ -1,4 +1,486 @@
 window.YANAPAKUY_SESSIONS = {
+  1: {
+    number: 1,
+    date: "12 de abril de 2026",
+    title: "Inicio, identidad y ciudadanía",
+    theme: "Inicio, identidad y ciudadanía",
+    axis: "Vínculo, orden y criterio",
+    result: "compromiso personal de inicio",
+    footerTheme: "inicio, identidad, convivencia y ciudadanía",
+    hero: "La primera sesión abre el año con pertenencia, acuerdos claros y una conversación sencilla sobre cómo se vive la ciudadanía en la vida diaria y ante las elecciones generales del 12 de abril de 2026.",
+    presentation: "Esta guía está pensada para ayudar a un voluntario a conducir con seguridad la sesión inicial. Importa sostener el sentido de cada bloque, cuidar el ambiente y cerrar con una idea clara de pertenencia y responsabilidad.",
+    why: "Porque el primer encuentro define mucho del año: si logra vínculo, orden y sentido, el grupo entiende que Yanapakuy es un espacio serio de acompañamiento y crecimiento.",
+    learning: "Comprender que Yanapakuy no es solo apoyo escolar, sino también hábito, convivencia, identidad y ciudadanía vivida en lo cotidiano.",
+    contribution: "Fortalece pertenencia, responsabilidad grupal, cuidado de lo común y criterio cívico desde el inicio del ciclo.",
+    quote: "Primero vínculo, luego orden, después contenido. Si el grupo entra frío o disperso, no corras: afirmar la relación al inicio te ahorra desorden después.",
+    materials: ["Cartulina o papelote para acuerdos", "Plumones o tizas", "Hojas o cuadernos", "Lápices y lapiceros"],
+    competencies: ["Participación y escucha", "Convivencia y acuerdos", "Identidad y pertenencia", "Ciudadanía y criterio básico"],
+    purpose: "La sesión busca que el grupo entienda desde el primer día que Yanapakuy es un espacio de acompañamiento serio, donde estudiar, convivir y pensar mejor van juntos. También introduce la idea de ciudadanía como práctica diaria, no solo como voto.",
+    cognitive: "Distinguir qué es Yanapakuy, qué se espera del grupo y cómo se relaciona la ciudadanía con decisiones cotidianas.",
+    emotional: "Bajar tensión inicial, generar confianza y favorecer una disposición de apertura y pertenencia.",
+    social: "Construir acuerdos, reconocer el rol de cada uno y valorar el cuidado del espacio y del grupo.",
+    results: [
+      { title: "Comprensión", text: "Entender que Yanapakuy es un espacio serio de estudio, acompañamiento y convivencia." },
+      { title: "Expresión", text: "Poder decir qué esperan del año, qué acuerdos consideran importantes y qué significa para ellos la ciudadanía." },
+      { title: "Producción", text: "Construir acuerdos simples de grupo y un compromiso pequeño pero exigible para la siguiente semana." },
+      { title: "Actitud", text: "Salir con una idea más clara de pertenencia, responsabilidad y cuidado de lo común." }
+    ],
+    script: "La sesión debe sentirse cercana, firme y serena. No conviene llenar de discurso institucional ni volver solemne la conversación: importa que el grupo entre en confianza, entienda el sentido del espacio y cierre con una idea usable de ciudadanía y compromiso.",
+    timeline: [
+      { time: "0-20 min", title: "Recepción e integración", text: "Romper la tensión inicial, aprender nombres y generar una primera sensación de bienvenida." },
+      { time: "20-35 min", title: "¿Qué es Yanapakuy?", text: "Explicar que no es solo apoyo escolar: también es acompañamiento, hábito, criterio y comunidad." },
+      { time: "35-50 min", title: "Acuerdos del grupo", text: "Instalar reglas simples y comprensibles para estudiar, convivir y cuidarse entre todos." },
+      { time: "50-80 min", title: "Perú e identidad", text: "Conectar pertenencia, historia cercana y orgullo por lo que somos, sin caer en discursos vacíos." },
+      { time: "80-110 min", title: "Ciudadanía y elecciones del 12 de abril de 2026", text: "Traducir la idea de ciudadanía a decisiones, cuidado del entorno, información y responsabilidad pública." },
+      { time: "110-120 min", title: "Cierre y compromiso", text: "Dejar una idea final concreta y un compromiso pequeño para la siguiente semana." }
+    ],
+    blocks: [
+      {
+        title: "Recepción e integración",
+        objective: "bajar la timidez inicial y hacer visible a cada participante",
+        minutes: 20,
+        volunteer: ["Recibe a cada participante por su nombre si ya lo conoces; si no, pregúntalo con naturalidad.", "Haz una dinámica breve de presentación: nombre, edad y algo que esperan del año.", "Intercala una pregunta fácil para activar al grupo: qué les gusta del sábado, qué materia les cuesta o qué esperan de Yanapakuy."],
+        say: "&ldquo;Hoy no venimos solo a pasar lista ni a hacer tareas. Hoy empezamos un espacio que quiere ayudarles a estudiar mejor, convivir mejor y pensar mejor.&rdquo;",
+        questions: ["¿Qué esperas de este año en Yanapakuy?", "¿Qué te gustaría que pase contigo en este espacio?", "¿Qué hace que un lugar se sienta seguro y acogedor?"],
+        care: ["Si el grupo está frío, alarga la presentación y acorta la explicación.", "No fuerces humor ni exposición personal temprana.", "Busca que todos participen al menos una vez de forma simple."]
+      },
+      {
+        title: "¿Qué es Yanapakuy?",
+        objective: "presentar el sentido del espacio sin llenarlo de discurso",
+        minutes: 15,
+        volunteer: ["Explica que Yanapakuy no es una guardería ni un lugar para cumplir el sábado.", "Muestra que estudiar, la conducta y la forma de relacionarnos importan juntos.", "Aterriza el mensaje en cosas concretas: puntualidad, respeto, esfuerzo y acompañamiento."],
+        say: "&ldquo;Queremos que este sea un lugar donde uno se sienta acompañado, pero también retado a crecer.&rdquo;",
+        questions: ["¿Qué diferencia a un espacio serio de uno donde todo da igual?", "¿Por qué estudiar y convivir mejor van juntos?", "¿Qué necesitaría pasar para que este grupo funcione bien?"],
+        care: ["No lo vuelvas una charla institucional larga.", "Conecta rápido con la experiencia de los estudiantes.", "Evita frases demasiado abstractas."]
+      },
+      {
+        title: "Acuerdos del grupo",
+        objective: "construir normas sencillas que ordenen el grupo desde el primer día",
+        minutes: 15,
+        steps: ["Recoge con el grupo reglas simples para estudiar, convivir y cuidar el espacio.", "Ordénalas en tres ejes: respeto, trabajo y cuidado mutuo.", "Cierra con pocas ideas memorables que después puedan recordarse sin sonar arbitrarias."],
+        questions: ["¿Qué cosas no deberían pasar en este espacio?", "¿Qué ayuda a que todos puedan aprender mejor?", "¿Qué significa cuidar a otro también en la manera de hablar?"],
+        care: ["No llenes la sesión de reglas largas.", "Subraya especialmente: no burlas, no humillación, no violencia.", "Busca que el grupo entienda el porqué de cada acuerdo."]
+      },
+      {
+        title: "Perú e identidad",
+        objective: "conectar pertenencia, historia cercana y amor concreto por el país",
+        minutes: 30,
+        steps: ["Divide al grupo en pares o ternas.", "Pide que nombren dos cosas que valoran del Perú y una que quisieran mejorar.", "Cierra mostrando que amar al país también implica hacerse cargo de mejorarlo."],
+        questions: ["¿Qué valoras de ser peruano?", "¿Qué te gustaría que fuera mejor en el país?", "¿Por qué identidad no significa orgullo vacío?"],
+        care: ["Evita discursos patrioteros.", "Busca ejemplos concretos de vida, cultura, esfuerzo y comunidad.", "No dejes que la conversación se vuelva solo queja."]
+      },
+      {
+        title: "Ciudadanía y elecciones del 12 de abril de 2026",
+        objective: "explicar la ciudadanía como práctica diaria y conectarla con el proceso electoral",
+        minutes: 30,
+        extra: `<div class="box soft"><h4>Idea central</h4><p>La ciudadanía no empieza el día del voto. Empieza antes: en la forma de informarse, en cómo se cuida lo común, en el respeto al otro y en la capacidad de pensar antes de decidir.</p></div><div class="grid-2" style="margin-top:14px;"><div class="box blue"><h4>Conexión con abril de 2026</h4><p>El domingo <strong>12 de abril de 2026</strong> el Perú vive una jornada electoral importante. Aunque varios del grupo todavía no voten, sí pueden entender que una democracia sana necesita personas que no elijan por impulso, por broma ni por pura pelea.</p></div><div class="box warm"><h4>Qué evitar decir</h4><ul><li>No pedir que el grupo apoye a un candidato o partido.</li><li>No burlarse de opiniones políticas familiares.</li><li>No convertir la sesión en propaganda.</li><li>No usar datos dudosos ni frases incendiarias para "animar" la conversación.</li></ul></div></div><details><summary>Frases sugeridas para esta parte</summary><div class="details-body"><p>&ldquo;Así como aquí pedimos respeto, constancia y cuidado del espacio, un país también necesita eso: personas que no destruyan lo común y que entiendan que elegir mal afecta a muchos.&rdquo;</p><p>&ldquo;La ciudadanía madura no es gritar más fuerte; es pensar mejor y actuar con responsabilidad.&rdquo;</p></div></details>`
+      },
+      {
+        title: "Cierre y compromiso",
+        objective: "dejar una idea final concreta y una tarea moral pequeña",
+        minutes: 10,
+        volunteer: ["Recoge una idea del grupo sobre lo que se llevan del encuentro.", "Pide un compromiso pequeño para la siguiente semana.", "Cierra subrayando que la ciudadanía se practica antes de votar y que el grupo ya empezó a entrenarla."],
+        say: "&ldquo;Hoy no solo empezó un ciclo. También empezó una forma de estar juntos: con más cuidado, más seriedad y más responsabilidad.&rdquo;",
+        questions: ["¿Qué compromiso pequeño te llevas?", "¿Qué acuerdo del grupo te parece más importante?", "¿Qué gesto concreto de ciudadanía puedes practicar esta semana?"],
+        care: ["No cierres apurado.", "Valora compromisos sencillos pero exigibles.", "Deja una idea que se pueda recordar la semana siguiente."]
+      }
+    ],
+    support: {
+      ideas: ["Yanapakuy no es solo refuerzo escolar: es también acompañamiento, hábito, criterio y comunidad.", "La ciudadanía no se enseña solo hablando de elecciones; también se enseña en la forma de convivir, informarse y cuidar lo público."],
+      frame: "La sesión se apoya en educación no formal y formación ciudadana: el sábado no es relleno, sino un tiempo educativo que construye vínculo, hábito y criterio.",
+      warnings: ["No infantilizar a los mayores ni volver solemne una conversación que debe sentirse concreta.", "No convertir la parte de ciudadanía en propaganda ni pelea.", "No llenar la sesión de reglas o conceptos sin aterrizarlos."],
+      sensitive: "Si aparecen opiniones políticas familiares fuertes o burlas, vuelve al criterio general: informarse, pensar antes de decidir y respetar lo común. No conviertas la sesión en debate partidario."
+    },
+    questions: {
+      open: ["¿Qué esperas de este año en Yanapakuy?", "¿Qué hace que un grupo se sienta seguro?", "¿Qué te gustaría que pase contigo este ciclo?"],
+      deep: ["¿Qué diferencia hay entre un espacio serio y uno donde todo da igual?", "¿Por qué la ciudadanía empieza antes del voto?", "¿Qué necesita un grupo para aprender y convivir bien?"],
+      life: ["¿Qué gesto concreto de ciudadanía puedes practicar esta semana?", "¿Qué acuerdo del grupo se conecta más con tu vida diaria?", "¿Cómo se nota el respeto a lo común en casa, escuela o barrio?"],
+      close: ["¿Qué idea te llevas hoy sobre Yanapakuy?", "¿Qué compromiso pequeño asumes?", "¿Qué significa para ti empezar bien el año como grupo?"]
+    },
+    activity: {
+      lead: "La dinámica principal combina acuerdo de grupo e identidad/ciudadanía: el objetivo es que el estudiante no solo participe, sino que salga con una idea visible de pertenencia y responsabilidad.",
+      steps: ["En pares o ternas, nombren dos cosas que valoran del Perú y una que quisieran mejorar.", "Conecten esa reflexión con una actitud ciudadana concreta.", "Escriban un acuerdo o compromiso pequeño para la siguiente semana.", "Compartan una idea breve con el grupo.", "Revisen si su compromiso es claro y posible."],
+      organization: ["Momento breve de integración al inicio.", "Trabajo en pares o ternas para bajar timidez.", "Puesta en común corta y guiada."],
+      example: "&ldquo;Valoro la solidaridad de mi gente y me duele la violencia. Esta semana quiero practicar más respeto al hablar y cuidar mejor el espacio común.&rdquo;",
+      review: ["Que el compromiso sea concreto.", "Que la idea de ciudadanía no quede en discurso abstracto.", "Que el producto conecte identidad, responsabilidad y vida diaria.", "Que todos puedan participar aunque sea de forma breve."],
+      small: "Si el grupo es pequeño, se puede hacer una sola lluvia de ideas y luego pedir compromisos individuales.",
+      distracted: "Si el grupo está disperso, reduce escritura y trabaja con tres preguntas visibles en pizarra para guiar respuestas cortas."
+    },
+    academic: {
+      reading: "Se trabaja al escuchar consignas, distinguir ideas clave y comprender que identidad y ciudadanía tienen relación con la vida diaria.",
+      writing: "Se refuerza al formular un acuerdo o compromiso breve, claro y personal.",
+      math: "Puede aparecer al organizar tiempos de participación o al secuenciar acciones del grupo durante el encuentro.",
+      english: "Si tiene sentido, puede aparecer vocabulario puntual como <em>community</em> o <em>citizenship</em>, pero no debe distraer del propósito principal."
+    },
+    recommendations: [
+      { title: "Primero mide al grupo", text: "Escucha y observa antes de acelerar el ritmo. La primera sesión necesita aterrizaje humano." },
+      { title: "No sermonees", text: "Alterna explicación, preguntas y participación; el sentido del espacio se entiende mejor cuando se vive." },
+      { title: "Aterriza ciudadanía", text: "Tradúcela a respeto, cuidado de lo común, información y criterio, no solo a elecciones." },
+      { title: "Incluye a los tímidos", text: "Las respuestas en pares o ternas facilitan mucho la participación temprana." },
+      { title: "Si sobra tiempo", text: "Profundiza en los acuerdos del grupo o en ejemplos concretos de ciudadanía cotidiana." },
+      { title: "Si falta tiempo", text: "Prioriza que el grupo entienda el sentido de Yanapakuy y cierre con un compromiso pequeño." }
+    ],
+    closing: "Abrir bien el año también es una forma de formarse. Cuando el grupo entiende que este espacio pide respeto, esfuerzo y cuidado de lo común, la ciudadanía deja de ser una palabra lejana y empieza a hacerse vida."
+  },
+  2: {
+    number: 2,
+    date: "25 de abril de 2026",
+    title: "Metas personales, colegio y hábitos de estudio",
+    theme: "Metas personales, colegio y hábitos de estudio",
+    axis: "Disciplina y perseverancia",
+    result: "Meta clara + hábito concreto",
+    footerTheme: "metas personales, colegio y hábitos de estudio",
+    hero: "Formar no es solo acompañar tareas. También es ayudar a que cada estudiante mire su año con dirección, distinga qué quiere construir y entienda que los hábitos de hoy sostienen el proyecto de vida de mañana.",
+    presentation: "Esta actividad trabaja el tema de las metas desde un enfoque formativo y realista. No se trata de pedir a los alumnos que \"sueñen bonito\" ni de llenar una hoja con deseos sueltos. Se busca que puedan reconocer qué quieren construir este año, por qué eso importa y qué hábitos diarios necesitan para acercarse a ello.",
+    why: "Porque muchos niños y adolescentes quieren mejorar, pero no siempre saben cómo convertir ese deseo en acciones concretas y sostenidas.",
+    learning: "Distinguir entre \"querer algo\" y \"organizarse para alcanzarlo\".",
+    contribution: "Fortalece hábitos, disciplina, comunicación clara y valoración del estudio como parte del proyecto de vida.",
+    quote: "En Yanapakuy, una meta no vale por sonar ambiciosa. Vale cuando ordena decisiones, fortalece hábitos y ayuda al alumno a tomarse en serio su propio camino.",
+    materials: ["Hojas bond o cuadernos", "Lápices, lapiceros y colores", "Papelotes o pizarra si hay disponibilidad", "Cinta o masking tape si se van a pegar metas en pared", "Tarjetas pequeñas o post-its, si se cuenta con ellos"],
+    competencies: ["Comunicación oral y expresión de ideas", "Comprensión y formulación de metas", "Reflexión personal y autorregulación", "Organización del estudio y pensamiento secuencial", "Participación, escucha y respeto en grupo"],
+    purpose: "El aprendizaje central esperado es que los alumnos comprendan que una meta no es solo un deseo, sino una dirección que exige orden, constancia y decisiones concretas. Esta sesión trabaja la dimensión formativa de la responsabilidad personal: pensar el año, valorar el colegio como parte del propio desarrollo y reconocer que los hábitos cotidianos pueden acercar o alejar de lo que uno quiere construir.",
+    cognitive: "Distinguir entre querer algo y organizarse para alcanzarlo; planificar pasos básicos y reconocer hábitos que acercan a la meta.",
+    emotional: "Conectar con lo que realmente importa y aumentar la disposición a tomarse en serio el propio camino.",
+    social: "Escuchar las metas del otro, respetar diferencias y apoyar la formulación de compromisos concretos.",
+    results: [
+      { title: "Comprensión", text: "Que los alumnos comprendan que una meta requiere esfuerzo sostenido y no solo entusiasmo momentáneo." },
+      { title: "Expresión", text: "Que puedan nombrar al menos una meta importante para este año y explicar por qué les importa." },
+      { title: "Producción", text: "Que formulen uno o dos hábitos concretos de estudio o conducta que puedan empezar a practicar esta misma semana." },
+      { title: "Actitud", text: "Que aumente la disposición a tomarse en serio el trabajo escolar, la puntualidad, el orden y la perseverancia." }
+    ],
+    script: "Lo que sigue está pensado para que un voluntario sin experiencia pueda conducir la actividad completa. No hace falta memorizar cada frase, pero sí entender el sentido de cada tramo y el tipo de conducción que requiere.",
+    timeline: [
+      { time: "0-15 min", title: "Bienvenida y reencuentro", text: "Se retoma el vínculo de la sesión anterior, se baja la tensión inicial y se prepara el paso hacia un tema más personal." },
+      { time: "15-30 min", title: "Activación y rompehielo", text: "Se activa la participación con una dinámica breve para pasar del \"cómo llegué\" al \"qué quiero construir\"." },
+      { time: "30-50 min", title: "Introducción al tema", text: "Se explica qué es una meta, por qué el colegio importa y cómo los hábitos hacen posible el avance." },
+      { time: "50-85 min", title: "Desarrollo principal", text: "Los alumnos piensan, escriben y comparten metas personales y metas vinculadas al estudio." },
+      { time: "85-105 min", title: "Dinámica participativa", text: "Se aterriza la reflexión en hábitos concretos, con apoyo del grupo y del voluntario." },
+      { time: "105-120 min", title: "Reflexión y cierre", text: "Se ordena el aprendizaje, se formula un compromiso simple y se conecta la sesión con la vida diaria." }
+    ],
+    blocks: [
+      {
+        title: "Bienvenida y reencuentro",
+        objective: "recuperar vínculo",
+        minutes: 15,
+        volunteer: ["Saluda por nombre y observa el ánimo del grupo.", "Pregunta brevemente cómo les fue en la semana.", "Recuerda en una frase el sentido de Yanapakuy: estudiar, crecer y tomarse en serio el propio camino."],
+        say: "&ldquo;La semana pasada empezamos como grupo. Hoy vamos a pensar en algo importante: qué queremos construir este año y cómo no dejar que eso se quede solo en palabras.&rdquo;",
+        questions: ["¿Cómo les fue en la semana?", "¿Qué esperaban al llegar hoy?", "¿Qué tiene que ver el estudio con lo que quieren lograr en su vida?"],
+        care: ["Mantener el tono cercano.", "No alargar demasiado esta parte.", "Conectar rápido con el tema de metas."]
+      },
+      {
+        title: "Activación o rompehielo",
+        objective: "abrir participación",
+        minutes: 15,
+        extra: `<div class="box warm"><h4>Dinámica breve: &ldquo;Si este año saliera bien...&rdquo;</h4><p>Pide que completen oralmente una frase: <strong>&ldquo;Si este año me fuera bien, me gustaría que al final pudiera decir que...&rdquo;</strong></p><p>Deja respuestas libres, pero anímalos a ser concretos: aprobar cursos, ser más ordenado, dejar de postergar, leer mejor, pelear menos, ayudar más en casa.</p></div><div class="quote">El rompehielo no es solo para &ldquo;animar&rdquo;. Aquí ya empieza el contenido: el alumno empieza a imaginar el año con dirección.</div>`
+      },
+      {
+        title: "Introducción al tema",
+        objective: "clarificar la idea de meta",
+        minutes: 20,
+        extra: `<div class="grid-2"><div class="box"><h4>Explicación sencilla</h4><p>Una meta no es solamente algo que me gustaría. Es algo que quiero lograr y por lo que estoy dispuesto a ordenar tiempo, esfuerzo y conducta. Una meta seria puede ser empezar a cumplir tareas, llegar más puntual o mejorar la manera de estudiar.</p></div><div class="box blue"><h4>Conexión con el colegio</h4><p>El colegio no es solo un lugar para recibir notas. Es un espacio donde se entrenan hábitos: escuchar, terminar procesos, leer con atención, preguntar, insistir, organizarse. Por eso las metas personales y el trabajo escolar no van separados.</p></div></div><details><summary>Frases útiles para esta parte</summary><div class="details-body"><ul><li>&ldquo;Soñar con algo es bueno. Pero crecer de verdad empieza cuando uno se pregunta qué tiene que cambiar desde hoy.&rdquo;</li><li>&ldquo;No todo depende de la motivación. Muchas veces depende del hábito.&rdquo;</li><li>&ldquo;Una meta seria se nota en lo pequeño: cómo llego, cómo estudio, cómo respondo cuando algo me cuesta.&rdquo;</li></ul></div></details>`
+      },
+      {
+        title: "Desarrollo principal",
+        objective: "formular metas reales",
+        minutes: 35,
+        steps: ["Pide que cada alumno escriba una meta personal importante para este año.", "Luego, que escriba una meta relacionada con el colegio o el estudio.", "Finalmente, que explique por qué esa meta importa y qué podría impedirle avanzar."],
+        questions: ["¿Qué te gustaría que estuviera mejor en diciembre que hoy?", "¿Qué parte de tu vida sientes que necesita más orden o esfuerzo?", "¿Qué relación tiene eso con el colegio, con tu casa o con tu manera de estudiar?"],
+        care: ["No ridiculizar metas pequeñas.", "No exigir metas \"bonitas\" solo para que suenen bien.", "No dejar que todo quede en respuestas muy generales como \"quiero ser mejor\"."]
+      },
+      {
+        title: "Dinámica participativa",
+        objective: "convertir metas en hábitos",
+        minutes: 20,
+        extra: `<div class="box soft"><h4>Consigna central</h4><p>Cada alumno elige una meta principal y debe escribir dos hábitos concretos que lo acerquen a ella esta semana.</p></div><div class="grid-2" style="margin-top:14px;"><div class="box blue"><h4>Ejemplos</h4><ul><li>Meta: mejorar en Matemática → Hábito: revisar 15 minutos diarios y preguntar cuando no entiendo.</li><li>Meta: ser más responsable → Hábito: preparar mi cuaderno la noche anterior y llegar puntual.</li><li>Meta: pelear menos en clase → Hábito: no responder de inmediato y cambiarme de lugar si me distraigo.</li></ul></div><div class="box warm"><h4>Qué debe revisar el voluntario</h4><ul><li>Que el hábito sea claro.</li><li>Que sea posible en una semana.</li><li>Que se pueda observar.</li><li>Que realmente tenga relación con la meta.</li></ul></div></div>`
+      },
+      {
+        title: "Espacio de reflexión y cierre",
+        objective: "dejar una decisión concreta",
+        minutes: 15,
+        volunteer: ["Recoge las metas y hábitos de quienes quieran compartir.", "Cierra con la idea central sobre metas y disciplina.", "Deja un compromiso claro para la siguiente semana."],
+        say: "&ldquo;Las metas no cambian la vida por escribirse en una hoja. Cambian la vida cuando empiezan a ordenar la semana, las decisiones y la manera de responder al esfuerzo.&rdquo;",
+        questions: ["¿Qué meta te importa de verdad este año?", "¿Qué hábito vas a empezar desde esta semana?", "¿Qué te suele frenar y cómo podrías responder mejor esta vez?"],
+        care: ["No cerrar apurado.", "Asegurar que todos salgan con al menos una meta y un hábito.", "Conectar la sesión con la siguiente."]
+      }
+    ],
+    support: {
+      ideas: ["Tener metas ayuda a no vivir el año a la deriva.", "El colegio importa porque enseña capacidades y hábitos, no solo contenidos.", "Las metas se sostienen con pequeñas repeticiones, no solo con ganas.", "Un alumno puede cambiar mucho cuando empieza a tomarse en serio pocas cosas, pero de verdad."],
+      frame: "Yanapakuy acompaña a niños y adolescentes en su formación académica y personal. El tema de metas no se trabaja como coaching vacío ni como charla motivacional superficial. Se trabaja como formación del carácter: aprender a pensar, decidir, insistir y responder con seriedad al estudio, al grupo y a la propia vida.",
+      warnings: ["Confundir meta con deseo momentáneo.", "Proponer objetivos demasiado grandes sin pasos intermedios.", "Pensar que el hábito \"aparece\" cuando uno se siente motivado.", "Ver el colegio solo como obligación y no como entrenamiento para la vida."],
+      sensitive: "Si un alumno no puede identificar ninguna meta o dice que nada le importa, no lo expongas. Ayúdalo a empezar con algo mínimo y concreto: una sola cosa que querría que estuviera mejor. Desde ahí se puede construir."
+    },
+    questions: {
+      open: ["¿Qué te gustaría lograr este año?", "¿Qué cosa quisieras que estuviera mejor en diciembre?", "¿Qué área de tu vida sientes que necesita más esfuerzo?"],
+      deep: ["¿Por qué esa meta es importante para ti?", "¿Qué te ha frenado antes?", "¿Qué tendrías que cambiar en tu rutina para acercarte a eso?"],
+      life: ["¿Qué haces hoy que te acerca a esa meta?", "¿Qué hábito pequeño podría ayudarte esta semana?", "¿Cómo influye el colegio en lo que quieres llegar a ser?"],
+      close: ["¿Qué compromiso real te llevas hoy?", "¿Qué hábito vas a empezar a practicar desde ahora?", "¿Qué te gustaría que el grupo note diferente en ti dentro de algunas semanas?"]
+    },
+    activity: {
+      lead: "La dinámica principal busca que cada estudiante formule una meta importante y la conecte con hábitos posibles. No basta con escribir algo bonito: el objetivo es que lo pensado pueda convertirse en acción.",
+      steps: ["Entrega una hoja a cada participante.", "Pide que la dividan en tres partes: \"Mi meta\", \"Por qué importa\", \"Qué hábitos necesito\".", "Da unos minutos para trabajo individual.", "Luego, en parejas, que expliquen su meta y escuchen si el compañero la entiende bien.", "Finalmente, cada uno ajusta sus hábitos para que sean más concretos."],
+      organization: ["Inicio individual para pensar sin copiar respuestas.", "Trabajo en parejas para verbalizar y aclarar.", "Puesta en común parcial, no necesariamente de todos, para no alargar demasiado."],
+      example: "&ldquo;Mi meta este año es mejorar en Matemática. Por eso voy a revisar 15 minutos cada tarde y a preguntar cuando no entiendo algo.&rdquo;",
+      review: ["Que el hábito sea claro.", "Que sea posible en una semana.", "Que se pueda observar.", "Que realmente tenga relación con la meta."],
+      small: "Se puede hacer en formato más conversado. Cada alumno comparte su meta y entre todos ayudan a convertirla en un hábito mejor formulado.",
+      distracted: "Reduce la cantidad de escritura y usa tarjetas con ejemplos. En lugar de pedir varias metas, trabaja solo una meta y un hábito. Con los más pequeños, usa ejemplos concretos: estudiar 15 minutos, ordenar el cuaderno, levantar la mano antes de hablar, traer materiales."
+    },
+    academic: {
+      reading: "Se trabaja cuando el alumno debe leer consignas, entender diferencias entre meta y hábito, y escuchar ideas de otros con atención.",
+      writing: "Se refuerza al pedir que redacten una meta y la expliquen con sus propias palabras, ordenando ideas con mayor claridad.",
+      math: "Puede aparecer al pensar tiempos, frecuencia y secuencia: cuántos días, cuántos minutos, qué orden de acciones tendrá un hábito.",
+      english: "Se puede aprovechar una palabra puntual como <em>goal</em> o <em>habit</em> para enriquecer vocabulario, pero no debe forzarse si distrae del propósito principal."
+    },
+    recommendations: [
+      { title: "Cómo mantener la atención", text: "Alterna explicación, pregunta y producción. No hables demasiado tiempo seguido sin pedir alguna respuesta o participación." },
+      { title: "Cómo explicar con claridad", text: "Usa ejemplos concretos. Si dices \"disciplina\", tradúcelo enseguida a acciones visibles: llegar, traer materiales, terminar, volver a intentar." },
+      { title: "Cómo incluir a alumnos tímidos", text: "Dales primero tiempo para escribir y luego invítalos a compartir algo breve. A muchos les cuesta menos hablar cuando ya pensaron antes." },
+      { title: "Cómo manejar silencios o respuestas parciales", text: "No llenes el vacío demasiado rápido. Repite la pregunta de otro modo, ofrece un ejemplo y deja unos segundos reales para pensar." },
+      { title: "Si sobra tiempo", text: "Pide que mejoren su formulación: que vuelvan su hábito más claro, más realista o más medible. También puedes pedir que lo compartan con otro compañero." },
+      { title: "Si falta tiempo", text: "Prioriza que cada alumno salga con una meta y un hábito, aunque la puesta en común sea más breve. No sacrifiques el aterrizaje final." }
+    ],
+    closing: "Una meta empieza a tener valor cuando deja de ser solo una idea bonita y se convierte en una forma de vivir la semana. El esfuerzo cotidiano, el orden en el estudio y la seriedad con la que uno responde a sus responsabilidades también forman carácter. En Yanapakuy, crecer no es solo sacar mejores notas: es aprender a construir una vida con más dirección, más disciplina y más sentido de servicio."
+  },
+  3: {
+    number: 3,
+    date: "9 de mayo de 2026",
+    title: "Familia, agradecimiento y Día de la Madre",
+    theme: "Familia, gratitud y reconocimiento",
+    axis: "Gratitud y vínculo",
+    result: "mensaje de agradecimiento con intención",
+    footerTheme: "familia, gratitud y reconocimiento",
+    hero: "La sesión ayuda a mirar a la familia con más atención, respeto y gratitud. A propósito del Día de la Madre, el objetivo no es hacer una tarjeta automática, sino reconocer de verdad el trabajo, el cuidado y el esfuerzo de quienes sostienen la vida diaria.",
+    presentation: "La familia suele ser uno de los primeros lugares donde una persona aprende cuidado, esfuerzo, límites y apoyo. Esta sesión quiere hacer visible algo que muchas veces se da por sentado: hay personas que sostienen la vida diaria con trabajo silencioso, corrección, compañía y sacrificio.",
+    why: "Porque agradecer bien forma el carácter. Un estudiante que aprende a reconocer el esfuerzo de otros también aprende a salir de sí mismo, a valorar más lo recibido y a responder mejor en casa y en el grupo.",
+    learning: "Comprender que agradecer no es solo decir algo bonito, sino reconocer con seriedad acciones concretas de cuidado, sacrificio y presencia.",
+    contribution: "Fortalece memoria afectiva, empatía, expresión escrita, respeto familiar y una mirada más madura sobre el esfuerzo de los demás.",
+    quote: "No todos viven la familia del mismo modo. La sesión debe hablar con dignidad, amplitud y respeto, sin idealizar ni comparar historias personales.",
+    materials: ["Hojas bond o cuadernos", "Lápices, lapiceros y colores", "Tarjetas o sobres, si hay disponibilidad", "Papelote o pizarra para recoger ideas"],
+    competencies: ["Expresión oral y escrita", "Reconocimiento afectivo", "Empatía y respeto familiar", "Escucha y reflexión personal"],
+    purpose: "La sesión busca que los estudiantes pasen de una gratitud genérica a un reconocimiento concreto del cuidado recibido. Desde la educación no formal, Yanapakuy acompaña a leer la propia historia con más respeto, sin moralizar ni forzar exposiciones personales.",
+    cognitive: "Observar acciones concretas de cuidado, diferenciarlas de frases vacías y convertirlas en ideas claras.",
+    emotional: "Agradecer con sinceridad, reconocer afectos complejos y nombrar lo valioso sin negar dificultades.",
+    social: "Fortalecer respeto, trato cuidadoso y sensibilidad frente a historias familiares diversas.",
+    results: [
+      { title: "Comprensión", text: "Reconocer mejor acciones concretas de cuidado y esfuerzo dentro del entorno familiar o de figuras de apoyo." },
+      { title: "Expresión", text: "Formular un agradecimiento más profundo y menos automático, evitando frases vacías o repetidas." },
+      { title: "Producción", text: "Elaborar un mensaje, carta o tarjeta con contenido sincero, específico y respetuoso." },
+      { title: "Actitud", text: "Salir con una disposición más consciente para valorar y tratar mejor a quienes cuidan." }
+    ],
+    script: "Esta sesión necesita un tono cálido, pero sobrio. No es una actuación emotiva ni una actividad decorativa: el voluntario acompaña a pensar, recordar, agradecer y expresar con verdad, con apoyos operativos claros para cada tramo.",
+    timeline: [
+      { time: "0-15 min", title: "Bienvenida y clima de confianza", text: "Preparar un ambiente de respeto para hablar de familia sin exponer a nadie." },
+      { time: "15-30 min", title: "Activación: ¿quién cuida?", text: "Hacer visible que cuidar no es solo decir que se quiere a alguien, sino sostener tareas, trabajo, corrección y presencia cotidiana." },
+      { time: "30-50 min", title: "Introducción al tema", text: "Explicar qué significa agradecer de verdad y por qué eso también forma carácter." },
+      { time: "50-80 min", title: "Desarrollo principal", text: "Recordar personas significativas, acciones concretas de cuidado y diferencias reales entre historias familiares." },
+      { time: "80-105 min", title: "Dinámica de producción", text: "Escribir un mensaje o carta de agradecimiento con estructura clara y contenido real." },
+      { time: "105-120 min", title: "Cierre", text: "Conectar gratitud, familia y responsabilidad personal en la manera de tratar a quienes nos cuidan." }
+    ],
+    blocks: [
+      {
+        title: "Bienvenida y clima de confianza",
+        objective: "abrir con cercanía y preparar un ambiente de respeto",
+        minutes: 15,
+        volunteer: ["Recibe al grupo con tono sereno y observa el ánimo general.", "Aclara desde el inicio que no todos viven la familia igual y que nadie estará obligado a compartir algo personal.", "Presenta el tema como una invitación a mirar mejor quiénes sostienen la vida diaria."],
+        say: "&ldquo;Hoy no vamos a repetir frases hechas. Vamos a mirar con más atención quiénes nos cuidan y cómo responder mejor a eso.&rdquo;",
+        questions: ["¿Qué personas te ayudan a salir adelante durante la semana?", "¿Qué hace que una persona se sienta cuidada?", "¿Qué tono necesita una conversación como esta?"],
+        care: ["No asumir un solo modelo familiar.", "No forzar respuestas personales.", "Cuidar que el grupo no vuelva el tema bromista ni superficial."]
+      },
+      {
+        title: "Activación: ¿quién cuida?",
+        objective: "hacer visible el trabajo cotidiano del cuidado",
+        minutes: 15,
+        steps: ["Pide que nombren tareas concretas que alguien hace por ellos cada semana.", "Anota acciones como cocinar, corregir, llevar, esperar, trabajar, acompañar.", "Ayuda a distinguir entre decir \"me quieren\" y mostrar cómo ese cariño se vuelve acción."],
+        questions: ["¿Qué cuidados solemos dar por normales?", "¿Por qué cuesta más agradecer lo cotidiano que lo excepcional?", "¿Qué cambia cuando uno empieza a notar esos esfuerzos?"],
+        care: ["No competir por quién sufre más o recibe más apoyo.", "No ridiculizar respuestas simples.", "Ayudar a pasar de lo general a lo concreto."],
+        quote: "La activación no es adorno. Aquí el estudiante empieza a leer su historia con más memoria y menos indiferencia."
+      },
+      {
+        title: "Introducción al tema",
+        objective: "clarificar qué significa agradecer bien",
+        minutes: 20,
+        volunteer: ["Explica que agradecer no es negar problemas, sino reconocer con honestidad el bien recibido.", "Da ejemplos de agradecimientos vacíos frente a agradecimientos concretos.", "Conecta el tema con respeto, convivencia y madurez personal."],
+        say: "&ldquo;Agradecer bien no es decorar una fecha. Es aprender a reconocer a las personas y a responder mejor a lo que hacen por nosotros.&rdquo;",
+        questions: ["¿Qué diferencia hay entre un \"gracias\" automático y uno pensado?", "¿Por qué agradecer también exige atención?", "¿Cómo se nota que alguien valora de verdad a quien lo cuida?"],
+        care: ["Evitar moralizar con frases como \"deberías sentirte así\".", "No convertir la sesión en discurso largo.", "Usar ejemplos cercanos y sencillos."],
+        extra: `<details><summary>Frases útiles para esta parte</summary><div class="details-body"><ul><li>&ldquo;Agradecer bien no significa hacer algo perfecto, sino reconocer con verdad y con ejemplos concretos.&rdquo;</li><li>&ldquo;No todos tienen la misma historia familiar, pero todos pueden aprender a mirar con más respeto a quienes los cuidan.&rdquo;</li><li>&ldquo;Lo importante no es escribir bonito; es decir algo sincero y real.&rdquo;</li></ul></div></details>`
+      },
+      {
+        title: "Desarrollo principal",
+        objective: "profundizar en experiencias concretas de cuidado",
+        minutes: 30,
+        steps: ["Pide que cada estudiante piense en una persona que lo ha sostenido de manera real este año.", "Invítalos a escribir dos o tres acciones concretas que esa persona ha hecho por él o ella.", "Haz una breve puesta en común con ejemplos que muestren esfuerzo, presencia y corrección."],
+        questions: ["¿Qué gesto recuerdas con más claridad?", "¿Qué trabajo silencioso hace esa persona que casi nadie ve?", "¿Qué respuesta más madura podrías dar tú a ese cuidado?"],
+        care: ["Validar si alguien elige a una abuela, tía, papá, hermano mayor o cuidador.", "No exigir relatos dolorosos.", "Si aparece tristeza, sostener con respeto y volver a la consigna."],
+        extra: `<details><summary>¿Qué hacer si un estudiante dice que no tiene a quién agradecer?</summary><div class="details-body"><p>No lo contradigas ni lo expongas. Ayúdalo a ampliar la mirada hacia una figura de apoyo real, aunque no sea su madre ni una persona de su casa, y valida que cada historia merece respeto.</p></div></details>`
+      },
+      {
+        title: "Dinámica de producción",
+        objective: "redactar un mensaje sincero y específico",
+        minutes: 25,
+        extra: `<div class="box soft"><h4>Consigna central</h4><p>Cada alumno escribe una carta o mensaje breve con tres partes: qué valoro de esa persona, qué le agradezco de manera concreta y qué me gustaría mejorar yo como respuesta a ese cuidado.</p></div><div class="grid-2" style="margin-top:14px;"><div class="box blue"><h4>Ejemplos que pueden destrabar</h4><ul><li>&ldquo;Gracias por levantarte temprano todos los días para que yo llegue al colegio.&rdquo;</li><li>&ldquo;Te agradezco cuando me corriges, aunque a veces no me guste en el momento.&rdquo;</li><li>&ldquo;Quiero responder mejor ayudando más en casa y hablando con más respeto.&rdquo;</li></ul></div><div class="box warm"><h4>Qué revisar al acompañar</h4><ul><li>Que el mensaje mencione hechos concretos.</li><li>Que tenga tono respetuoso y personal.</li><li>Que no sea copia de fórmulas repetidas.</li><li>Que cierre con una respuesta o compromiso propio.</li></ul></div></div>`
+      },
+      {
+        title: "Cierre y reflexión final",
+        objective: "conectar gratitud y conducta concreta",
+        minutes: 15,
+        volunteer: ["Invita a compartir solo a quien quiera.", "Recupera dos o tres aprendizajes de la sesión.", "Cierra conectando gratitud, respeto y responsabilidad cotidiana."],
+        say: "&ldquo;Agradecer bien también forma el corazón. Cuando uno aprende a reconocer el amor, el trabajo y el sacrificio de otros, empieza a vivir con más respeto, memoria y humanidad.&rdquo;",
+        questions: ["¿Qué te llevas hoy?", "¿Qué pequeño gesto concreto puedes hacer esta semana para responder mejor?", "¿Qué cambió en tu mirada sobre quienes te cuidan?"],
+        care: ["No obligar a leer en voz alta.", "Cuidar que el cierre no se vuelva apurado.", "Valorar avances pequeños y sinceros."]
+      }
+    ],
+    support: {
+      ideas: ["La familia no es perfecta, pero suele ser uno de los lugares donde más se trabaja, se cuida y se sostiene la vida. Agradecer no significa negar problemas; significa reconocer con honestidad lo bueno recibido.", "No todos tienen la misma situación familiar. Lo importante es identificar quién ha cumplido un rol de cuidado real y ayudar a que el alumno lo nombre con dignidad."],
+      frame: "Desde Yanapakuy, esta sesión se entiende como un ejercicio de memoria, empatía y responsabilidad. El voluntario acompaña a leer la propia experiencia sin idealizar ni culpar, y convierte la gratitud en una respuesta más consciente.",
+      warnings: ["Evitar frases como \"todas las madres son iguales\" o \"todos deberían sentirse así\".", "No reducir el agradecimiento a hacer una tarjeta bonita.", "No corregir de manera fría si alguien tiene dificultad para escribir: primero ayudarlo a recordar hechos concretos."],
+      sensitive: "Si un estudiante dice que su situación familiar es dolorosa o que no quiere referirse a su madre, no lo expongas ni lo fuerces. Abre la posibilidad de agradecer a otra figura significativa y valida que cada historia merece respeto."
+    },
+    questions: {
+      open: ["¿Quiénes te cuidan o te han sostenido este año?", "¿Qué cosas hace una familia que a veces uno no nota?", "¿Qué significa para ti sentirte cuidado?"],
+      deep: ["¿Por qué agradecer cuesta más que pedir?", "¿Qué diferencia hay entre querer a alguien y demostrarlo cuidando?", "¿Qué te enseña el esfuerzo silencioso de otras personas?"],
+      life: ["¿Cómo respondes tú normalmente cuando alguien te corrige o te ayuda?", "¿Qué gesto concreto podrías tener esta semana en casa?", "¿Cómo cambia una convivencia cuando hay más reconocimiento y respeto?"],
+      close: ["¿Qué persona apareció con más fuerza en tu mente hoy?", "¿Qué compromiso pequeño te llevas para responder mejor al cuidado recibido?", "¿Qué significa para ti agradecer con verdad y no por costumbre?"]
+    },
+    activity: {
+      lead: "La actividad central consiste en escribir una carta o mensaje breve de agradecimiento con contenido real. La consigna no busca una tarjeta decorativa, sino una producción que nombre hechos, valore personas y abra una respuesta concreta.",
+      steps: ["Entrega una hoja a cada participante y recuérdales la estructura de tres partes.", "Da unos minutos para recordar acciones concretas y tomar notas previas.", "Pide que redacten el mensaje con calma y acompañamiento cercano.", "Invita a revisar si el texto nombra hechos reales y no solo frases generales.", "Abre un momento voluntario para compartir una parte del mensaje si alguien desea hacerlo."],
+      organization: ["Inicio individual para favorecer sinceridad.", "Acompañamiento del voluntario pasando por las mesas.", "Puesta en común breve, sin obligar exposiciones personales."],
+      example: "&ldquo;Gracias por esperarme cuando llego cansado, por trabajar tanto y por corregirme cuando me equivoco. Quiero responder ayudando más en casa y hablando con más respeto.&rdquo;",
+      review: ["Que nombre acciones concretas de cuidado.", "Que use un tono respetuoso y personal.", "Que incluya una idea de respuesta o compromiso propio.", "Que se entienda con claridad aunque sea breve."],
+      small: "Si el grupo es pequeño, puede hacerse en formato más conversado: cada alumno comenta primero a quién quiere agradecer y el grupo lo ayuda a volver más concreto su mensaje.",
+      distracted: "Si el grupo está disperso, reduce la extensión: una tarjeta con dos frases bien pensadas basta. Con los más pequeños, permite dibujos acompañados de frases cortas."
+    },
+    academic: {
+      reading: "Se trabaja al leer consignas, reconocer acciones concretas de cuidado y comprender matices entre agradecer de verdad y repetir fórmulas vacías.",
+      writing: "Se refuerza al redactar un mensaje breve, ordenado y sincero, con ideas conectadas y ejemplos específicos.",
+      math: "Puede aparecer al ordenar ideas en secuencia: quién, qué hizo, cómo respondo. También al pensar rutinas o pequeños compromisos semanales.",
+      english: "Si tiene sentido, se puede introducir una palabra puntual como <em>care</em> o <em>thankful</em>, pero solo si suma claridad y no distrae del propósito principal."
+    },
+    recommendations: [
+      { title: "Cuida el tono", text: "La sesión debe ser cálida, pero también sobria. No conviene volverla exageradamente sentimental." },
+      { title: "No idealices", text: "Habla de familia con amplitud y respeto. No todas las historias son iguales ni todas son fáciles." },
+      { title: "Aterriza el agradecimiento", text: "Si alguien dice \"le agradezco todo\", ayúdalo a concretar: tiempo, trabajo, corrección, compañía y sacrificio." },
+      { title: "Incluye a los tímidos", text: "Dales primero tiempo para escribir. A muchos les cuesta menos compartir algo cuando ya lo pensaron antes." },
+      { title: "Sostén los silencios", text: "No llenes el vacío demasiado rápido. Repite la pregunta con otras palabras y deja unos segundos reales para pensar." },
+      { title: "Prioriza lo significativo", text: "Si falta tiempo, reduce la puesta en común, pero procura que todos salgan al menos con un mensaje sincero empezado." }
+    ],
+    closing: "Agradecer bien también forma el corazón. Cuando uno aprende a reconocer el amor, el trabajo y el sacrificio de otros, empieza a vivir con más respeto, más memoria y más humanidad."
+  },
+  4: {
+    number: 4,
+    date: "23 de mayo de 2026",
+    title: "Trabajo en equipo y cooperación",
+    theme: "Trabajo en equipo",
+    axis: "Cooperación",
+    result: "Dinámica resuelta en equipo con reflexión",
+    footerTheme: "cooperación, escucha y trabajo en equipo",
+    hero: "Esta sesión busca corregir una idea superficial del trabajo en equipo. No basta con estar juntos ni con repartirse tareas de cualquier manera. Se trata de aprender a escuchar, coordinarse, asumir un rol y descubrir que avanzar con otros exige humildad, responsabilidad y voluntad de cooperación.",
+    presentation: "Yanapakuy no quiere formar alumnos que solo sepan responder individualmente. También quiere formar personas capaces de trabajar con otros, escuchar, apoyar, ceder y sostener objetivos comunes. Esta sesión aterriza el tema del trabajo en equipo para que el grupo entienda que cooperar bien también es una forma de madurez.",
+    why: "Porque muchas veces se confunde equipo con simple agrupación. Esta sesión ayuda a ver que el verdadero trabajo en equipo exige coordinación, respeto y responsabilidad compartida.",
+    learning: "Comprender que cooperar no es desaparecer como persona ni mandar más que otros, sino aportar bien a un objetivo común.",
+    contribution: "La actividad fortalece escucha, comunicación, organización, humildad práctica y lectura de cómo nuestras actitudes afectan al grupo.",
+    quote: "Un equipo no mejora solo porque sus integrantes tengan buenas intenciones. Mejora cuando aprende a organizarse, a respetar roles y a responder mejor en conjunto.",
+    materials: ["Hojas y lápices", "Cinta o masking tape", "Vasos, papel u objetos simples para un reto grupal", "Pizarra o papelote para recoger aprendizajes"],
+    competencies: ["Comunicación oral", "Escucha y coordinación", "Resolución compartida de problemas", "Autorregulación y cooperación"],
+    purpose: "La sesión busca que los alumnos distingan con claridad la diferencia entre un grupo cualquiera y un equipo que coopera. Mediante un reto práctico y una reflexión guiada, se trabaja escucha, organización y responsabilidad compartida.",
+    cognitive: "Distinguir la diferencia entre un grupo y un equipo, e identificar actitudes que favorecen o bloquean la cooperación.",
+    emotional: "Vivir la tensión y satisfacción del trabajo colectivo, y reconocer las emociones propias al cooperar.",
+    social: "Aprender a escuchar, ceder, asumir un rol y responder por el resultado del grupo.",
+    results: [
+      { title: "Comprensión", text: "Que los alumnos distingan con mayor claridad la diferencia entre un grupo cualquiera y un equipo que sí coopera." },
+      { title: "Lectura del proceso", text: "Que identifiquen actitudes que ayudan al trabajo común y actitudes que lo bloquean." },
+      { title: "Aplicación", text: "Que vivan una experiencia práctica de coordinación y puedan sacar aprendizajes útiles para el aula, la casa y Yanapakuy." }
+    ],
+    script: "Esta sesión requiere movimiento, observación y buena conducción de la reflexión posterior. La dinámica importa, pero el corazón pedagógico está en cómo el grupo lee lo que acaba de vivir.",
+    timeline: [
+      { time: "0-15 min", title: "Bienvenida y activación", text: "Retomar al grupo, recordar el tono del espacio y abrir el tema desde experiencias cercanas de colaboración." },
+      { time: "15-35 min", title: "Introducción al tema", text: "Explicar por qué trabajar en equipo es más que repartir tareas y por qué no siempre resulta fácil." },
+      { time: "35-70 min", title: "Dinámica principal", text: "Realizar un reto cooperativo donde cada alumno tenga una función y el grupo necesite coordinarse." },
+      { time: "70-95 min", title: "Lectura de la experiencia", text: "Analizar qué ayudó, qué estorbó y cómo se comportó el grupo mientras intentaba resolver el reto." },
+      { time: "95-110 min", title: "Aplicación a la vida diaria", text: "Conectar lo vivido con el aula, la casa, el barrio y la forma en que se participa en Yanapakuy." },
+      { time: "110-120 min", title: "Cierre", text: "Resumir el aprendizaje y dejar una idea clara sobre cooperación, humildad y responsabilidad compartida." }
+    ],
+    blocks: [
+      {
+        title: "Bienvenida y activación",
+        objective: "retomar al grupo y abrir el tema desde experiencias concretas",
+        minutes: 15,
+        volunteer: ["Recibe al grupo y observa el ánimo general.", "Recuerda brevemente el tono del espacio.", "Pregunta por experiencias cercanas de trabajo con otros."],
+        say: "&ldquo;Hoy vamos a trabajar juntos en algo que parece simple pero que no siempre lo es: cooperar de verdad.&rdquo;",
+        questions: ["¿Cuándo fue la última vez que trabajaste bien con alguien?", "¿Qué hace difícil trabajar en equipo?", "¿Qué diferencia a un grupo de un equipo?"],
+        care: ["Mantener el tono activo.", "No alargar demasiado esta parte.", "Conectar rápido con la dinámica principal."]
+      },
+      {
+        title: "Introducción al tema",
+        objective: "clarificar qué es cooperar y por qué no basta con estar juntos",
+        minutes: 20,
+        volunteer: ["Explica que trabajar en equipo exige más que repartir tareas.", "Señala actitudes que bloquean la cooperación: imponerse, callarse, distraer, no cumplir el rol.", "Da ejemplos concretos y cercanos."],
+        say: "&ldquo;Un equipo funciona cuando sus integrantes entienden que no todo depende de hablar más fuerte ni de hacer lo que cada uno quiere. Hace falta escuchar, repartir mejor y pensar en el objetivo común.&rdquo;",
+        questions: ["¿Qué hace que un equipo funcione bien?", "¿Qué actitudes lo rompen?", "¿Qué cuesta más: hablar, escuchar o ceder?"],
+        care: ["Evitar discurso largo sin ejemplos.", "Usar situaciones que el grupo reconozca.", "Mantener el ritmo para llegar a la dinámica con energía."]
+      },
+      {
+        title: "Dinámica cooperativa",
+        objective: "vivir una experiencia práctica de coordinación con un reto grupal",
+        minutes: 35,
+        extra: `<div class="box soft"><h4>Reto cooperativo</h4><p>Construir una estructura, trasladar objetos o resolver una secuencia usando materiales básicos. La consigna debe obligar a coordinarse, no solo a competir. El voluntario observa: quién organiza, quién interrumpe, quién se frustra, cómo se corrigen entre ellos.</p></div><div class="grid-2" style="margin-top:14px;"><div class="box blue"><h4>Variante sin materiales</h4><p>Si no hay materiales, se puede hacer con una consigna verbal: ordenar pasos, resolver un pequeño problema o construir una respuesta conjunta donde cada uno tenga una parte.</p></div><div class="box warm"><h4>Forma de organizar</h4><p>Grupos pequeños con meta clara y tiempo limitado. Si el grupo es grande, varios equipos pueden comparar sus procesos al final.</p></div></div>`
+      },
+      {
+        title: "Lectura de la experiencia",
+        objective: "convertir el reto vivido en aprendizaje real sobre cooperación",
+        minutes: 25,
+        volunteer: ["Pregunta qué pasó durante el reto y por qué.", "Ayuda al grupo a nombrar actitudes que ayudaron y actitudes que dificultaron.", "Cierra con una idea sobre qué significa cooperar bien."],
+        say: "&ldquo;Sin esta parte, la actividad queda en juego. Lo importante es entender qué nos dice sobre cómo cooperamos.&rdquo;",
+        questions: ["¿Qué ayudó al grupo a avanzar?", "¿Qué lo complicó?", "¿Cómo se nota que alguien sí está pensando en el grupo?"],
+        care: ["No dejar que la reflexión quede superficial.", "Conectar lo observado con actitudes concretas.", "Dar tiempo real para pensar antes de responder."]
+      },
+      {
+        title: "Aplicación y cierre",
+        objective: "conectar el aprendizaje con la vida diaria y cerrar con claridad",
+        minutes: 25,
+        volunteer: ["Conecta lo vivido con el aula, la casa y la manera de participar en Yanapakuy.", "Recoge una idea final de cada alumno.", "Cierra con el mensaje central."],
+        say: "&ldquo;Trabajar bien con otros es una forma de madurez. Quien coopera no desaparece: aporta mejor. Y quien aprende a pensar en el bien del grupo también empieza a crecer como persona.&rdquo;",
+        questions: ["¿Cómo puedes aplicar esto en el aula?", "¿Qué cambiarías de cómo participas en el grupo?", "¿Qué te llevas de hoy?"],
+        care: ["No cerrar apurado.", "Asegurar que todos salgan con una idea clara.", "Conectar cooperación con responsabilidad personal."]
+      }
+    ],
+    support: {
+      ideas: ["Un equipo funciona cuando sus integrantes entienden que no todo depende de hablar más fuerte ni de hacer lo que cada uno quiere.", "Hay maneras distintas de dañar un equipo: imponerse, callarse por completo, distraer al grupo, no cumplir el rol o buscar lucirse por encima del resultado común."],
+      frame: "El voluntario debe observar mucho durante la dinámica. Lo importante no es solo si el grupo logra el reto, sino cómo lo intenta: quién interrumpe, quién ayuda, quién organiza, quién se frustra y cómo se corrigen entre ellos.",
+      warnings: ["No ayudar demasiado pronto: dejar que el grupo experimente las dificultades.", "No dejar la reflexión posterior solo como repaso: ahí está el corazón pedagógico.", "No encerrar la idea en el reto: llevarla al aula, la casa y el modo de participar en el grupo."],
+      sensitive: "Si hay conflictos durante la dinámica, no los ignores ni los cortes bruscamente. Úsalos como material pedagógico, nombrando lo que pasó con respeto y preguntando qué se puede aprender de eso."
+    },
+    questions: {
+      open: ["¿Cuándo fue la última vez que trabajaste bien con alguien?", "¿Qué hace difícil trabajar con otros?", "¿Qué diferencia a un grupo de un equipo?"],
+      deep: ["¿Qué hace que un equipo funcione bien?", "¿Qué actitudes lo rompen?", "¿Qué cuesta más: hablar, escuchar o ceder?"],
+      life: ["¿Cómo cooperas tú en el aula?", "¿Qué cambiarías de cómo participas en el grupo?", "¿Cómo se nota que alguien sí está pensando en el bien común?"],
+      close: ["¿Qué te llevas hoy?", "¿Qué idea sobre cooperación puedes aplicar esta semana?", "¿Qué cambiarías en cómo trabajas con otros?"]
+    },
+    activity: {
+      lead: "Un reto cooperativo simple: construir una estructura, trasladar objetos o resolver una secuencia usando materiales básicos. La consigna debe obligar a coordinarse, no solo a competir.",
+      steps: ["Forma grupos pequeños con una meta clara y tiempo limitado.", "Asigna una función a cada integrante sin explicar demasiado.", "Deja que el grupo intente el reto con mínima intervención.", "Observa: quién organiza, quién interrumpe, quién ayuda, quién se frustra.", "Cuando termine el tiempo, inicia la reflexión sobre el proceso."],
+      organization: ["Grupos de 4 a 6 personas.", "Meta clara y tiempo limitado visible.", "El voluntario observa sin intervenir salvo que sea necesario."],
+      example: "&ldquo;Nuestro equipo logró el reto porque escuchamos a quien tenía la idea más clara y todos cumplimos con nuestra parte.&rdquo;",
+      review: ["Que el grupo logre coordinarse aunque no sea perfecto.", "Que haya actitudes observables para analizar.", "Que la reflexión posterior conecte experiencia y aprendizaje.", "Que todos puedan decir qué aprendieron."],
+      small: "Si el grupo es pequeño, trabaja con un solo equipo y aumenta la complejidad del reto para mantener el desafío.",
+      distracted: "Si el grupo está disperso, reduce el tiempo del reto y dedica más tiempo a la reflexión. Con grupos muy activos, un reto físico puede ayudar a canalizar energía."
+    },
+    academic: {
+      reading: "Se trabaja al entender consignas, interpretar reglas del reto y reconocer qué pide la tarea.",
+      writing: "Se refuerza al registrar observaciones, anotar acuerdos del equipo o redactar un compromiso de mejora.",
+      math: "Aparece al contar pasos, medir tiempos, calcular materiales o pensar en secuencias para resolver el reto.",
+      english: "Puede aparecer vocabulario como <em>team</em>, <em>cooperate</em> o <em>leader</em> de forma puntual si el grupo lo reconoce."
+    },
+    recommendations: [
+      { title: "Asigna y observa roles", text: "Aunque no los nombres formalmente, mira quién tiende a organizar, quién interrumpe, quién acompaña y quién se apaga." },
+      { title: "No ayudes demasiado pronto", text: "Deja que el grupo experimente el reto y sus dificultades. La intervención temprana puede quitar valor al aprendizaje." },
+      { title: "Haz buena reflexión posterior", text: "Sin esa parte, la actividad queda en juego. Pregunta qué pasó, por qué pasó y qué enseña eso sobre cooperar." },
+      { title: "Conecta con la vida diaria", text: "No dejes la idea encerrada en el reto. Llévala al aula, a la casa y al modo en que se participa en el grupo cada sábado." },
+      { title: "Si sobra tiempo", text: "Profundiza en la reflexión o permite una segunda vuelta del reto con lo aprendido." },
+      { title: "Si falta tiempo", text: "Prioriza la reflexión posterior al reto. La experiencia práctica sin análisis no consolida el aprendizaje." }
+    ],
+    closing: "Trabajar bien con otros es una forma de madurez. Quien coopera no desaparece: aporta mejor. Y quien aprende a pensar en el bien del grupo también empieza a crecer como persona."
+  },
   5: {
     number: 5,
     date: "6 de junio de 2026",
