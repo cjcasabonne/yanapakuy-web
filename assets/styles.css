@@ -172,9 +172,9 @@ li  { margin: var(--s-1) 0 }
   color: var(--gold);
 }
 .chip {
-  font-size: 12px; font-weight: 600; color: var(--muted);
-  padding: 5px 12px; border-radius: 999px;
-  border: 1px solid var(--line); background: var(--surface);
+  font-size: 15px; font-weight: 600; color: var(--ink-2);
+  padding: 8px 18px; border-radius: 999px;
+  border: 1px solid var(--line-warm); background: var(--bg-warm);
 }
 
 .hr { height: 1px; background: var(--line); border: 0; margin: var(--s-4) 0 }
