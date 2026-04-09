@@ -525,9 +525,49 @@ details[open] summary::after { content: '−'; color: var(--pri) }
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .5s, transform .5s }
 .reveal.visible { opacity: 1; transform: translateY(0) }
 
+/* ── WHATSAPP FLOAT ─────────────────────────────────────────── */
+.wa-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #25D366;
+  color: #fff;
+  border-radius: 999px;
+  padding: 13px 22px 13px 16px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  box-shadow: 0 4px 20px rgba(37,211,102,.45);
+  transition: transform .15s ease-out, box-shadow .15s ease-out;
+  white-space: nowrap;
+}
+.wa-float:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(37,211,102,.60);
+  color: #fff;
+}
+.wa-float:focus-visible {
+  outline: 3px solid #25D366;
+  outline-offset: 3px;
+}
+.wa-float svg { flex: 0 0 auto; }
+@media (max-width: 480px) {
+  .wa-float { padding: 14px; }
+  .wa-float .wa-label { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wa-float { transition: none; }
+  .wa-float:hover { transform: none; }
+}
+
 /* ── PRINT ───────────────────────────────────────────────────── */
 @media print {
-  .header, .btnrow, .navbtn { display: none !important }
+  .header, .btnrow, .navbtn, .wa-float { display: none !important }
   body { background: #fff }
   .card, .hero-card { box-shadow: none }
 }
