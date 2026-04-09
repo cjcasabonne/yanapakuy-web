@@ -525,6 +525,13 @@ details[open] summary::after { content: '−'; color: var(--pri) }
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .5s, transform .5s }
 .reveal.visible { opacity: 1; transform: translateY(0) }
 
+/* ── INSTAGRAM EMBED ─────────────────────────────────────────── */
+.instagram-embed-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
 /* ── WHATSAPP FLOAT ─────────────────────────────────────────── */
 .wa-float {
   position: fixed;
