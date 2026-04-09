@@ -111,7 +111,7 @@ function renderSession(data) {
           </div>
         </div>
         <div class="toolbar">
-          <a class="btn" href="../indice/index.html">&#8592; Índice 2026</a>
+          <a class="btn" href="../indice/">&#8592; Índice 2026</a>
           <button class="btn warm" type="button" onclick="window.print()">Imprimir</button>
           <button class="btn secondary" type="button" id="expandAll">Abrir todo</button>
           <button class="btn secondary" type="button" id="collapseAll">Cerrar todo</button>
