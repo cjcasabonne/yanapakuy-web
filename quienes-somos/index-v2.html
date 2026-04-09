@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiénes somos | ONG educativa Yanapakuy en Manchay, Lima</title>
+  <meta name="description" content="Conoce a Yanapakuy, ONG de educación no formal que trabaja desde 2015 con niños y adolescentes de Manchay, Lima." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="theme-color" content="#269947" />
+  <link rel="canonical" href="https://www.yanapakuy.org.pe/quienes-somos/" />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap">
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <style>
+
+    /* ── NAV DROPDOWN ──────────────────────────────────────────── */
+    .nav-item {
+      position: relative;
+    }
+    .nav-item > a {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .nav-item > a::after {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-right: 1.5px solid currentColor;
+      border-bottom: 1.5px solid currentColor;
+      transform: translateY(-2px) rotate(45deg);
+      opacity: .6;
+      transition: transform .15s;
+    }
+    .nav-item:hover > a::after,
+    .nav-item:focus-within > a::after {
+      transform: translateY(1px) rotate(-135deg);
+    }
+    .nav-sub {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 170px;
+      background: var(--surface);
+      border: 1px solid var(--line-warm);
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-lg);
+      padding: 6px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .15s, transform .15s;
+      transform: translateX(-50%) translateY(-6px);
+      z-index: 100;
+    }
+    .nav-item:hover .nav-sub,
+    .nav-item:focus-within .nav-sub {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateX(-50%) translateY(0);
+    }
+    .nav-sub a {
+      display: block;
+      padding: 9px 14px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink-2);
+      white-space: nowrap;
+      transition: background .12s, color .12s;
+    }
+    .nav-sub a:hover {
+      background: var(--bg-warm);
+      color: var(--pri-2);
+    }
+    /* mobile: flatten dropdown */
+    @media (max-width: 860px) {
+      .nav-item > a::after { display: none; }
+      .nav-sub {
+        position: static;
+        transform: none;
+        opacity: 1;
+        pointer-events: auto;
+        box-shadow: none;
+        border: none;
+        border-left: 3px solid var(--pri-light);
+        border-radius: 0;
+        margin: 0 0 4px 12px;
+        padding: 0;
+        background: transparent;
+      }
+      .nav-sub a {
+        font-size: 13px;
+        padding: 6px 10px;
+        color: var(--muted);
+      }
+    }
+
+    /* ── SECTION HEADER ─────────────────────────────────────────── */
+    .section-header { margin-bottom: 0 }
+    .section-header .kicker { margin-bottom: 6px }
+    .section-header .h2 { margin: 0 0 8px }
+
+    /* ── HERO V2 — bloque dominante único ──────────────────────── */
+    /* Eliminamos el impact-band duplicado.
+       El hero lleva toda la información de identidad en un solo bloque. */
+    .hero-enf-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--pri);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: 7px 16px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+    }
+    .hero-enf-tag::before {
+      content: "";
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.7);
+    }
+
+    /* Display h1 más grande y con peso visual dominante */
+    .hero-2 .display-h {
+      font-size: clamp(46px, 7vw, 86px);
+      margin-bottom: 0;
+    }
+    .hero-2 .display-h em {
+      font-style: normal;
+      color: var(--pri);
+    }
+
+    /* Bajada principal — una sola pieza coherente */
+    .hero-2-desc {
+      font-size: clamp(16px, 1.8vw, 19px);
+      color: var(--ink-2);
+      max-width: 580px;
+      margin: 18px 0 28px;
+      line-height: 1.65;
+    }
+
+    /* Stats — solo una vez, aquí */
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px 32px;
+      margin: 0;
+    }
+    .hero-stat-n {
+      font-family: var(--font-display);
+      font-size: clamp(26px, 3.5vw, 38px);
+      line-height: 1;
+      color: var(--pri);
+      display: block;
+    }
+    .hero-stat-l {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: block;
+      margin-top: 3px;
+    }
+
+    /* ── MISIÓN/VISIÓN ──────────────────────────────────────────── */
+    .mv-wrap {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      min-height: 480px;
+    }
+    .mv-text-side {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 52px 48px;
+      background: var(--surface);
+    }
+    .mv-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .mv-text {
+      font-size: 17px;
+      color: var(--ink-2);
+      line-height: 1.65;
+      margin: 0;
+    }
+    .mv-divider {
+      height: 1px;
+      background: var(--line-warm);
+      margin: 20px 0;
+    }
+    .mv-photo-side { overflow: hidden; position: relative; }
+    .mv-photo-side img {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+    }
+
+    /* ── VALORES BAND ───────────────────────────────────────────── */
+    .valores-band {
+      background: var(--bg-warm);
+      border-top: 1px solid var(--line-warm);
+      border-bottom: 1px solid var(--line-warm);
+      padding: 40px 0;
+    }
+    .valores-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--pad);
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .valores-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .valores-chips { display: flex; flex-wrap: wrap; gap: 8px }
+
+    /* ── COMUNIDAD ──────────────────────────────────────────────── */
+    .comunidad-wrap {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+    .comunidad-side {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      min-height: 100%;
+      box-shadow: var(--shadow);
+    }
+    .comunidad-side img {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+    }
+    .comunidad-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(10,34,24,.10), rgba(10,34,24,.55));
+      display: flex;
+      align-items: end;
+      padding: 26px;
+    }
+    .comunidad-quote { color: #fff; max-width: 420px; }
+    .comunidad-quote-text {
+      font-family: var(--font-display);
+      font-size: clamp(20px, 2.2vw, 30px);
+      line-height: 1.2;
+      margin: 0 0 12px;
+    }
+    .comunidad-quote-who {
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.68);
+      font-weight: 700;
+    }
+
+    /* ── GOBERNANZA ─────────────────────────────────────────────── */
+    .gov-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 28px;
+    }
+    .gov-card {
+      text-align: center;
+      padding: 30px 22px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-top: 4px solid var(--pri);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .gov-card:nth-child(2) { border-top-color: var(--gold); }
+    .gov-card:nth-child(3) { border-top-color: var(--acc); }
+
+    /* ── FOTO BAND ──────────────────────────────────────────────── */
+    .foto-band {
+      position: relative;
+      overflow: hidden;
+      height: 430px;
+    }
+    .foto-band img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center 32%;
+      display: block;
+    }
+    .foto-band-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(10,34,24,.82) 0%, rgba(10,34,24,.28) 65%);
+      display: flex;
+      align-items: center;
+    }
+    .foto-quote-text {
+      font-family: var(--font-display);
+      font-size: clamp(22px, 2.8vw, 36px);
+      color: #fff;
+      line-height: 1.25;
+      margin: 0 0 16px;
+    }
+    .foto-quote-who {
+      font-size: 12px;
+      font-weight: 700;
+      color: rgba(255,255,255,.80);
+      text-transform: uppercase;
+      letter-spacing: .12em;
+    }
+
+    /* ── MARCO BANNER ───────────────────────────────────────────── */
+    .marco-banner {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 18px;
+      background: var(--surface);
+      border: 1px solid rgba(38,153,71,.18);
+      border-radius: 22px;
+      padding: 18px 20px 18px 26px;
+      box-shadow: var(--shadow);
+      color: var(--ink);
+      margin: 0 auto 28px;
+      max-width: var(--max);
+    }
+    .marco-banner::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 10px;
+      background: linear-gradient(180deg, var(--pri) 0%, #70ba87 100%);
+    }
+    .marco-content { position: relative; z-index: 1; min-width: 0; }
+    .marco-kicker {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--pri);
+    }
+    .marco-heading {
+      margin: 0 0 4px;
+      font-size: 24px;
+      line-height: 1.08;
+      font-family: var(--font-display);
+      font-weight: 400;
+      color: var(--ink);
+    }
+    .marco-text {
+      margin: 0;
+      max-width: 560px;
+      font-size: 14px;
+      line-height: 1.55;
+      color: var(--ink-2);
+    }
+    .marco-action {
+      position: relative; z-index: 1;
+      white-space: nowrap;
+      align-self: stretch;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 0 18px;
+      min-height: 52px;
+      border-radius: 16px;
+      background: var(--pri-light);
+      color: var(--pri);
+      border: 1px solid transparent;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      transition: transform .15s, background .15s, color .15s;
+    }
+    .marco-action:hover {
+      transform: translateY(-1px);
+      background: rgba(38,153,71,.14);
+      color: var(--pri-2);
+    }
+
+    /* ── CTA FINAL ──────────────────────────────────────────────── */
+    .cta-final {
+      background: #0a2218;
+      position: relative;
+      overflow: hidden;
+      padding: 88px 0;
+      text-align: center;
+    }
+    .cta-final::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 900px 500px at 15% 50%, rgba(38,153,71,.18), transparent 60%),
+        radial-gradient(ellipse 700px 400px at 85% 50%, rgba(38,153,71,.10), transparent 60%);
+      pointer-events: none;
+    }
+    .cta-final-inner {
+      position: relative;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--pad);
+    }
+    .cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap }
+
+    /* ── RESPONSIVE ─────────────────────────────────────────────── */
+    @media (max-width: 860px) {
+      .mv-wrap, .comunidad-wrap { grid-template-columns: 1fr; }
+      .mv-text-side { padding: 40px var(--pad) 36px }
+      .mv-photo-side { height: 56vw; min-height: 240px }
+      .comunidad-side { min-height: 320px }
+      .gov-grid-2 { grid-template-columns: 1fr; }
+      .foto-band { height: 320px }
+      .cta-final { padding: 64px 0 }
+      .marco-banner { grid-template-columns: 1fr; padding-right: 18px; }
+      .marco-action { min-height: 48px; }
+    }
+    @media (max-width: 480px) {
+      .foto-band { height: 260px }
+      .foto-quote-text { font-size: 20px }
+      .cta-final { padding: 48px 0 }
+    }
+  </style>
+</head>
+<body>
+<a class="skip-link" href="#main">Ir al contenido principal</a>
+
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="Inicio Yanapakuy">
+      <img src="/assets/logo.svg" alt="Yanapakuy" />
+    </a>
+    <button class="navbtn" data-nav-toggle aria-expanded="false" aria-controls="nav" aria-label="Abrir men&uacute;">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <rect y="3" width="20" height="2.2" rx="1.1" fill="currentColor"/>
+        <rect y="9" width="20" height="2.2" rx="1.1" fill="currentColor"/>
+        <rect y="15" width="20" height="2.2" rx="1.1" fill="currentColor"/>
+      </svg>
+    </button>
+    <nav class="nav" id="nav" data-nav data-open="false" aria-label="Navegaci&oacute;n principal">
+      <a href="/quienes-somos/" aria-current="page">Qui&eacute;nes somos</a>
+
+      <!-- Metodología con dropdown "Marco teórico" -->
+      <div class="nav-item">
+        <a href="/metodologia/">Metodolog&iacute;a</a>
+        <div class="nav-sub" role="menu">
+          <a href="/marco-teorico/" role="menuitem">Marco te&oacute;rico</a>
+        </div>
+      </div>
+
+      <a href="/programas/">Programas</a>
+      <a href="/actividades/">Actividades</a>
+      <a href="/documentos/">Documentos</a>
+      <a href="/voluntariado/">Voluntariado</a>
+      <a href="/contacto/">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ══ HERO — bloque dominante único, sin duplicar datos abajo ══ -->
+  <section class="hero-2" aria-label="Presentaci&oacute;n">
+    <div class="hero-2-text">
+
+      <!-- Tag de enfoque: Educación No Formal como término unificado -->
+      <div class="hero-enf-tag">Educaci&oacute;n No Formal</div>
+
+      <div class="hero-eyebrow anim-up">
+        Asociaci&oacute;n civil sin fines de lucro &middot; Lima, Per&uacute; &middot; Desde 2015
+      </div>
+
+      <h1 class="display-h anim-up">
+        Qui&eacute;nes<br>
+        <em>somos</em>
+      </h1>
+
+      <!-- Una sola bajada continua y coherente -->
+      <p class="hero-2-desc anim-up">
+        Somos una organizaci&oacute;n peruana de educaci&oacute;n no formal que, desde 2015, trabaja de forma continua con ni&ntilde;os y adolescentes en Manchay, Lima. Presencia constante, trabajo en territorio y acompa&ntilde;amiento sostenido en el tiempo.
+      </p>
+
+      <!-- Stats una sola vez — aquí, no en impact-band separada -->
+      <div class="hero-stats anim-up" aria-label="Datos clave">
+        <div class="hero-stat">
+          <span class="hero-stat-n">2015</span>
+          <span class="hero-stat-l">Desde cu&aacute;ndo</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-n">Manchay</span>
+          <span class="hero-stat-l">Territorio</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-n">Continuo</span>
+          <span class="hero-stat-l">Acompa&ntilde;amiento</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hero-2-panel" aria-hidden="true">
+      <img id="heroRandom" src="/assets/img/foto1.jpg" alt="Comunidad Yanapakuy" width="900" height="700" fetchpriority="high" />
+    </div>
+  </section>
+  <!-- ✖ impact-band eliminado — era duplicado de los stats del hero -->
+
+  <!-- ══ MISIÓN Y VISIÓN ══ -->
+  <section class="section" aria-label="Norte institucional">
+    <div class="container">
+      <div class="mv-wrap reveal">
+        <div class="mv-text-side">
+          <div class="kicker">Norte institucional</div>
+
+          <div class="mv-label">Misi&oacute;n</div>
+          <p class="mv-text">Acompa&ntilde;ar procesos de formaci&oacute;n acad&eacute;mica y personal de ni&ntilde;os y adolescentes mediante trabajo sostenido, estructura y seguimiento.</p>
+
+          <div class="mv-divider"></div>
+
+          <div class="mv-label">Visi&oacute;n</div>
+          <p class="mv-text">Consolidar comunidades donde los estudiantes cuenten con condiciones claras para continuar su desarrollo acad&eacute;mico y personal en el tiempo.</p>
+
+          <div class="quote" style="margin:24px 0 0">
+            <p>"Servicio con prop&oacute;sito: trabajo orientado a resultados concretos en la formaci&oacute;n de estudiantes."</p>
+            <div class="who">Principio rector</div>
+          </div>
+        </div>
+
+        <div class="mv-photo-side" aria-hidden="true">
+          <img id="misionRandom" src="/assets/img/foto2.jpg" alt="Trabajo de campo Yanapakuy" loading="lazy" width="900" height="700" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ VALORES ══ -->
+  <div class="valores-band">
+    <div class="valores-inner">
+      <span class="valores-label">Lo que practicamos</span>
+      <div class="valores-chips">
+        <span class="chip">Servicio con prop&oacute;sito</span>
+        <span class="chip">Solidaridad</span>
+        <span class="chip">Disciplina</span>
+        <span class="chip">Perseverancia</span>
+        <span class="chip">Responsabilidad</span>
+        <span class="chip">Honestidad</span>
+        <span class="chip">Identidad peruana</span>
+        <span class="chip">Trabajo en equipo</span>
+        <span class="chip">Respeto</span>
+        <span class="chip">Excelencia</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ COMUNIDAD ══ -->
+  <section class="section" aria-label="Nuestra comunidad">
+    <div class="container comunidad-wrap">
+      <div class="card reveal">
+        <div class="section-header">
+          <div class="kicker">A qui&eacute;nes acompa&ntilde;amos</div>
+          <h2 class="h2">Nuestra comunidad</h2>
+          <p class="section-header-sub">
+            Trabajamos con ni&ntilde;os y adolescentes de Manchay, Lima, a trav&eacute;s de sesiones, seguimiento y acompa&ntilde;amiento en su proceso formativo.
+          </p>
+        </div>
+
+        <div class="grid grid-2" style="margin-top:22px">
+          <div class="card flat" style="border-left:4px solid #e57373">
+            <h3 class="h3">Barreras que enfrentan</h3>
+            <ul>
+              <li>Acceso limitado a recursos educativos en el entorno cercano.</li>
+              <li>Poca orientaci&oacute;n acad&eacute;mica y vocacional.</li>
+              <li>Falta de espacios de acompa&ntilde;amiento continuo fuera del entorno escolar.</li>
+            </ul>
+          </div>
+          <div class="card flat" style="border-left:4px solid var(--ok)">
+            <h3 class="h3">Lo que traen consigo</h3>
+            <ul>
+              <li>Disposici&oacute;n al aprendizaje.</li>
+              <li>Capacidad de adaptaci&oacute;n.</li>
+              <li>Inter&eacute;s en continuar su formaci&oacute;n cuando existe acompa&ntilde;amiento sostenido.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="comunidad-side reveal" style="animation-delay:.08s" aria-hidden="true">
+        <img id="comunidadRandom" src="/assets/img/foto3.jpg" alt="Ni&ntilde;os y adolescentes de la comunidad" loading="lazy" width="900" height="900" />
+        <div class="comunidad-overlay">
+          <div class="comunidad-quote">
+            <p class="comunidad-quote-text">Educaci&oacute;n no formal con presencia constante y trabajo en territorio.</p>
+            <div class="comunidad-quote-who">Yanapakuy &middot; Manchay, Lima</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOTO BAND ══ -->
+  <div class="foto-band" aria-hidden="true">
+    <img id="fotoBandRandom" src="/assets/img/foto4.jpg" alt="Voluntariado y comunidad" loading="lazy" width="1400" height="800" />
+    <div class="foto-band-overlay">
+      <div class="foto-band-inner">
+        <blockquote class="foto-quote">
+          <p class="foto-quote-text">"Presencia constante, trabajo en territorio y acompa&ntilde;amiento en el tiempo."</p>
+          <footer class="foto-quote-who">Yanapakuy &middot; Lima, Per&uacute;</footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ EQUIPO Y GOBERNANZA ══ -->
+  <section class="section" aria-label="Equipo y gobernanza">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="kicker">Estructura interna</div>
+        <h2 class="h2">Equipo y gobernanza</h2>
+        <p class="section-header-sub">
+          Estructura operativa simple, con funciones definidas y seguimiento de responsabilidades en cada nivel.
+        </p>
+      </div>
+
+      <div class="gov-grid-2">
+        <div class="gov-card reveal">
+          <h3 class="h3">Direcci&oacute;n</h3>
+          <p class="p small">Define lineamientos, supervisa el funcionamiento general y toma decisiones estrat&eacute;gicas.</p>
+        </div>
+        <div class="gov-card reveal" style="animation-delay:.08s">
+          <h3 class="h3">Coordinaci&oacute;n</h3>
+          <p class="p small">Organiza actividades, planifica sesiones y realiza seguimiento operativo.</p>
+        </div>
+        <div class="gov-card reveal" style="animation-delay:.16s">
+          <h3 class="h3">Voluntariado</h3>
+          <p class="p small">Ejecuta las sesiones, acompa&ntilde;a a los estudiantes y reporta avances.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ MARCO TEÓRICO BANNER ══ -->
+  <div class="marco-banner" aria-label="Marco te&oacute;rico">
+    <div class="marco-content">
+      <span class="marco-kicker">Fundamento pedag&oacute;gico</span>
+      <h2 class="marco-heading">Conoce nuestro marco te&oacute;rico</h2>
+      <p class="marco-text">Si quieres entender por qu&eacute; trabajamos as&iacute; en comunidad, aqu&iacute; est&aacute; la base conceptual que sostiene a Yanapakuy.</p>
+    </div>
+    <a class="marco-action" href="/marco-teorico/">Explorar &rarr;</a>
+  </div>
+
+  <!-- ══ CTA FINAL ══ -->
+  <section class="cta-final" aria-label="Llamado a la acci&oacute;n">
+    <div class="cta-final-inner reveal">
+      <span class="cta-kicker">Participa</span>
+      <h2 class="cta-h">
+        La organizaci&oacute;n se sostiene<br>
+        con estructura y compromiso.
+      </h2>
+      <p class="cta-sub">
+        Educaci&oacute;n no formal y acompa&ntilde;amiento para escolares, con trabajo continuo en comunidad.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-white" href="/documentos/">Transparencia y documentos</a>
+        <a class="btn btn-ghost-white" href="/voluntariado/">Sumarme como voluntario</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="h3">Yanapakuy &mdash; Juntos por el Per&uacute;</div>
+      <div class="small">Educaci&oacute;n no formal y acompa&ntilde;amiento educativo para escolares.</div>
+      <div class="legal">&copy; <span data-year></span> Yanapakuy. Asociaci&oacute;n civil sin fines de lucro.</div>
+    </div>
+    <div>
+      <div class="footer-nav-h">Navegaci&oacute;n</div>
+      <div class="small">
+        <div><a href="/metodologia/">Metodolog&iacute;a</a></div>
+        <div><a href="/programas/">Programas</a></div>
+        <div><a href="/actividades/">Actividades</a></div>
+      </div>
+    </div>
+    <div>
+      <div class="footer-nav-h">Acci&oacute;n</div>
+      <div class="small">
+        <div><a href="/voluntariado/">Voluntariado</a></div>
+        <div><a href="/contacto/">Contacto</a></div>
+        <div><a href="https://www.instagram.com/yanapakuy.pe" target="_blank" rel="noopener">Instagram @yanapakuy.pe</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/app.js"></script>
+<script src="/assets/fotos.js"></script>
+<script>
+(() => {
+  const BASE = '/assets/img/';
+  const ids = ['heroRandom', 'misionRandom', 'comunidadRandom', 'fotoBandRandom'];
+  const picks = FOTOS.map(v => ({v, s: Math.random()})).sort((a,b)=>a.s-b.s).map(x=>x.v);
+  ids.forEach((id, i) => {
+    const el = document.getElementById(id);
+    if (el) el.src = BASE + picks[i % picks.length];
+  });
+})();
+</script>
+</body>
+</html>
