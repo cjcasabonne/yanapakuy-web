@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Índice de las 19 sesiones infantiles del programa Yanapakuy 2026.">
+  <title>Sesiones infantiles 2026 | Yanapakuy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../session-styles.css">
+  <style>
+    .sessions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+    .scard {
+      display: block;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      padding: 20px 18px 18px;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+      position: relative;
+      overflow: hidden;
+    }
+    .scard::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--pri) 0%, #8ad95d 100%);
+      opacity: 0;
+      transition: opacity 200ms ease-out;
+    }
+    .scard:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .scard:hover::before { opacity: 1; }
+    .scard-head { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+    .scard-num {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      background: rgba(38,153,71,.10);
+      color: #155c28;
+      font-family: var(--font-display);
+      font-size: 17px;
+      display: grid;
+      place-items: center;
+      border: 1.5px solid rgba(38,153,71,.18);
+      flex: 0 0 auto;
+    }
+    .scard-title {
+      font-family: var(--font-display);
+      font-size: 17px;
+      line-height: 1.25;
+      font-weight: 400;
+      margin: 0 0 10px;
+    }
+    .scard-tag {
+      display: inline-block;
+      background: var(--surface-soft);
+      color: #145734;
+      border: 1px solid rgba(38,153,71,.14);
+      border-radius: 999px;
+      padding: 5px 11px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .section-intro {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 36px;
+    }
+    .section-intro h2 {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3vw, 32px);
+      font-weight: 400;
+      line-height: 1.1;
+    }
+    .count-chip {
+      background: var(--surface-soft);
+      color: #145734;
+      border: 1px solid rgba(38,153,71,.16);
+      border-radius: 999px;
+      padding: 7px 14px;
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <div class="brand-copy">
+          <strong>Yanapakuy</strong>
+          <span>Módulo infantil 2026</span>
+        </div>
+      </div>
+      <div class="toolbar">
+        <a class="btn" href="../../../actividades/">&#8592; Actividades</a>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="hero-kicker">Programa anual · Yanapakuy infantil 2026</div>
+      <h1>Sesiones infantiles 2026</h1>
+      <p>Consulta rápida de las 19 sesiones para niños de 3 a 10 años.</p>
+    </div>
+
+    <div class="section-intro">
+      <h2>Todas las sesiones</h2>
+      <span class="count-chip">19 sesiones</span>
+    </div>
+
+    <div class="sessions-grid" id="sessionsGrid"></div>
+
+    <p class="footer-note">Yanapakuy infantil 2026 · 19 sesiones · Manchay, Lima</p>
+  </div>
+
+  <script src="../session-data.js"></script>
+  <script>
+    const grid = document.getElementById("sessionsGrid");
+    const sessions = window.YANAPAKUY_INF_SESSIONS || {};
+    Object.keys(sessions).map(Number).sort((a, b) => a - b).forEach((id) => {
+      const session = sessions[id];
+      const card = document.createElement("a");
+      card.className = "scard";
+      card.href = `../sesion${id}/`;
+      card.innerHTML = `
+        <div class="scard-head">
+          <div class="scard-num">${id}</div>
+          <div>Sesión ${id}</div>
+        </div>
+        <p class="scard-title">${session.title}</p>
+        <span class="scard-tag">${session.theme}</span>
+      `;
+      grid.appendChild(card);
+    });
+  </script>
+</body>
+</html>
