@@ -1,7 +1,7 @@
 window.YANAPAKUY_SESSIONS = {
   1: {
     number: 1,
-    date: "12 de abril de 2026",
+    date: "11 de abril de 2026",
     title: "Inicio, identidad y ciudadanía",
     theme: "Inicio, identidad y ciudadanía",
     axis: "Vínculo, orden y criterio",
@@ -73,7 +73,7 @@ window.YANAPAKUY_SESSIONS = {
         title: "Ciudadanía y elecciones del 12 de abril de 2026",
         objective: "explicar la ciudadanía como práctica diaria y conectarla con el proceso electoral",
         minutes: 30,
-        extra: `<div class="box soft"><h4>Idea central</h4><p>La ciudadanía no empieza el día del voto. Empieza antes: en la forma de informarse, en cómo se cuida lo común, en el respeto al otro y en la capacidad de pensar antes de decidir.</p></div><div class="grid-2" style="margin-top:14px;"><div class="box blue"><h4>Conexión con abril de 2026</h4><p>El domingo <strong>12 de abril de 2026</strong> el Perú vive una jornada electoral importante. Aunque varios del grupo todavía no voten, sí pueden entender que una democracia sana necesita personas que no elijan por impulso, por broma ni por pura pelea.</p></div><div class="box warm"><h4>Qué evitar decir</h4><ul><li>No pedir que el grupo apoye a un candidato o partido.</li><li>No burlarse de opiniones políticas familiares.</li><li>No convertir la sesión en propaganda.</li><li>No usar datos dudosos ni frases incendiarias para "animar" la conversación.</li></ul></div></div><details><summary>Frases sugeridas para esta parte</summary><div class="details-body"><p>&ldquo;Así como aquí pedimos respeto, constancia y cuidado del espacio, un país también necesita eso: personas que no destruyan lo común y que entiendan que elegir mal afecta a muchos.&rdquo;</p><p>&ldquo;La ciudadanía madura no es gritar más fuerte; es pensar mejor y actuar con responsabilidad.&rdquo;</p></div></details>`
+        extra: `<div class="box soft"><h4>Idea central</h4><p>La ciudadanía no empieza el día del voto. Empieza antes: en la forma de informarse, en cómo se cuida lo común, en el respeto al otro y en la capacidad de pensar antes de decidir.</p></div><div class="grid-2" style="margin-top:14px;"><div class="box blue"><h4>Conexión con abril de 2026</h4><p>El domingo <strong>11 de abril de 2026</strong> el Perú vive una jornada electoral importante. Aunque varios del grupo todavía no voten, sí pueden entender que una democracia sana necesita personas que no elijan por impulso, por broma ni por pura pelea.</p></div><div class="box warm"><h4>Qué evitar decir</h4><ul><li>No pedir que el grupo apoye a un candidato o partido.</li><li>No burlarse de opiniones políticas familiares.</li><li>No convertir la sesión en propaganda.</li><li>No usar datos dudosos ni frases incendiarias para "animar" la conversación.</li></ul></div></div><details><summary>Frases sugeridas para esta parte</summary><div class="details-body"><p>&ldquo;Así como aquí pedimos respeto, constancia y cuidado del espacio, un país también necesita eso: personas que no destruyan lo común y que entiendan que elegir mal afecta a muchos.&rdquo;</p><p>&ldquo;La ciudadanía madura no es gritar más fuerte; es pensar mejor y actuar con responsabilidad.&rdquo;</p></div></details>`
       },
       {
         title: "Cierre y compromiso",
